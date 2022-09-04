@@ -28,9 +28,9 @@ final: prev: with pkgs.haskell.lib;
 
   fin = doJailbreak prev.fin;
 
-  heapwords = enableCabalFlag (prev.callCabal2nix "heapwords" (inputs.cardano-base + /heapwords) {}) "development";
+#  heapwords = enableCabalFlag (prev.callCabal2nix "heapwords" (inputs.cardano-base + /heapwords) {}) "development";
 
-  inline-r = doJailbreak (prev.callHackage "inline-r" "0.10.5" {} );
+  inline-r = doJailbreak (prev.callCabal2nix "inline-r" (inputs.HaskellR + /inline-r) {});
 
   jsaddle = doJailbreak (prev.callHackage "jsaddle" "0.9.8.2" { });
 
@@ -55,9 +55,9 @@ final: prev: with pkgs.haskell.lib;
 
   protolude = doJailbreak (prev.callHackage "protolude" "0.3.2" { });
 
-  ral = doJailbreak prev.ral;
+  ral = doJailbreak (prev.callHackage "ral" "0.1" { });
 
-  recursion-schemes = prev.callHackage "recursion-schemes" "5.2.2.2" { };
+  recursion-schemes = doJailbreak (prev.callHackage "recursion-schemes" "5.2.2.2" { });
 
   ref-tf = prev.callHackage "ref-tf" "0.5.0.1" { };
 
@@ -65,9 +65,13 @@ final: prev: with pkgs.haskell.lib;
 
   secp256k1 = pkgs.secp256k1;
 
+  singletons-th = prev.callHackage "singletons-th" "3.1.1" { };
+
   strict-containers = enableCabalFlag (prev.callCabal2nix "strict-containers" (inputs.cardano-base + /strict-containers) {}) "development";
 
   th-extras = doJailbreak prev.th-extras;
+
+  th-desugar = prev.callHackage "th-desugar" "1.14" {};
 
   vector-binary-instances = doJailbreak prev.vector-binary-instances;
 

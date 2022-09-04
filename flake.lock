@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "HaskellR": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1644844599,
+        "narHash": "sha256-q39Dp5hj4u5Lx6wWwPoc9CbyocH3KutYDmWVd3xevgo=",
+        "owner": "tweag",
+        "repo": "HaskellR",
+        "rev": "c3ba1023480e26ade420896bcb629ceaad59f308",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tweag",
+        "repo": "HaskellR",
+        "type": "github"
+      }
+    },
     "all-cabal-hashes": {
       "flake": false,
       "locked": {
@@ -37,16 +53,17 @@
     "cardano-base": {
       "flake": false,
       "locked": {
-        "lastModified": 1662109055,
-        "narHash": "sha256-PqnME1OKL2cviAljUvzDADNll2Po3gruYhTS42lnvo0=",
+        "lastModified": 1646222518,
+        "narHash": "sha256-jrSDD2fXgHf4wo5THzfK/6tolvt8y9rNuJWYfBooqaQ=",
         "owner": "input-output-hk",
         "repo": "cardano-base",
-        "rev": "639caaa7f2a03561a3fee646516becc1ed7d5d82",
+        "rev": "1587462ac8b2e50af2691f5ad93d3c2aa4674ed1",
         "type": "github"
       },
       "original": {
         "owner": "input-output-hk",
         "repo": "cardano-base",
+        "rev": "1587462ac8b2e50af2691f5ad93d3c2aa4674ed1",
         "type": "github"
       }
     },
@@ -63,6 +80,7 @@
       "original": {
         "owner": "input-output-hk",
         "repo": "cardano-crypto",
+        "rev": "07397f0e50da97eaa0575d93bee7ac4b2b2576ec",
         "type": "github"
       }
     },
@@ -377,6 +395,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-libR": {
+      "locked": {
+        "lastModified": 1650935992,
+        "narHash": "sha256-+3aqnX2lSi2XVTEXFu6mrnGL/czDxiwRmXP5xPp9i3U=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "602748c14b82a2e17078713686fe1df2824fa502",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "602748c14b82a2e17078713686fe1df2824fa502",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1662096612,
@@ -444,21 +478,23 @@
     "plutus": {
       "flake": false,
       "locked": {
-        "lastModified": 1662231900,
-        "narHash": "sha256-+dU52lXmfMfWTfXCYsnh/6YSTXkYNGyoA0WVMgzcLsE=",
-        "owner": "input-output-hk",
+        "lastModified": 1662314418,
+        "narHash": "sha256-Zd87e5gNVcnRk/2lXG5slEejI3HRWTenYnjIndkRICg=",
+        "owner": "locallycompact",
         "repo": "plutus",
-        "rev": "e12414b2cc8dc78479939c6a337d0a965f405052",
+        "rev": "10140d8cc4c813ca5ec4f5397271f7bee0e4b2da",
         "type": "github"
       },
       "original": {
-        "owner": "input-output-hk",
+        "owner": "locallycompact",
+        "ref": "ghc-942",
         "repo": "plutus",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
+        "HaskellR": "HaskellR",
         "all-cabal-hashes": "all-cabal-hashes",
         "cardano-base": "cardano-base",
         "cardano-crypto": "cardano-crypto",
@@ -470,6 +506,7 @@
         "horizon-platform": "horizon-platform",
         "lint-utils": "lint-utils_2",
         "nixpkgs": "nixpkgs_4",
+        "nixpkgs-libR": "nixpkgs-libR",
         "nothunks": "nothunks",
         "plutus": "plutus"
       }

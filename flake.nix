@@ -5,11 +5,11 @@
       flake = false;
     };
     cardano-base = {
-      url = "github:input-output-hk/cardano-base";
+      url = "github:input-output-hk/cardano-base/1587462ac8b2e50af2691f5ad93d3c2aa4674ed1";
       flake = false;
     };
     cardano-crypto = {
-      url = "github:input-output-hk/cardano-crypto";
+      url = "github:input-output-hk/cardano-crypto/07397f0e50da97eaa0575d93bee7ac4b2b2576ec";
       flake = false;
     };
     cardano-prelude = {
@@ -26,22 +26,29 @@
     horizon-platform = {
       url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
     };
+    HaskellR = {
+      url = "github:tweag/HaskellR";
+      flake = false;
+    };
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
     nothunks = {
       url = "github:locallycompact/nothunks";
       flake = false;
     };
     plutus = {
-      url = "github:input-output-hk/plutus";
+      url = "github:locallycompact/plutus?ref=ghc-942";
       flake = false;
     };
   };
-  outputs = inputs@{ self, nixpkgs, horizon-platform, flake-utils, lint-utils, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-libR, horizon-platform, flake-utils, lint-utils, ... }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         overlay-ach = final: prev: { all-cabal-hashes = inputs.all-cabal-hashes; };
-        pkgs = import nixpkgs { inherit system; overlays = [ overlay-ach ]; };
+        pkgs-libR = import nixpkgs-libR { inherit system; };
+        pkgs = import nixpkgs { inherit system; overlays = [ overlay-ach (final: prev: { R = pkgs-libR.R; })];};
+
         overrides-hp = final: prev:
           (horizon-platform.overrides.${system}.ghc942 final prev)
             // (import ./overlay.nix { inherit inputs pkgs; } final prev);

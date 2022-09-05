@@ -47,11 +47,11 @@ final: prev: with pkgs.haskell.lib;
 
   prettyprinter-configurable = dontCheck (prev.callCabal2nix "prettyprinter-configurable" (inputs.plutus + /prettyprinter-configurable) {});
 
-  plutus-core = dontBenchmark (setBuildTarget (dontCheck (doJailbreak (prev.callCabal2nix "plutus-core" (inputs.plutus + /plutus-core) {}))) "uplc");
+  plutus-core = setBuildTarget (disableLibraryProfiling (dontBenchmark (dontCheck (doJailbreak (prev.callCabal2nix "plutus-core" (inputs.plutus + /plutus-core) {}))))) "plc";
 
-  plutus-ledger-api = dontBenchmark (setBuildTarget (dontCheck (doJailbreak (prev.callCabal2nix "plutus-ledger-api" (inputs.plutus + /plutus-ledger-api) {}))) "uplc");
+  plutus-ledger-api = disableLibraryProfiling (dontBenchmark (dontCheck (doJailbreak (prev.callCabal2nix "plutus-ledger-api" (inputs.plutus + /plutus-ledger-api) {}))));
 
-  plutus-tx = dontBenchmark (setBuildTarget (dontCheck (doJailbreak (prev.callCabal2nix "plutus-tx" (inputs.plutus + /plutus-tx) {}))) "uplc");
+  plutus-tx = disableLibraryProfiling (dontBenchmark (dontCheck (doJailbreak (prev.callCabal2nix "plutus-tx" (inputs.plutus + /plutus-tx) {}))));
 
   protolude = doJailbreak (prev.callHackage "protolude" "0.3.2" { });
 

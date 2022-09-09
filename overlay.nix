@@ -10,6 +10,8 @@ final: prev: with pkgs.haskell.lib;
 
   base16 = doJailbreak (dontCheck prev.base16);
 
+  bech32 = dontCheck (prev.callHackage "bech32" "1.1.2" { });
+
   canonical-json = dontCheck (doJailbreak (prev.callHackage "canonical-json" "0.6.0.0" {}));
 
   cardano-binary = doDevbreak (prev.callCabal2nix "cardano-binary" (inputs.cardano-base + /binary) {});

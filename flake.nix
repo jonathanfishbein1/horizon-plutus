@@ -50,8 +50,8 @@
         pkgs = import nixpkgs { inherit system; overlays = [ overlay-ach (final: prev: { R = pkgs-libR.R; })];};
 
         overrides-hp = final: prev:
-          (horizon-platform.overrides.${system}.ghc942 final prev)
-            // (import ./overlay.nix { inherit inputs pkgs; } final prev);
+          (horizon-platform.overrides.${system}.ghc942 final prev
+            // (import ./overlay.nix { inherit inputs pkgs; } final prev));
         hp = pkgs.haskell.packages.ghc942.override {
           overrides = overrides-hp;
         };

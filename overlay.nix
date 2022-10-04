@@ -63,6 +63,8 @@ final: prev: with pkgs.haskell.lib;
 
   ref-tf = prev.callHackage "ref-tf" "0.5.0.1" { };
 
+  secp256k1 = pkgs.secp256k1;
+
   secp256k1-haskell = addPkgconfigDepend (dontCheck (prev.secp256k1-haskell)) pkgs.secp256k1;
 
   singletons-th = prev.callHackage "singletons-th" "3.1.1" { };

@@ -12,7 +12,7 @@ final: prev: with pkgs.haskell.lib;
 
   bech32 = dontCheck (prev.callHackage "bech32" "1.1.2" { });
 
-  canonical-json = dontCheck (doJailbreak (prev.callHackage "canonical-json" "0.6.0.0" {}));
+  canonical-json = dontCheck (doJailbreak (prev.callHackage "canonical-json" "0.6.0.1" {}));
 
   cardano-binary = doDevbreak (prev.callCabal2nix "cardano-binary" (inputs.cardano-base + /binary) {});
 
@@ -24,7 +24,7 @@ final: prev: with pkgs.haskell.lib;
 
   cardano-prelude = enableCabalFlag (doJailbreak (prev.callCabal2nix "cardano-prelude" (inputs.cardano-prelude + /cardano-prelude) {})) "development";
 
-  cardano-prelude-test = prev.callCabal2nix "cardano-prelude-test" (inputs.cardano-prelude + /cardano-prelude-test) {};
+  cardano-prelude-test = dontHaddock (prev.callCabal2nix "cardano-prelude-test" (inputs.cardano-prelude + /cardano-prelude-test) {});
 
   flat = dontCheck (prev.callCabal2nix "flat" inputs.flat { });
 

@@ -119,11 +119,11 @@
     "cardano-prelude": {
       "flake": false,
       "locked": {
-        "lastModified": 1657171052,
-        "narHash": "sha256-T5hW85PfnuR6066jIhH/2g5dzTmI0JXsXSKwez8fXnw=",
+        "lastModified": 1664548869,
+        "narHash": "sha256-7YOyIYKuslh8yD8ZAPuOiDaON7IoWVfkFKHOrjLtUK8=",
         "owner": "input-output-hk",
         "repo": "cardano-prelude",
-        "rev": "533aec85c1ca05c7d171da44b89341fb736ecfe5",
+        "rev": "b6053a23f53acd5c519cc559c3861dda3ebf8b35",
         "type": "github"
       },
       "original": {

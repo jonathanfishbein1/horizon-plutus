@@ -85,17 +85,16 @@
     "cardano-base": {
       "flake": false,
       "locked": {
-        "lastModified": 1646222518,
-        "narHash": "sha256-jrSDD2fXgHf4wo5THzfK/6tolvt8y9rNuJWYfBooqaQ=",
+        "lastModified": 1664966805,
+        "narHash": "sha256-raPy7vCleco/6mARMOeUraq7SQO1YOV5zOn4iqEyxWI=",
         "owner": "input-output-hk",
         "repo": "cardano-base",
-        "rev": "1587462ac8b2e50af2691f5ad93d3c2aa4674ed1",
+        "rev": "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee",
         "type": "github"
       },
       "original": {
         "owner": "input-output-hk",
         "repo": "cardano-base",
-        "rev": "1587462ac8b2e50af2691f5ad93d3c2aa4674ed1",
         "type": "github"
       }
     },

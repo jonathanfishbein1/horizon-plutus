@@ -5,7 +5,7 @@
       flake = false;
     };
     cardano-base = {
-      url = "github:input-output-hk/cardano-base/1587462ac8b2e50af2691f5ad93d3c2aa4674ed1";
+      url = "github:input-output-hk/cardano-base";
       flake = false;
     };
     cardano-crypto = {

@@ -6,6 +6,8 @@ final: prev: with pkgs.haskell.lib;
 
   PyF = prev.callHackage "PyF" "0.11.0.0" { };
 
+  algebraic-graphs = prev.callHackage "algebraic-graphs" "0.7" {};
+
   bin = doJailbreak prev.bin;
 
   base16 = doJailbreak (dontCheck prev.base16);

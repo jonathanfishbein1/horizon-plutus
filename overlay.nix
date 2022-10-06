@@ -6,13 +6,15 @@ final: prev: with pkgs.haskell.lib;
 
   PyF = prev.callHackage "PyF" "0.11.0.0" { };
 
+  algebraic-graphs = prev.callHackage "algebraic-graphs" "0.7" {};
+
   bin = doJailbreak prev.bin;
 
   base16 = doJailbreak (dontCheck prev.base16);
 
   bech32 = dontCheck (prev.callHackage "bech32" "1.1.2" { });
 
-  canonical-json = dontCheck (doJailbreak (prev.callHackage "canonical-json" "0.6.0.0" {}));
+  canonical-json = dontCheck (doJailbreak (prev.callHackage "canonical-json" "0.6.0.1" {}));
 
   cardano-binary = doDevbreak (prev.callCabal2nix "cardano-binary" (inputs.cardano-base + /binary) {});
 
@@ -24,13 +26,15 @@ final: prev: with pkgs.haskell.lib;
 
   cardano-prelude = enableCabalFlag (doJailbreak (prev.callCabal2nix "cardano-prelude" (inputs.cardano-prelude + /cardano-prelude) {})) "development";
 
-  cardano-prelude-test = prev.callCabal2nix "cardano-prelude-test" (inputs.cardano-prelude + /cardano-prelude-test) {};
+  cardano-prelude-test = dontHaddock (prev.callCabal2nix "cardano-prelude-test" (inputs.cardano-prelude + /cardano-prelude-test) {});
+
+  cardano-strict-containers = enableCabalFlag (prev.callCabal2nix "cardano-strict-containers" (inputs.cardano-base + /cardano-strict-containers) {}) "development";
 
   flat = dontCheck (prev.callCabal2nix "flat" inputs.flat { });
 
   fin = doJailbreak prev.fin;
 
-#  heapwords = enableCabalFlag (prev.callCabal2nix "heapwords" (inputs.cardano-base + /heapwords) {}) "development";
+  heapwords = enableCabalFlag (prev.callCabal2nix "heapwords" (inputs.cardano-base + /heapwords) {}) "development";
 
   inline-r = doJailbreak (prev.callCabal2nix "inline-r" (inputs.HaskellR + /inline-r) {});
 
@@ -63,11 +67,11 @@ final: prev: with pkgs.haskell.lib;
 
   ref-tf = prev.callHackage "ref-tf" "0.5.0.1" { };
 
+  secp256k1 = pkgs.secp256k1;
+
   secp256k1-haskell = addPkgconfigDepend (dontCheck (prev.secp256k1-haskell)) pkgs.secp256k1;
 
   singletons-th = prev.callHackage "singletons-th" "3.1.1" { };
-
-  strict-containers = enableCabalFlag (prev.callCabal2nix "strict-containers" (inputs.cardano-base + /strict-containers) {}) "development";
 
   th-extras = doJailbreak prev.th-extras;
 

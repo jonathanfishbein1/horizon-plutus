@@ -38,7 +38,7 @@
       flake = false;
     };
     plutus = {
-      url = "github:locallycompact/plutus?ref=ghc-942";
+      url = "github:milloni/plutus?ref=milloni/ghc942";
       flake = false;
     };
   };

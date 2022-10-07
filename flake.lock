@@ -378,6 +378,23 @@
         "type": "github"
       }
     },
+    "ghc-typelits-knownnat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1658650195,
+        "narHash": "sha256-9ITC1f0wGvOH1VrFXegwSUugjR777FknFcfOsNxXhMY=",
+        "owner": "clash-lang",
+        "repo": "ghc-typelits-knownnat",
+        "rev": "634b0c076e5cf6ce24d80fa845121b38ec9efe01",
+        "type": "github"
+      },
+      "original": {
+        "owner": "clash-lang",
+        "ref": "941-support",
+        "repo": "ghc-typelits-knownnat",
+        "type": "github"
+      }
+    },
     "ghc-typelits-natnormalise": {
       "flake": false,
       "locked": {
@@ -764,6 +781,7 @@
         "flake-parts": "flake-parts",
         "flake-utils": "flake-utils",
         "flat": "flat",
+        "ghc-typelits-knownnat": "ghc-typelits-knownnat",
         "ghc-typelits-natnormalise": "ghc-typelits-natnormalise",
         "gray-code": "gray-code",
         "haskell-flake": "haskell-flake",

@@ -22,6 +22,10 @@
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
+    ghc-typelits-knownnat = {
+      url = "github:clash-lang/ghc-typelits-knownnat?ref=941-support";
+      flake = false;
+    };
     ghc-typelits-natnormalise = {
       url = "github:clash-lang/ghc-typelits-natnormalise";
       flake = false;

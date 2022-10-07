@@ -22,6 +22,10 @@
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
+    ghc-typelits-natnormalise = {
+      url = "github:clash-lang/ghc-typelits-natnormalise";
+      flake = false;
+    };
     gray-code = {
       url = "github:milloni/gray-code-0.3.1?ref=milloni/fix-quicktest";
       flake = false;

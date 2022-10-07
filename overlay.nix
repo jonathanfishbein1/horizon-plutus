@@ -36,6 +36,8 @@ final: prev: with pkgs.haskell.lib;
 
   fin = doJailbreak prev.fin;
 
+  ghc-typelits-natnormalise = prev.callCabal2nix "ghc-typelits-natnormalise" inputs.ghc-typelits-natnormalise {};
+
   gray-code = prev.callCabal2nix "gray-code" inputs.gray-code {};
 
   heapwords = enableCabalFlag (prev.callCabal2nix "heapwords" (inputs.cardano-base + /heapwords) {}) "development";

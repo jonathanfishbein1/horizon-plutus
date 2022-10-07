@@ -378,6 +378,22 @@
         "type": "github"
       }
     },
+    "ghc-typelits-natnormalise": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663485752,
+        "narHash": "sha256-cHDm8Bd5VhN3hhCBQYFfaGl3uczC46CTbM1mIKZP9bY=",
+        "owner": "clash-lang",
+        "repo": "ghc-typelits-natnormalise",
+        "rev": "64f3fe6bbc1a3c8d729ede7c9f14b158e2a12641",
+        "type": "github"
+      },
+      "original": {
+        "owner": "clash-lang",
+        "repo": "ghc-typelits-natnormalise",
+        "type": "github"
+      }
+    },
     "gray-code": {
       "flake": false,
       "locked": {
@@ -748,6 +764,7 @@
         "flake-parts": "flake-parts",
         "flake-utils": "flake-utils",
         "flat": "flat",
+        "ghc-typelits-natnormalise": "ghc-typelits-natnormalise",
         "gray-code": "gray-code",
         "haskell-flake": "haskell-flake",
         "horizon-platform": "horizon-platform",

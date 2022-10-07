@@ -46,6 +46,8 @@ final: prev: with pkgs.haskell.lib;
 
   monoidal-containers = doJailbreak prev.monoidal-containers;
 
+  moo = dontCheck (prev.callCabal2nix "moo" inputs.moo {});
+
   multiset = dontCheck prev.multiset;
 
   nonempty-vector = doJailbreak (dontCheck prev.nonempty-vector);

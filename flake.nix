@@ -35,6 +35,10 @@
       flake = false;
     };
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
+    moo = {
+      url = "github:milloni/moo?ref=milloni/build-fix";
+      flake = false;
+    };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
     nothunks = {

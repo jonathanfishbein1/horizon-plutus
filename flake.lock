@@ -575,6 +575,23 @@
         "type": "github"
       }
     },
+    "moo": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1665149984,
+        "narHash": "sha256-HWxnkf6xEAFfY14QxQFU/RsQ09skzLSMKvrAB1EQstU=",
+        "owner": "milloni",
+        "repo": "moo",
+        "rev": "20e4c6ee880e7d62b18b995750063dd7349a3f8e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "milloni",
+        "ref": "milloni/build-fix",
+        "repo": "moo",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1644525281,
@@ -735,6 +752,7 @@
         "haskell-flake": "haskell-flake",
         "horizon-platform": "horizon-platform",
         "lint-utils": "lint-utils_2",
+        "moo": "moo",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-libR": "nixpkgs-libR",
         "nothunks": "nothunks",

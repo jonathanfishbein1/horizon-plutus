@@ -378,6 +378,23 @@
         "type": "github"
       }
     },
+    "gray-code": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1665142843,
+        "narHash": "sha256-Tv3cE4BDhEPHuzP2V4Onkn5JsRBsUCbZtQ6t9wZDvlc=",
+        "owner": "milloni",
+        "repo": "gray-code-0.3.1",
+        "rev": "f310a19e44416206633cfd084f10ffb7cfea9f1d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "milloni",
+        "ref": "milloni/fix-quicktest",
+        "repo": "gray-code-0.3.1",
+        "type": "github"
+      }
+    },
     "haskell-flake": {
       "locked": {
         "lastModified": 1664562023,
@@ -714,6 +731,7 @@
         "flake-parts": "flake-parts",
         "flake-utils": "flake-utils",
         "flat": "flat",
+        "gray-code": "gray-code",
         "haskell-flake": "haskell-flake",
         "horizon-platform": "horizon-platform",
         "lint-utils": "lint-utils_2",

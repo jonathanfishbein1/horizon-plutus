@@ -22,6 +22,10 @@
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
+    gray-code = {
+      url = "github:milloni/gray-code-0.3.1?ref=milloni/fix-quicktest";
+      flake = false;
+    };
     haskell-flake.url = "github:srid/haskell-flake";
     horizon-platform = {
       url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";

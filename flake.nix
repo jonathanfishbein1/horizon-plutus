@@ -12,6 +12,10 @@
       url = "github:input-output-hk/cardano-crypto/07397f0e50da97eaa0575d93bee7ac4b2b2576ec";
       flake = false;
     };
+    cardano-ledger = {
+      url = "github:milloni/cardano-ledger?ref=milloni/horizon";
+      flake = false;
+    };
     cardano-prelude = {
       url = "github:input-output-hk/cardano-prelude";
       flake = false;

@@ -83,6 +83,10 @@ final: prev: with pkgs.haskell.lib;
 
   singletons-th = prev.callHackage "singletons-th" "3.1.1" { };
 
+  small-steps = doJailbreak (prev.callCabal2nix "small-steps" (inputs.cardano-ledger + /libs/small-steps) {});
+
+  small-steps-test = doJailbreak (prev.callCabal2nix "small-steps-test" (inputs.cardano-ledger + /libs/small-steps) {});
+
   strict-containers = dontCheck (doJailbreak (prev.callCabal2nix "strict-containers" (inputs.strict-containers + /strict-containers) {}));
 
   th-extras = doJailbreak prev.th-extras;

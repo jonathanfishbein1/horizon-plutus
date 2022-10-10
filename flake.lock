@@ -115,6 +115,23 @@
         "type": "github"
       }
     },
+    "cardano-ledger": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1665417848,
+        "narHash": "sha256-52jiXfBToQuNASCJEE4fLo+LggWmaS3SrTbSHYb0VcA=",
+        "owner": "milloni",
+        "repo": "cardano-ledger",
+        "rev": "2b18cf684f3f98b5c43fa269f7d61f715a17fcb3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "milloni",
+        "ref": "milloni/horizon",
+        "repo": "cardano-ledger",
+        "type": "github"
+      }
+    },
     "cardano-prelude": {
       "flake": false,
       "locked": {
@@ -777,6 +794,7 @@
         "all-cabal-hashes": "all-cabal-hashes",
         "cardano-base": "cardano-base",
         "cardano-crypto": "cardano-crypto",
+        "cardano-ledger": "cardano-ledger",
         "cardano-prelude": "cardano-prelude",
         "flake-parts": "flake-parts",
         "flake-utils": "flake-utils",

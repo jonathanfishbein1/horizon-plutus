@@ -12,6 +12,10 @@
       url = "github:input-output-hk/cardano-crypto/07397f0e50da97eaa0575d93bee7ac4b2b2576ec";
       flake = false;
     };
+    cardano-ledger = {
+      url = "github:milloni/cardano-ledger?ref=milloni/horizon";
+      flake = false;
+    };
     cardano-prelude = {
       url = "github:input-output-hk/cardano-prelude";
       flake = false;
@@ -22,6 +26,18 @@
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
+    ghc-typelits-knownnat = {
+      url = "github:clash-lang/ghc-typelits-knownnat?ref=941-support";
+      flake = false;
+    };
+    ghc-typelits-natnormalise = {
+      url = "github:clash-lang/ghc-typelits-natnormalise";
+      flake = false;
+    };
+    gray-code = {
+      url = "github:milloni/gray-code-0.3.1?ref=milloni/fix-quicktest";
+      flake = false;
+    };
     haskell-flake.url = "github:srid/haskell-flake";
     horizon-platform = {
       url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
@@ -31,6 +47,10 @@
       flake = false;
     };
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
+    moo = {
+      url = "github:milloni/moo?ref=milloni/build-fix";
+      flake = false;
+    };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
     nothunks = {
@@ -39,6 +59,10 @@
     };
     plutus = {
       url = "github:milloni/plutus?ref=milloni/ghc942";
+      flake = false;
+    };
+    strict-containers = {
+      url = "github:milloni/strict-containers?ref=milloni/fix";
       flake = false;
     };
   };

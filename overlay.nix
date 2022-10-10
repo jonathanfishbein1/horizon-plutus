@@ -6,6 +6,8 @@ final: prev: with pkgs.haskell.lib;
 
   PyF = prev.callHackage "PyF" "0.11.0.0" { };
 
+  Unique = dontCheck (doJailbreak (prev.callHackage "Unique" "0.4.7.9" {}));
+
   algebraic-graphs = prev.callHackage "algebraic-graphs" "0.7" {};
 
   bin = doJailbreak prev.bin;
@@ -34,6 +36,12 @@ final: prev: with pkgs.haskell.lib;
 
   fin = doJailbreak prev.fin;
 
+  ghc-typelits-knownnat = prev.callCabal2nix "ghc-typelits-knownnat" inputs.ghc-typelits-knownnat {};
+
+  ghc-typelits-natnormalise = prev.callCabal2nix "ghc-typelits-natnormalise" inputs.ghc-typelits-natnormalise {};
+
+  gray-code = prev.callCabal2nix "gray-code" inputs.gray-code {};
+
   heapwords = enableCabalFlag (prev.callCabal2nix "heapwords" (inputs.cardano-base + /heapwords) {}) "development";
 
   inline-r = doJailbreak (prev.callCabal2nix "inline-r" (inputs.HaskellR + /inline-r) {});
@@ -43,6 +51,8 @@ final: prev: with pkgs.haskell.lib;
   microstache = doJailbreak prev.microstache;
 
   monoidal-containers = doJailbreak prev.monoidal-containers;
+
+  moo = dontCheck (prev.callCabal2nix "moo" inputs.moo {});
 
   multiset = dontCheck prev.multiset;
 
@@ -72,6 +82,12 @@ final: prev: with pkgs.haskell.lib;
   secp256k1-haskell = addPkgconfigDepend (dontCheck (prev.secp256k1-haskell)) pkgs.secp256k1;
 
   singletons-th = prev.callHackage "singletons-th" "3.1.1" { };
+
+  small-steps = doJailbreak (prev.callCabal2nix "small-steps" (inputs.cardano-ledger + /libs/small-steps) {});
+
+  small-steps-test = doJailbreak (prev.callCabal2nix "small-steps-test" (inputs.cardano-ledger + /libs/small-steps) {});
+
+  strict-containers = dontCheck (doJailbreak (prev.callCabal2nix "strict-containers" (inputs.strict-containers + /strict-containers) {}));
 
   th-extras = doJailbreak prev.th-extras;
 

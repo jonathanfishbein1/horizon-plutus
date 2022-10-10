@@ -57,6 +57,10 @@
       url = "github:milloni/plutus?ref=milloni/ghc942";
       flake = false;
     };
+    strict-containers = {
+      url = "github:milloni/strict-containers?ref=milloni/fix";
+      flake = false;
+    };
   };
   outputs = inputs@{ self, nixpkgs, nixpkgs-libR, horizon-platform, flake-utils, lint-utils, ... }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:

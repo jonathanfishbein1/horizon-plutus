@@ -83,6 +83,8 @@ final: prev: with pkgs.haskell.lib;
 
   singletons-th = prev.callHackage "singletons-th" "3.1.1" { };
 
+  strict-containers = dontCheck (doJailbreak (prev.callCabal2nix "strict-containers" (inputs.strict-containers + /strict-containers) {}));
+
   th-extras = doJailbreak prev.th-extras;
 
   th-desugar = prev.callHackage "th-desugar" "1.14" {};

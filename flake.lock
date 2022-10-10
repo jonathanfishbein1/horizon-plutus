@@ -791,7 +791,8 @@
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-libR": "nixpkgs-libR",
         "nothunks": "nothunks",
-        "plutus": "plutus"
+        "plutus": "plutus",
+        "strict-containers": "strict-containers"
       }
     },
     "servant": {
@@ -808,6 +809,23 @@
         "owner": "TeofilC",
         "ref": "ghc-9.4",
         "repo": "servant",
+        "type": "github"
+      }
+    },
+    "strict-containers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1665410955,
+        "narHash": "sha256-K0QfB5GFYlJ/D0KO3U6SxWOBgZx8NvcuAgRhV1JhbOg=",
+        "owner": "milloni",
+        "repo": "strict-containers",
+        "rev": "9e833be00bc2c5cdb0b4e743b7a2cde00dd4f616",
+        "type": "github"
+      },
+      "original": {
+        "owner": "milloni",
+        "ref": "milloni/fix",
+        "repo": "strict-containers",
         "type": "github"
       }
     },

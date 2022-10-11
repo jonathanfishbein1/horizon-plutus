@@ -34,6 +34,10 @@
       url = "github:clash-lang/ghc-typelits-natnormalise";
       flake = false;
     };
+    goblins = {
+      url = "github:newhoggy/goblins?ref=a315f41ec7250097fa6073b5ef4773e45758578f";
+      flake = false;
+    };
     gray-code = {
       url = "github:milloni/gray-code-0.3.1?ref=milloni/fix-quicktest";
       flake = false;
@@ -63,6 +67,10 @@
     };
     strict-containers = {
       url = "github:milloni/strict-containers?ref=milloni/fix";
+      flake = false;
+    };
+    typerep-map = {
+      url = "github:parsonsmatt/typerep-map?ref=75b7cd5d45986be07420a6821d352ad2adc0b697";
       flake = false;
     };
   };

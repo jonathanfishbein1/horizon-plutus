@@ -14,11 +14,19 @@ final: prev: with pkgs.haskell.lib;
 
   base16 = doJailbreak (dontCheck prev.base16);
 
+  base64-bytestring-type = doJailbreak (prev.callHackage "base64-bytestring-type" "1.0.1" {});
+
   bech32 = dontCheck (prev.callHackage "bech32" "1.1.2" { });
+
+  byron-spec-chain = doJailbreak (prev.callCabal2nix "byron-spec-chain" (inputs.cardano-ledger + /eras/byron/chain/executable-spec) {});
+
+  byron-spec-ledger = doJailbreak (prev.callCabal2nix "byron-spec-ledger" (inputs.cardano-ledger + /eras/byron/ledger/executable-spec) {});
 
   canonical-json = dontCheck (doJailbreak (prev.callHackage "canonical-json" "0.6.0.1" {}));
 
   cardano-binary = doDevbreak (prev.callCabal2nix "cardano-binary" (inputs.cardano-base + /binary) {});
+
+  cardano-binary-test = doJailbreak (prev.callCabal2nix "cardano-binary-test" (inputs.cardano-base + /binary/test) {});
 
   cardano-crypto = prev.callCabal2nix "cardano-crypto" inputs.cardano-crypto { };
 
@@ -39,6 +47,8 @@ final: prev: with pkgs.haskell.lib;
   ghc-typelits-knownnat = prev.callCabal2nix "ghc-typelits-knownnat" inputs.ghc-typelits-knownnat {};
 
   ghc-typelits-natnormalise = prev.callCabal2nix "ghc-typelits-natnormalise" inputs.ghc-typelits-natnormalise {};
+
+  goblins = doJailbreak (prev.callCabal2nix "goblins" inputs.goblins {});
 
   gray-code = prev.callCabal2nix "gray-code" inputs.gray-code {};
 
@@ -85,13 +95,15 @@ final: prev: with pkgs.haskell.lib;
 
   small-steps = doJailbreak (prev.callCabal2nix "small-steps" (inputs.cardano-ledger + /libs/small-steps) {});
 
-  small-steps-test = doJailbreak (prev.callCabal2nix "small-steps-test" (inputs.cardano-ledger + /libs/small-steps) {});
+  small-steps-test = doJailbreak (prev.callCabal2nix "small-steps-test" (inputs.cardano-ledger + /libs/small-steps-test) {});
 
   strict-containers = dontCheck (doJailbreak (prev.callCabal2nix "strict-containers" (inputs.strict-containers + /strict-containers) {}));
 
   th-extras = doJailbreak prev.th-extras;
 
   th-desugar = prev.callHackage "th-desugar" "1.14" {};
+
+  typerep-map = doJailbreak (prev.callCabal2nix "typerep-map" inputs.typerep-map {});
 
   vector-binary-instances = doJailbreak prev.vector-binary-instances;
 

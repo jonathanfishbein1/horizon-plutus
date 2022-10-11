@@ -14,6 +14,8 @@ final: prev: with pkgs.haskell.lib;
 
   base16 = doJailbreak (dontCheck prev.base16);
 
+  base64-bytestring-type = doJailbreak (prev.callHackage "base64-bytestring-type" "1.0.1" {});
+
   bech32 = dontCheck (prev.callHackage "bech32" "1.1.2" { });
 
   canonical-json = dontCheck (doJailbreak (prev.callHackage "canonical-json" "0.6.0.1" {}));

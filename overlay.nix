@@ -18,6 +18,8 @@ final: prev: with pkgs.haskell.lib;
 
   bech32 = dontCheck (prev.callHackage "bech32" "1.1.2" { });
 
+  byron-spec-chain = doJailbreak (prev.callCabal2nix "byron-spec-chain" (inputs.cardano-ledger + /eras/byron/chain/executable-spec) {});
+
   byron-spec-ledger = doJailbreak (prev.callCabal2nix "byron-spec-ledger" (inputs.cardano-ledger + /eras/byron/ledger/executable-spec) {});
 
   canonical-json = dontCheck (doJailbreak (prev.callHackage "canonical-json" "0.6.0.1" {}));

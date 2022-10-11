@@ -65,6 +65,10 @@
       url = "github:milloni/strict-containers?ref=milloni/fix";
       flake = false;
     };
+    typerep-map = {
+      url = "github:parsonsmatt/typerep-map?ref=75b7cd5d45986be07420a6821d352ad2adc0b697";
+      flake = false;
+    };
   };
   outputs = inputs@{ self, nixpkgs, nixpkgs-libR, horizon-platform, flake-utils, lint-utils, ... }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:

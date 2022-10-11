@@ -93,6 +93,8 @@ final: prev: with pkgs.haskell.lib;
 
   th-desugar = prev.callHackage "th-desugar" "1.14" {};
 
+  typerep-map = doJailbreak (prev.callCabal2nix "typerep-map" inputs.typerep-map {});
+
   vector-binary-instances = doJailbreak prev.vector-binary-instances;
 
   word-array = prev.callCabal2nix "word-array" (inputs.plutus + /word-array) {};

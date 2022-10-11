@@ -810,7 +810,8 @@
         "nixpkgs-libR": "nixpkgs-libR",
         "nothunks": "nothunks",
         "plutus": "plutus",
-        "strict-containers": "strict-containers"
+        "strict-containers": "strict-containers",
+        "typerep-map": "typerep-map"
       }
     },
     "servant": {
@@ -892,6 +893,23 @@
       "original": {
         "owner": "locallycompact",
         "repo": "tasty-hedgehog",
+        "type": "github"
+      }
+    },
+    "typerep-map": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1661208811,
+        "narHash": "sha256-3ATQgkB0dIyA3q/VzsTUk9KwVtmNudu7u3WeqXIWbgg=",
+        "owner": "parsonsmatt",
+        "repo": "typerep-map",
+        "rev": "75b7cd5d45986be07420a6821d352ad2adc0b697",
+        "type": "github"
+      },
+      "original": {
+        "owner": "parsonsmatt",
+        "ref": "75b7cd5d45986be07420a6821d352ad2adc0b697",
+        "repo": "typerep-map",
         "type": "github"
       }
     },

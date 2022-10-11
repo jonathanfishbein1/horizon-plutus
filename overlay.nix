@@ -20,6 +20,8 @@ final: prev: with pkgs.haskell.lib;
 
   cardano-binary = doDevbreak (prev.callCabal2nix "cardano-binary" (inputs.cardano-base + /binary) {});
 
+  cardano-binary-test = doJailbreak (prev.callCabal2nix "cardano-binary-test" (inputs.cardano-base + /binary/test) {});
+
   cardano-crypto = prev.callCabal2nix "cardano-crypto" inputs.cardano-crypto { };
 
   cardano-crypto-class = doDevbreak (addPkgconfigDepend (prev.callCabal2nix "cardano-crypto-class" (inputs.cardano-base + /cardano-crypto-class) {}) pkgs.libsodium);

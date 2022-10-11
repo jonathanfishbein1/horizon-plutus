@@ -428,6 +428,23 @@
         "type": "github"
       }
     },
+    "goblins": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663802529,
+        "narHash": "sha256-xeprp3H7lFTH6TxkHtchfD5vIuW0h4NdKaXQjInKTjc=",
+        "owner": "newhoggy",
+        "repo": "goblins",
+        "rev": "a315f41ec7250097fa6073b5ef4773e45758578f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "newhoggy",
+        "ref": "a315f41ec7250097fa6073b5ef4773e45758578f",
+        "repo": "goblins",
+        "type": "github"
+      }
+    },
     "gray-code": {
       "flake": false,
       "locked": {
@@ -801,6 +818,7 @@
         "flat": "flat",
         "ghc-typelits-knownnat": "ghc-typelits-knownnat",
         "ghc-typelits-natnormalise": "ghc-typelits-natnormalise",
+        "goblins": "goblins",
         "gray-code": "gray-code",
         "haskell-flake": "haskell-flake",
         "horizon-platform": "horizon-platform",

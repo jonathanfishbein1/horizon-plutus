@@ -44,6 +44,8 @@ final: prev: with pkgs.haskell.lib;
 
   fin = doJailbreak prev.fin;
 
+  generic-monoid = doJailbreak (prev.callHackage "generic-monoid" "0.1.0.1" {});
+
   ghc-typelits-knownnat = prev.callCabal2nix "ghc-typelits-knownnat" inputs.ghc-typelits-knownnat {};
 
   ghc-typelits-natnormalise = prev.callCabal2nix "ghc-typelits-natnormalise" inputs.ghc-typelits-natnormalise {};

@@ -34,6 +34,8 @@ final: prev: with pkgs.haskell.lib;
 
   cardano-crypto-praos = doDevbreak (addPkgconfigDepend (prev.callCabal2nix "cardano-crypto-praos" (inputs.cardano-base + /cardano-crypto-praos) {}) pkgs.libsodium);
 
+  cardano-crypto-wrapper = doJailbreak (prev.callCabal2nix "cardano-crypto-wrapper" (inputs.cardano-ledger + /eras/byron/crypto) {});
+
   cardano-prelude = enableCabalFlag (doJailbreak (prev.callCabal2nix "cardano-prelude" (inputs.cardano-prelude + /cardano-prelude) {})) "development";
 
   cardano-prelude-test = dontHaddock (prev.callCabal2nix "cardano-prelude-test" (inputs.cardano-prelude + /cardano-prelude-test) {});

@@ -118,11 +118,11 @@
     "cardano-ledger": {
       "flake": false,
       "locked": {
-        "lastModified": 1665487672,
-        "narHash": "sha256-DcD7kLp7WJj2Pf01kR/nqFeEYSQCW/QhxpQhx4jxDIE=",
+        "lastModified": 1665957020,
+        "narHash": "sha256-X6wDKTzbxwU8PagnXx979y74cenJDUkJbJyVF8xsQsM=",
         "owner": "milloni",
         "repo": "cardano-ledger",
-        "rev": "5150d61189363c9ee5e652cc0daabb954ae8b117",
+        "rev": "23751e07daf353fc8eb730450906d2830dd1a4d6",
         "type": "github"
       },
       "original": {

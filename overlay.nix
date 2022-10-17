@@ -34,6 +34,10 @@ final: prev: with pkgs.haskell.lib;
 
   cardano-crypto-praos = doDevbreak (addPkgconfigDepend (prev.callCabal2nix "cardano-crypto-praos" (inputs.cardano-base + /cardano-crypto-praos) {}) pkgs.libsodium);
 
+  cardano-crypto-test = doJailbreak (prev.callCabal2nix "cardano-crypto-test" (inputs.cardano-ledger + /eras/byron/crypto/test) {});
+
+  cardano-crypto-wrapper = doJailbreak (prev.callCabal2nix "cardano-crypto-wrapper" (inputs.cardano-ledger + /eras/byron/crypto) {});
+
   cardano-prelude = enableCabalFlag (doJailbreak (prev.callCabal2nix "cardano-prelude" (inputs.cardano-prelude + /cardano-prelude) {})) "development";
 
   cardano-prelude-test = dontHaddock (prev.callCabal2nix "cardano-prelude-test" (inputs.cardano-prelude + /cardano-prelude-test) {});
@@ -43,6 +47,8 @@ final: prev: with pkgs.haskell.lib;
   flat = dontCheck (prev.callCabal2nix "flat" inputs.flat { });
 
   fin = doJailbreak prev.fin;
+
+  generic-monoid = doJailbreak (prev.callHackage "generic-monoid" "0.1.0.1" {});
 
   ghc-typelits-knownnat = prev.callCabal2nix "ghc-typelits-knownnat" inputs.ghc-typelits-knownnat {};
 
@@ -96,6 +102,8 @@ final: prev: with pkgs.haskell.lib;
   small-steps = doJailbreak (prev.callCabal2nix "small-steps" (inputs.cardano-ledger + /libs/small-steps) {});
 
   small-steps-test = doJailbreak (prev.callCabal2nix "small-steps-test" (inputs.cardano-ledger + /libs/small-steps-test) {});
+
+  streaming-bytestring = doJailbreak (prev.callHackage "streaming-bytestring" "0.2.4" {});
 
   strict-containers = dontCheck (doJailbreak (prev.callCabal2nix "strict-containers" (inputs.strict-containers + /strict-containers) {}));
 

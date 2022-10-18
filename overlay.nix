@@ -38,6 +38,8 @@ final: prev: with pkgs.haskell.lib;
 
   cardano-crypto-wrapper = doJailbreak (prev.callCabal2nix "cardano-crypto-wrapper" (inputs.cardano-ledger + /eras/byron/crypto) {});
 
+  cardano-ledger-byron = dontCheck (doJailbreak (prev.callCabal2nix "cardano-ledger-byron" (inputs.cardano-ledger + /eras/byron/ledger/impl) {}));
+
   cardano-prelude = enableCabalFlag (doJailbreak (prev.callCabal2nix "cardano-prelude" (inputs.cardano-prelude + /cardano-prelude) {})) "development";
 
   cardano-prelude-test = dontHaddock (prev.callCabal2nix "cardano-prelude-test" (inputs.cardano-prelude + /cardano-prelude-test) {});

@@ -1,122 +1,90 @@
-{ inputs, pkgs }:
-final: prev: with pkgs.haskell.lib; 
-  let doDevbreak = x: enableCabalFlag (dontCheck (doJailbreak x)) "development";
- in
- {
+{pkgs, ...}:
 
-  PyF = prev.callHackage "PyF" "0.11.0.0" { };
+final: prev: with pkgs.haskell.lib; {
+    PyF = prev.callPackage (./pkgs/PyF.nix) { };
 
-  Unique = dontCheck (doJailbreak (prev.callHackage "Unique" "0.4.7.9" {}));
+    Unique = prev.callPackage (./pkgs/Unique.nix) { };
 
-  algebraic-graphs = prev.callHackage "algebraic-graphs" "0.7" {};
+    algebraic-graphs = prev.callPackage (./pkgs/algebraic-graphs.nix) { };
 
-  bin = doJailbreak prev.bin;
+    base64-bytestring-type = prev.callPackage (./pkgs/base64-bytestring-type.nix) { };
 
-  base16 = doJailbreak (dontCheck prev.base16);
+    bech32 = prev.callPackage (./pkgs/bech32.nix) { };
 
-  base64-bytestring-type = doJailbreak (prev.callHackage "base64-bytestring-type" "1.0.1" {});
+    byron-spec-chain = prev.callPackage (./pkgs/byron-spec-chain.nix) { };
 
-  bech32 = dontCheck (prev.callHackage "bech32" "1.1.2" { });
+    byron-spec-ledger = prev.callPackage (./pkgs/byron-spec-ledger.nix) { };
 
-  byron-spec-chain = doJailbreak (prev.callCabal2nix "byron-spec-chain" (inputs.cardano-ledger + /eras/byron/chain/executable-spec) {});
+    canonical-json = prev.callPackage (./pkgs/canonical-json.nix) { };
 
-  byron-spec-ledger = doJailbreak (prev.callCabal2nix "byron-spec-ledger" (inputs.cardano-ledger + /eras/byron/ledger/executable-spec) {});
+    cardano-binary = prev.callPackage (./pkgs/cardano-binary.nix) { };
 
-  canonical-json = dontCheck (doJailbreak (prev.callHackage "canonical-json" "0.6.0.1" {}));
+    cardano-binary-test = prev.callPackage (./pkgs/cardano-binary-test.nix) { };
 
-  cardano-binary = doDevbreak (prev.callCabal2nix "cardano-binary" (inputs.cardano-base + /binary) {});
+    cardano-crypto = prev.callPackage (./pkgs/cardano-crypto.nix) { };
 
-  cardano-binary-test = doJailbreak (prev.callCabal2nix "cardano-binary-test" (inputs.cardano-base + /binary/test) {});
+    cardano-crypto-class = prev.callPackage (./pkgs/cardano-crypto-class.nix) { };
 
-  cardano-crypto = prev.callCabal2nix "cardano-crypto" inputs.cardano-crypto { };
+    cardano-crypto-praos = prev.callPackage (./pkgs/cardano-crypto-praos.nix) { };
 
-  cardano-crypto-class = doDevbreak (addPkgconfigDepend (prev.callCabal2nix "cardano-crypto-class" (inputs.cardano-base + /cardano-crypto-class) {}) pkgs.libsodium);
+    cardano-crypto-test = prev.callPackage (./pkgs/cardano-crypto-test.nix) { };
 
-  cardano-crypto-praos = doDevbreak (addPkgconfigDepend (prev.callCabal2nix "cardano-crypto-praos" (inputs.cardano-base + /cardano-crypto-praos) {}) pkgs.libsodium);
+    cardano-crypto-wrapper = prev.callPackage (./pkgs/cardano-crypto-wrapper.nix) { };
 
-  cardano-crypto-test = doJailbreak (prev.callCabal2nix "cardano-crypto-test" (inputs.cardano-ledger + /eras/byron/crypto/test) {});
+    cardano-ledger-byron = prev.callPackage (./pkgs/cardano-ledger-byron.nix) { };
 
-  cardano-crypto-wrapper = doJailbreak (prev.callCabal2nix "cardano-crypto-wrapper" (inputs.cardano-ledger + /eras/byron/crypto) {});
+    cardano-prelude = prev.callPackage (./pkgs/cardano-prelude.nix) { };
 
-  cardano-ledger-byron = dontCheck (doJailbreak (prev.callCabal2nix "cardano-ledger-byron" (inputs.cardano-ledger + /eras/byron/ledger/impl) {}));
+    cardano-prelude-test = prev.callPackage (./pkgs/cardano-prelude-test.nix) { };
 
-  cardano-prelude = enableCabalFlag (doJailbreak (prev.callCabal2nix "cardano-prelude" (inputs.cardano-prelude + /cardano-prelude) {})) "development";
+    cardano-strict-containers = prev.callPackage (./pkgs/cardano-strict-containers.nix) { };
 
-  cardano-prelude-test = dontHaddock (prev.callCabal2nix "cardano-prelude-test" (inputs.cardano-prelude + /cardano-prelude-test) {});
+    flat = prev.callPackage (./pkgs/flat.nix) { };
 
-  cardano-strict-containers = enableCabalFlag (prev.callCabal2nix "cardano-strict-containers" (inputs.cardano-base + /cardano-strict-containers) {}) "development";
+    generic-monoid = prev.callPackage (./pkgs/generic-monoid.nix) { };
 
-  flat = dontCheck (prev.callCabal2nix "flat" inputs.flat { });
+    ghc-typelits-knownnat = prev.callPackage (./pkgs/ghc-typelits-knownnat.nix) { };
 
-  fin = doJailbreak prev.fin;
+    ghc-typelits-natnormalise = prev.callPackage (./pkgs/ghc-typelits-natnormalise.nix) { };
 
-  generic-monoid = doJailbreak (prev.callHackage "generic-monoid" "0.1.0.1" {});
+    goblins = prev.callPackage (./pkgs/goblins.nix) { };
 
-  ghc-typelits-knownnat = prev.callCabal2nix "ghc-typelits-knownnat" inputs.ghc-typelits-knownnat {};
+    gray-code = prev.callPackage (./pkgs/gray-code.nix) { };
 
-  ghc-typelits-natnormalise = prev.callCabal2nix "ghc-typelits-natnormalise" inputs.ghc-typelits-natnormalise {};
+    heapwords = prev.callPackage (./pkgs/heapwords.nix) { };
 
-  goblins = doJailbreak (prev.callCabal2nix "goblins" inputs.goblins {});
+    inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
 
-  gray-code = prev.callCabal2nix "gray-code" inputs.gray-code {};
+    jsaddle = prev.callPackage (./pkgs/jsaddle.nix) { };
 
-  heapwords = enableCabalFlag (prev.callCabal2nix "heapwords" (inputs.cardano-base + /heapwords) {}) "development";
+    moo = prev.callPackage (./pkgs/moo.nix) { };
 
-  inline-r = doJailbreak (prev.callCabal2nix "inline-r" (inputs.HaskellR + /inline-r) {});
+    nothunks = prev.callPackage (./pkgs/nothunks.nix) { };
 
-  jsaddle = doJailbreak (prev.callHackage "jsaddle" "0.9.8.2" { });
+    plutus-core = prev.callPackage (./pkgs/plutus-core.nix) { };
 
-  microstache = doJailbreak prev.microstache;
+    prettyprinter-configurable = prev.callPackage (./pkgs/prettyprinter-configurable.nix) { };
 
-  monoidal-containers = doJailbreak prev.monoidal-containers;
+    protolude = prev.callPackage (./pkgs/protolude.nix) { };
 
-  moo = dontCheck (prev.callCabal2nix "moo" inputs.moo {});
+    ral = prev.callPackage (./pkgs/ral.nix) { };
 
-  multiset = dontCheck prev.multiset;
+    recursion-schemes = prev.callPackage (./pkgs/recursion-schemes.nix) { };
 
-  nonempty-vector = doJailbreak (dontCheck prev.nonempty-vector);
+    ref-tf = prev.callPackage (./pkgs/ref-tf.nix) { };
 
-#  nothunks = dontCheck (prev.callHackage "nothunks" "0.1.3" { });
-  nothunks = dontCheck (doJailbreak (prev.callCabal2nix "nothunks" inputs.nothunks { }));
+    singletons-th = prev.callPackage (./pkgs/singletons-th.nix) { };
 
-  prettyprinter-configurable = dontCheck (prev.callCabal2nix "prettyprinter-configurable" (inputs.plutus + /prettyprinter-configurable) {});
+    small-steps = prev.callPackage (./pkgs/small-steps.nix) { };
 
-  plutus-core = setBuildTarget (disableLibraryProfiling (dontBenchmark (dontCheck (doJailbreak (prev.callCabal2nix "plutus-core" (inputs.plutus + /plutus-core) {}))))) "plc";
+    small-steps-test = prev.callPackage (./pkgs/small-steps-test.nix) { };
 
-  plutus-ledger-api = disableLibraryProfiling (dontBenchmark (dontCheck (doJailbreak (prev.callCabal2nix "plutus-ledger-api" (inputs.plutus + /plutus-ledger-api) {}))));
+    streaming-bytestring = prev.callPackage (./pkgs/streaming-bytestring.nix) { };
 
-  plutus-tx = disableLibraryProfiling (dontBenchmark (dontCheck (doJailbreak (prev.callCabal2nix "plutus-tx" (inputs.plutus + /plutus-tx) {}))));
+    strict-containers = prev.callPackage (./pkgs/strict-containers.nix) { };
 
-  protolude = doJailbreak (prev.callHackage "protolude" "0.3.2" { });
+    th-desugar = prev.callPackage (./pkgs/th-desugar.nix) { };
 
-  ral = doJailbreak (prev.callHackage "ral" "0.1" { });
-
-  recursion-schemes = doJailbreak (prev.callHackage "recursion-schemes" "5.2.2.2" { });
-
-  ref-tf = prev.callHackage "ref-tf" "0.5.0.1" { };
-
-  secp256k1 = pkgs.secp256k1;
-
-  secp256k1-haskell = addPkgconfigDepend (dontCheck (prev.secp256k1-haskell)) pkgs.secp256k1;
-
-  singletons-th = prev.callHackage "singletons-th" "3.1.1" { };
-
-  small-steps = doJailbreak (prev.callCabal2nix "small-steps" (inputs.cardano-ledger + /libs/small-steps) {});
-
-  small-steps-test = doJailbreak (prev.callCabal2nix "small-steps-test" (inputs.cardano-ledger + /libs/small-steps-test) {});
-
-  streaming-bytestring = doJailbreak (prev.callHackage "streaming-bytestring" "0.2.4" {});
-
-  strict-containers = dontCheck (doJailbreak (prev.callCabal2nix "strict-containers" (inputs.strict-containers + /strict-containers) {}));
-
-  th-extras = doJailbreak prev.th-extras;
-
-  th-desugar = prev.callHackage "th-desugar" "1.14" {};
-
-  typerep-map = doJailbreak (prev.callCabal2nix "typerep-map" inputs.typerep-map {});
-
-  vector-binary-instances = doJailbreak prev.vector-binary-instances;
-
-  word-array = prev.callCabal2nix "word-array" (inputs.plutus + /word-array) {};
+    typerep-map = prev.callPackage (./pkgs/typerep-map.nix) { };
 
 }

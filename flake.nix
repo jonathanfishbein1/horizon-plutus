@@ -1,91 +1,28 @@
 {
   inputs = {
-    all-cabal-hashes = {
-      url = "github:commercialhaskell/all-cabal-hashes?ref=hackage";
-      flake = false;
-    };
-    cardano-base = {
-      url = "github:input-output-hk/cardano-base";
-      flake = false;
-    };
-    cardano-crypto = {
-      url = "github:input-output-hk/cardano-crypto/07397f0e50da97eaa0575d93bee7ac4b2b2576ec";
-      flake = false;
-    };
-    cardano-ledger = {
-      url = "github:milloni/cardano-ledger?ref=milloni/horizon";
-      flake = false;
-    };
-    cardano-prelude = {
-      url = "github:input-output-hk/cardano-prelude";
-      flake = false;
-    };
-    flat = {
-      url = "github:Quid2/flat";
-      flake = false;
-    };
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
-    ghc-typelits-knownnat = {
-      url = "github:clash-lang/ghc-typelits-knownnat?ref=941-support";
-      flake = false;
-    };
-    ghc-typelits-natnormalise = {
-      url = "github:clash-lang/ghc-typelits-natnormalise";
-      flake = false;
-    };
-    goblins = {
-      url = "github:newhoggy/goblins?ref=a315f41ec7250097fa6073b5ef4773e45758578f";
-      flake = false;
-    };
-    gray-code = {
-      url = "github:milloni/gray-code-0.3.1?ref=milloni/fix-quicktest";
-      flake = false;
-    };
     haskell-flake.url = "github:srid/haskell-flake";
     horizon-platform = {
       url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
     };
-    HaskellR = {
-      url = "github:tweag/HaskellR";
-      flake = false;
-    };
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
-    moo = {
-      url = "github:milloni/moo?ref=milloni/build-fix";
-      flake = false;
-    };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
-    nothunks = {
-      url = "github:locallycompact/nothunks";
-      flake = false;
-    };
-    plutus = {
-      url = "github:milloni/plutus?ref=milloni/ghc942";
-      flake = false;
-    };
-    strict-containers = {
-      url = "github:milloni/strict-containers?ref=milloni/fix";
-      flake = false;
-    };
-    typerep-map = {
-      url = "github:parsonsmatt/typerep-map?ref=75b7cd5d45986be07420a6821d352ad2adc0b697";
-      flake = false;
-    };
+    horizon-gen-nix.url = "git+https://gitlab.homotopic.tech/horizon/horizon-gen-nix";
   };
-  outputs = inputs@{ self, nixpkgs, nixpkgs-libR, horizon-platform, flake-utils, lint-utils, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-libR, horizon-gen-nix, horizon-platform, flake-utils, lint-utils, ... }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
-        overlay-ach = final: prev: { all-cabal-hashes = inputs.all-cabal-hashes; };
         pkgs-libR = import nixpkgs-libR { inherit system; };
-        pkgs = import nixpkgs { inherit system; overlays = [ overlay-ach (final: prev: { R = pkgs-libR.R; })];};
+        pkgs = import nixpkgs { inherit system; };
 
         overrides-hp = final: prev:
           (horizon-platform.overrides.${system}.ghc942 final prev
             // (import ./overlay.nix { inherit inputs pkgs; } final prev));
+        configuration = import ./configuration.nix { inherit inputs pkgs pkgs-libR; };
         hp = pkgs.haskell.packages.ghc942.override {
-          overrides = overrides-hp;
+          overrides = pkgs.lib.composeManyExtensions [overrides-hp configuration];
         };
         hp' = pkgs.lib.filterAttrs
           (n: v: v != null
@@ -96,7 +33,14 @@
           hp;
       in
       {
+        apps = {
+          horizon-gen-nix = {
+            type = "app";
+            program = "${horizon-gen-nix.outputs.packages.x86_64-linux.default}/bin/horizon-gen-nix";
+          };
+        };
         checks = {
+          dhall-format = lint-utils.outputs.linters.linters.x86_64-linux.dhall-format ./.;
           nixpkgs-fmt = lint-utils.outputs.linters.x86_64-linux.nixpkgs-fmt ./.;
         };
         overrides.ghc942 = overrides-hp;

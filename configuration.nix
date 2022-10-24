@@ -12,6 +12,12 @@ final: prev: {
 
   cardano-prelude = enableCabalFlag prev.cardano-prelude "development";
 
+  microstache = doJailbreak prev.microstache;
+
+  monoidal-containers = doJailbreak prev.monoidal-containers;
+
+  nonempty-vector = dontCheck (doJailbreak prev.nonempty-vector);
+
   secp256k1 = pkgs.secp256k1;
 
 }

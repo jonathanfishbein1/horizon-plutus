@@ -145,7 +145,6 @@ in  [ callHackage "PyF" "0.11.0.0"
         "https://github.com/tweag/HaskellR"
         (Some "fe9b5bd06cd4d3988e47b9933b11d83b6108e255")
         (Some "inline-r")
-    , callHackage "jsaddle" "0.9.8.2"
     , callCabal2nix
         "moo"
         "https://github.com/milloni/moo"

@@ -55,8 +55,6 @@ final: prev: with pkgs.haskell.lib; {
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
 
-  jsaddle = prev.callPackage (./pkgs/jsaddle.nix) { };
-
   moo = prev.callPackage (./pkgs/moo.nix) { };
 
   nothunks = prev.callPackage (./pkgs/nothunks.nix) { };

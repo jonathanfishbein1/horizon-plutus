@@ -61,6 +61,10 @@ final: prev: with pkgs.haskell.lib; {
 
   plutus-core = prev.callPackage (./pkgs/plutus-core.nix) { };
 
+  plutus-ledger-api = prev.callPackage (./pkgs/plutus-ledger-api.nix) { };
+
+  plutus-tx = prev.callPackage (./pkgs/plutus-tx.nix) { };
+
   prettyprinter-configurable = prev.callPackage (./pkgs/prettyprinter-configurable.nix) { };
 
   protolude = prev.callPackage (./pkgs/protolude.nix) { };
@@ -84,5 +88,7 @@ final: prev: with pkgs.haskell.lib; {
   th-desugar = prev.callPackage (./pkgs/th-desugar.nix) { };
 
   typerep-map = prev.callPackage (./pkgs/typerep-map.nix) { };
+
+  word-array = prev.callPackage (./pkgs/word-array.nix) { };
 
 }

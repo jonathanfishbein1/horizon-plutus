@@ -102,12 +102,12 @@ in  [ callHackage "PyF" "0.11.0.0"
     , callCabal2nix
         "cardano-prelude"
         "https://github.com/input-output-hk/cardano-prelude"
-        (None Text)
+        (Some "b6053a23f53acd5c519cc559c3861dda3ebf8b35")
         (Some "cardano-prelude")
     , callCabal2nix
         "cardano-prelude-test"
         "https://github.com/input-output-hk/cardano-prelude"
-        (None Text)
+        (Some "b6053a23f53acd5c519cc559c3861dda3ebf8b35")
         (Some "cardano-prelude-test")
     , callCabal2nix
         "flat"
@@ -161,6 +161,16 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")
         (Some "plutus-core")
     , callCabal2nix
+        "plutus-ledger-api"
+        "https://github.com/milloni/plutus"
+        (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")
+        (Some "plutus-ledger-api")
+    , callCabal2nix
+        "plutus-tx"
+        "https://github.com/milloni/plutus"
+        (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")
+        (Some "plutus-tx")
+    , callCabal2nix
         "prettyprinter-configurable"
         "https://github.com/milloni/plutus"
         (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")
@@ -192,4 +202,9 @@ in  [ callHackage "PyF" "0.11.0.0"
         "https://github.com/parsonsmatt/typerep-map"
         (Some "75b7cd5d45986be07420a6821d352ad2adc0b697")
         (None Text)
+    , callCabal2nix
+        "word-array"
+        "https://github.com/milloni/plutus"
+        (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")
+        (Some "word-array")
     ]

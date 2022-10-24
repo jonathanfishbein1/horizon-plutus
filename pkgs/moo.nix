@@ -1,6 +1,19 @@
-{ mkDerivation, array, base, containers, fetchgit, gray-code, HUnit
-, lib, mersenne-random-pure64, MonadRandom, mtl, parallel, random
-, random-shuffle, time, vector
+{ mkDerivation
+, array
+, base
+, containers
+, fetchgit
+, gray-code
+, HUnit
+, lib
+, mersenne-random-pure64
+, MonadRandom
+, mtl
+, parallel
+, random
+, random-shuffle
+, time
+, vector
 }:
 mkDerivation {
   pname = "moo";
@@ -12,12 +25,33 @@ mkDerivation {
     fetchSubmodules = true;
   };
   libraryHaskellDepends = [
-    array base containers gray-code mersenne-random-pure64 MonadRandom
-    mtl parallel random random-shuffle time vector
+    array
+    base
+    containers
+    gray-code
+    mersenne-random-pure64
+    MonadRandom
+    mtl
+    parallel
+    random
+    random-shuffle
+    time
+    vector
   ];
   testHaskellDepends = [
-    array base containers gray-code HUnit mersenne-random-pure64
-    MonadRandom mtl parallel random random-shuffle time vector
+    array
+    base
+    containers
+    gray-code
+    HUnit
+    mersenne-random-pure64
+    MonadRandom
+    mtl
+    parallel
+    random
+    random-shuffle
+    time
+    vector
   ];
   doHaddock = false;
   jailbreak = true;

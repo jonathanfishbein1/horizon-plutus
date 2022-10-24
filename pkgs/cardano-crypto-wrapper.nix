@@ -1,9 +1,29 @@
-{ mkDerivation, aeson, base, base16-bytestring, base64-bytestring
-, base64-bytestring-type, binary, bytestring, canonical-json
-, cardano-binary, cardano-binary-test, cardano-crypto
-, cardano-prelude, cardano-prelude-test, cryptonite, data-default
-, fetchgit, filepath, formatting, heapwords, hedgehog, lib, memory
-, mtl, nothunks, text
+{ mkDerivation
+, aeson
+, base
+, base16-bytestring
+, base64-bytestring
+, base64-bytestring-type
+, binary
+, bytestring
+, canonical-json
+, cardano-binary
+, cardano-binary-test
+, cardano-crypto
+, cardano-prelude
+, cardano-prelude-test
+, cryptonite
+, data-default
+, fetchgit
+, filepath
+, formatting
+, heapwords
+, hedgehog
+, lib
+, memory
+, mtl
+, nothunks
+, text
 }:
 mkDerivation {
   pname = "cardano-crypto-wrapper";
@@ -17,15 +37,40 @@ mkDerivation {
   postUnpack = "sourceRoot+=/eras/byron/crypto/; echo source root reset to $sourceRoot";
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson base base16-bytestring base64-bytestring
-    base64-bytestring-type binary bytestring canonical-json
-    cardano-binary cardano-crypto cardano-prelude cryptonite
-    data-default formatting heapwords memory mtl nothunks text
+    aeson
+    base
+    base16-bytestring
+    base64-bytestring
+    base64-bytestring-type
+    binary
+    bytestring
+    canonical-json
+    cardano-binary
+    cardano-crypto
+    cardano-prelude
+    cryptonite
+    data-default
+    formatting
+    heapwords
+    memory
+    mtl
+    nothunks
+    text
   ];
   testHaskellDepends = [
-    base bytestring cardano-binary cardano-binary-test cardano-crypto
-    cardano-prelude cardano-prelude-test cryptonite filepath formatting
-    hedgehog memory text
+    base
+    bytestring
+    cardano-binary
+    cardano-binary-test
+    cardano-crypto
+    cardano-prelude
+    cardano-prelude-test
+    cryptonite
+    filepath
+    formatting
+    hedgehog
+    memory
+    text
   ];
   doHaddock = false;
   jailbreak = true;

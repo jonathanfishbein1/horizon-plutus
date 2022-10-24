@@ -1,15 +1,33 @@
-{ mkDerivation, array, base, containers, deepseq, extra
-, inspection-testing, lib, QuickCheck, transformers
+{ mkDerivation
+, array
+, base
+, containers
+, deepseq
+, extra
+, inspection-testing
+, lib
+, QuickCheck
+, transformers
 }:
 mkDerivation {
   pname = "algebraic-graphs";
   version = "0.7";
   sha256 = "51159a0d18690ab51e6709e3c576275402f96f57d901f87d734da6854582e568";
   libraryHaskellDepends = [
-    array base containers deepseq transformers
+    array
+    base
+    containers
+    deepseq
+    transformers
   ];
   testHaskellDepends = [
-    array base containers deepseq extra inspection-testing QuickCheck
+    array
+    base
+    containers
+    deepseq
+    extra
+    inspection-testing
+    QuickCheck
     transformers
   ];
   doHaddock = false;

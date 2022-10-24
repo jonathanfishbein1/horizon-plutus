@@ -1,6 +1,20 @@
-{ mkDerivation, base, bytestring, deepseq, filepath, ghc, ghc-boot
-, hspec, HUnit, lib, mtl, parsec, process, template-haskell
-, temporary, text, time
+{ mkDerivation
+, base
+, bytestring
+, deepseq
+, filepath
+, ghc
+, ghc-boot
+, hspec
+, HUnit
+, lib
+, mtl
+, parsec
+, process
+, template-haskell
+, temporary
+, text
+, time
 }:
 mkDerivation {
   pname = "PyF";
@@ -9,11 +23,28 @@ mkDerivation {
   revision = "1";
   editedCabalFile = "091gbpmwhzvkmsk1kpsczwqb02vyw3603mqxflrajg9h2idgsdkd";
   libraryHaskellDepends = [
-    base bytestring ghc ghc-boot mtl parsec template-haskell text time
+    base
+    bytestring
+    ghc
+    ghc-boot
+    mtl
+    parsec
+    template-haskell
+    text
+    time
   ];
   testHaskellDepends = [
-    base bytestring deepseq filepath hspec HUnit process
-    template-haskell temporary text time
+    base
+    bytestring
+    deepseq
+    filepath
+    hspec
+    HUnit
+    process
+    template-haskell
+    temporary
+    text
+    time
   ];
   doHaddock = false;
   jailbreak = true;

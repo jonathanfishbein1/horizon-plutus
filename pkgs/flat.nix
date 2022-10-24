@@ -1,8 +1,28 @@
-{ mkDerivation, array, base, bytestring, containers, deepseq, dlist
-, fetchgit, filepath, ghc-prim, hashable, lib, list-t
-, mono-traversable, pretty, primitive, QuickCheck, quickcheck-text
-, tasty, tasty-hunit, tasty-quickcheck, text, timeit
-, unordered-containers, vector
+{ mkDerivation
+, array
+, base
+, bytestring
+, containers
+, deepseq
+, dlist
+, fetchgit
+, filepath
+, ghc-prim
+, hashable
+, lib
+, list-t
+, mono-traversable
+, pretty
+, primitive
+, QuickCheck
+, quickcheck-text
+, tasty
+, tasty-hunit
+, tasty-quickcheck
+, text
+, timeit
+, unordered-containers
+, vector
 }:
 mkDerivation {
   pname = "flat";
@@ -14,14 +34,42 @@ mkDerivation {
     fetchSubmodules = true;
   };
   libraryHaskellDepends = [
-    array base bytestring containers deepseq dlist ghc-prim hashable
-    list-t mono-traversable pretty primitive text unordered-containers
+    array
+    base
+    bytestring
+    containers
+    deepseq
+    dlist
+    ghc-prim
+    hashable
+    list-t
+    mono-traversable
+    pretty
+    primitive
+    text
+    unordered-containers
     vector
   ];
   testHaskellDepends = [
-    array base bytestring containers deepseq dlist filepath ghc-prim
-    list-t mono-traversable pretty QuickCheck quickcheck-text tasty
-    tasty-hunit tasty-quickcheck text timeit unordered-containers
+    array
+    base
+    bytestring
+    containers
+    deepseq
+    dlist
+    filepath
+    ghc-prim
+    list-t
+    mono-traversable
+    pretty
+    QuickCheck
+    quickcheck-text
+    tasty
+    tasty-hunit
+    tasty-quickcheck
+    text
+    timeit
+    unordered-containers
     vector
   ];
   doHaddock = false;

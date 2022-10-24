@@ -1,6 +1,16 @@
-{ mkDerivation, base, fetchgit, ghc, ghc-prim, ghc-tcplugins-extra
-, ghc-typelits-natnormalise, lib, tasty, tasty-hunit
-, tasty-quickcheck, template-haskell, transformers
+{ mkDerivation
+, base
+, fetchgit
+, ghc
+, ghc-prim
+, ghc-tcplugins-extra
+, ghc-typelits-natnormalise
+, lib
+, tasty
+, tasty-hunit
+, tasty-quickcheck
+, template-haskell
+, transformers
 }:
 mkDerivation {
   pname = "ghc-typelits-knownnat";
@@ -12,11 +22,20 @@ mkDerivation {
     fetchSubmodules = true;
   };
   libraryHaskellDepends = [
-    base ghc ghc-prim ghc-tcplugins-extra ghc-typelits-natnormalise
-    template-haskell transformers
+    base
+    ghc
+    ghc-prim
+    ghc-tcplugins-extra
+    ghc-typelits-natnormalise
+    template-haskell
+    transformers
   ];
   testHaskellDepends = [
-    base ghc-typelits-natnormalise tasty tasty-hunit tasty-quickcheck
+    base
+    ghc-typelits-natnormalise
+    tasty
+    tasty-hunit
+    tasty-quickcheck
   ];
   doHaddock = false;
   jailbreak = true;

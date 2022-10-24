@@ -1,10 +1,44 @@
-{ mkDerivation, aeson, base, bytestring, containers, criterion
-, data-default-class, deepseq, directory, exceptions, fetchgit
-, filepath, heredoc, ieee754, inline-c, lib, mtl, pretty, primitive
-, process, quickcheck-assertions, R, reflection, setenv, silently
-, singletons, singletons-th, strict, tasty, tasty-expected-failure
-, tasty-golden, tasty-hunit, tasty-quickcheck, template-haskell
-, temporary, text, th-lift, th-orphans, transformers, unix, vector
+{ mkDerivation
+, aeson
+, base
+, bytestring
+, containers
+, criterion
+, data-default-class
+, deepseq
+, directory
+, exceptions
+, fetchgit
+, filepath
+, heredoc
+, ieee754
+, inline-c
+, lib
+, mtl
+, pretty
+, primitive
+, process
+, quickcheck-assertions
+, R
+, reflection
+, setenv
+, silently
+, singletons
+, singletons-th
+, strict
+, tasty
+, tasty-expected-failure
+, tasty-golden
+, tasty-hunit
+, tasty-quickcheck
+, template-haskell
+, temporary
+, text
+, th-lift
+, th-orphans
+, transformers
+, unix
+, vector
 }:
 mkDerivation {
   pname = "inline-r";
@@ -17,21 +51,66 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/inline-r/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    aeson base bytestring containers data-default-class deepseq
-    exceptions heredoc inline-c mtl pretty primitive process reflection
-    setenv singletons singletons-th template-haskell temporary text
-    th-lift th-orphans transformers unix vector
+    aeson
+    base
+    bytestring
+    containers
+    data-default-class
+    deepseq
+    exceptions
+    heredoc
+    inline-c
+    mtl
+    pretty
+    primitive
+    process
+    reflection
+    setenv
+    singletons
+    singletons-th
+    template-haskell
+    temporary
+    text
+    th-lift
+    th-orphans
+    transformers
+    unix
+    vector
   ];
   libraryPkgconfigDepends = [ R ];
   testHaskellDepends = [
-    base bytestring directory filepath heredoc ieee754 mtl process
-    quickcheck-assertions silently singletons strict tasty
-    tasty-expected-failure tasty-golden tasty-hunit tasty-quickcheck
-    template-haskell temporary text unix vector
+    base
+    bytestring
+    directory
+    filepath
+    heredoc
+    ieee754
+    mtl
+    process
+    quickcheck-assertions
+    silently
+    singletons
+    strict
+    tasty
+    tasty-expected-failure
+    tasty-golden
+    tasty-hunit
+    tasty-quickcheck
+    template-haskell
+    temporary
+    text
+    unix
+    vector
   ];
   benchmarkHaskellDepends = [
-    base criterion filepath primitive process singletons
-    template-haskell vector
+    base
+    criterion
+    filepath
+    primitive
+    process
+    singletons
+    template-haskell
+    vector
   ];
   doHaddock = false;
   jailbreak = true;

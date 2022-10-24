@@ -1,8 +1,28 @@
-{ mkDerivation, aeson, aeson-pretty, attoparsec, base
-, base16-bytestring, bytestring, canonical-json, cardano-prelude
-, containers, cryptonite, fetchgit, formatting, ghc-heap, ghc-prim
-, hedgehog, hspec, lib, pretty-show, QuickCheck
-, quickcheck-instances, template-haskell, text, th-compat, time
+{ mkDerivation
+, aeson
+, aeson-pretty
+, attoparsec
+, base
+, base16-bytestring
+, bytestring
+, canonical-json
+, cardano-prelude
+, containers
+, cryptonite
+, fetchgit
+, formatting
+, ghc-heap
+, ghc-prim
+, hedgehog
+, hspec
+, lib
+, pretty-show
+, QuickCheck
+, quickcheck-instances
+, template-haskell
+, text
+, th-compat
+, time
 }:
 mkDerivation {
   pname = "cardano-prelude-test";
@@ -15,13 +35,35 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/cardano-prelude-test/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    aeson aeson-pretty attoparsec base base16-bytestring bytestring
-    canonical-json cardano-prelude containers cryptonite formatting
-    hedgehog hspec pretty-show QuickCheck quickcheck-instances
-    template-haskell text th-compat time
+    aeson
+    aeson-pretty
+    attoparsec
+    base
+    base16-bytestring
+    bytestring
+    canonical-json
+    cardano-prelude
+    containers
+    cryptonite
+    formatting
+    hedgehog
+    hspec
+    pretty-show
+    QuickCheck
+    quickcheck-instances
+    template-haskell
+    text
+    th-compat
+    time
   ];
   testHaskellDepends = [
-    base bytestring cardano-prelude ghc-heap ghc-prim hedgehog text
+    base
+    bytestring
+    cardano-prelude
+    ghc-heap
+    ghc-prim
+    hedgehog
+    text
   ];
   doHaddock = false;
   jailbreak = true;

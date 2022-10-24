@@ -1,5 +1,14 @@
-{ mkDerivation, array, base, bytestring, containers, fetchgit
-, ghc-prim, lib, text, time, vector
+{ mkDerivation
+, array
+, base
+, bytestring
+, containers
+, fetchgit
+, ghc-prim
+, lib
+, text
+, time
+, vector
 }:
 mkDerivation {
   pname = "heapwords";
@@ -12,7 +21,14 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/heapwords/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    array base bytestring containers ghc-prim text time vector
+    array
+    base
+    bytestring
+    containers
+    ghc-prim
+    text
+    time
+    vector
   ];
   doHaddock = false;
   jailbreak = true;

@@ -1,5 +1,15 @@
-{ mkDerivation, adjunctions, base, bin, criterion, deepseq
-, distributive, fin, hashable, lib, QuickCheck, semigroupoids
+{ mkDerivation
+, adjunctions
+, base
+, bin
+, criterion
+, deepseq
+, distributive
+, fin
+, hashable
+, lib
+, QuickCheck
+, semigroupoids
 , vector
 }:
 mkDerivation {
@@ -9,7 +19,14 @@ mkDerivation {
   revision = "2";
   editedCabalFile = "0a3ryzcmjgyp64f8s2pl95pkz8zddq9qsn76dlimg23gczf1cql4";
   libraryHaskellDepends = [
-    adjunctions base bin deepseq distributive fin hashable QuickCheck
+    adjunctions
+    base
+    bin
+    deepseq
+    distributive
+    fin
+    hashable
+    QuickCheck
     semigroupoids
   ];
   benchmarkHaskellDepends = [ base criterion vector ];

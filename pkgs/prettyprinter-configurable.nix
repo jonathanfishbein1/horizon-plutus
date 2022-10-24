@@ -1,6 +1,20 @@
-{ mkDerivation, base, Cabal, cabal-doctest, doctest, fetchgit, lib
-, megaparsec, microlens, mtl, parser-combinators, prettyprinter
-, QuickCheck, quickcheck-text, tasty, tasty-hunit, tasty-quickcheck
+{ mkDerivation
+, base
+, Cabal
+, cabal-doctest
+, doctest
+, fetchgit
+, lib
+, megaparsec
+, microlens
+, mtl
+, parser-combinators
+, prettyprinter
+, QuickCheck
+, quickcheck-text
+, tasty
+, tasty-hunit
+, tasty-quickcheck
 , text
 }:
 mkDerivation {
@@ -16,8 +30,17 @@ mkDerivation {
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [ base microlens mtl prettyprinter text ];
   testHaskellDepends = [
-    base doctest megaparsec parser-combinators prettyprinter QuickCheck
-    quickcheck-text tasty tasty-hunit tasty-quickcheck text
+    base
+    doctest
+    megaparsec
+    parser-combinators
+    prettyprinter
+    QuickCheck
+    quickcheck-text
+    tasty
+    tasty-hunit
+    tasty-quickcheck
+    text
   ];
   doHaddock = false;
   jailbreak = true;

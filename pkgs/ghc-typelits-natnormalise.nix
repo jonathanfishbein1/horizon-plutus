@@ -1,6 +1,16 @@
-{ mkDerivation, base, containers, fetchgit, ghc, ghc-bignum
-, ghc-prim, ghc-tcplugins-extra, lib, tasty, tasty-hunit
-, template-haskell, transformers
+{ mkDerivation
+, base
+, containers
+, fetchgit
+, ghc
+, ghc-bignum
+, ghc-prim
+, ghc-tcplugins-extra
+, lib
+, tasty
+, tasty-hunit
+, template-haskell
+, transformers
 }:
 mkDerivation {
   pname = "ghc-typelits-natnormalise";
@@ -12,10 +22,19 @@ mkDerivation {
     fetchSubmodules = true;
   };
   libraryHaskellDepends = [
-    base containers ghc ghc-bignum ghc-tcplugins-extra transformers
+    base
+    containers
+    ghc
+    ghc-bignum
+    ghc-tcplugins-extra
+    transformers
   ];
   testHaskellDepends = [
-    base ghc-prim tasty tasty-hunit template-haskell
+    base
+    ghc-prim
+    tasty
+    tasty-hunit
+    template-haskell
   ];
   doHaddock = false;
   jailbreak = true;

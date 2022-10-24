@@ -1,5 +1,15 @@
-{ mkDerivation, aeson, base, cardano-binary, cborg, containers
-, data-default-class, deepseq, fetchgit, fingertree, lib, nothunks
+{ mkDerivation
+, aeson
+, base
+, cardano-binary
+, cborg
+, containers
+, data-default-class
+, deepseq
+, fetchgit
+, fingertree
+, lib
+, nothunks
 , serialise
 }:
 mkDerivation {
@@ -13,8 +23,16 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/cardano-strict-containers/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    aeson base cardano-binary cborg containers data-default-class
-    deepseq fingertree nothunks serialise
+    aeson
+    base
+    cardano-binary
+    cborg
+    containers
+    data-default-class
+    deepseq
+    fingertree
+    nothunks
+    serialise
   ];
   doHaddock = false;
   jailbreak = true;

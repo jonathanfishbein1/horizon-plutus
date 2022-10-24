@@ -1,7 +1,23 @@
-{ mkDerivation, aeson, base, base16-bytestring, bytestring
-, canonical-json, cborg, containers, fetchgit, formatting, ghc-heap
-, ghc-prim, integer-gmp, lib, microlens, mtl, protolude, tagged
-, text, time
+{ mkDerivation
+, aeson
+, base
+, base16-bytestring
+, bytestring
+, canonical-json
+, cborg
+, containers
+, fetchgit
+, formatting
+, ghc-heap
+, ghc-prim
+, integer-gmp
+, lib
+, microlens
+, mtl
+, protolude
+, tagged
+, text
+, time
 }:
 mkDerivation {
   pname = "cardano-prelude";
@@ -14,9 +30,23 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/cardano-prelude/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    aeson base base16-bytestring bytestring canonical-json cborg
-    containers formatting ghc-heap ghc-prim integer-gmp microlens mtl
-    protolude tagged text time
+    aeson
+    base
+    base16-bytestring
+    bytestring
+    canonical-json
+    cborg
+    containers
+    formatting
+    ghc-heap
+    ghc-prim
+    integer-gmp
+    microlens
+    mtl
+    protolude
+    tagged
+    text
+    time
   ];
   doHaddock = false;
   jailbreak = true;

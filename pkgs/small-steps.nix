@@ -1,6 +1,17 @@
-{ mkDerivation, aeson, base, cardano-strict-containers, containers
-, data-default-class, fetchgit, free, lib, mtl, nothunks, text
-, transformers, validation-selective
+{ mkDerivation
+, aeson
+, base
+, cardano-strict-containers
+, containers
+, data-default-class
+, fetchgit
+, free
+, lib
+, mtl
+, nothunks
+, text
+, transformers
+, validation-selective
 }:
 mkDerivation {
   pname = "small-steps";
@@ -13,8 +24,17 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/libs/small-steps/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    aeson base cardano-strict-containers containers data-default-class
-    free mtl nothunks text transformers validation-selective
+    aeson
+    base
+    cardano-strict-containers
+    containers
+    data-default-class
+    free
+    mtl
+    nothunks
+    text
+    transformers
+    validation-selective
   ];
   doHaddock = false;
   jailbreak = true;

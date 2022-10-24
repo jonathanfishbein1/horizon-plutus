@@ -1,8 +1,25 @@
-{ mkDerivation, base, bimap, bytestring, cardano-binary
-, cardano-crypto-class, containers, cryptonite, fetchgit, hashable
-, hedgehog, lib, microlens, microlens-th, nothunks, small-steps
-, small-steps-test, tasty, tasty-hedgehog, tasty-hunit
-, template-haskell, Unique
+{ mkDerivation
+, base
+, bimap
+, bytestring
+, cardano-binary
+, cardano-crypto-class
+, containers
+, cryptonite
+, fetchgit
+, hashable
+, hedgehog
+, lib
+, microlens
+, microlens-th
+, nothunks
+, small-steps
+, small-steps-test
+, tasty
+, tasty-hedgehog
+, tasty-hunit
+, template-haskell
+, Unique
 }:
 mkDerivation {
   pname = "byron-spec-ledger";
@@ -15,13 +32,36 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/eras/byron/ledger/executable-spec/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    base bimap bytestring cardano-binary cardano-crypto-class
-    containers cryptonite hashable hedgehog microlens microlens-th
-    nothunks small-steps small-steps-test template-haskell Unique
+    base
+    bimap
+    bytestring
+    cardano-binary
+    cardano-crypto-class
+    containers
+    cryptonite
+    hashable
+    hedgehog
+    microlens
+    microlens-th
+    nothunks
+    small-steps
+    small-steps-test
+    template-haskell
+    Unique
   ];
   testHaskellDepends = [
-    base bimap containers hedgehog microlens microlens-th small-steps
-    small-steps-test tasty tasty-hedgehog tasty-hunit Unique
+    base
+    bimap
+    containers
+    hedgehog
+    microlens
+    microlens-th
+    small-steps
+    small-steps-test
+    tasty
+    tasty-hedgehog
+    tasty-hunit
+    Unique
   ];
   doHaddock = false;
   jailbreak = true;

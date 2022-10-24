@@ -1,8 +1,26 @@
-{ mkDerivation, base, cardano-binary, cardano-crypto-class
-, cardano-strict-containers, containers, deepseq, fetchgit
-, hedgehog, lib, microlens, microlens-th, mtl, nothunks, QuickCheck
-, small-steps, tasty, tasty-expected-failure, tasty-hedgehog
-, tasty-hunit, tasty-quickcheck, transformers, Unique
+{ mkDerivation
+, base
+, cardano-binary
+, cardano-crypto-class
+, cardano-strict-containers
+, containers
+, deepseq
+, fetchgit
+, hedgehog
+, lib
+, microlens
+, microlens-th
+, mtl
+, nothunks
+, QuickCheck
+, small-steps
+, tasty
+, tasty-expected-failure
+, tasty-hedgehog
+, tasty-hunit
+, tasty-quickcheck
+, transformers
+, Unique
 }:
 mkDerivation {
   pname = "small-steps-test";
@@ -15,14 +33,34 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/libs/small-steps-test/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    base cardano-strict-containers deepseq hedgehog microlens
-    microlens-th mtl nothunks QuickCheck small-steps tasty-hunit
+    base
+    cardano-strict-containers
+    deepseq
+    hedgehog
+    microlens
+    microlens-th
+    mtl
+    nothunks
+    QuickCheck
+    small-steps
+    tasty-hunit
     transformers
   ];
   testHaskellDepends = [
-    base cardano-binary cardano-crypto-class containers hedgehog mtl
-    QuickCheck small-steps tasty tasty-expected-failure tasty-hedgehog
-    tasty-hunit tasty-quickcheck Unique
+    base
+    cardano-binary
+    cardano-crypto-class
+    containers
+    hedgehog
+    mtl
+    QuickCheck
+    small-steps
+    tasty
+    tasty-expected-failure
+    tasty-hedgehog
+    tasty-hunit
+    tasty-quickcheck
+    Unique
   ];
   doHaddock = false;
   jailbreak = true;

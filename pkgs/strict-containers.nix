@@ -1,9 +1,30 @@
-{ mkDerivation, array, base, base-orphans, binary, ChasingBottoms
-, containers, deepseq, fetchgit, hashable, HUnit
-, indexed-traversable, lib, primitive, QuickCheck, random, strict
-, tasty, tasty-hunit, tasty-quickcheck, template-haskell
-, test-framework, test-framework-hunit, test-framework-quickcheck2
-, transformers, unordered-containers, vector
+{ mkDerivation
+, array
+, base
+, base-orphans
+, binary
+, ChasingBottoms
+, containers
+, deepseq
+, fetchgit
+, hashable
+, HUnit
+, indexed-traversable
+, lib
+, primitive
+, QuickCheck
+, random
+, strict
+, tasty
+, tasty-hunit
+, tasty-quickcheck
+, template-haskell
+, test-framework
+, test-framework-hunit
+, test-framework-quickcheck2
+, transformers
+, unordered-containers
+, vector
 , vector-binary-instances
 }:
 mkDerivation {
@@ -17,16 +38,41 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/strict-containers/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    array base binary containers deepseq hashable indexed-traversable
-    primitive strict unordered-containers vector
+    array
+    base
+    binary
+    containers
+    deepseq
+    hashable
+    indexed-traversable
+    primitive
+    strict
+    unordered-containers
+    vector
     vector-binary-instances
   ];
   testHaskellDepends = [
-    array base base-orphans ChasingBottoms containers deepseq hashable
-    HUnit primitive QuickCheck random tasty tasty-hunit
-    tasty-quickcheck template-haskell test-framework
-    test-framework-hunit test-framework-quickcheck2 transformers
-    unordered-containers vector
+    array
+    base
+    base-orphans
+    ChasingBottoms
+    containers
+    deepseq
+    hashable
+    HUnit
+    primitive
+    QuickCheck
+    random
+    tasty
+    tasty-hunit
+    tasty-quickcheck
+    template-haskell
+    test-framework
+    test-framework-hunit
+    test-framework-quickcheck2
+    transformers
+    unordered-containers
+    vector
   ];
   doHaddock = false;
   jailbreak = true;

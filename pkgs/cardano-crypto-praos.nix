@@ -1,5 +1,13 @@
-{ mkDerivation, base, bytestring, cardano-binary
-, cardano-crypto-class, deepseq, fetchgit, lib, libsodium, nothunks
+{ mkDerivation
+, base
+, bytestring
+, cardano-binary
+, cardano-crypto-class
+, deepseq
+, fetchgit
+, lib
+, libsodium
+, nothunks
 }:
 mkDerivation {
   pname = "cardano-crypto-praos";
@@ -12,7 +20,11 @@ mkDerivation {
   };
   postUnpack = "sourceRoot+=/cardano-crypto-praos/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    base bytestring cardano-binary cardano-crypto-class deepseq
+    base
+    bytestring
+    cardano-binary
+    cardano-crypto-class
+    deepseq
     nothunks
   ];
   libraryPkgconfigDepends = [ libsodium ];

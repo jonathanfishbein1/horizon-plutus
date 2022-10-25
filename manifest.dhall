@@ -100,6 +100,11 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")
         (Some "eras/byron/ledger/impl")
     , callCabal2nix
+        "cardano-slotting"
+        "https://github.com/input-output-hk/cardano-base"
+        (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
+        (Some "slotting")
+    , callCabal2nix
         "cardano-strict-containers"
         "https://github.com/input-output-hk/cardano-base"
         (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")

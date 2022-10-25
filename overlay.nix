@@ -39,6 +39,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-prelude-test = prev.callPackage (./pkgs/cardano-prelude-test.nix) { };
 
+  cardano-slotting = prev.callPackage (./pkgs/cardano-slotting.nix) { };
+
   cardano-strict-containers = prev.callPackage (./pkgs/cardano-strict-containers.nix) { };
 
   flat = prev.callPackage (./pkgs/flat.nix) { };

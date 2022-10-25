@@ -203,6 +203,11 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "75b7cd5d45986be07420a6821d352ad2adc0b697")
         (None Text)
     , callCabal2nix
+        "vector-map"
+        "https://github.com/milloni/cardano-ledger"
+        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
+        (Some "libs/vector-map")
+    , callCabal2nix
         "word-array"
         "https://github.com/milloni/plutus"
         (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")

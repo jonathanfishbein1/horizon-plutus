@@ -40,7 +40,7 @@
           };
         };
         checks = {
-          dhall-format = lint-utils.outputs.linters.linters.x86_64-linux.dhall-format ./.;
+          dhall-format = lint-utils.outputs.linters.x86_64-linux.dhall-format ./.;
           nixpkgs-fmt = lint-utils.outputs.linters.x86_64-linux.nixpkgs-fmt ./.;
         };
         overrides.ghc942 = overrides-hp;

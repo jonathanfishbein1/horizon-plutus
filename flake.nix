@@ -1,8 +1,5 @@
 {
   inputs = {
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    flake-parts.inputs.nixpkgs.follows = "nixpkgs";
-    haskell-flake.url = "github:srid/haskell-flake";
     horizon-platform = {
       url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
     };

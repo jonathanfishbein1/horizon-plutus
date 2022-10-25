@@ -183,26 +183,6 @@
     "flake-parts": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1664385320,
-        "narHash": "sha256-uSCHb9RUqHRjTpI8OzyaUuHckFnnxwZqlXEuo+yUpYQ=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "45298bd207b26e1bcd030a0bb075aa2da29f8e30",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
-      }
-    },
-    "flake-parts_2": {
-      "inputs": {
-        "nixpkgs": [
           "horizon-platform",
           "nixpkgs"
         ]
@@ -355,21 +335,6 @@
         "type": "github"
       }
     },
-    "haskell-flake": {
-      "locked": {
-        "lastModified": 1664562023,
-        "narHash": "sha256-EYpGp8IlktZUF6k6StHZ8u8XaCY0JpTuG7u3FJWyPHM=",
-        "owner": "srid",
-        "repo": "haskell-flake",
-        "rev": "c5843170f9581b33740b4c081fdf6e835720d85e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "srid",
-        "repo": "haskell-flake",
-        "type": "github"
-      }
-    },
     "haskell-src-meta": {
       "flake": false,
       "locked": {
@@ -490,7 +455,7 @@
         "double-conversion": "double-conversion",
         "ed25519": "ed25519",
         "ema": "ema",
-        "flake-parts": "flake-parts_2",
+        "flake-parts": "flake-parts",
         "flake-utils": "flake-utils_6",
         "ghc-exactprint": "ghc-exactprint",
         "haskell-src-meta": "haskell-src-meta",
@@ -781,9 +746,7 @@
     },
     "root": {
       "inputs": {
-        "flake-parts": "flake-parts",
         "flake-utils": "flake-utils",
-        "haskell-flake": "haskell-flake",
         "horizon-gen-nix": "horizon-gen-nix",
         "horizon-platform": "horizon-platform_2",
         "lint-utils": "lint-utils_4",

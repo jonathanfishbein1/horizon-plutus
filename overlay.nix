@@ -77,6 +77,8 @@ final: prev: with pkgs.haskell.lib; {
 
   ref-tf = prev.callPackage (./pkgs/ref-tf.nix) { };
 
+  set-algebra = prev.callPackage (./pkgs/set-algebra.nix) { };
+
   singletons-th = prev.callPackage (./pkgs/singletons-th.nix) { };
 
   small-steps = prev.callPackage (./pkgs/small-steps.nix) { };

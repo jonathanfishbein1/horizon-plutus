@@ -184,6 +184,11 @@ in  [ callHackage "PyF" "0.11.0.0"
     , callHackage "ral" "0.1"
     , callHackage "recursion-schemes" "5.2.2.2"
     , callHackage "ref-tf" "0.5.0.1"
+    , callCabal2nix
+        "set-algebra"
+        "https://github.com/milloni/cardano-ledger"
+        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
+        (Some "libs/set-algebra")
     , callHackage "singletons-th" "3.1.1"
     , callCabal2nix
         "small-steps"

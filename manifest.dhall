@@ -90,6 +90,11 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")
         (Some "eras/byron/crypto")
     , callCabal2nix
+        "cardano-data"
+        "https://github.com/milloni/cardano-ledger"
+        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
+        (Some "libs/cardano-data")
+    , callCabal2nix
         "cardano-ledger-byron"
         "https://github.com/milloni/cardano-ledger"
         (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")

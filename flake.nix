@@ -1,8 +1,6 @@
 {
   inputs = {
-    horizon-platform = {
-      url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
-    };
+    horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";

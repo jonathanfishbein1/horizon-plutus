@@ -161,6 +161,11 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "20e4c6ee880e7d62b18b995750063dd7349a3f8e")
         (None Text)
     , callCabal2nix
+        "non-integral"
+        "https://github.com/milloni/cardano-ledger"
+        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
+        (Some "libs/non-integral")
+    , callCabal2nix
         "nothunks"
         "https://github.com/locallycompact/nothunks"
         (Some "0d7e3565407aa4eb21d861d075dff6f20d090f97")

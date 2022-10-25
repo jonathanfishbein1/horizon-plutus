@@ -61,6 +61,8 @@ final: prev: with pkgs.haskell.lib; {
 
   moo = prev.callPackage (./pkgs/moo.nix) { };
 
+  non-integral = prev.callPackage (./pkgs/non-integral.nix) { };
+
   nothunks = prev.callPackage (./pkgs/nothunks.nix) { };
 
   plutus-core = prev.callPackage (./pkgs/plutus-core.nix) { };

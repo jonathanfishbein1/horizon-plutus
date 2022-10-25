@@ -35,6 +35,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-ledger-byron = prev.callPackage (./pkgs/cardano-ledger-byron.nix) { };
 
+  cardano-ledger-core = prev.callPackage (./pkgs/cardano-ledger-core.nix) { };
+
   cardano-prelude = prev.callPackage (./pkgs/cardano-prelude.nix) { };
 
   cardano-prelude-test = prev.callPackage (./pkgs/cardano-prelude-test.nix) { };

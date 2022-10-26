@@ -25,12 +25,17 @@
             && v.type == "derivation"
             && v.meta.broken == false)
           hp;
+        horizon-gen-gitlab-ci = pkgs.writers.writeBashBin "gen-gitlab-ci" "${pkgs.dhall-json}/bin/dhall-to-yaml --file .gitlab-ci.dhall";
       in
       {
         apps = {
           horizon-gen-nix = {
             type = "app";
             program = "${hp.horizon-gen-nix}/bin/horizon-gen-nix";
+          };
+        horizon-gen-gitlab-ci = {
+            type = "app";
+            program = "${horizon-gen-gitlab-ci}/bin/gen-gitlab-ci";
           };
         };
         checks = {

@@ -31,11 +31,19 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-crypto-wrapper = prev.callPackage (./pkgs/cardano-crypto-wrapper.nix) { };
 
+  cardano-data = prev.callPackage (./pkgs/cardano-data.nix) { };
+
   cardano-ledger-byron = prev.callPackage (./pkgs/cardano-ledger-byron.nix) { };
+
+  cardano-ledger-core = prev.callPackage (./pkgs/cardano-ledger-core.nix) { };
+
+  cardano-ledger-shelley = prev.callPackage (./pkgs/cardano-ledger-shelley.nix) { };
 
   cardano-prelude = prev.callPackage (./pkgs/cardano-prelude.nix) { };
 
   cardano-prelude-test = prev.callPackage (./pkgs/cardano-prelude-test.nix) { };
+
+  cardano-slotting = prev.callPackage (./pkgs/cardano-slotting.nix) { };
 
   cardano-strict-containers = prev.callPackage (./pkgs/cardano-strict-containers.nix) { };
 
@@ -57,6 +65,8 @@ final: prev: with pkgs.haskell.lib; {
 
   moo = prev.callPackage (./pkgs/moo.nix) { };
 
+  non-integral = prev.callPackage (./pkgs/non-integral.nix) { };
+
   nothunks = prev.callPackage (./pkgs/nothunks.nix) { };
 
   plutus-core = prev.callPackage (./pkgs/plutus-core.nix) { };
@@ -75,6 +85,8 @@ final: prev: with pkgs.haskell.lib; {
 
   ref-tf = prev.callPackage (./pkgs/ref-tf.nix) { };
 
+  set-algebra = prev.callPackage (./pkgs/set-algebra.nix) { };
+
   singletons-th = prev.callPackage (./pkgs/singletons-th.nix) { };
 
   small-steps = prev.callPackage (./pkgs/small-steps.nix) { };
@@ -88,6 +100,8 @@ final: prev: with pkgs.haskell.lib; {
   th-desugar = prev.callPackage (./pkgs/th-desugar.nix) { };
 
   typerep-map = prev.callPackage (./pkgs/typerep-map.nix) { };
+
+  vector-map = prev.callPackage (./pkgs/vector-map.nix) { };
 
   word-array = prev.callPackage (./pkgs/word-array.nix) { };
 

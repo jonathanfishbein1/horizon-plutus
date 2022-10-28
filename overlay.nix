@@ -7,6 +7,8 @@ final: prev: with pkgs.haskell.lib; {
 
   algebraic-graphs = prev.callPackage (./pkgs/algebraic-graphs.nix) { };
 
+  base-deriving-via = prev.callPackage (./pkgs/base-deriving-via.nix) { };
+
   base64-bytestring-type = prev.callPackage (./pkgs/base64-bytestring-type.nix) { };
 
   bech32 = prev.callPackage (./pkgs/bech32.nix) { };

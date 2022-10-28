@@ -54,6 +54,11 @@ in  [ callHackage "PyF" "0.11.0.0"
     , callHackage "Unique" "0.4.7.9"
     , callHackage "algebraic-graphs" "0.7"
     , callHackage "base64-bytestring-type" "1.0.1"
+    , callCabal2nix
+        "base-deriving-via"
+        "https://github.com/input-output-hk/cardano-base"
+        (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
+        (Some "base-deriving-via")
     , callHackage "bech32" "1.1.2"
     , callCardanoLedger "byron-spec-chain" "eras/byron/chain/executable-spec"
     , callCardanoLedger "byron-spec-ledger" "eras/byron/ledger/executable-spec"

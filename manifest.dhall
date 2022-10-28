@@ -152,6 +152,11 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "fe9b5bd06cd4d3988e47b9933b11d83b6108e255")
         (Some "inline-r")
     , callCabal2nix
+        "measures"
+        "https://github.com/input-output-hk/cardano-base"
+        (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
+        (Some "measures")
+    , callCabal2nix
         "moo"
         "https://github.com/milloni/moo"
         (Some "20e4c6ee880e7d62b18b995750063dd7349a3f8e")

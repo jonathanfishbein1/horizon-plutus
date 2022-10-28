@@ -67,6 +67,8 @@ final: prev: with pkgs.haskell.lib; {
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
 
+  measures = prev.callPackage (./pkgs/measures.nix) { };
+
   moo = prev.callPackage (./pkgs/moo.nix) { };
 
   non-integral = prev.callPackage (./pkgs/non-integral.nix) { };

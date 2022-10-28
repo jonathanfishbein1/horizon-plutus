@@ -39,6 +39,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-ledger-shelley = prev.callPackage (./pkgs/cardano-ledger-shelley.nix) { };
 
+  cardano-ledger-shelley-ma = prev.callPackage (./pkgs/cardano-ledger-shelley-ma.nix) { };
+
   cardano-prelude = prev.callPackage (./pkgs/cardano-prelude.nix) { };
 
   cardano-prelude-test = prev.callPackage (./pkgs/cardano-prelude-test.nix) { };

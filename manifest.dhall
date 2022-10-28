@@ -38,21 +38,25 @@ let callCabal2nix
         , mapValue = HsPkg::{ source = HsSrc.FromGit { url, revision, subdir } }
         }
 
+let callCardanoLedger
+    : ∀(name : Text) →
+      ∀(subdir : Text) →
+        Attr HsPkg.Type
+    = λ(name : Text) →
+      λ(subdir : Text) →
+        callCabal2nix
+          name
+          "https://github.com/milloni/cardano-ledger"
+          (Some "e95d4aa2d7e39c856e8b0aaae3610ffb2391ac19")
+          (Some subdir)
+
 in  [ callHackage "PyF" "0.11.0.0"
     , callHackage "Unique" "0.4.7.9"
     , callHackage "algebraic-graphs" "0.7"
     , callHackage "base64-bytestring-type" "1.0.1"
     , callHackage "bech32" "1.1.2"
-    , callCabal2nix
-        "byron-spec-chain"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")
-        (Some "eras/byron/chain/executable-spec")
-    , callCabal2nix
-        "byron-spec-ledger"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")
-        (Some "eras/byron/ledger/executable-spec")
+    , callCardanoLedger "byron-spec-chain" "eras/byron/chain/executable-spec"
+    , callCardanoLedger "byron-spec-ledger" "eras/byron/ledger/executable-spec"
     , callHackage "canonical-json" "0.6.0.1"
     , callCabal2nix
         "cardano-binary"
@@ -79,36 +83,13 @@ in  [ callHackage "PyF" "0.11.0.0"
         "https://github.com/input-output-hk/cardano-base"
         (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
         (Some "cardano-crypto-praos")
-    , callCabal2nix
-        "cardano-crypto-test"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")
-        (Some "eras/byron/crypto/test")
-    , callCabal2nix
-        "cardano-crypto-wrapper"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")
-        (Some "eras/byron/crypto")
-    , callCabal2nix
-        "cardano-data"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
-        (Some "libs/cardano-data")
-    , callCabal2nix
-        "cardano-ledger-byron"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")
-        (Some "eras/byron/ledger/impl")
-    , callCabal2nix
-        "cardano-ledger-core"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
-        (Some "libs/cardano-ledger-core")
-    , callCabal2nix
-        "cardano-ledger-shelley"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
-        (Some "eras/shelley/impl")
+    , callCardanoLedger "cardano-crypto-test" "eras/byron/crypto/test"
+    , callCardanoLedger "cardano-crypto-wrapper" "eras/byron/crypto"
+    , callCardanoLedger "cardano-data" "libs/cardano-data"
+    , callCardanoLedger "cardano-ledger-byron" "eras/byron/ledger/impl"
+    , callCardanoLedger "cardano-ledger-core" "libs/cardano-ledger-core"
+    , callCardanoLedger "cardano-ledger-shelley" "eras/shelley/impl"
+    , callCardanoLedger "cardano-ledger-shelley-ma" "eras/shelley-ma/impl"
     , callCabal2nix
         "cardano-slotting"
         "https://github.com/input-output-hk/cardano-base"
@@ -170,11 +151,7 @@ in  [ callHackage "PyF" "0.11.0.0"
         "https://github.com/milloni/moo"
         (Some "20e4c6ee880e7d62b18b995750063dd7349a3f8e")
         (None Text)
-    , callCabal2nix
-        "non-integral"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
-        (Some "libs/non-integral")
+    , callCardanoLedger "non-integral" "libs/non-integral"
     , callCabal2nix
         "nothunks"
         "https://github.com/locallycompact/nothunks"
@@ -204,22 +181,10 @@ in  [ callHackage "PyF" "0.11.0.0"
     , callHackage "ral" "0.1"
     , callHackage "recursion-schemes" "5.2.2.2"
     , callHackage "ref-tf" "0.5.0.1"
-    , callCabal2nix
-        "set-algebra"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
-        (Some "libs/set-algebra")
+    , callCardanoLedger "set-algebra" "libs/set-algebra"
     , callHackage "singletons-th" "3.1.1"
-    , callCabal2nix
-        "small-steps"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")
-        (Some "libs/small-steps")
-    , callCabal2nix
-        "small-steps-test"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "2857b079bdab6e1545c60c614157ba8e7d19233e")
-        (Some "libs/small-steps-test")
+    , callCardanoLedger "small-steps" "libs/small-steps"
+    , callCardanoLedger "small-steps-test" "libs/small-steps-test"
     , callHackage "streaming-bytestring" "0.2.4"
     , callCabal2nix
         "strict-containers"
@@ -232,11 +197,7 @@ in  [ callHackage "PyF" "0.11.0.0"
         "https://github.com/parsonsmatt/typerep-map"
         (Some "75b7cd5d45986be07420a6821d352ad2adc0b697")
         (None Text)
-    , callCabal2nix
-        "vector-map"
-        "https://github.com/milloni/cardano-ledger"
-        (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
-        (Some "libs/vector-map")
+    , callCardanoLedger "vector-map" "libs/vector-map"
     , callCabal2nix
         "word-array"
         "https://github.com/milloni/plutus"

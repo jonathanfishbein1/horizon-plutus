@@ -1,20 +1,31 @@
 { mkDerivation
-, aeson
 , base
+, base16-bytestring
+, bytestring
+, cardano-binary
+, cardano-crypto-class
+, cardano-data
+, cardano-ledger-core
+, cardano-ledger-shelley
+, cardano-slotting
 , cardano-strict-containers
+, cborg
 , containers
-, data-default-class
+, deepseq
 , fetchgit
-, free
+, groups
 , lib
+, microlens
 , mtl
 , nothunks
+, primitive
+, small-steps
 , text
 , transformers
 , validation-selective
 }:
 mkDerivation {
-  pname = "small-steps";
+  pname = "cardano-ledger-shelley-ma";
   version = "0.1.0.0";
   src = fetchgit {
     url = "https://github.com/milloni/cardano-ledger";
@@ -22,16 +33,27 @@ mkDerivation {
     rev = "e95d4aa2d7e39c856e8b0aaae3610ffb2391ac19";
     fetchSubmodules = true;
   };
-  postUnpack = "sourceRoot+=/libs/small-steps/; echo source root reset to $sourceRoot";
+  postUnpack = "sourceRoot+=/eras/shelley-ma/impl/; echo source root reset to $sourceRoot";
   libraryHaskellDepends = [
-    aeson
     base
+    base16-bytestring
+    bytestring
+    cardano-binary
+    cardano-crypto-class
+    cardano-data
+    cardano-ledger-core
+    cardano-ledger-shelley
+    cardano-slotting
     cardano-strict-containers
+    cborg
     containers
-    data-default-class
-    free
+    deepseq
+    groups
+    microlens
     mtl
     nothunks
+    primitive
+    small-steps
     text
     transformers
     validation-selective
@@ -40,7 +62,6 @@ mkDerivation {
   jailbreak = true;
   doCheck = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/input-output-hk/cardano-ledger";
-  description = "Small step semantics";
+  description = "Shelley ledger with multiasset and time lock support";
   license = lib.licenses.asl20;
 }

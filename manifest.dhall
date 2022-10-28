@@ -110,6 +110,11 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "bc859395040abf075f4ca44b4ce8c221d2c4bb66")
         (Some "eras/shelley/impl")
     , callCabal2nix
+        "cardano-ledger-shelley-ma"
+        "https://github.com/milloni/cardano-ledger"
+        (Some "e95d4aa2d7e39c856e8b0aaae3610ffb2391ac19")
+        (Some "eras/shelley-ma/impl")
+    , callCabal2nix
         "cardano-slotting"
         "https://github.com/input-output-hk/cardano-base"
         (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")

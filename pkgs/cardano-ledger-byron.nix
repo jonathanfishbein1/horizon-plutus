@@ -21,7 +21,6 @@
 , containers
 , contra-tracer
 , cryptonite
-, deepseq
 , digest
 , directory
 , fetchgit
@@ -32,7 +31,6 @@
 , hedgehog
 , lib
 , microlens
-, mtl
 , nothunks
 , quiet
 , resourcet
@@ -52,8 +50,8 @@ mkDerivation {
   version = "0.1.0.0";
   src = fetchgit {
     url = "https://github.com/milloni/cardano-ledger";
-    sha256 = "0vzz5a3alzl4hh62krifc0qzc03pxpm42szhxq0p88qvjjy3cwkj";
-    rev = "2857b079bdab6e1545c60c614157ba8e7d19233e";
+    sha256 = "0qwq9ddsdq2kps5j1mpznxbh8lvq3qf54587kch1m0bya086bmxx";
+    rev = "e95d4aa2d7e39c856e8b0aaae3610ffb2391ac19";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/byron/ledger/impl/; echo source root reset to $sourceRoot";
@@ -75,13 +73,11 @@ mkDerivation {
     containers
     contra-tracer
     cryptonite
-    deepseq
     digest
     directory
     filepath
     formatting
     heapwords
-    mtl
     nothunks
     quiet
     resourcet
@@ -106,7 +102,6 @@ mkDerivation {
     cardano-crypto-wrapper
     cardano-prelude
     cardano-prelude-test
-    cborg
     containers
     directory
     filepath

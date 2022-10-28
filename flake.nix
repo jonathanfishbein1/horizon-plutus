@@ -31,7 +31,7 @@
         apps = {
           horizon-gen-nix = {
             type = "app";
-            program = "${hp.horizon-gen-nix}/bin/horizon-gen-nix";
+            program = "${horizon-platform.packages.${system}.horizon-gen-nix}/bin/horizon-gen-nix";
           };
         horizon-gen-gitlab-ci = {
             type = "app";

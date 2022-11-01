@@ -99,6 +99,8 @@ final: prev: with pkgs.haskell.lib; {
 
   small-steps-test = prev.callPackage (./pkgs/small-steps-test.nix) { };
 
+  streaming-binary = prev.callPackage (./pkgs/streaming-binary.nix) { };
+
   streaming-bytestring = prev.callPackage (./pkgs/streaming-bytestring.nix) { };
 
   strict-containers = prev.callPackage (./pkgs/strict-containers.nix) { };

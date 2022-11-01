@@ -195,6 +195,7 @@ in  [ callHackage "PyF" "0.11.0.0"
     , callHackage "singletons-th" "3.1.1"
     , callCardanoLedger "small-steps" "libs/small-steps"
     , callCardanoLedger "small-steps-test" "libs/small-steps-test"
+    , callHackage "streaming-binary" "0.3.0.1"
     , callHackage "streaming-bytestring" "0.2.4"
     , callCabal2nix
         "strict-containers"

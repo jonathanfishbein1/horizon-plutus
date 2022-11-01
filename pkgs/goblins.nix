@@ -31,6 +31,9 @@ mkDerivation {
     rev = "a315f41ec7250097fa6073b5ef4773e45758578f";
     fetchSubmodules = true;
   };
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     bimap
@@ -53,11 +56,15 @@ mkDerivation {
     typerep-map
   ];
   testHaskellDepends = [ base hedgehog temporary ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/input-output-hk/goblins";
   description = "Genetic algorithm based randomised testing";
   license = lib.licenses.bsd3;
+  broken = false;
 }

@@ -55,6 +55,8 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/byron/ledger/impl/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
     aeson
@@ -120,10 +122,14 @@ mkDerivation {
     time
     vector
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "The blockchain layer of Cardano during the Byron era";
   license = lib.licenses.asl20;
+  broken = false;
 }

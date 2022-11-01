@@ -33,6 +33,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/libs/cardano-data/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson
     base
@@ -66,11 +69,15 @@ mkDerivation {
     tasty-quickcheck
     text
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/input-output-hk/cardano-ledger";
   description = "Specialized data for Cardano project";
   license = lib.licenses.asl20;
+  broken = false;
 }

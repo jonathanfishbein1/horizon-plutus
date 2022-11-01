@@ -23,6 +23,7 @@ mkDerivation {
   };
   isLibrary = true;
   isExecutable = true;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     basement
@@ -49,11 +50,15 @@ mkDerivation {
     gauge
     memory
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/input-output-hk/cardano-crypto#readme";
   description = "Cryptography primitives for cardano";
   license = lib.licenses.mit;
+  broken = false;
 }

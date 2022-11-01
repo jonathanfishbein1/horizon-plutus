@@ -50,6 +50,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/inline-r/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson
     base
@@ -112,11 +115,15 @@ mkDerivation {
     template-haskell
     vector
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://tweag.github.io/HaskellR";
   description = "Seamlessly call R from Haskell and vice versa. No FFI required.";
   license = lib.licenses.bsd3;
+  broken = false;
 }

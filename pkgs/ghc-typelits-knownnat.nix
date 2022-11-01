@@ -21,6 +21,9 @@ mkDerivation {
     rev = "1bc4ee33e005e96d1f7785c715588a289707cd48";
     fetchSubmodules = true;
   };
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     ghc
@@ -37,11 +40,15 @@ mkDerivation {
     tasty-hunit
     tasty-quickcheck
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "http://clash-lang.org/";
   description = "Derive KnownNat constraints from other KnownNat constraints";
   license = lib.licenses.bsd2;
+  broken = false;
 }

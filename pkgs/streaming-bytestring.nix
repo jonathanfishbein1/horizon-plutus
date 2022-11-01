@@ -20,6 +20,9 @@ mkDerivation {
   pname = "streaming-bytestring";
   version = "0.2.4";
   sha256 = "b0dfd86f8ee711dbbd7b51d04531cf2e1c79c6dc05f23bb3902b35175481e447";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     bytestring
@@ -44,11 +47,15 @@ mkDerivation {
     tasty-smallcheck
     transformers
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/haskell-streaming/streaming-bytestring";
   description = "Fast, effectful byte streams";
   license = lib.licenses.bsd3;
+  broken = false;
 }

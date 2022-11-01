@@ -21,6 +21,9 @@ mkDerivation {
     rev = "e0af5b3c69a7d8e1dd402eb727631801e7d9be3d";
     fetchSubmodules = true;
   };
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     containers
@@ -36,11 +39,15 @@ mkDerivation {
     tasty-hunit
     template-haskell
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "http://www.clash-lang.org/";
   description = "GHC typechecker plugin for types of kind GHC.TypeLits.Nat";
   license = lib.licenses.bsd2;
+  broken = false;
 }

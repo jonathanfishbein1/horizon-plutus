@@ -34,6 +34,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/cardano-prelude-test/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson
     aeson-pretty
@@ -65,10 +68,14 @@ mkDerivation {
     hedgehog
     text
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "Utility types and functions for testing Cardano";
   license = lib.licenses.mit;
+  broken = false;
 }

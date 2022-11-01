@@ -24,6 +24,9 @@ mkDerivation {
     rev = "75b7cd5d45986be07420a6821d352ad2adc0b697";
     fetchSubmodules = true;
   };
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     containers
@@ -47,11 +50,15 @@ mkDerivation {
     dependent-sum
     ghc-typelits-knownnat
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/kowainik/typerep-map";
   description = "Efficient implementation of a dependent map with types as keys";
   license = lib.licenses.mpl20;
+  broken = false;
 }

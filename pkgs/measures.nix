@@ -17,12 +17,19 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/measures/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base base-deriving-via ];
   testHaskellDepends = [ base QuickCheck tasty tasty-quickcheck ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "An abstraction for (tuples of) measured quantities";
   license = lib.licenses.asl20;
+  broken = false;
 }

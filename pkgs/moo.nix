@@ -24,6 +24,9 @@ mkDerivation {
     rev = "20e4c6ee880e7d62b18b995750063dd7349a3f8e";
     fetchSubmodules = true;
   };
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     array
     base
@@ -53,11 +56,15 @@ mkDerivation {
     time
     vector
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "http://www.github.com/astanin/moo/";
   description = "Genetic algorithm library";
   license = lib.licenses.bsd3;
+  broken = false;
 }

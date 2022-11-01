@@ -33,6 +33,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/cardano-crypto-class/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson
     base
@@ -55,10 +58,14 @@ mkDerivation {
   ];
   libraryPkgconfigDepends = [ libsodium secp256k1 ];
   testHaskellDepends = [ base bytestring unix ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "Type classes abstracting over cryptography primitives for Cardano";
   license = lib.licenses.asl20;
+  broken = false;
 }

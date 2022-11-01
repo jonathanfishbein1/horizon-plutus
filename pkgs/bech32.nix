@@ -22,6 +22,7 @@ mkDerivation {
   sha256 = "489e1922dce97ce59f72d87b17480eb0087b6661d4bcb7be124e027abcb7d2c7";
   isLibrary = true;
   isExecutable = true;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     array
     base
@@ -54,12 +55,16 @@ mkDerivation {
     vector
   ];
   testToolDepends = [ hspec-discover ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/input-output-hk/bech32";
   description = "Implementation of the Bech32 cryptocurrency address format (BIP 0173)";
   license = lib.licenses.asl20;
   mainProgram = "bech32";
+  broken = false;
 }

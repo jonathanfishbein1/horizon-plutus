@@ -19,6 +19,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/cardano-crypto-praos/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     bytestring
@@ -28,10 +31,14 @@ mkDerivation {
     nothunks
   ];
   libraryPkgconfigDepends = [ libsodium ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "Crypto primitives from libsodium";
   license = lib.licenses.asl20;
+  broken = false;
 }

@@ -30,6 +30,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/byron/ledger/executable-spec/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     bimap
@@ -61,11 +64,15 @@ mkDerivation {
     tasty-hunit
     Unique
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/input-output-hk/cardano-legder";
   description = "Executable specification of Cardano ledger";
   license = lib.licenses.asl20;
+  broken = false;
 }

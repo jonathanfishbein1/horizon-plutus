@@ -47,7 +47,7 @@ let callCardanoLedger
         callCabal2nix
           name
           "https://github.com/milloni/cardano-ledger"
-          (Some "a77172d7d3446634600689f17eaa9e5b48a28b5d")
+          (Some "0d12cfa23aed9c355f66f69d7a1fcc6e82b68ea9")
           (Some subdir)
 
 in  [ callHackage "PyF" "0.11.0.0"
@@ -91,6 +91,7 @@ in  [ callHackage "PyF" "0.11.0.0"
     , callCardanoLedger "cardano-crypto-test" "eras/byron/crypto/test"
     , callCardanoLedger "cardano-crypto-wrapper" "eras/byron/crypto"
     , callCardanoLedger "cardano-data" "libs/cardano-data"
+    , callCardanoLedger "cardano-ledger-babbage" "eras/babbage/impl"
     , callCardanoLedger "cardano-ledger-byron" "eras/byron/ledger/impl"
     , callCardanoLedger "cardano-ledger-core" "libs/cardano-ledger-core"
     , callCardanoLedger "cardano-ledger-shelley" "eras/shelley/impl"

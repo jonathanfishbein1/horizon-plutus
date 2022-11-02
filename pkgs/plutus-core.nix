@@ -102,6 +102,7 @@ mkDerivation {
   postUnpack = "sourceRoot+=/plutus-core/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = true;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson
     algebraic-graphs
@@ -268,10 +269,14 @@ mkDerivation {
     text
     vector
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "Language library for Plutus Core";
   license = lib.licenses.asl20;
+  broken = false;
 }

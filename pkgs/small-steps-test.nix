@@ -32,6 +32,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/libs/small-steps-test/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     cardano-strict-containers
@@ -62,11 +65,15 @@ mkDerivation {
     tasty-quickcheck
     Unique
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/input-output-hk/cardano-ledger";
   description = "Small step semantics testing library";
   license = lib.licenses.asl20;
+  broken = false;
 }

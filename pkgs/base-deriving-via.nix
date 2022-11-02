@@ -1,19 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, cardano-binary
-, cborg
-, containers
-, data-default-class
-, deepseq
-, fetchgit
-, fingertree
-, lib
-, nothunks
-, serialise
-}:
+{ mkDerivation, base, fetchgit, lib }:
 mkDerivation {
-  pname = "cardano-strict-containers";
+  pname = "base-deriving-via";
   version = "0.1.0.1";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-base";
@@ -21,22 +8,11 @@ mkDerivation {
     rev = "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee";
     fetchSubmodules = true;
   };
-  postUnpack = "sourceRoot+=/cardano-strict-containers/; echo source root reset to $sourceRoot";
+  postUnpack = "sourceRoot+=/base-deriving-via/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [
-    aeson
-    base
-    cardano-binary
-    cborg
-    containers
-    data-default-class
-    deepseq
-    fingertree
-    nothunks
-    serialise
-  ];
+  libraryHaskellDepends = [ base ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;
   doHaddock = false;
@@ -44,7 +20,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  description = "Various strict container types";
+  description = "A general hook newtype for use with deriving via";
   license = lib.licenses.asl20;
   broken = false;
 }

@@ -1,73 +1,65 @@
 { mkDerivation
-, aeson
 , base
 , bytestring
 , cardano-binary
+, cardano-crypto-class
+, cardano-data
+, cardano-ledger-alonzo
+, cardano-ledger-core
+, cardano-ledger-shelley
+, cardano-ledger-shelley-ma
+, cardano-slotting
 , cardano-strict-containers
-, cborg
 , containers
+, data-default
 , deepseq
 , fetchgit
-, formatting
 , lib
 , microlens
-, mtl
 , nothunks
-, primitive
-, QuickCheck
-, tasty
-, tasty-hunit
-, tasty-quickcheck
+, plutus-ledger-api
+, set-algebra
+, small-steps
 , text
 , transformers
-, vector
-, vector-map
+, validation-selective
 }:
 mkDerivation {
-  pname = "cardano-data";
+  pname = "cardano-ledger-babbage";
   version = "0.1.0.0";
   src = fetchgit {
     url = "https://github.com/milloni/cardano-ledger";
-    sha256 = "0qwq9ddsdq2kps5j1mpznxbh8lvq3qf54587kch1m0bya086bmxx";
-    rev = "e95d4aa2d7e39c856e8b0aaae3610ffb2391ac19";
+    sha256 = "1gjfjbsj9zglxy2aas06nmr22629j1pd1nl3q584v5is6k8nxlsj";
+    rev = "0d12cfa23aed9c355f66f69d7a1fcc6e82b68ea9";
     fetchSubmodules = true;
   };
-  postUnpack = "sourceRoot+=/libs/cardano-data/; echo source root reset to $sourceRoot";
+  postUnpack = "sourceRoot+=/eras/babbage/impl/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
     base
     bytestring
     cardano-binary
+    cardano-crypto-class
+    cardano-data
+    cardano-ledger-alonzo
+    cardano-ledger-core
+    cardano-ledger-shelley
+    cardano-ledger-shelley-ma
+    cardano-slotting
     cardano-strict-containers
-    cborg
     containers
+    data-default
     deepseq
-    formatting
     microlens
-    mtl
     nothunks
-    primitive
-    QuickCheck
+    plutus-ledger-api
+    set-algebra
+    small-steps
     text
     transformers
-    vector
-    vector-map
-  ];
-  testHaskellDepends = [
-    base
-    bytestring
-    cardano-binary
-    cardano-strict-containers
-    cborg
-    containers
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
+    validation-selective
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;
@@ -76,8 +68,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/input-output-hk/cardano-ledger";
-  description = "Specialized data for Cardano project";
+  description = "TODO";
   license = lib.licenses.asl20;
   broken = false;
 }

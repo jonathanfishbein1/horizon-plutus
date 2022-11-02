@@ -27,6 +27,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/prettyprinter-configurable/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [ base microlens mtl prettyprinter text ];
   testHaskellDepends = [
@@ -42,9 +45,13 @@ mkDerivation {
     tasty-quickcheck
     text
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   license = "unknown";
+  broken = false;
 }

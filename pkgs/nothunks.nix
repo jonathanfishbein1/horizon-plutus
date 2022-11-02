@@ -24,6 +24,9 @@ mkDerivation {
     rev = "0d7e3565407aa4eb21d861d075dff6f20d090f97";
     fetchSubmodules = true;
   };
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     bytestring
@@ -44,10 +47,14 @@ mkDerivation {
     tasty
     tasty-hedgehog
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "Examine values for unexpected thunks";
   license = lib.licenses.mit;
+  broken = false;
 }

@@ -20,8 +20,11 @@ mkDerivation {
   pname = "base64-bytestring-type";
   version = "1.0.1";
   sha256 = "f607d07c4aab227b4536c495fa7c07b35ddc9c2c013d385c16c02f236526780e";
-  revision = "14";
-  editedCabalFile = "0pfj807231v2jn5067yhn13f6qq3d77fqnglmzh5wp445ikd5q0s";
+  revision = "15";
+  editedCabalFile = "0yka3aazfd5jj0dqh89cpjc8sgx3yhiiqfhrpb9z5p4zvbyvym6g";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson
     base
@@ -48,11 +51,15 @@ mkDerivation {
     tasty
     tasty-quickcheck
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/phadej/base64-bytestring-type#readme";
   description = "A newtype around ByteString, for base64 encoding";
   license = lib.licenses.bsd3;
+  broken = false;
 }

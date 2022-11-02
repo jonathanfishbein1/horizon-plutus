@@ -43,6 +43,7 @@ mkDerivation {
   postUnpack = "sourceRoot+=/plutus-ledger-api/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = true;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     base16-bytestring
@@ -94,11 +95,15 @@ mkDerivation {
     tasty-quickcheck
     text
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "Interface to the Plutus ledger for the Cardano ledger";
   license = lib.licenses.asl20;
   mainProgram = "evaluation-test";
+  broken = false;
 }

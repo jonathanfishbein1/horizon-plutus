@@ -23,6 +23,8 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/byron/crypto/test/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
     base
@@ -37,10 +39,14 @@ mkDerivation {
     hedgehog
     memory
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "Test helpers from cardano-crypto exposed to other packages";
   license = lib.licenses.asl20;
+  broken = false;
 }

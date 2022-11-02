@@ -34,6 +34,8 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/byron/crypto/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
     aeson
@@ -69,10 +71,14 @@ mkDerivation {
     hedgehog
     memory
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   description = "Cryptographic primitives used in the Cardano project";
   license = lib.licenses.asl20;
+  broken = false;
 }

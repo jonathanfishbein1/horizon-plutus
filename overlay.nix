@@ -7,6 +7,8 @@ final: prev: with pkgs.haskell.lib; {
 
   algebraic-graphs = prev.callPackage (./pkgs/algebraic-graphs.nix) { };
 
+  base-deriving-via = prev.callPackage (./pkgs/base-deriving-via.nix) { };
+
   base64-bytestring-type = prev.callPackage (./pkgs/base64-bytestring-type.nix) { };
 
   bech32 = prev.callPackage (./pkgs/bech32.nix) { };
@@ -33,7 +35,13 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-data = prev.callPackage (./pkgs/cardano-data.nix) { };
 
+  cardano-ledger-alonzo = prev.callPackage (./pkgs/cardano-ledger-alonzo.nix) { };
+
+  cardano-ledger-babbage = prev.callPackage (./pkgs/cardano-ledger-babbage.nix) { };
+
   cardano-ledger-byron = prev.callPackage (./pkgs/cardano-ledger-byron.nix) { };
+
+  cardano-ledger-conway = prev.callPackage (./pkgs/cardano-ledger-conway.nix) { };
 
   cardano-ledger-core = prev.callPackage (./pkgs/cardano-ledger-core.nix) { };
 
@@ -65,6 +73,8 @@ final: prev: with pkgs.haskell.lib; {
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
 
+  measures = prev.callPackage (./pkgs/measures.nix) { };
+
   moo = prev.callPackage (./pkgs/moo.nix) { };
 
   non-integral = prev.callPackage (./pkgs/non-integral.nix) { };
@@ -94,6 +104,8 @@ final: prev: with pkgs.haskell.lib; {
   small-steps = prev.callPackage (./pkgs/small-steps.nix) { };
 
   small-steps-test = prev.callPackage (./pkgs/small-steps-test.nix) { };
+
+  streaming-binary = prev.callPackage (./pkgs/streaming-binary.nix) { };
 
   streaming-bytestring = prev.callPackage (./pkgs/streaming-bytestring.nix) { };
 

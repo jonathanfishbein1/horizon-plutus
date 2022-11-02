@@ -8,12 +8,19 @@ mkDerivation {
     rev = "f310a19e44416206633cfd084f10ffb7cfea9f1d";
     fetchSubmodules = true;
   };
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "http://bitbucket.org/astanin/hs-gray-code";
   description = "Gray code encoder/decoder";
   license = lib.licenses.bsd3;
+  broken = false;
 }

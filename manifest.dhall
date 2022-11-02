@@ -47,13 +47,18 @@ let callCardanoLedger
         callCabal2nix
           name
           "https://github.com/milloni/cardano-ledger"
-          (Some "e95d4aa2d7e39c856e8b0aaae3610ffb2391ac19")
+          (Some "0d12cfa23aed9c355f66f69d7a1fcc6e82b68ea9")
           (Some subdir)
 
 in  [ callHackage "PyF" "0.11.0.0"
     , callHackage "Unique" "0.4.7.9"
     , callHackage "algebraic-graphs" "0.7"
     , callHackage "base64-bytestring-type" "1.0.1"
+    , callCabal2nix
+        "base-deriving-via"
+        "https://github.com/input-output-hk/cardano-base"
+        (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
+        (Some "base-deriving-via")
     , callHackage "bech32" "1.1.2"
     , callCardanoLedger "byron-spec-chain" "eras/byron/chain/executable-spec"
     , callCardanoLedger "byron-spec-ledger" "eras/byron/ledger/executable-spec"
@@ -86,10 +91,13 @@ in  [ callHackage "PyF" "0.11.0.0"
     , callCardanoLedger "cardano-crypto-test" "eras/byron/crypto/test"
     , callCardanoLedger "cardano-crypto-wrapper" "eras/byron/crypto"
     , callCardanoLedger "cardano-data" "libs/cardano-data"
+    , callCardanoLedger "cardano-ledger-babbage" "eras/babbage/impl"
     , callCardanoLedger "cardano-ledger-byron" "eras/byron/ledger/impl"
+    , callCardanoLedger "cardano-ledger-conway" "eras/conway/impl"
     , callCardanoLedger "cardano-ledger-core" "libs/cardano-ledger-core"
     , callCardanoLedger "cardano-ledger-shelley" "eras/shelley/impl"
     , callCardanoLedger "cardano-ledger-shelley-ma" "eras/shelley-ma/impl"
+    , callCardanoLedger "cardano-ledger-alonzo" "eras/alonzo/impl"
     , callCabal2nix
         "cardano-slotting"
         "https://github.com/input-output-hk/cardano-base"
@@ -147,6 +155,11 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "fe9b5bd06cd4d3988e47b9933b11d83b6108e255")
         (Some "inline-r")
     , callCabal2nix
+        "measures"
+        "https://github.com/input-output-hk/cardano-base"
+        (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
+        (Some "measures")
+    , callCabal2nix
         "moo"
         "https://github.com/milloni/moo"
         (Some "20e4c6ee880e7d62b18b995750063dd7349a3f8e")
@@ -185,6 +198,7 @@ in  [ callHackage "PyF" "0.11.0.0"
     , callHackage "singletons-th" "3.1.1"
     , callCardanoLedger "small-steps" "libs/small-steps"
     , callCardanoLedger "small-steps-test" "libs/small-steps-test"
+    , callHackage "streaming-binary" "0.3.0.1"
     , callHackage "streaming-bytestring" "0.2.4"
     , callCabal2nix
         "strict-containers"

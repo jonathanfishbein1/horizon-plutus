@@ -19,6 +19,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/libs/set-algebra/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     ansi-wl-pprint
     base
@@ -33,11 +36,15 @@ mkDerivation {
     tasty-hunit
     tasty-quickcheck
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/input-output-hk/cardano-ledger";
   description = "Set Algebra";
   license = lib.licenses.asl20;
+  broken = false;
 }

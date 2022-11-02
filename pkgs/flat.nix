@@ -33,6 +33,9 @@ mkDerivation {
     rev = "2121ee96201e39764e3a6fcbc53241afb0050647";
     fetchSubmodules = true;
   };
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     array
     base
@@ -72,11 +75,15 @@ mkDerivation {
     unordered-containers
     vector
   ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "http://quid2.org";
   description = "Principled and efficient bit-oriented binary serialization";
   license = lib.licenses.bsd3;
+  broken = false;
 }

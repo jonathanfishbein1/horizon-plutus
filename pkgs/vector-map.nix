@@ -26,6 +26,9 @@ mkDerivation {
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/libs/vector-map/; echo source root reset to $sourceRoot";
+  isLibrary = true;
+  isExecutable = false;
+  enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
     cardano-binary
@@ -45,11 +48,15 @@ mkDerivation {
     tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ base containers criterion random ];
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
+  doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/input-output-hk/cardano-ledger";
   description = "An efficient VMap that is backed by two vectors: one for keys and another for values";
   license = lib.licenses.asl20;
+  broken = false;
 }

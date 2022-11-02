@@ -1,65 +1,47 @@
 { mkDerivation
+, aeson
 , base
-, base16-bytestring
 , bytestring
 , cardano-binary
-, cardano-crypto-class
-, cardano-data
+, cardano-ledger-alonzo
+, cardano-ledger-babbage
 , cardano-ledger-core
 , cardano-ledger-shelley
-, cardano-slotting
+, cardano-ledger-shelley-ma
 , cardano-strict-containers
-, cborg
 , containers
-, deepseq
 , fetchgit
-, groups
 , lib
 , microlens
-, mtl
 , nothunks
-, primitive
-, small-steps
-, text
-, transformers
-, validation-selective
 }:
 mkDerivation {
-  pname = "cardano-ledger-shelley-ma";
+  pname = "cardano-ledger-conway";
   version = "0.1.0.0";
   src = fetchgit {
     url = "https://github.com/milloni/cardano-ledger";
-    sha256 = "0qwq9ddsdq2kps5j1mpznxbh8lvq3qf54587kch1m0bya086bmxx";
-    rev = "e95d4aa2d7e39c856e8b0aaae3610ffb2391ac19";
+    sha256 = "1gjfjbsj9zglxy2aas06nmr22629j1pd1nl3q584v5is6k8nxlsj";
+    rev = "0d12cfa23aed9c355f66f69d7a1fcc6e82b68ea9";
     fetchSubmodules = true;
   };
-  postUnpack = "sourceRoot+=/eras/shelley-ma/impl/; echo source root reset to $sourceRoot";
+  postUnpack = "sourceRoot+=/eras/conway/impl/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
+    aeson
     base
-    base16-bytestring
     bytestring
     cardano-binary
-    cardano-crypto-class
-    cardano-data
+    cardano-ledger-alonzo
+    cardano-ledger-babbage
     cardano-ledger-core
     cardano-ledger-shelley
-    cardano-slotting
+    cardano-ledger-shelley-ma
     cardano-strict-containers
-    cborg
     containers
-    deepseq
-    groups
     microlens
-    mtl
     nothunks
-    primitive
-    small-steps
-    text
-    transformers
-    validation-selective
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;
@@ -68,7 +50,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  description = "Shelley ledger with multiasset and time lock support";
+  description = "TODO";
   license = lib.licenses.asl20;
   broken = false;
 }

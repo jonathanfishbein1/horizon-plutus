@@ -39,6 +39,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-ledger-alonzo-test = prev.callPackage (./pkgs/cardano-ledger-alonzo-test.nix) { };
 
+  cardano-ledger-api = prev.callPackage (./pkgs/cardano-ledger-api.nix) { };
+
   cardano-ledger-babbage = prev.callPackage (./pkgs/cardano-ledger-babbage.nix) { };
 
   cardano-ledger-babbage-test = prev.callPackage (./pkgs/cardano-ledger-babbage-test.nix) { };

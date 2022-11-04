@@ -105,6 +105,8 @@ final: prev: with pkgs.haskell.lib; {
 
   plutus-ledger-api = prev.callPackage (./pkgs/plutus-ledger-api.nix) { };
 
+  plutus-preprocessor = prev.callPackage (./pkgs/plutus-preprocessor.nix) { };
+
   plutus-tx = prev.callPackage (./pkgs/plutus-tx.nix) { };
 
   prettyprinter-configurable = prev.callPackage (./pkgs/prettyprinter-configurable.nix) { };

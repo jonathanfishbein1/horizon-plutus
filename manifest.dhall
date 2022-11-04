@@ -190,6 +190,7 @@ in  [ callHackage "PyF" "0.11.0.0"
         "https://github.com/milloni/plutus"
         (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")
         (Some "plutus-ledger-api")
+    , callCardanoLedger "plutus-preprocessor" "libs/plutus-preprocessor"
     , callCabal2nix
         "plutus-tx"
         "https://github.com/milloni/plutus"

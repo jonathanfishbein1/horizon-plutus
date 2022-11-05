@@ -37,21 +37,41 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-ledger-alonzo = prev.callPackage (./pkgs/cardano-ledger-alonzo.nix) { };
 
+  cardano-ledger-alonzo-test = prev.callPackage (./pkgs/cardano-ledger-alonzo-test.nix) { };
+
+  cardano-ledger-api = prev.callPackage (./pkgs/cardano-ledger-api.nix) { };
+
   cardano-ledger-babbage = prev.callPackage (./pkgs/cardano-ledger-babbage.nix) { };
+
+  cardano-ledger-babbage-test = prev.callPackage (./pkgs/cardano-ledger-babbage-test.nix) { };
 
   cardano-ledger-byron = prev.callPackage (./pkgs/cardano-ledger-byron.nix) { };
 
+  cardano-ledger-byron-test = prev.callPackage (./pkgs/cardano-ledger-byron-test.nix) { };
+
   cardano-ledger-conway = prev.callPackage (./pkgs/cardano-ledger-conway.nix) { };
 
+  cardano-ledger-conway-test = prev.callPackage (./pkgs/cardano-ledger-conway-test.nix) { };
+
   cardano-ledger-core = prev.callPackage (./pkgs/cardano-ledger-core.nix) { };
+
+  cardano-ledger-pretty = prev.callPackage (./pkgs/cardano-ledger-pretty.nix) { };
 
   cardano-ledger-shelley = prev.callPackage (./pkgs/cardano-ledger-shelley.nix) { };
 
   cardano-ledger-shelley-ma = prev.callPackage (./pkgs/cardano-ledger-shelley-ma.nix) { };
 
+  cardano-ledger-shelley-ma-test = prev.callPackage (./pkgs/cardano-ledger-shelley-ma-test.nix) { };
+
+  cardano-ledger-shelley-test = prev.callPackage (./pkgs/cardano-ledger-shelley-test.nix) { };
+
+  cardano-ledger-test = prev.callPackage (./pkgs/cardano-ledger-test.nix) { };
+
   cardano-prelude = prev.callPackage (./pkgs/cardano-prelude.nix) { };
 
   cardano-prelude-test = prev.callPackage (./pkgs/cardano-prelude-test.nix) { };
+
+  cardano-protocol-tpraos = prev.callPackage (./pkgs/cardano-protocol-tpraos.nix) { };
 
   cardano-slotting = prev.callPackage (./pkgs/cardano-slotting.nix) { };
 
@@ -84,6 +104,8 @@ final: prev: with pkgs.haskell.lib; {
   plutus-core = prev.callPackage (./pkgs/plutus-core.nix) { };
 
   plutus-ledger-api = prev.callPackage (./pkgs/plutus-ledger-api.nix) { };
+
+  plutus-preprocessor = prev.callPackage (./pkgs/plutus-preprocessor.nix) { };
 
   plutus-tx = prev.callPackage (./pkgs/plutus-tx.nix) { };
 

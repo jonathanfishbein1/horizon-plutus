@@ -47,7 +47,7 @@ let callCardanoLedger
         callCabal2nix
           name
           "https://github.com/milloni/cardano-ledger"
-          (Some "0d12cfa23aed9c355f66f69d7a1fcc6e82b68ea9")
+          (Some "3aa1fd8469424778454644f0d371988fb4490b4a")
           (Some subdir)
 
 in  [ callHackage "PyF" "0.11.0.0"
@@ -91,13 +91,23 @@ in  [ callHackage "PyF" "0.11.0.0"
     , callCardanoLedger "cardano-crypto-test" "eras/byron/crypto/test"
     , callCardanoLedger "cardano-crypto-wrapper" "eras/byron/crypto"
     , callCardanoLedger "cardano-data" "libs/cardano-data"
-    , callCardanoLedger "cardano-ledger-babbage" "eras/babbage/impl"
-    , callCardanoLedger "cardano-ledger-byron" "eras/byron/ledger/impl"
-    , callCardanoLedger "cardano-ledger-conway" "eras/conway/impl"
-    , callCardanoLedger "cardano-ledger-core" "libs/cardano-ledger-core"
-    , callCardanoLedger "cardano-ledger-shelley" "eras/shelley/impl"
-    , callCardanoLedger "cardano-ledger-shelley-ma" "eras/shelley-ma/impl"
     , callCardanoLedger "cardano-ledger-alonzo" "eras/alonzo/impl"
+    , callCardanoLedger "cardano-ledger-alonzo-test" "eras/alonzo/test-suite"
+    , callCardanoLedger "cardano-ledger-api" "libs/cardano-ledger-api"
+    , callCardanoLedger "cardano-ledger-babbage" "eras/babbage/impl"
+    , callCardanoLedger "cardano-ledger-babbage-test" "eras/babbage/test-suite"
+    , callCardanoLedger "cardano-ledger-byron" "eras/byron/ledger/impl"
+    , callCardanoLedger "cardano-ledger-byron-test" "eras/byron/ledger/impl/test"
+    , callCardanoLedger "cardano-ledger-conway" "eras/conway/impl"
+    , callCardanoLedger "cardano-ledger-conway-test" "eras/conway/test-suite"
+    , callCardanoLedger "cardano-ledger-core" "libs/cardano-ledger-core"
+    , callCardanoLedger "cardano-ledger-pretty" "libs/cardano-ledger-pretty"
+    , callCardanoLedger "cardano-ledger-shelley" "eras/shelley/impl"
+    , callCardanoLedger "cardano-ledger-shelley-test" "eras/shelley/test-suite"
+    , callCardanoLedger "cardano-ledger-shelley-ma" "eras/shelley-ma/impl"
+    , callCardanoLedger "cardano-ledger-shelley-ma-test" "eras/shelley-ma/test-suite"
+    , callCardanoLedger "cardano-ledger-test" "libs/cardano-ledger-test"
+    , callCardanoLedger "cardano-protocol-tpraos" "libs/cardano-protocol-tpraos"
     , callCabal2nix
         "cardano-slotting"
         "https://github.com/input-output-hk/cardano-base"
@@ -180,6 +190,7 @@ in  [ callHackage "PyF" "0.11.0.0"
         "https://github.com/milloni/plutus"
         (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")
         (Some "plutus-ledger-api")
+    , callCardanoLedger "plutus-preprocessor" "libs/plutus-preprocessor"
     , callCabal2nix
         "plutus-tx"
         "https://github.com/milloni/plutus"

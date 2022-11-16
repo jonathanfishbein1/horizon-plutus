@@ -204,6 +204,7 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")
         (Some "prettyprinter-configurable")
     , callHackage "protolude" "0.3.2"
+    , callHackage "quiet" "0.2"
     , callHackage "ral" "0.1"
     , callHackage "recursion-schemes" "5.2.2.2"
     , callHackage "ref-tf" "0.5.0.1"

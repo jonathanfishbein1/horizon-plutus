@@ -117,6 +117,8 @@ final: prev: with pkgs.haskell.lib; {
 
   protolude = prev.callPackage (./pkgs/protolude.nix) { };
 
+  quiet = prev.callPackage (./pkgs/quiet.nix) { };
+
   ral = prev.callPackage (./pkgs/ral.nix) { };
 
   recursion-schemes = prev.callPackage (./pkgs/recursion-schemes.nix) { };

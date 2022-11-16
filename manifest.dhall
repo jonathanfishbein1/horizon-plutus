@@ -224,6 +224,7 @@ in  [ callHackage "PyF" "0.11.0.0"
         "https://github.com/parsonsmatt/typerep-map"
         (Some "75b7cd5d45986be07420a6821d352ad2adc0b697")
         (None Text)
+    , callHackage "validation-selective" "0.1.0.2"
     , callCardanoLedger "vector-map" "libs/vector-map"
     , callCabal2nix
         "word-array"

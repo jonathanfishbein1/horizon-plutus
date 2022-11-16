@@ -141,6 +141,8 @@ final: prev: with pkgs.haskell.lib; {
 
   typerep-map = prev.callPackage (./pkgs/typerep-map.nix) { };
 
+  validation-selective = prev.callPackage (./pkgs/validation-selective.nix) { };
+
   vector-map = prev.callPackage (./pkgs/vector-map.nix) { };
 
   word-array = prev.callPackage (./pkgs/word-array.nix) { };

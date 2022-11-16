@@ -18,12 +18,15 @@
 
         horizon-gen-nix-app = get-flake horizon-gen-nix;
 
-        legacyPackages = horizon-platform.legacyPackages.${system}.override {
-          overrides = pkgs.lib.composeManyExtensions [
+        plutus-overlay = pkgs.lib.composeManyExtensions [
             (import ./overlay.nix { inherit pkgs; })
             (import ./configuration.nix { inherit pkgs pkgs-libR; })
           ];
+
+        legacyPackages = horizon-platform.legacyPackages.${system}.override {
+          overrides = plutus-overlay;
         };
+
         packages = pkgs.lib.filterAttrs
           (n: v: v != null
             && builtins.typeOf v == "set"
@@ -45,6 +48,9 @@
           dhall-format = lint-utils.outputs.linters.x86_64-linux.dhall-format ./.;
           nixpkgs-fmt = lint-utils.outputs.linters.x86_64-linux.nixpkgs-fmt ./.;
         };
+
+        overlays.default = plutus-overlay;
+
         inherit legacyPackages;
         inherit packages;
       });

@@ -53,6 +53,7 @@ let callCardanoLedger
 in  [ callHackage "PyF" "0.11.0.0"
     , callHackage "Unique" "0.4.7.9"
     , callHackage "algebraic-graphs" "0.7"
+    , callHackage "base58-bytestring" "0.1.0"
     , callHackage "base64-bytestring-type" "1.0.1"
     , callCabal2nix
         "base-deriving-via"

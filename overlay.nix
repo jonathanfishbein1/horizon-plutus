@@ -79,6 +79,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-strict-containers = prev.callPackage (./pkgs/cardano-strict-containers.nix) { };
 
+  data-ordlist = prev.callPackage (./pkgs/data-ordlist.nix) { };
+
   flat = prev.callPackage (./pkgs/flat.nix) { };
 
   generic-monoid = prev.callPackage (./pkgs/generic-monoid.nix) { };

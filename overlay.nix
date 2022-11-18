@@ -97,6 +97,8 @@ final: prev: with pkgs.haskell.lib; {
 
   heapwords = prev.callPackage (./pkgs/heapwords.nix) { };
 
+  hedgehog-quickcheck = prev.callPackage (./pkgs/hedgehog-quickcheck.nix) { };
+
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
 
   measures = prev.callPackage (./pkgs/measures.nix) { };

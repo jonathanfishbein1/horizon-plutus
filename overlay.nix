@@ -95,6 +95,8 @@ final: prev: with pkgs.haskell.lib; {
 
   deriving-compat = prev.callPackage (./pkgs/deriving-compat.nix) { };
 
+  dom-lt = prev.callPackage (./pkgs/dom-lt.nix) { };
+
   flat = prev.callPackage (./pkgs/flat.nix) { };
 
   generic-monoid = prev.callPackage (./pkgs/generic-monoid.nix) { };

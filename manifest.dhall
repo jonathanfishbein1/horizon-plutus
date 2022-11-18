@@ -163,6 +163,7 @@ in  [ callHackage "PyF" "0.11.0.0"
         (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
         (Some "heapwords")
     , callHackage "hedgehog-quickcheck" "0.1.1"
+    , callHackage "inline-c" "0.9.1.6"
     , callCabal2nix
         "inline-r"
         "https://github.com/tweag/HaskellR"

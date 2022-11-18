@@ -99,6 +99,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hedgehog-quickcheck = prev.callPackage (./pkgs/hedgehog-quickcheck.nix) { };
 
+  inline-c = prev.callPackage (./pkgs/inline-c.nix) { };
+
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
 
   list-t = prev.callPackage (./pkgs/list-t.nix) { };

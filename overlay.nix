@@ -165,4 +165,6 @@ final: prev: with pkgs.haskell.lib; {
 
   word-array = prev.callPackage (./pkgs/word-array.nix) { };
 
+  xmlgen = prev.callPackage (./pkgs/xmlgen.nix) { };
+
 }

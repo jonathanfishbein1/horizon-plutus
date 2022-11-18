@@ -246,6 +246,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         "https://github.com/milloni/strict-containers"
         (Some "9e833be00bc2c5cdb0b4e743b7a2cde00dd4f616")
         (Some "strict-containers")
+    , callHackage "testing-type-modifiers" "0.1.0.1"
     , callHackage "th-desugar" "1.14"
     , callCabal2nix
         "typerep-map"

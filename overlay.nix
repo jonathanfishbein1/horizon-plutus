@@ -195,6 +195,8 @@ final: prev: with pkgs.haskell.lib; {
 
   strict-containers = prev.callPackage (./pkgs/strict-containers.nix) { };
 
+  testing-type-modifiers = prev.callPackage (./pkgs/testing-type-modifiers.nix) { };
+
   th-desugar = prev.callPackage (./pkgs/th-desugar.nix) { };
 
   typerep-map = prev.callPackage (./pkgs/typerep-map.nix) { };

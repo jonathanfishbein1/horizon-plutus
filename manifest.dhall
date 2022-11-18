@@ -196,6 +196,7 @@ in  [ callHackage "HTF" "0.15.0.0"
     , callHackage "lazysmallcheck" "0.6"
     , callHackage "list-t" "1.0.5.3"
     , callHackage "newtype" "0.2.2.0"
+    , callHackage "nonempty-vector" "0.2.1.0"
     , callCardanoLedger "non-integral" "libs/non-integral"
     , callCabal2nix
         "nothunks"

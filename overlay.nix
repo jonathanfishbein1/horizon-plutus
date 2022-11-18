@@ -143,6 +143,8 @@ final: prev: with pkgs.haskell.lib; {
 
   non-integral = prev.callPackage (./pkgs/non-integral.nix) { };
 
+  nonempty-vector = prev.callPackage (./pkgs/nonempty-vector.nix) { };
+
   nothunks = prev.callPackage (./pkgs/nothunks.nix) { };
 
   partial-order = prev.callPackage (./pkgs/partial-order.nix) { };

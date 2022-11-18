@@ -179,6 +179,7 @@ in  [ callHackage "HTF" "0.15.0.0"
     , callHackage "hxt" "9.3.1.22"
     , callHackage "hxt-charproperties" "9.5.0.0"
     , callHackage "hxt-regex-xmlschema" "9.2.0.7"
+    , callHackage "hxt-unicode" "9.0.2.4"
     , callHackage "inline-c" "0.9.1.6"
     , callCabal2nix
         "inline-r"

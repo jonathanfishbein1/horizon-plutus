@@ -131,6 +131,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hxt-regex-xmlschema = prev.callPackage (./pkgs/hxt-regex-xmlschema.nix) { };
 
+  hxt-unicode = prev.callPackage (./pkgs/hxt-unicode.nix) { };
+
   inline-c = prev.callPackage (./pkgs/inline-c.nix) { };
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };

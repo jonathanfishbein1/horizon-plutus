@@ -1,7 +1,7 @@
 {
   inputs = {
     get-flake.url = "github:ursi/get-flake";
-    horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform?rev=9d0b00c8ce7e5b53960b2702fb7edc4c9668ac7c";
+    horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform?rev=51ffeae6e4cb64c4c0b5c2af322990d3d4089ca2";
     horizon-gen-nix = {
       url = "git+https://gitlab.homotopic.tech/horizon/horizon-gen-nix";
       flake = false;

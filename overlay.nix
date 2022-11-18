@@ -121,6 +121,8 @@ final: prev: with pkgs.haskell.lib; {
 
   mtl-prelude = prev.callPackage (./pkgs/mtl-prelude.nix) { };
 
+  multiset = prev.callPackage (./pkgs/multiset.nix) { };
+
   non-integral = prev.callPackage (./pkgs/non-integral.nix) { };
 
   nothunks = prev.callPackage (./pkgs/nothunks.nix) { };

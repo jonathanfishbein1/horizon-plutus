@@ -185,6 +185,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         (Some "20e4c6ee880e7d62b18b995750063dd7349a3f8e")
         (None Text)
     , callHackage "mtl-prelude" "2.0.3.1"
+    , callHackage "multiset" "0.3.4.3"
     , callHackage "list-t" "1.0.5.3"
     , callCardanoLedger "non-integral" "libs/non-integral"
     , callCabal2nix

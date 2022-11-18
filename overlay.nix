@@ -117,6 +117,8 @@ final: prev: with pkgs.haskell.lib; {
 
   moo = prev.callPackage (./pkgs/moo.nix) { };
 
+  mtl-prelude = prev.callPackage (./pkgs/mtl-prelude.nix) { };
+
   non-integral = prev.callPackage (./pkgs/non-integral.nix) { };
 
   nothunks = prev.callPackage (./pkgs/nothunks.nix) { };

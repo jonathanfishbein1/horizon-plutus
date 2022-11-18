@@ -93,6 +93,8 @@ final: prev: with pkgs.haskell.lib; {
 
   dependent-sum-template = prev.callPackage (./pkgs/dependent-sum-template.nix) { };
 
+  deriving-compat = prev.callPackage (./pkgs/deriving-compat.nix) { };
+
   flat = prev.callPackage (./pkgs/flat.nix) { };
 
   generic-monoid = prev.callPackage (./pkgs/generic-monoid.nix) { };

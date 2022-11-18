@@ -115,6 +115,8 @@ final: prev: with pkgs.haskell.lib; {
 
   heredoc = prev.callPackage (./pkgs/heredoc.nix) { };
 
+  hex-text = prev.callPackage (./pkgs/hex-text.nix) { };
+
   inline-c = prev.callPackage (./pkgs/inline-c.nix) { };
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };

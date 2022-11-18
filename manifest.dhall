@@ -171,6 +171,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         (Some "heapwords")
     , callHackage "hedgehog-quickcheck" "0.1.1"
     , callHackage "heredoc" "0.2.0.0"
+    , callHackage "hex-text" "0.1.0.7"
     , callHackage "inline-c" "0.9.1.6"
     , callCabal2nix
         "inline-r"

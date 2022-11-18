@@ -64,6 +64,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         (Some "base-deriving-via")
     , callHackage "base-prelude" "1.6.1"
     , callHackage "bech32" "1.1.2"
+    , callHackage "bin" "0.1.2"
     , callCardanoLedger "byron-spec-chain" "eras/byron/chain/executable-spec"
     , callCardanoLedger "byron-spec-ledger" "eras/byron/ledger/executable-spec"
     , callHackage "canonical-json" "0.6.0.1"

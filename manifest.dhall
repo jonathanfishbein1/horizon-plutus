@@ -257,4 +257,5 @@ in  [ callHackage "HTF" "0.15.0.0"
         (Some "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd")
         (Some "word-array")
     , callHackage "xmlgen" "0.6.2.2"
+    , callHackage "size-based" "0.1.3.1"
     ]

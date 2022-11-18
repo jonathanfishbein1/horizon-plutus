@@ -177,6 +177,8 @@ final: prev: with pkgs.haskell.lib; {
 
   singletons-th = prev.callPackage (./pkgs/singletons-th.nix) { };
 
+  size-based = prev.callPackage (./pkgs/size-based.nix) { };
+
   small-steps = prev.callPackage (./pkgs/small-steps.nix) { };
 
   small-steps-test = prev.callPackage (./pkgs/small-steps-test.nix) { };

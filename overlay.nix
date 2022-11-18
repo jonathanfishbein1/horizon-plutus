@@ -97,6 +97,8 @@ final: prev: with pkgs.haskell.lib; {
 
   gray-code = prev.callPackage (./pkgs/gray-code.nix) { };
 
+  haskell-src = prev.callPackage (./pkgs/haskell-src.nix) { };
+
   heapwords = prev.callPackage (./pkgs/heapwords.nix) { };
 
   hedgehog-quickcheck = prev.callPackage (./pkgs/hedgehog-quickcheck.nix) { };

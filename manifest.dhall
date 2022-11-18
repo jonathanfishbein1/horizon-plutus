@@ -158,6 +158,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         "https://github.com/milloni/gray-code-0.3.1"
         (Some "f310a19e44416206633cfd084f10ffb7cfea9f1d")
         (None Text)
+    , callHackage "haskell-src" "1.0.4"
     , callCabal2nix
         "heapwords"
         "https://github.com/input-output-hk/cardano-base"

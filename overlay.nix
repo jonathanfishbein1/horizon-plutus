@@ -115,6 +115,8 @@ final: prev: with pkgs.haskell.lib; {
 
   measures = prev.callPackage (./pkgs/measures.nix) { };
 
+  mersenne-random-pure64 = prev.callPackage (./pkgs/mersenne-random-pure64.nix) { };
+
   moo = prev.callPackage (./pkgs/moo.nix) { };
 
   mtl-prelude = prev.callPackage (./pkgs/mtl-prelude.nix) { };

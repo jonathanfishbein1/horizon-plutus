@@ -1,7 +1,11 @@
 { pkgs, ... }:
 
 final: prev: with pkgs.haskell.lib; {
+  HTF = prev.callPackage (./pkgs/HTF.nix) { };
+
   PyF = prev.callPackage (./pkgs/PyF.nix) { };
+
+  Stream = prev.callPackage (./pkgs/Stream.nix) { };
 
   Unique = prev.callPackage (./pkgs/Unique.nix) { };
 
@@ -9,9 +13,15 @@ final: prev: with pkgs.haskell.lib; {
 
   base-deriving-via = prev.callPackage (./pkgs/base-deriving-via.nix) { };
 
+  base-prelude = prev.callPackage (./pkgs/base-prelude.nix) { };
+
+  base58-bytestring = prev.callPackage (./pkgs/base58-bytestring.nix) { };
+
   base64-bytestring-type = prev.callPackage (./pkgs/base64-bytestring-type.nix) { };
 
   bech32 = prev.callPackage (./pkgs/bech32.nix) { };
+
+  bin = prev.callPackage (./pkgs/bin.nix) { };
 
   byron-spec-chain = prev.callPackage (./pkgs/byron-spec-chain.nix) { };
 
@@ -77,6 +87,20 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-strict-containers = prev.callPackage (./pkgs/cardano-strict-containers.nix) { };
 
+  composition-prelude = prev.callPackage (./pkgs/composition-prelude.nix) { };
+
+  contra-tracer = prev.callPackage (./pkgs/contra-tracer.nix) { };
+
+  data-ordlist = prev.callPackage (./pkgs/data-ordlist.nix) { };
+
+  dependent-sum-template = prev.callPackage (./pkgs/dependent-sum-template.nix) { };
+
+  deriving-compat = prev.callPackage (./pkgs/deriving-compat.nix) { };
+
+  dictionary-sharing = prev.callPackage (./pkgs/dictionary-sharing.nix) { };
+
+  dom-lt = prev.callPackage (./pkgs/dom-lt.nix) { };
+
   flat = prev.callPackage (./pkgs/flat.nix) { };
 
   generic-monoid = prev.callPackage (./pkgs/generic-monoid.nix) { };
@@ -89,17 +113,59 @@ final: prev: with pkgs.haskell.lib; {
 
   gray-code = prev.callPackage (./pkgs/gray-code.nix) { };
 
+  haskell-src = prev.callPackage (./pkgs/haskell-src.nix) { };
+
   heapwords = prev.callPackage (./pkgs/heapwords.nix) { };
+
+  hedgehog-fn = prev.callPackage (./pkgs/hedgehog-fn.nix) { };
+
+  hedgehog-quickcheck = prev.callPackage (./pkgs/hedgehog-quickcheck.nix) { };
+
+  heredoc = prev.callPackage (./pkgs/heredoc.nix) { };
+
+  hex-text = prev.callPackage (./pkgs/hex-text.nix) { };
+
+  hxt = prev.callPackage (./pkgs/hxt.nix) { };
+
+  hxt-charproperties = prev.callPackage (./pkgs/hxt-charproperties.nix) { };
+
+  hxt-regex-xmlschema = prev.callPackage (./pkgs/hxt-regex-xmlschema.nix) { };
+
+  hxt-unicode = prev.callPackage (./pkgs/hxt-unicode.nix) { };
+
+  inline-c = prev.callPackage (./pkgs/inline-c.nix) { };
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
 
+  int-cast = prev.callPackage (./pkgs/int-cast.nix) { };
+
+  lazy-search = prev.callPackage (./pkgs/lazy-search.nix) { };
+
+  lazysmallcheck = prev.callPackage (./pkgs/lazysmallcheck.nix) { };
+
+  list-t = prev.callPackage (./pkgs/list-t.nix) { };
+
   measures = prev.callPackage (./pkgs/measures.nix) { };
+
+  mersenne-random-pure64 = prev.callPackage (./pkgs/mersenne-random-pure64.nix) { };
+
+  monoidal-containers = prev.callPackage (./pkgs/monoidal-containers.nix) { };
 
   moo = prev.callPackage (./pkgs/moo.nix) { };
 
+  mtl-prelude = prev.callPackage (./pkgs/mtl-prelude.nix) { };
+
+  multiset = prev.callPackage (./pkgs/multiset.nix) { };
+
+  newtype = prev.callPackage (./pkgs/newtype.nix) { };
+
   non-integral = prev.callPackage (./pkgs/non-integral.nix) { };
 
+  nonempty-vector = prev.callPackage (./pkgs/nonempty-vector.nix) { };
+
   nothunks = prev.callPackage (./pkgs/nothunks.nix) { };
+
+  partial-order = prev.callPackage (./pkgs/partial-order.nix) { };
 
   plutus-core = prev.callPackage (./pkgs/plutus-core.nix) { };
 
@@ -113,6 +179,8 @@ final: prev: with pkgs.haskell.lib; {
 
   protolude = prev.callPackage (./pkgs/protolude.nix) { };
 
+  quiet = prev.callPackage (./pkgs/quiet.nix) { };
+
   ral = prev.callPackage (./pkgs/ral.nix) { };
 
   recursion-schemes = prev.callPackage (./pkgs/recursion-schemes.nix) { };
@@ -122,6 +190,8 @@ final: prev: with pkgs.haskell.lib; {
   set-algebra = prev.callPackage (./pkgs/set-algebra.nix) { };
 
   singletons-th = prev.callPackage (./pkgs/singletons-th.nix) { };
+
+  size-based = prev.callPackage (./pkgs/size-based.nix) { };
 
   small-steps = prev.callPackage (./pkgs/small-steps.nix) { };
 
@@ -133,12 +203,18 @@ final: prev: with pkgs.haskell.lib; {
 
   strict-containers = prev.callPackage (./pkgs/strict-containers.nix) { };
 
+  testing-type-modifiers = prev.callPackage (./pkgs/testing-type-modifiers.nix) { };
+
   th-desugar = prev.callPackage (./pkgs/th-desugar.nix) { };
 
   typerep-map = prev.callPackage (./pkgs/typerep-map.nix) { };
 
+  validation-selective = prev.callPackage (./pkgs/validation-selective.nix) { };
+
   vector-map = prev.callPackage (./pkgs/vector-map.nix) { };
 
   word-array = prev.callPackage (./pkgs/word-array.nix) { };
+
+  xmlgen = prev.callPackage (./pkgs/xmlgen.nix) { };
 
 }

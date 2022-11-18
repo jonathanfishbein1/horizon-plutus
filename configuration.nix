@@ -12,12 +12,6 @@ final: prev: {
 
   cardano-prelude = enableCabalFlag prev.cardano-prelude "development";
 
-  microstache = doJailbreak prev.microstache;
-
-  monoidal-containers = doJailbreak prev.monoidal-containers;
-
-  nonempty-vector = dontCheck (doJailbreak prev.nonempty-vector);
-
   plutus-core = setBuildTarget (dontBenchmark prev.plutus-core) "plc";
 
   plutus-ledger-api = dontBenchmark prev.plutus-ledger-api;

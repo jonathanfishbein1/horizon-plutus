@@ -19,9 +19,9 @@ mkDerivation {
   pname = "moo";
   version = "1.2";
   src = fetchgit {
-    url = "https://github.com/milloni/moo";
+    url = "https://github.com/astanin/moo";
     sha256 = "1mdj218hgh7s5a6b9k14vg9i06zxah0wa42ycdgh245izs8nfv0x";
-    rev = "20e4c6ee880e7d62b18b995750063dd7349a3f8e";
+    rev = "dbda5e76ac3b4c72c805ec0cdb9bcdff7bb6247d";
     fetchSubmodules = true;
   };
   isLibrary = true;

@@ -1,7 +1,7 @@
 {
   inputs = {
     get-flake.url = "github:ursi/get-flake";
-    horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
+    horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform?rev=9d0b00c8ce7e5b53960b2702fb7edc4c9668ac7c";
     horizon-gen-nix = {
       url = "git+https://gitlab.homotopic.tech/horizon/horizon-gen-nix";
       flake = false;
@@ -18,20 +18,22 @@
 
         horizon-gen-nix-app = get-flake horizon-gen-nix;
 
-        overrides-hp = final: prev:
-          (horizon-platform.overrides.${system}.ghc942 final prev
-            // (import ./overlay.nix { inherit inputs pkgs; } final prev));
-        configuration = import ./configuration.nix { inherit inputs pkgs pkgs-libR; };
-        hp = pkgs.haskell.packages.ghc942.override {
-          overrides = pkgs.lib.composeManyExtensions [ overrides-hp configuration ];
+        plutus-overlay = pkgs.lib.composeManyExtensions [
+            (import ./overlay.nix { inherit pkgs; })
+            (import ./configuration.nix { inherit pkgs pkgs-libR; })
+          ];
+
+        legacyPackages = horizon-platform.legacyPackages.${system}.override {
+          overrides = plutus-overlay;
         };
-        hp' = pkgs.lib.filterAttrs
+
+        packages = pkgs.lib.filterAttrs
           (n: v: v != null
             && builtins.typeOf v == "set"
             && pkgs.lib.hasAttr "type" v
             && v.type == "derivation"
             && v.meta.broken == false)
-          hp;
+          legacyPackages;
         horizon-gen-gitlab-ci = pkgs.writers.writeBashBin "gen-gitlab-ci" "${pkgs.dhall-json}/bin/dhall-to-yaml --file .gitlab-ci.dhall";
       in
       {
@@ -46,7 +48,10 @@
           dhall-format = lint-utils.outputs.linters.x86_64-linux.dhall-format ./.;
           nixpkgs-fmt = lint-utils.outputs.linters.x86_64-linux.nixpkgs-fmt ./.;
         };
-        overrides.ghc942 = overrides-hp;
-        packages = hp';
+
+        overlays.default = plutus-overlay;
+
+        inherit legacyPackages;
+        inherit packages;
       });
 }

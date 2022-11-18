@@ -91,6 +91,8 @@ final: prev: with pkgs.haskell.lib; {
 
   data-ordlist = prev.callPackage (./pkgs/data-ordlist.nix) { };
 
+  dependent-sum-template = prev.callPackage (./pkgs/dependent-sum-template.nix) { };
+
   flat = prev.callPackage (./pkgs/flat.nix) { };
 
   generic-monoid = prev.callPackage (./pkgs/generic-monoid.nix) { };

@@ -135,6 +135,7 @@ in  [ callHackage "HTF" "0.15.0.0"
     , callHackage "composition-prelude" "3.0.0.2"
     , callHackage "contra-tracer" "0.2.0.0"
     , callHackage "data-ordlist" "0.4.7.0"
+    , callHackage "dependent-sum-template" "0.1.1.1"
     , callCabal2nix
         "flat"
         "https://github.com/Quid2/flat"

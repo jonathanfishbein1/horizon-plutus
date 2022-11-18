@@ -97,6 +97,8 @@ final: prev: with pkgs.haskell.lib; {
 
   deriving-compat = prev.callPackage (./pkgs/deriving-compat.nix) { };
 
+  dictionary-sharing = prev.callPackage (./pkgs/dictionary-sharing.nix) { };
+
   dom-lt = prev.callPackage (./pkgs/dom-lt.nix) { };
 
   flat = prev.callPackage (./pkgs/flat.nix) { };

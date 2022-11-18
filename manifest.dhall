@@ -138,6 +138,7 @@ in  [ callHackage "HTF" "0.15.0.0"
     , callHackage "data-ordlist" "0.4.7.0"
     , callHackage "dependent-sum-template" "0.1.1.1"
     , callHackage "deriving-compat" "0.6.1"
+    , callHackage "dictionary-sharing" "0.1.0.0"
     , callHackage "dom-lt" "0.2.3"
     , callCabal2nix
         "flat"

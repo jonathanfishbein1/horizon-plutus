@@ -137,6 +137,8 @@ final: prev: with pkgs.haskell.lib; {
 
   multiset = prev.callPackage (./pkgs/multiset.nix) { };
 
+  newtype = prev.callPackage (./pkgs/newtype.nix) { };
+
   non-integral = prev.callPackage (./pkgs/non-integral.nix) { };
 
   nothunks = prev.callPackage (./pkgs/nothunks.nix) { };

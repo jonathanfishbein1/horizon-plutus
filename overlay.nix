@@ -125,6 +125,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hex-text = prev.callPackage (./pkgs/hex-text.nix) { };
 
+  hxt = prev.callPackage (./pkgs/hxt.nix) { };
+
   inline-c = prev.callPackage (./pkgs/inline-c.nix) { };
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };

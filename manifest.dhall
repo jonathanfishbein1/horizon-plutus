@@ -183,6 +183,7 @@ in  [ callHackage "PyF" "0.11.0.0"
         "https://github.com/locallycompact/nothunks"
         (Some "0d7e3565407aa4eb21d861d075dff6f20d090f97")
         (None Text)
+    , callHackage "partial-order" "0.2.0.0"
     , callCabal2nix
         "plutus-core"
         "https://github.com/milloni/plutus"

@@ -107,6 +107,8 @@ final: prev: with pkgs.haskell.lib; {
 
   nothunks = prev.callPackage (./pkgs/nothunks.nix) { };
 
+  partial-order = prev.callPackage (./pkgs/partial-order.nix) { };
+
   plutus-core = prev.callPackage (./pkgs/plutus-core.nix) { };
 
   plutus-ledger-api = prev.callPackage (./pkgs/plutus-ledger-api.nix) { };

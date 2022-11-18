@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 final: prev: with pkgs.haskell.lib; {
+  HTF = prev.callPackage (./pkgs/HTF.nix) { };
+
   PyF = prev.callPackage (./pkgs/PyF.nix) { };
 
   Unique = prev.callPackage (./pkgs/Unique.nix) { };

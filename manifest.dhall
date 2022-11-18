@@ -50,7 +50,8 @@ let callCardanoLedger
           (Some "3aa1fd8469424778454644f0d371988fb4490b4a")
           (Some subdir)
 
-in  [ callHackage "PyF" "0.11.0.0"
+in  [ callHackage "HTF" "0.15.0.0"
+    , callHackage "PyF" "0.11.0.0"
     , callHackage "Unique" "0.4.7.9"
     , callHackage "algebraic-graphs" "0.7"
     , callHackage "base58-bytestring" "0.1.0"

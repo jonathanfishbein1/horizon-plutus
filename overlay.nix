@@ -101,6 +101,8 @@ final: prev: with pkgs.haskell.lib; {
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
 
+  list-t = prev.callPackage (./pkgs/list-t.nix) { };
+
   measures = prev.callPackage (./pkgs/measures.nix) { };
 
   moo = prev.callPackage (./pkgs/moo.nix) { };

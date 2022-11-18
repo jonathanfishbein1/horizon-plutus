@@ -196,8 +196,8 @@ in  [ callHackage "HTF" "0.15.0.0"
     , callHackage "monoidal-containers" "0.6.3.0"
     , callCabal2nix
         "moo"
-        "https://github.com/milloni/moo"
-        (Some "20e4c6ee880e7d62b18b995750063dd7349a3f8e")
+        "https://github.com/astanin/moo"
+        (Some "dbda5e76ac3b4c72c805ec0cdb9bcdff7bb6247d")
         (None Text)
     , callHackage "mtl-prelude" "2.0.3.1"
     , callHackage "multiset" "0.3.4.3"

@@ -170,6 +170,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         "https://github.com/input-output-hk/cardano-base"
         (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
         (Some "heapwords")
+    , callHackage "hedgehog-fn" "1.0"
     , callHackage "hedgehog-quickcheck" "0.1.1"
     , callHackage "heredoc" "0.2.0.0"
     , callHackage "hex-text" "0.1.0.7"

@@ -5,6 +5,8 @@ final: prev: with pkgs.haskell.lib; {
 
   PyF = prev.callPackage (./pkgs/PyF.nix) { };
 
+  Stream = prev.callPackage (./pkgs/Stream.nix) { };
+
   Unique = prev.callPackage (./pkgs/Unique.nix) { };
 
   algebraic-graphs = prev.callPackage (./pkgs/algebraic-graphs.nix) { };

@@ -52,6 +52,7 @@ let callCardanoLedger
 
 in  [ callHackage "HTF" "0.15.0.0"
     , callHackage "PyF" "0.11.0.0"
+    , callHackage "Stream" "0.4.7.2"
     , callHackage "Unique" "0.4.7.9"
     , callHackage "algebraic-graphs" "0.7"
     , callHackage "base58-bytestring" "0.1.0"

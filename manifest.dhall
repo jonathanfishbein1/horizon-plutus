@@ -184,6 +184,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
         (Some "measures")
     , callHackage "mersenne-random-pure64" "0.2.2.0"
+    , callHackage "monoidal-containers" "0.6.3.0"
     , callCabal2nix
         "moo"
         "https://github.com/milloni/moo"

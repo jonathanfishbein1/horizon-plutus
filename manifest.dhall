@@ -132,6 +132,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         "https://github.com/input-output-hk/cardano-prelude"
         (Some "b6053a23f53acd5c519cc559c3861dda3ebf8b35")
         (Some "cardano-prelude-test")
+    , callHackage "composition-prelude" "3.0.0.2"
     , callHackage "contra-tracer" "0.2.0.0"
     , callHackage "data-ordlist" "0.4.7.0"
     , callCabal2nix

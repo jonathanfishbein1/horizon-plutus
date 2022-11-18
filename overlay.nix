@@ -113,6 +113,8 @@ final: prev: with pkgs.haskell.lib; {
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
 
+  int-cast = prev.callPackage (./pkgs/int-cast.nix) { };
+
   lazysmallcheck = prev.callPackage (./pkgs/lazysmallcheck.nix) { };
 
   list-t = prev.callPackage (./pkgs/list-t.nix) { };

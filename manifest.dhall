@@ -174,6 +174,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         "https://github.com/tweag/HaskellR"
         (Some "fe9b5bd06cd4d3988e47b9933b11d83b6108e255")
         (Some "inline-r")
+    , callHackage "int-cast" "0.2.0.0"
     , callCabal2nix
         "measures"
         "https://github.com/input-output-hk/cardano-base"

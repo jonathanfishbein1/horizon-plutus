@@ -125,6 +125,8 @@ final: prev: with pkgs.haskell.lib; {
 
   int-cast = prev.callPackage (./pkgs/int-cast.nix) { };
 
+  lazy-search = prev.callPackage (./pkgs/lazy-search.nix) { };
+
   lazysmallcheck = prev.callPackage (./pkgs/lazysmallcheck.nix) { };
 
   list-t = prev.callPackage (./pkgs/list-t.nix) { };

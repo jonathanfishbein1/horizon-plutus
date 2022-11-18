@@ -127,6 +127,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hxt = prev.callPackage (./pkgs/hxt.nix) { };
 
+  hxt-regex-xmlschema = prev.callPackage (./pkgs/hxt-regex-xmlschema.nix) { };
+
   inline-c = prev.callPackage (./pkgs/inline-c.nix) { };
 
   inline-r = prev.callPackage (./pkgs/inline-r.nix) { };

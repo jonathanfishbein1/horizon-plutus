@@ -61,6 +61,7 @@ in  [ callHackage "HTF" "0.15.0.0"
         "https://github.com/input-output-hk/cardano-base"
         (Some "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee")
         (Some "base-deriving-via")
+    , callHackage "base-prelude" "1.6.1"
     , callHackage "bech32" "1.1.2"
     , callCardanoLedger "byron-spec-chain" "eras/byron/chain/executable-spec"
     , callCardanoLedger "byron-spec-ledger" "eras/byron/ledger/executable-spec"

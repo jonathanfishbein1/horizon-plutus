@@ -11,6 +11,8 @@ final: prev: with pkgs.haskell.lib; {
 
   base-deriving-via = prev.callPackage (./pkgs/base-deriving-via.nix) { };
 
+  base-prelude = prev.callPackage (./pkgs/base-prelude.nix) { };
+
   base58-bytestring = prev.callPackage (./pkgs/base58-bytestring.nix) { };
 
   base64-bytestring-type = prev.callPackage (./pkgs/base64-bytestring-type.nix) { };

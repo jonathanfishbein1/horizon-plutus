@@ -1,9 +1,9 @@
 { mkDerivation
+, HUnit
 , base
 , bytestring
 , criterion
 , deepseq
-, HUnit
 , hxt-charproperties
 , lib
 , parsec
@@ -32,8 +32,8 @@ mkDerivation {
     parsec
     text
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

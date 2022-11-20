@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , base
 , base-compat
 , base-orphans
@@ -8,7 +9,6 @@
 , hspec
 , hspec-discover
 , lib
-, QuickCheck
 , tagged
 , template-haskell
 , th-abstraction
@@ -48,8 +48,8 @@ mkDerivation {
     void
   ];
   testToolDepends = [ hspec-discover ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

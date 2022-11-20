@@ -1,11 +1,11 @@
 { mkDerivation
+, HUnit
 , base
 , base-orphans
 , comonad
 , containers
 , data-fix
 , free
-, HUnit
 , lib
 , template-haskell
 , th-abstraction
@@ -32,8 +32,8 @@ mkDerivation {
     transformers
   ];
   testHaskellDepends = [ base HUnit template-haskell transformers ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

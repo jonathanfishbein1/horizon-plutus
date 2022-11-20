@@ -1,16 +1,16 @@
 { mkDerivation
+, HUnit
+, QuickCheck
 , base
 , blaze-builder
 , bytestring
 , containers
 , criterion
 , filepath
-, HUnit
 , hxt
 , lib
 , mtl
 , process
-, QuickCheck
 , text
 , unix
 }:
@@ -44,8 +44,8 @@ mkDerivation {
     unix
   ];
   benchmarkHaskellDepends = [ base bytestring criterion text ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

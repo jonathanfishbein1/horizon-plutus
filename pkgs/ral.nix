@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , adjunctions
 , base
 , bin
@@ -8,7 +9,6 @@
 , fin
 , hashable
 , lib
-, QuickCheck
 , semigroupoids
 , vector
 }:
@@ -33,8 +33,8 @@ mkDerivation {
     semigroupoids
   ];
   benchmarkHaskellDepends = [ base criterion vector ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

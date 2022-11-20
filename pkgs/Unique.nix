@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , base
 , bytestring
 , containers
@@ -7,7 +8,6 @@
 , hashable
 , hspec
 , lib
-, QuickCheck
 , quickcheck-instances
 , unordered-containers
 }:
@@ -34,8 +34,8 @@ mkDerivation {
     QuickCheck
     quickcheck-instances
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -13,8 +13,8 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   executableHaskellDepends = [ base cardano-ledger-alonzo ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
@@ -22,6 +22,5 @@ mkDerivation {
   hyperlinkSource = false;
   description = "A preproceesor for creating plutus scripts as bytestrings and equivalents";
   license = lib.licenses.asl20;
-  mainProgram = "plutus-debug";
   broken = false;
 }

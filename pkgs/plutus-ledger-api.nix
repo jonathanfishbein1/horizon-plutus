@@ -1,4 +1,5 @@
 { mkDerivation
+, PyF
 , async
 , barbies
 , base
@@ -20,7 +21,6 @@
 , plutus-core
 , plutus-tx
 , prettyprinter
-, PyF
 , serialise
 , tagged
 , tasty
@@ -95,8 +95,8 @@ mkDerivation {
     tasty-quickcheck
     text
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
@@ -104,6 +104,5 @@ mkDerivation {
   hyperlinkSource = false;
   description = "Interface to the Plutus ledger for the Cardano ledger";
   license = lib.licenses.asl20;
-  mainProgram = "evaluation-test";
   broken = false;
 }

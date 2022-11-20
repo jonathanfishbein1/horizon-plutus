@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , aeson
 , base
 , base-compat
@@ -10,7 +11,6 @@
 , hashable
 , http-api-data
 , lib
-, QuickCheck
 , serialise
 , tasty
 , tasty-quickcheck
@@ -51,8 +51,8 @@ mkDerivation {
     tasty
     tasty-quickcheck
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -1,6 +1,7 @@
 { mkDerivation
-, base
 , Cabal
+, QuickCheck
+, base
 , cabal-doctest
 , doctest
 , fetchgit
@@ -10,7 +11,6 @@
 , mtl
 , parser-combinators
 , prettyprinter
-, QuickCheck
 , quickcheck-text
 , tasty
 , tasty-hunit
@@ -45,8 +45,8 @@ mkDerivation {
     tasty-quickcheck
     text
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

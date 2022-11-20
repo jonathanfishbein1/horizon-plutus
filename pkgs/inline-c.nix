@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , ansi-wl-pprint
 , base
 , bytestring
@@ -9,7 +10,6 @@
 , mtl
 , parsec
 , parsers
-, QuickCheck
 , raw-strings-qq
 , regex-posix
 , split
@@ -55,8 +55,8 @@ mkDerivation {
     unordered-containers
     vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -1,13 +1,13 @@
 { mkDerivation
+, HUnit
+, MonadRandom
 , array
 , base
 , containers
 , fetchgit
 , gray-code
-, HUnit
 , lib
 , mersenne-random-pure64
-, MonadRandom
 , mtl
 , parallel
 , random
@@ -56,8 +56,8 @@ mkDerivation {
     time
     vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , aeson
 , aeson-pretty
 , attoparsec
@@ -17,7 +18,6 @@
 , hspec
 , lib
 , pretty-show
-, QuickCheck
 , quickcheck-instances
 , template-haskell
 , text
@@ -68,8 +68,8 @@ mkDerivation {
     hedgehog
     text
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

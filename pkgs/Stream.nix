@@ -1,4 +1,4 @@
-{ mkDerivation, base, lazysmallcheck, lib, QuickCheck }:
+{ mkDerivation, QuickCheck, base, lazysmallcheck, lib }:
 mkDerivation {
   pname = "Stream";
   version = "0.4.7.2";
@@ -7,8 +7,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base lazysmallcheck QuickCheck ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

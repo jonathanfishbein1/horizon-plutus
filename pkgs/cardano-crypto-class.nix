@@ -58,8 +58,8 @@ mkDerivation {
   ];
   libraryPkgconfigDepends = [ libsodium secp256k1 ];
   testHaskellDepends = [ base bytestring unix ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

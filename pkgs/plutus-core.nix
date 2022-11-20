@@ -1,4 +1,7 @@
 { mkDerivation
+, HUnit
+, QuickCheck
+, Stream
 , aeson
 , aeson-pretty
 , algebraic-graphs
@@ -36,7 +39,6 @@
 , hashable
 , hedgehog
 , hex-text
-, HUnit
 , inline-r
 , int-cast
 , integer-gmp
@@ -56,7 +58,6 @@
 , prettyprinter
 , prettyprinter-configurable
 , primitive
-, QuickCheck
 , quickcheck-instances
 , ral
 , random
@@ -67,7 +68,6 @@
 , size-based
 , some
 , split
-, Stream
 , tagged
 , tasty
 , tasty-golden
@@ -269,8 +269,8 @@ mkDerivation {
     text
     vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

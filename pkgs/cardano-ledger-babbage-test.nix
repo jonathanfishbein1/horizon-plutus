@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , base
 , base16-bytestring
 , bytestring
@@ -23,7 +24,6 @@
 , plutus-ledger-api
 , plutus-tx
 , pretty-show
-, QuickCheck
 , small-steps
 , tasty
 , tasty-hunit
@@ -35,8 +35,8 @@ mkDerivation {
   version = "0.1.0.0";
   src = fetchgit {
     url = "https://github.com/milloni/cardano-ledger";
-    sha256 = "0x6xx0rx85ygnl0wclr9w4li3pmc9zf7xi5wqb7h0ibzbqyrhbzf";
-    rev = "f24ec5ad840458588e6e3ec2440add911f066aeb";
+    sha256 = "08nj6hcqj5apvb17n1irc8j7rzf10bcdh5gh1mkmhwbyw6h2d4ab";
+    rev = "3aa1fd8469424778454644f0d371988fb4490b4a";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/babbage/test-suite/; echo source root reset to $sourceRoot";
@@ -89,8 +89,8 @@ mkDerivation {
     tasty-quickcheck
     time
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

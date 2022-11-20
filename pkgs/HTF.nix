@@ -1,18 +1,19 @@
 { mkDerivation
+, Cabal
+, Diff
+, HUnit
+, QuickCheck
 , aeson
 , aeson-pretty
 , array
 , base
 , base64-bytestring
 , bytestring
-, Cabal
 , containers
 , cpphs
-, Diff
 , directory
 , filepath
 , haskell-src
-, HUnit
 , lib
 , lifted-base
 , monad-control
@@ -20,7 +21,6 @@
 , old-time
 , pretty
 , process
-, QuickCheck
 , random
 , regex-compat
 , template-haskell
@@ -97,8 +97,8 @@ mkDerivation {
     text
     unordered-containers
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
@@ -107,6 +107,5 @@ mkDerivation {
   homepage = "https://github.com/skogsbaer/HTF/";
   description = "The Haskell Test Framework";
   license = lib.licenses.lgpl21Only;
-  mainProgram = "htfpp";
   broken = false;
 }

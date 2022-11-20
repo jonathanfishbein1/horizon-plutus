@@ -1,4 +1,4 @@
-{ mkDerivation, base, hedgehog, lib, QuickCheck, transformers }:
+{ mkDerivation, QuickCheck, base, hedgehog, lib, transformers }:
 mkDerivation {
   pname = "hedgehog-quickcheck";
   version = "0.1.1";
@@ -9,8 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base hedgehog QuickCheck transformers ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

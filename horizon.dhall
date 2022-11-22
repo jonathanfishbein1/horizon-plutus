@@ -12,7 +12,40 @@ let callCardanoLedger
           "3aa1fd8469424778454644f0d371988fb4490b4a"
           (Some subdir)
 
-in  [ H.callHackage "HTF" "0.15.0.0"
+let mods = H.Modifiers :: { enableProfiling = False }
+
+in  H.modPackageList mods
+    [ callCardanoLedger "cardano-ledger-alonzo-test" "eras/alonzo/test-suite"
+    , callCardanoLedger "cardano-ledger-alonzo" "eras/alonzo/impl"
+    , callCardanoLedger "cardano-ledger-babbage" "eras/babbage/impl"
+    , callCardanoLedger "cardano-ledger-babbage-test" "eras/babbage/test-suite"
+    , callCardanoLedger "cardano-ledger-conway" "eras/conway/impl"
+    , callCardanoLedger "cardano-ledger-conway-test" "eras/conway/test-suite"
+    , callCardanoLedger "cardano-ledger-pretty" "libs/cardano-ledger-pretty"
+    , callCardanoLedger "cardano-ledger-shelley" "eras/shelley/impl"
+    , callCardanoLedger "cardano-ledger-shelley-test" "eras/shelley/test-suite"
+    , callCardanoLedger "cardano-ledger-shelley-ma" "eras/shelley-ma/impl"
+    , callCardanoLedger "cardano-ledger-shelley-ma-test" "eras/shelley-ma/test-suite"
+    , callCardanoLedger "cardano-ledger-test" "libs/cardano-ledger-test"
+    , callCardanoLedger "cardano-protocol-tpraos" "libs/cardano-protocol-tpraos"
+    , H.callCabal2nix
+        "plutus-core"
+        "https://github.com/milloni/plutus"
+        "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
+        (Some "plutus-core")
+    , H.callCabal2nix
+        "plutus-ledger-api"
+        "https://github.com/milloni/plutus"
+        "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
+        (Some "plutus-ledger-api")
+     , H.callCabal2nix
+        "plutus-tx"
+        "https://github.com/milloni/plutus"
+        "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
+        (Some "plutus-tx")
+    ]
+    #
+    [ H.callHackage "HTF" "0.15.0.0"
     , H.callHackage "PyF" "0.11.0.0"
     , H.callHackage "Stream" "0.4.7.2"
     , H.callHackage "Unique" "0.4.7.9"
@@ -58,23 +91,10 @@ in  [ H.callHackage "HTF" "0.15.0.0"
     , callCardanoLedger "cardano-crypto-test" "eras/byron/crypto/test"
     , callCardanoLedger "cardano-crypto-wrapper" "eras/byron/crypto"
     , callCardanoLedger "cardano-data" "libs/cardano-data"
-    , callCardanoLedger "cardano-ledger-alonzo" "eras/alonzo/impl"
-    , callCardanoLedger "cardano-ledger-alonzo-test" "eras/alonzo/test-suite"
     , callCardanoLedger "cardano-ledger-api" "libs/cardano-ledger-api"
-    , callCardanoLedger "cardano-ledger-babbage" "eras/babbage/impl"
-    , callCardanoLedger "cardano-ledger-babbage-test" "eras/babbage/test-suite"
     , callCardanoLedger "cardano-ledger-byron" "eras/byron/ledger/impl"
     , callCardanoLedger "cardano-ledger-byron-test" "eras/byron/ledger/impl/test"
-    , callCardanoLedger "cardano-ledger-conway" "eras/conway/impl"
-    , callCardanoLedger "cardano-ledger-conway-test" "eras/conway/test-suite"
     , callCardanoLedger "cardano-ledger-core" "libs/cardano-ledger-core"
-    , callCardanoLedger "cardano-ledger-pretty" "libs/cardano-ledger-pretty"
-    , callCardanoLedger "cardano-ledger-shelley" "eras/shelley/impl"
-    , callCardanoLedger "cardano-ledger-shelley-test" "eras/shelley/test-suite"
-    , callCardanoLedger "cardano-ledger-shelley-ma" "eras/shelley-ma/impl"
-    , callCardanoLedger "cardano-ledger-shelley-ma-test" "eras/shelley-ma/test-suite"
-    , callCardanoLedger "cardano-ledger-test" "libs/cardano-ledger-test"
-    , callCardanoLedger "cardano-protocol-tpraos" "libs/cardano-protocol-tpraos"
     , H.callCabal2nix
         "cardano-slotting"
         "https://github.com/input-output-hk/cardano-base"
@@ -175,22 +195,7 @@ in  [ H.callHackage "HTF" "0.15.0.0"
         "0d7e3565407aa4eb21d861d075dff6f20d090f97"
         (None Text)
     , H.callHackage "partial-order" "0.2.0.0"
-    , H.callCabal2nix
-        "plutus-core"
-        "https://github.com/milloni/plutus"
-        "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-        (Some "plutus-core")
-    , H.callCabal2nix
-        "plutus-ledger-api"
-        "https://github.com/milloni/plutus"
-        "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-        (Some "plutus-ledger-api")
     , callCardanoLedger "plutus-preprocessor" "libs/plutus-preprocessor"
-    , H.callCabal2nix
-        "plutus-tx"
-        "https://github.com/milloni/plutus"
-        "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-        (Some "plutus-tx")
     , H.callCabal2nix
         "prettyprinter-configurable"
         "https://github.com/milloni/plutus"

@@ -61,8 +61,8 @@ mkDerivation {
     cardano-ledger-shelley-test
     tasty
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

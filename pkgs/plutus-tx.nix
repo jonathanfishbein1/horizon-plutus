@@ -92,8 +92,8 @@ mkDerivation {
     transformers
   ];
   testToolDepends = [ doctest ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

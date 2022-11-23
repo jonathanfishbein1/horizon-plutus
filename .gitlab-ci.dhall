@@ -16,7 +16,7 @@ let toStep
         , mapValue.script = [ "nix build -L .#${prefix}.${x}" ]
         }
 
-let input = Prelude.Map.keys Text H.HaskellPackage ./manifest.dhall
+let input = Prelude.Map.keys Text H.HaskellPackage.Type ./horizon.dhall
 
 let packages =
       Prelude.List.map

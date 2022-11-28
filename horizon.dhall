@@ -221,6 +221,11 @@ let otherLibraries =
           "0d7e3565407aa4eb21d861d075dff6f20d090f97"
           (None H.Subdir)
       , H.callHackage "openapi3" "3.2.2"
+      , H.callCabal2nix
+          "optparse-applicative-fork"
+          "https://github.com/input-output-hk/optparse-applicative/"
+          "7497a29cb998721a9068d5725d49461f2bba0e7a"
+          (None H.Subdir)
       , H.callHackage "optparse-generic" "1.4.8"
       , H.callHackage "partial-order" "0.2.0.0"
       , H.callCabal2nix

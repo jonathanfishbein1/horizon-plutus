@@ -175,6 +175,8 @@ final: prev: with pkgs.haskell.lib; {
 
   openapi3 = final.callPackage (./pkgs/openapi3.nix) { };
 
+  optparse-applicative-fork = final.callPackage (./pkgs/optparse-applicative-fork.nix) { };
+
   optparse-generic = final.callPackage (./pkgs/optparse-generic.nix) { };
 
   partial-order = final.callPackage (./pkgs/partial-order.nix) { };

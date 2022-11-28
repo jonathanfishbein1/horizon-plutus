@@ -1,9 +1,9 @@
 let H = ./horizon-spec.dhall
 
 let callCardanoLedger
-    : ∀(name : Text) → ∀(subdir : Text) → H.Attr H.HaskellPackage.Type
-    = λ(name : Text) →
-      λ(subdir : Text) →
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = λ(name : H.Name) →
+      λ(subdir : H.Subdir) →
         H.callCabal2nix
           name
           "https://github.com/milloni/cardano-ledger"
@@ -12,7 +12,7 @@ let callCardanoLedger
 
 let plutusLibraries =
       H.modPackageList
-        mods
+        H.Modifiers::{ enableProfiling = False }
         [ callCardanoLedger
             "cardano-ledger-alonzo-test"
             "eras/alonzo/test-suite"

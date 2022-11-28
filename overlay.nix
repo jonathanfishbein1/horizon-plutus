@@ -165,6 +165,8 @@ final: prev: with pkgs.haskell.lib; {
 
   nothunks = final.callPackage (./pkgs/nothunks.nix) { };
 
+  optparse-generic = final.callPackage (./pkgs/optparse-generic.nix) { };
+
   partial-order = final.callPackage (./pkgs/partial-order.nix) { };
 
   plutus-core = final.callPackage (./pkgs/plutus-core.nix) { };

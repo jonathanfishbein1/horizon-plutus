@@ -14,17 +14,17 @@ let callCardanoBase
         "https://github.com/input-output-hk/cardano-base"
         "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
 
-let callCardanoNode
-    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
-    = callRepository
-        "https://github.com/input-output-hk/cardano-node"
-        "4198592a7ea9c4873def316d6f80df1d20d37891"
-
 let callCardanoLedger
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
     = callRepository
         "https://github.com/milloni/cardano-ledger"
         "3aa1fd8469424778454644f0d371988fb4490b4a"
+
+let callCardanoNode
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = callRepository
+        "https://github.com/input-output-hk/cardano-node"
+        "4198592a7ea9c4873def316d6f80df1d20d37891"
 
 let callIoSim
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type

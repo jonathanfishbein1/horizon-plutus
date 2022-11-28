@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , aeson
 , base
 , bytestring
@@ -8,7 +9,6 @@
 , lib
 , parsec
 , pretty
-, QuickCheck
 , tasty
 , tasty-quickcheck
 , unordered-containers
@@ -41,8 +41,8 @@ mkDerivation {
     vector
   ];
   benchmarkHaskellDepends = [ base bytestring containers criterion ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

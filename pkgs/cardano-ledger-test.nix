@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , aeson
 , array
 , base
@@ -35,7 +36,6 @@
 , plutus-core
 , plutus-ledger-api
 , prettyprinter
-, QuickCheck
 , random
 , scientific
 , set-algebra

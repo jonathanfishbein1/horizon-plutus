@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , aeson
 , base
 , bytestring
@@ -15,7 +16,6 @@
 , nothunks
 , pretty-show
 , primitive
-, QuickCheck
 , quickcheck-instances
 , recursion-schemes
 , safe-exceptions
@@ -72,8 +72,8 @@ mkDerivation {
     time
     vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

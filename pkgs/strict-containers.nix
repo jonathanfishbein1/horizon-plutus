@@ -1,18 +1,18 @@
 { mkDerivation
+, ChasingBottoms
+, HUnit
+, QuickCheck
 , array
 , base
 , base-orphans
 , binary
-, ChasingBottoms
 , containers
 , deepseq
 , fetchgit
 , hashable
-, HUnit
 , indexed-traversable
 , lib
 , primitive
-, QuickCheck
 , random
 , strict
 , tasty
@@ -77,8 +77,8 @@ mkDerivation {
     unordered-containers
     vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

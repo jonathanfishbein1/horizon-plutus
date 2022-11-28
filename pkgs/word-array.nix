@@ -1,11 +1,11 @@
 { mkDerivation
+, QuickCheck
 , base
 , deepseq
 , fetchgit
 , lib
 , mono-traversable
 , primitive
-, QuickCheck
 , tasty
 , tasty-bench
 , tasty-quickcheck
@@ -39,8 +39,8 @@ mkDerivation {
     vector
   ];
   benchmarkHaskellDepends = [ base primitive tasty-bench ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

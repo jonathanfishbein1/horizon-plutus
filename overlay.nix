@@ -1,220 +1,220 @@
 { pkgs, ... }:
 
 final: prev: with pkgs.haskell.lib; {
-  HTF = prev.callPackage (./pkgs/HTF.nix) { };
+  HTF = final.callPackage (./pkgs/HTF.nix) { };
 
-  PyF = prev.callPackage (./pkgs/PyF.nix) { };
+  PyF = final.callPackage (./pkgs/PyF.nix) { };
 
-  Stream = prev.callPackage (./pkgs/Stream.nix) { };
+  Stream = final.callPackage (./pkgs/Stream.nix) { };
 
-  Unique = prev.callPackage (./pkgs/Unique.nix) { };
+  Unique = final.callPackage (./pkgs/Unique.nix) { };
 
-  algebraic-graphs = prev.callPackage (./pkgs/algebraic-graphs.nix) { };
+  algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
 
-  base-deriving-via = prev.callPackage (./pkgs/base-deriving-via.nix) { };
+  base-deriving-via = final.callPackage (./pkgs/base-deriving-via.nix) { };
 
-  base-prelude = prev.callPackage (./pkgs/base-prelude.nix) { };
+  base-prelude = final.callPackage (./pkgs/base-prelude.nix) { };
 
-  base58-bytestring = prev.callPackage (./pkgs/base58-bytestring.nix) { };
+  base58-bytestring = final.callPackage (./pkgs/base58-bytestring.nix) { };
 
-  base64-bytestring-type = prev.callPackage (./pkgs/base64-bytestring-type.nix) { };
+  base64-bytestring-type = final.callPackage (./pkgs/base64-bytestring-type.nix) { };
 
-  bech32 = prev.callPackage (./pkgs/bech32.nix) { };
+  bech32 = final.callPackage (./pkgs/bech32.nix) { };
 
-  bin = prev.callPackage (./pkgs/bin.nix) { };
+  bin = final.callPackage (./pkgs/bin.nix) { };
 
-  byron-spec-chain = prev.callPackage (./pkgs/byron-spec-chain.nix) { };
+  byron-spec-chain = final.callPackage (./pkgs/byron-spec-chain.nix) { };
 
-  byron-spec-ledger = prev.callPackage (./pkgs/byron-spec-ledger.nix) { };
+  byron-spec-ledger = final.callPackage (./pkgs/byron-spec-ledger.nix) { };
 
-  canonical-json = prev.callPackage (./pkgs/canonical-json.nix) { };
+  canonical-json = final.callPackage (./pkgs/canonical-json.nix) { };
 
-  cardano-binary = prev.callPackage (./pkgs/cardano-binary.nix) { };
+  cardano-binary = final.callPackage (./pkgs/cardano-binary.nix) { };
 
-  cardano-binary-test = prev.callPackage (./pkgs/cardano-binary-test.nix) { };
+  cardano-binary-test = final.callPackage (./pkgs/cardano-binary-test.nix) { };
 
-  cardano-crypto = prev.callPackage (./pkgs/cardano-crypto.nix) { };
+  cardano-crypto = final.callPackage (./pkgs/cardano-crypto.nix) { };
 
-  cardano-crypto-class = prev.callPackage (./pkgs/cardano-crypto-class.nix) { };
+  cardano-crypto-class = final.callPackage (./pkgs/cardano-crypto-class.nix) { };
 
-  cardano-crypto-praos = prev.callPackage (./pkgs/cardano-crypto-praos.nix) { };
+  cardano-crypto-praos = final.callPackage (./pkgs/cardano-crypto-praos.nix) { };
 
-  cardano-crypto-test = prev.callPackage (./pkgs/cardano-crypto-test.nix) { };
+  cardano-crypto-test = final.callPackage (./pkgs/cardano-crypto-test.nix) { };
 
-  cardano-crypto-wrapper = prev.callPackage (./pkgs/cardano-crypto-wrapper.nix) { };
+  cardano-crypto-wrapper = final.callPackage (./pkgs/cardano-crypto-wrapper.nix) { };
 
-  cardano-data = prev.callPackage (./pkgs/cardano-data.nix) { };
+  cardano-data = final.callPackage (./pkgs/cardano-data.nix) { };
 
-  cardano-ledger-alonzo = prev.callPackage (./pkgs/cardano-ledger-alonzo.nix) { };
+  cardano-ledger-alonzo = final.callPackage (./pkgs/cardano-ledger-alonzo.nix) { };
 
-  cardano-ledger-alonzo-test = prev.callPackage (./pkgs/cardano-ledger-alonzo-test.nix) { };
+  cardano-ledger-alonzo-test = final.callPackage (./pkgs/cardano-ledger-alonzo-test.nix) { };
 
-  cardano-ledger-api = prev.callPackage (./pkgs/cardano-ledger-api.nix) { };
+  cardano-ledger-api = final.callPackage (./pkgs/cardano-ledger-api.nix) { };
 
-  cardano-ledger-babbage = prev.callPackage (./pkgs/cardano-ledger-babbage.nix) { };
+  cardano-ledger-babbage = final.callPackage (./pkgs/cardano-ledger-babbage.nix) { };
 
-  cardano-ledger-babbage-test = prev.callPackage (./pkgs/cardano-ledger-babbage-test.nix) { };
+  cardano-ledger-babbage-test = final.callPackage (./pkgs/cardano-ledger-babbage-test.nix) { };
 
-  cardano-ledger-byron = prev.callPackage (./pkgs/cardano-ledger-byron.nix) { };
+  cardano-ledger-byron = final.callPackage (./pkgs/cardano-ledger-byron.nix) { };
 
-  cardano-ledger-byron-test = prev.callPackage (./pkgs/cardano-ledger-byron-test.nix) { };
+  cardano-ledger-byron-test = final.callPackage (./pkgs/cardano-ledger-byron-test.nix) { };
 
-  cardano-ledger-conway = prev.callPackage (./pkgs/cardano-ledger-conway.nix) { };
+  cardano-ledger-conway = final.callPackage (./pkgs/cardano-ledger-conway.nix) { };
 
-  cardano-ledger-conway-test = prev.callPackage (./pkgs/cardano-ledger-conway-test.nix) { };
+  cardano-ledger-conway-test = final.callPackage (./pkgs/cardano-ledger-conway-test.nix) { };
 
-  cardano-ledger-core = prev.callPackage (./pkgs/cardano-ledger-core.nix) { };
+  cardano-ledger-core = final.callPackage (./pkgs/cardano-ledger-core.nix) { };
 
-  cardano-ledger-pretty = prev.callPackage (./pkgs/cardano-ledger-pretty.nix) { };
+  cardano-ledger-pretty = final.callPackage (./pkgs/cardano-ledger-pretty.nix) { };
 
-  cardano-ledger-shelley = prev.callPackage (./pkgs/cardano-ledger-shelley.nix) { };
+  cardano-ledger-shelley = final.callPackage (./pkgs/cardano-ledger-shelley.nix) { };
 
-  cardano-ledger-shelley-ma = prev.callPackage (./pkgs/cardano-ledger-shelley-ma.nix) { };
+  cardano-ledger-shelley-ma = final.callPackage (./pkgs/cardano-ledger-shelley-ma.nix) { };
 
-  cardano-ledger-shelley-ma-test = prev.callPackage (./pkgs/cardano-ledger-shelley-ma-test.nix) { };
+  cardano-ledger-shelley-ma-test = final.callPackage (./pkgs/cardano-ledger-shelley-ma-test.nix) { };
 
-  cardano-ledger-shelley-test = prev.callPackage (./pkgs/cardano-ledger-shelley-test.nix) { };
+  cardano-ledger-shelley-test = final.callPackage (./pkgs/cardano-ledger-shelley-test.nix) { };
 
-  cardano-ledger-test = prev.callPackage (./pkgs/cardano-ledger-test.nix) { };
+  cardano-ledger-test = final.callPackage (./pkgs/cardano-ledger-test.nix) { };
 
-  cardano-prelude = prev.callPackage (./pkgs/cardano-prelude.nix) { };
+  cardano-prelude = final.callPackage (./pkgs/cardano-prelude.nix) { };
 
-  cardano-prelude-test = prev.callPackage (./pkgs/cardano-prelude-test.nix) { };
+  cardano-prelude-test = final.callPackage (./pkgs/cardano-prelude-test.nix) { };
 
-  cardano-protocol-tpraos = prev.callPackage (./pkgs/cardano-protocol-tpraos.nix) { };
+  cardano-protocol-tpraos = final.callPackage (./pkgs/cardano-protocol-tpraos.nix) { };
 
-  cardano-slotting = prev.callPackage (./pkgs/cardano-slotting.nix) { };
+  cardano-slotting = final.callPackage (./pkgs/cardano-slotting.nix) { };
 
-  cardano-strict-containers = prev.callPackage (./pkgs/cardano-strict-containers.nix) { };
+  cardano-strict-containers = final.callPackage (./pkgs/cardano-strict-containers.nix) { };
 
-  composition-prelude = prev.callPackage (./pkgs/composition-prelude.nix) { };
+  composition-prelude = final.callPackage (./pkgs/composition-prelude.nix) { };
 
-  contra-tracer = prev.callPackage (./pkgs/contra-tracer.nix) { };
+  contra-tracer = final.callPackage (./pkgs/contra-tracer.nix) { };
 
-  data-ordlist = prev.callPackage (./pkgs/data-ordlist.nix) { };
+  data-ordlist = final.callPackage (./pkgs/data-ordlist.nix) { };
 
-  dependent-sum-template = prev.callPackage (./pkgs/dependent-sum-template.nix) { };
+  dependent-sum-template = final.callPackage (./pkgs/dependent-sum-template.nix) { };
 
-  deriving-compat = prev.callPackage (./pkgs/deriving-compat.nix) { };
+  deriving-compat = final.callPackage (./pkgs/deriving-compat.nix) { };
 
-  dictionary-sharing = prev.callPackage (./pkgs/dictionary-sharing.nix) { };
+  dictionary-sharing = final.callPackage (./pkgs/dictionary-sharing.nix) { };
 
-  dom-lt = prev.callPackage (./pkgs/dom-lt.nix) { };
+  dom-lt = final.callPackage (./pkgs/dom-lt.nix) { };
 
-  flat = prev.callPackage (./pkgs/flat.nix) { };
+  flat = final.callPackage (./pkgs/flat.nix) { };
 
-  generic-monoid = prev.callPackage (./pkgs/generic-monoid.nix) { };
+  generic-monoid = final.callPackage (./pkgs/generic-monoid.nix) { };
 
-  ghc-typelits-knownnat = prev.callPackage (./pkgs/ghc-typelits-knownnat.nix) { };
+  ghc-typelits-knownnat = final.callPackage (./pkgs/ghc-typelits-knownnat.nix) { };
 
-  ghc-typelits-natnormalise = prev.callPackage (./pkgs/ghc-typelits-natnormalise.nix) { };
+  ghc-typelits-natnormalise = final.callPackage (./pkgs/ghc-typelits-natnormalise.nix) { };
 
-  goblins = prev.callPackage (./pkgs/goblins.nix) { };
+  goblins = final.callPackage (./pkgs/goblins.nix) { };
 
-  gray-code = prev.callPackage (./pkgs/gray-code.nix) { };
+  gray-code = final.callPackage (./pkgs/gray-code.nix) { };
 
-  haskell-src = prev.callPackage (./pkgs/haskell-src.nix) { };
+  haskell-src = final.callPackage (./pkgs/haskell-src.nix) { };
 
-  heapwords = prev.callPackage (./pkgs/heapwords.nix) { };
+  heapwords = final.callPackage (./pkgs/heapwords.nix) { };
 
-  hedgehog-fn = prev.callPackage (./pkgs/hedgehog-fn.nix) { };
+  hedgehog-fn = final.callPackage (./pkgs/hedgehog-fn.nix) { };
 
-  hedgehog-quickcheck = prev.callPackage (./pkgs/hedgehog-quickcheck.nix) { };
+  hedgehog-quickcheck = final.callPackage (./pkgs/hedgehog-quickcheck.nix) { };
 
-  heredoc = prev.callPackage (./pkgs/heredoc.nix) { };
+  heredoc = final.callPackage (./pkgs/heredoc.nix) { };
 
-  hex-text = prev.callPackage (./pkgs/hex-text.nix) { };
+  hex-text = final.callPackage (./pkgs/hex-text.nix) { };
 
-  hxt = prev.callPackage (./pkgs/hxt.nix) { };
+  hxt = final.callPackage (./pkgs/hxt.nix) { };
 
-  hxt-charproperties = prev.callPackage (./pkgs/hxt-charproperties.nix) { };
+  hxt-charproperties = final.callPackage (./pkgs/hxt-charproperties.nix) { };
 
-  hxt-regex-xmlschema = prev.callPackage (./pkgs/hxt-regex-xmlschema.nix) { };
+  hxt-regex-xmlschema = final.callPackage (./pkgs/hxt-regex-xmlschema.nix) { };
 
-  hxt-unicode = prev.callPackage (./pkgs/hxt-unicode.nix) { };
+  hxt-unicode = final.callPackage (./pkgs/hxt-unicode.nix) { };
 
-  inline-c = prev.callPackage (./pkgs/inline-c.nix) { };
+  inline-c = final.callPackage (./pkgs/inline-c.nix) { };
 
-  inline-r = prev.callPackage (./pkgs/inline-r.nix) { };
+  inline-r = final.callPackage (./pkgs/inline-r.nix) { };
 
-  int-cast = prev.callPackage (./pkgs/int-cast.nix) { };
+  int-cast = final.callPackage (./pkgs/int-cast.nix) { };
 
-  lazy-search = prev.callPackage (./pkgs/lazy-search.nix) { };
+  lazy-search = final.callPackage (./pkgs/lazy-search.nix) { };
 
-  lazysmallcheck = prev.callPackage (./pkgs/lazysmallcheck.nix) { };
+  lazysmallcheck = final.callPackage (./pkgs/lazysmallcheck.nix) { };
 
-  list-t = prev.callPackage (./pkgs/list-t.nix) { };
+  list-t = final.callPackage (./pkgs/list-t.nix) { };
 
-  measures = prev.callPackage (./pkgs/measures.nix) { };
+  measures = final.callPackage (./pkgs/measures.nix) { };
 
-  mersenne-random-pure64 = prev.callPackage (./pkgs/mersenne-random-pure64.nix) { };
+  mersenne-random-pure64 = final.callPackage (./pkgs/mersenne-random-pure64.nix) { };
 
-  monoidal-containers = prev.callPackage (./pkgs/monoidal-containers.nix) { };
+  monoidal-containers = final.callPackage (./pkgs/monoidal-containers.nix) { };
 
-  moo = prev.callPackage (./pkgs/moo.nix) { };
+  moo = final.callPackage (./pkgs/moo.nix) { };
 
-  mtl-prelude = prev.callPackage (./pkgs/mtl-prelude.nix) { };
+  mtl-prelude = final.callPackage (./pkgs/mtl-prelude.nix) { };
 
-  multiset = prev.callPackage (./pkgs/multiset.nix) { };
+  multiset = final.callPackage (./pkgs/multiset.nix) { };
 
-  newtype = prev.callPackage (./pkgs/newtype.nix) { };
+  newtype = final.callPackage (./pkgs/newtype.nix) { };
 
-  non-integral = prev.callPackage (./pkgs/non-integral.nix) { };
+  non-integral = final.callPackage (./pkgs/non-integral.nix) { };
 
-  nonempty-vector = prev.callPackage (./pkgs/nonempty-vector.nix) { };
+  nonempty-vector = final.callPackage (./pkgs/nonempty-vector.nix) { };
 
-  nothunks = prev.callPackage (./pkgs/nothunks.nix) { };
+  nothunks = final.callPackage (./pkgs/nothunks.nix) { };
 
-  partial-order = prev.callPackage (./pkgs/partial-order.nix) { };
+  partial-order = final.callPackage (./pkgs/partial-order.nix) { };
 
-  plutus-core = prev.callPackage (./pkgs/plutus-core.nix) { };
+  plutus-core = final.callPackage (./pkgs/plutus-core.nix) { };
 
-  plutus-ledger-api = prev.callPackage (./pkgs/plutus-ledger-api.nix) { };
+  plutus-ledger-api = final.callPackage (./pkgs/plutus-ledger-api.nix) { };
 
-  plutus-preprocessor = prev.callPackage (./pkgs/plutus-preprocessor.nix) { };
+  plutus-preprocessor = final.callPackage (./pkgs/plutus-preprocessor.nix) { };
 
-  plutus-tx = prev.callPackage (./pkgs/plutus-tx.nix) { };
+  plutus-tx = final.callPackage (./pkgs/plutus-tx.nix) { };
 
-  prettyprinter-configurable = prev.callPackage (./pkgs/prettyprinter-configurable.nix) { };
+  prettyprinter-configurable = final.callPackage (./pkgs/prettyprinter-configurable.nix) { };
 
-  protolude = prev.callPackage (./pkgs/protolude.nix) { };
+  protolude = final.callPackage (./pkgs/protolude.nix) { };
 
-  quiet = prev.callPackage (./pkgs/quiet.nix) { };
+  quiet = final.callPackage (./pkgs/quiet.nix) { };
 
-  ral = prev.callPackage (./pkgs/ral.nix) { };
+  ral = final.callPackage (./pkgs/ral.nix) { };
 
-  recursion-schemes = prev.callPackage (./pkgs/recursion-schemes.nix) { };
+  recursion-schemes = final.callPackage (./pkgs/recursion-schemes.nix) { };
 
-  ref-tf = prev.callPackage (./pkgs/ref-tf.nix) { };
+  ref-tf = final.callPackage (./pkgs/ref-tf.nix) { };
 
-  set-algebra = prev.callPackage (./pkgs/set-algebra.nix) { };
+  set-algebra = final.callPackage (./pkgs/set-algebra.nix) { };
 
-  singletons-th = prev.callPackage (./pkgs/singletons-th.nix) { };
+  singletons-th = final.callPackage (./pkgs/singletons-th.nix) { };
 
-  size-based = prev.callPackage (./pkgs/size-based.nix) { };
+  size-based = final.callPackage (./pkgs/size-based.nix) { };
 
-  small-steps = prev.callPackage (./pkgs/small-steps.nix) { };
+  small-steps = final.callPackage (./pkgs/small-steps.nix) { };
 
-  small-steps-test = prev.callPackage (./pkgs/small-steps-test.nix) { };
+  small-steps-test = final.callPackage (./pkgs/small-steps-test.nix) { };
 
-  streaming-binary = prev.callPackage (./pkgs/streaming-binary.nix) { };
+  streaming-binary = final.callPackage (./pkgs/streaming-binary.nix) { };
 
-  streaming-bytestring = prev.callPackage (./pkgs/streaming-bytestring.nix) { };
+  streaming-bytestring = final.callPackage (./pkgs/streaming-bytestring.nix) { };
 
-  strict-containers = prev.callPackage (./pkgs/strict-containers.nix) { };
+  strict-containers = final.callPackage (./pkgs/strict-containers.nix) { };
 
-  testing-type-modifiers = prev.callPackage (./pkgs/testing-type-modifiers.nix) { };
+  testing-type-modifiers = final.callPackage (./pkgs/testing-type-modifiers.nix) { };
 
-  th-desugar = prev.callPackage (./pkgs/th-desugar.nix) { };
+  th-desugar = final.callPackage (./pkgs/th-desugar.nix) { };
 
-  typerep-map = prev.callPackage (./pkgs/typerep-map.nix) { };
+  typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 
-  validation-selective = prev.callPackage (./pkgs/validation-selective.nix) { };
+  validation-selective = final.callPackage (./pkgs/validation-selective.nix) { };
 
-  vector-map = prev.callPackage (./pkgs/vector-map.nix) { };
+  vector-map = final.callPackage (./pkgs/vector-map.nix) { };
 
-  word-array = prev.callPackage (./pkgs/word-array.nix) { };
+  word-array = final.callPackage (./pkgs/word-array.nix) { };
 
-  xmlgen = prev.callPackage (./pkgs/xmlgen.nix) { };
+  xmlgen = final.callPackage (./pkgs/xmlgen.nix) { };
 
 }

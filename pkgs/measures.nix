@@ -1,9 +1,9 @@
 { mkDerivation
+, QuickCheck
 , base
 , base-deriving-via
 , fetchgit
 , lib
-, QuickCheck
 , tasty
 , tasty-quickcheck
 }:
@@ -22,8 +22,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base base-deriving-via ];
   testHaskellDepends = [ base QuickCheck tasty tasty-quickcheck ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

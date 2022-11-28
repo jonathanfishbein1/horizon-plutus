@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , aeson
 , base
 , base16-bytestring
@@ -38,7 +39,6 @@
 , plutus-ledger-api
 , prettyprinter
 , process-extras
-, QuickCheck
 , scientific
 , serialise
 , set-algebra
@@ -61,8 +61,8 @@ mkDerivation {
   version = "0.1.0.0";
   src = fetchgit {
     url = "https://github.com/milloni/cardano-ledger";
-    sha256 = "13k3kq9s4did0bnmsisp8d4liaa90v1an28h6z3b6vwrwabbls4n";
-    rev = "cb35749e9726bb5e8db4fc95b54f2521dfe9e192";
+    sha256 = "08nj6hcqj5apvb17n1irc8j7rzf10bcdh5gh1mkmhwbyw6h2d4ab";
+    rev = "3aa1fd8469424778454644f0d371988fb4490b4a";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/shelley/test-suite/; echo source root reset to $sourceRoot";

@@ -29,8 +29,8 @@ mkDerivation {
   version = "0.1.0.0";
   src = fetchgit {
     url = "https://github.com/milloni/cardano-ledger";
-    sha256 = "0qwq9ddsdq2kps5j1mpznxbh8lvq3qf54587kch1m0bya086bmxx";
-    rev = "e95d4aa2d7e39c856e8b0aaae3610ffb2391ac19";
+    sha256 = "08nj6hcqj5apvb17n1irc8j7rzf10bcdh5gh1mkmhwbyw6h2d4ab";
+    rev = "3aa1fd8469424778454644f0d371988fb4490b4a";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/shelley-ma/impl/; echo source root reset to $sourceRoot";

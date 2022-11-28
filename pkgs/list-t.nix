@@ -1,8 +1,8 @@
 { mkDerivation
+, HTF
 , base
 , base-prelude
 , foldl
-, HTF
 , lib
 , logict
 , mmorph
@@ -32,8 +32,8 @@ mkDerivation {
     transformers-base
   ];
   testHaskellDepends = [ base-prelude HTF mmorph mtl-prelude ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

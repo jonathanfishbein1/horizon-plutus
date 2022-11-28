@@ -27,8 +27,8 @@ mkDerivation {
   version = "0.1.0.0";
   src = fetchgit {
     url = "https://github.com/milloni/cardano-ledger";
-    sha256 = "1gjfjbsj9zglxy2aas06nmr22629j1pd1nl3q584v5is6k8nxlsj";
-    rev = "0d12cfa23aed9c355f66f69d7a1fcc6e82b68ea9";
+    sha256 = "08nj6hcqj5apvb17n1irc8j7rzf10bcdh5gh1mkmhwbyw6h2d4ab";
+    rev = "3aa1fd8469424778454644f0d371988fb4490b4a";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/libs/cardano-protocol-tpraos/; echo source root reset to $sourceRoot";

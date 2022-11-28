@@ -1,6 +1,6 @@
 { mkDerivation
-, base
 , Cabal
+, base
 , cabal-doctest
 , deepseq
 , doctest
@@ -20,8 +20,8 @@ mkDerivation {
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [ base deepseq primitive vector ];
   testHaskellDepends = [ base doctest ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

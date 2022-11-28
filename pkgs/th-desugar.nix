@@ -1,9 +1,9 @@
 { mkDerivation
+, HUnit
 , base
 , containers
 , ghc-prim
 , hspec
-, HUnit
 , lib
 , mtl
 , ordered-containers
@@ -46,8 +46,8 @@ mkDerivation {
     th-lift
     th-orphans
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , array
 , base
 , base58-bytestring
@@ -12,7 +13,6 @@
 , memory
 , optparse-applicative
 , process
-, QuickCheck
 , text
 , vector
 }:
@@ -55,8 +55,8 @@ mkDerivation {
     vector
   ];
   testToolDepends = [ hspec-discover ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
@@ -65,6 +65,5 @@ mkDerivation {
   homepage = "https://github.com/input-output-hk/bech32";
   description = "Implementation of the Bech32 cryptocurrency address format (BIP 0173)";
   license = lib.licenses.asl20;
-  mainProgram = "bech32";
   broken = false;
 }

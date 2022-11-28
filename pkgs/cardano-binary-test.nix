@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , base
 , bytestring
 , cardano-binary
@@ -11,7 +12,6 @@
 , hspec
 , lib
 , pretty-show
-, QuickCheck
 , quickcheck-instances
 , text
 , time
@@ -47,8 +47,8 @@ mkDerivation {
     time
     vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

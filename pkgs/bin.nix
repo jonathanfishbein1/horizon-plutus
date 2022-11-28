@@ -1,4 +1,5 @@
 { mkDerivation
+, QuickCheck
 , base
 , boring
 , dec
@@ -6,7 +7,6 @@
 , fin
 , hashable
 , lib
-, QuickCheck
 , some
 }:
 mkDerivation {
@@ -28,8 +28,8 @@ mkDerivation {
     QuickCheck
     some
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

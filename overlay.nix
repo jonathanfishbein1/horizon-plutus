@@ -171,6 +171,8 @@ final: prev: with pkgs.haskell.lib; {
 
   nothunks = final.callPackage (./pkgs/nothunks.nix) { };
 
+  openapi3 = final.callPackage (./pkgs/openapi3.nix) { };
+
   optparse-generic = final.callPackage (./pkgs/optparse-generic.nix) { };
 
   partial-order = final.callPackage (./pkgs/partial-order.nix) { };

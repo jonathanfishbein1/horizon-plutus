@@ -219,6 +219,7 @@ let otherLibraries =
           "https://github.com/locallycompact/nothunks"
           "0d7e3565407aa4eb21d861d075dff6f20d090f97"
           (None H.Subdir)
+      , H.callHackage "openapi3" "3.2.2"
       , H.callHackage "optparse-generic" "1.4.8"
       , H.callHackage "partial-order" "0.2.0.0"
       , H.callCabal2nix

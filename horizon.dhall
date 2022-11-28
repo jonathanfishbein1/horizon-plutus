@@ -20,6 +20,16 @@ let callCardanoLedger
           "3aa1fd8469424778454644f0d371988fb4490b4a"
           (Some subdir)
 
+let callIohkMonitoringFramework
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = λ(name : H.Name) →
+      λ(subdir : H.Subdir) →
+        H.callCabal2nix
+          name
+          "https://github.com/input-output-hk/iohk-monitoring-framework"
+          "1b5ae75d3186159f8175ad625db324d075450343"
+          (Some subdir)
+
 let callOuroboros
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
     = λ(name : H.Name) →

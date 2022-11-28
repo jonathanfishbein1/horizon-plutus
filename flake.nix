@@ -10,7 +10,18 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
   };
-  outputs = inputs@{ self, get-flake, nixpkgs, nixpkgs-libR, horizon-gen-nix, horizon-platform, flake-utils, lint-utils, ... }:
+  outputs =
+    inputs@
+    { self
+    , flake-utils
+    , get-flake
+    , horizon-gen-nix
+    , horizon-platform
+    , lint-utils
+    , nixpkgs
+    , nixpkgs-libR
+    , ...
+    }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs-libR = import nixpkgs-libR { inherit system; };

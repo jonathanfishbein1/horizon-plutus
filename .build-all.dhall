@@ -7,15 +7,16 @@ let H = ./horizon-spec.dhall
 
 let toStep
     : Text → Text
-    = \(x : Text) -> ".#${x}"
+    = λ(x : Text) → ".#${x}"
 
 let input = Prelude.Map.keys Text H.HaskellPackage.Type ./horizon.dhall
 
-let packages =
-      Prelude.List.map
-        Text
-        Text
-        toStep 
-        (input : List Text)
+let packages = Prelude.List.map Text Text toStep (input : List Text)
 
-in  "nix build -L" ++ Prelude.List.fold Text packages Text (\(x : Text) -> \(y : Text) -> x ++ " " ++ y) ""
+in      "nix build -L"
+    ++  Prelude.List.fold
+          Text
+          packages
+          Text
+          (λ(x : Text) → λ(y : Text) → x ++ " " ++ y)
+          ""

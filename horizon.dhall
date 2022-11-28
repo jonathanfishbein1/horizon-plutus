@@ -147,6 +147,7 @@ let otherLibraries =
       , H.callHackage "dependent-sum-template" "0.1.1.1"
       , H.callHackage "deriving-compat" "0.6.1"
       , H.callHackage "dictionary-sharing" "0.1.0.0"
+      , H.callHackage "doctest-discover" "0.2.0.0"
       , H.callHackage "dom-lt" "0.2.3"
       , H.callCabal2nix
           "flat"

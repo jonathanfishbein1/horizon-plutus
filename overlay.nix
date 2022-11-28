@@ -99,6 +99,8 @@ final: prev: with pkgs.haskell.lib; {
 
   dictionary-sharing = final.callPackage (./pkgs/dictionary-sharing.nix) { };
 
+  doctest-discover = final.callPackage (./pkgs/doctest-discover.nix) { };
+
   dom-lt = final.callPackage (./pkgs/dom-lt.nix) { };
 
   flat = final.callPackage (./pkgs/flat.nix) { };

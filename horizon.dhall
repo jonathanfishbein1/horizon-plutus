@@ -1,84 +1,60 @@
 let H = ./horizon-spec.dhall
 
+let callRepository
+    : H.Url → H.Revision → H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = λ(repo : H.Url) →
+      λ(revision : H.Revision) →
+      λ(name : H.Name) →
+      λ(subdir : H.Subdir) →
+        H.callCabal2nix name repo revision (Some subdir)
+
 let callCardanoBase
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
-    = λ(name : H.Name) →
-      λ(subdir : H.Subdir) →
-        H.callCabal2nix
-          name
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some subdir)
+    = callRepository
+        "https://github.com/input-output-hk/cardano-base"
+        "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
 
 let callCardanoNode
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
-    = λ(name : Text) →
-      λ(subdir : H.Subdir) →
-        H.callCabal2nix
-          name
-          "https://github.com/input-output-hk/cardano-node"
-          "4198592a7ea9c4873def316d6f80df1d20d37891"
-          (Some subdir)
+    = callRepository
+        "https://github.com/input-output-hk/cardano-node"
+        "4198592a7ea9c4873def316d6f80df1d20d37891"
 
 let callCardanoLedger
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
-    = λ(name : H.Name) →
-      λ(subdir : H.Subdir) →
-        H.callCabal2nix
-          name
-          "https://github.com/milloni/cardano-ledger"
-          "3aa1fd8469424778454644f0d371988fb4490b4a"
-          (Some subdir)
+    = callRepository
+        "https://github.com/milloni/cardano-ledger"
+        "3aa1fd8469424778454644f0d371988fb4490b4a"
 
 let callIoSim
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
-    = λ(name : H.Name) →
-      λ(subdir : H.Subdir) →
-        H.callCabal2nix
-          name
-          "https://github.com/input-output-hk/io-sim"
-          "dcafd44cdc101a3e213de6a2d5ba7f674c2bc13c"
-          (Some subdir)
+    = callRepository
+        "https://github.com/input-output-hk/io-sim"
+        "dcafd44cdc101a3e213de6a2d5ba7f674c2bc13c"
 
 let callIohkMonitoringFramework
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
-    = λ(name : H.Name) →
-      λ(subdir : H.Subdir) →
-        H.callCabal2nix
-          name
-          "https://github.com/input-output-hk/iohk-monitoring-framework"
-          "1b5ae75d3186159f8175ad625db324d075450343"
-          (Some subdir)
+    = callRepository
+        "https://github.com/input-output-hk/iohk-monitoring-framework"
+        "1b5ae75d3186159f8175ad625db324d075450343"
 
 let callOuroboros
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
-    = λ(name : H.Name) →
-      λ(subdir : H.Subdir) →
-        H.callCabal2nix
-          name
-          "https://github.com/input-output-hk/ouroboros-network"
-          "3a2c7c296fa4d9748d89dbe592375bf7f60cd656"
-          (Some subdir)
+    = callRepository
+        "https://github.com/input-output-hk/ouroboros-network"
+        "3a2c7c296fa4d9748d89dbe592375bf7f60cd656"
 
 let callPlutusApps
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
-    = λ(name : H.Name) →
-      λ(subdir : H.Subdir) →
-        H.callCabal2nix
-          name
-          "https://github.com/input-output-hk/plutus-apps"
-          "b7ac5b2035f3675b3ceb289cf3a1551230714987"
-          (Some subdir)
+    = callRepository
+        "https://github.com/input-output-hk/plutus-apps"
+        "b7ac5b2035f3675b3ceb289cf3a1551230714987"
 
 let callPlutus
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
-    = λ(name : H.Name) →
-      λ(subdir : H.Subdir) →
-        H.callCabal2nix
-          name
-          "https://github.com/milloni/plutus"
-          "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-          (Some subdir)
+    = callRepository
+        "https://github.com/milloni/plutus"
+        "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
 
 let plutusLibraries =
       H.modPackageList

@@ -30,6 +30,16 @@ let callCardanoLedger
           "3aa1fd8469424778454644f0d371988fb4490b4a"
           (Some subdir)
 
+let callIoSim
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = λ(name : H.Name) →
+      λ(subdir : H.Subdir) →
+        H.callCabal2nix
+          name
+          "https://github.com/input-output-hk/io-sim"
+          "dcafd44cdc101a3e213de6a2d5ba7f674c2bc13c"
+          (Some subdir)
+
 let callIohkMonitoringFramework
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
     = λ(name : H.Name) →

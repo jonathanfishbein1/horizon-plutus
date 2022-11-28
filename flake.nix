@@ -26,54 +26,54 @@
     , ...
     }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
-      let
-        pkgs-libR = import nixpkgs-libR { inherit system; };
-        pkgs = import nixpkgs { inherit system; };
-      in
-      with pkgs.lib;
-      with pkgs.writers;
-      let
-        horizon-gen-nix-app = get-flake horizon-gen-nix;
+    let
+      pkgs-libR = import nixpkgs-libR { inherit system; };
+      pkgs = import nixpkgs { inherit system; };
+    in
+    with pkgs.lib;
+    with pkgs.writers;
+    let
+      horizon-gen-nix-app = get-flake horizon-gen-nix;
 
-        overrides = composeManyExtensions [
-          (import ./overlay.nix { inherit pkgs; })
-          (import ./configuration.nix { inherit pkgs pkgs-libR; })
-        ];
+      overrides = composeManyExtensions [
+        (import ./overlay.nix { inherit pkgs; })
+        (import ./configuration.nix { inherit pkgs pkgs-libR; })
+      ];
 
-        legacyPackages = horizon-platform.legacyPackages.${system}.override {
-          inherit overrides;
-        };
-
-        packages = filterAttrs
-          (n: v: v != null
-            && builtins.typeOf v == "set"
-            && pkgs.lib.hasAttr "type" v
-            && v.type == "derivation"
-            && v.meta.broken == false)
-          legacyPackages;
-
-        horizon-gen-gitlab-ci = writeBashBin "gen-gitlab-ci" "${pkgs.dhall-json}/bin/dhall-to-yaml --file .gitlab-ci.dhall";
-
-      in
-      {
-        apps = {
-
-          horizon-gen-nix = horizon-gen-nix-app.apps.${system}.horizon-gen-nix;
-
-          horizon-gen-gitlab-ci = {
-            type = "app";
-            program = "${horizon-gen-gitlab-ci}/bin/gen-gitlab-ci";
-          };
-
-        };
-
-        checks = {
-          dhall-format = lint-utils.outputs.linters.${system}.dhall-format ./.;
-          nixpkgs-fmt = lint-utils.outputs.linters.${system}.nixpkgs-fmt ./.;
-        };
-
-        inherit legacyPackages;
+      legacyPackages = horizon-platform.legacyPackages.${system}.override {
         inherit overrides;
-        inherit packages;
-      });
+      };
+
+      packages = filterAttrs
+        (n: v: v != null
+          && builtins.typeOf v == "set"
+          && pkgs.lib.hasAttr "type" v
+          && v.type == "derivation"
+          && v.meta.broken == false)
+        legacyPackages;
+
+      horizon-gen-gitlab-ci = writeBashBin "gen-gitlab-ci" "${pkgs.dhall-json}/bin/dhall-to-yaml --file .gitlab-ci.dhall";
+
+    in
+    {
+      apps = {
+
+        horizon-gen-nix = horizon-gen-nix-app.apps.${system}.horizon-gen-nix;
+
+        horizon-gen-gitlab-ci = {
+          type = "app";
+          program = "${horizon-gen-gitlab-ci}/bin/gen-gitlab-ci";
+        };
+
+      };
+
+      checks = {
+        dhall-format = lint-utils.outputs.linters.${system}.dhall-format ./.;
+        nixpkgs-fmt = lint-utils.outputs.linters.${system}.nixpkgs-fmt ./.;
+      };
+
+      inherit legacyPackages;
+      inherit overrides;
+      inherit packages;
+    });
 }

@@ -67,6 +67,7 @@ let plutusLibraries =
             "cardano-ledger-alonzo-test"
             "eras/alonzo/test-suite"
         , callCardanoLedger "cardano-ledger-alonzo" "eras/alonzo/impl"
+        , callCardanoLedger "cardano-ledger-api" "libs/cardano-ledger-api"
         , callCardanoLedger "cardano-ledger-babbage" "eras/babbage/impl"
         , callCardanoLedger
             "cardano-ledger-babbage-test"
@@ -90,6 +91,7 @@ let plutusLibraries =
             "libs/cardano-protocol-tpraos"
         , callPlutus "plutus-core" "plutus-core"
         , callPlutus "plutus-ledger-api" "plutus-ledger-api"
+        , callCardanoLedger "plutus-preprocessor" "libs/plutus-preprocessor"
         , callPlutus "plutus-tx" "plutus-tx"
         ]
 
@@ -122,7 +124,6 @@ let otherLibraries =
       , callCardanoLedger "cardano-crypto-test" "eras/byron/crypto/test"
       , callCardanoLedger "cardano-crypto-wrapper" "eras/byron/crypto"
       , callCardanoLedger "cardano-data" "libs/cardano-data"
-      , callCardanoLedger "cardano-ledger-api" "libs/cardano-ledger-api"
       , callCardanoLedger "cardano-ledger-byron" "eras/byron/ledger/impl"
       , callCardanoLedger
           "cardano-ledger-byron-test"
@@ -213,7 +214,6 @@ let otherLibraries =
           (None H.Subdir)
       , H.callHackage "optparse-generic" "1.4.8"
       , H.callHackage "partial-order" "0.2.0.0"
-      , callCardanoLedger "plutus-preprocessor" "libs/plutus-preprocessor"
       , H.callCabal2nix
           "prettyprinter-configurable"
           "https://github.com/milloni/plutus"

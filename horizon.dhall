@@ -30,6 +30,16 @@ let callPlutus
           "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
           (Some subdir)
 
+let callOuroboros
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = λ(name : H.Name) →
+      λ(subdir : H.Subdir) →
+        H.callCabal2nix
+          name
+          "https://github.com/input-output-hk/ouroboros-network"
+          "3a2c7c296fa4d9748d89dbe592375bf7f60cd656"
+          (Some subdir)
+
 let plutusLibraries =
       H.modPackageList
         H.Modifiers::{ enableProfiling = False }

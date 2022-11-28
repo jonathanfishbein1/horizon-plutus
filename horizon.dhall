@@ -177,6 +177,11 @@ let otherLibraries =
           (None H.Subdir)
       , H.callHackage "haskell-src" "1.0.4"
       , callCardanoBase "heapwords" "heapwords"
+      , H.callCabal2nix
+          "hedgehog-extras"
+          "https://github.com/input-output-hk/hedgehog-extras"
+          "26b76bbcecfe48d0a87099f213f58e3778aa1f59"
+          (None H.Subdir)
       , H.callHackage "hedgehog-fn" "1.0"
       , H.callHackage "hedgehog-quickcheck" "0.1.1"
       , H.callHackage "heredoc" "0.2.0.0"

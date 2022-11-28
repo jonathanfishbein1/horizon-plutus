@@ -119,6 +119,8 @@ final: prev: with pkgs.haskell.lib; {
 
   heapwords = final.callPackage (./pkgs/heapwords.nix) { };
 
+  hedgehog-extras = final.callPackage (./pkgs/hedgehog-extras.nix) { };
+
   hedgehog-fn = final.callPackage (./pkgs/hedgehog-fn.nix) { };
 
   hedgehog-quickcheck = final.callPackage (./pkgs/hedgehog-quickcheck.nix) { };

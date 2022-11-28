@@ -1,0 +1,3 @@
+loops:
+  build: cat .build-all.dhall | dhall text | bash
+  check: nix flake check -L

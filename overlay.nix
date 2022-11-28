@@ -215,6 +215,8 @@ final: prev: with pkgs.haskell.lib; {
 
   th-desugar = final.callPackage (./pkgs/th-desugar.nix) { };
 
+  time-units = final.callPackage (./pkgs/time-units.nix) { };
+
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 
   validation-selective = final.callPackage (./pkgs/validation-selective.nix) { };

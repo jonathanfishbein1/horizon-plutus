@@ -245,6 +245,7 @@ let otherLibraries =
           (Some "strict-containers")
       , H.callHackage "testing-type-modifiers" "0.1.0.1"
       , H.callHackage "th-desugar" "1.14"
+      , H.callHackage "time-units" "1.0.0"
       , H.callCabal2nix
           "typerep-map"
           "https://github.com/parsonsmatt/typerep-map"

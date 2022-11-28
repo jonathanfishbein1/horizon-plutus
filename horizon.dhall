@@ -40,6 +40,16 @@ let callOuroboros
           "3a2c7c296fa4d9748d89dbe592375bf7f60cd656"
           (Some subdir)
 
+let callPlutusApps
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = λ(name : H.Name) →
+      λ(subdir : H.Subdir) →
+        H.callCabal2nix
+          name
+          "https://github.com/input-output-hk/plutus-apps"
+          "b7ac5b2035f3675b3ceb289cf3a1551230714987"
+          (Some subdir)
+
 let callPlutus
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
     = λ(name : H.Name) →

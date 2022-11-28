@@ -19,9 +19,9 @@
         horizon-gen-nix-app = get-flake horizon-gen-nix;
 
         overrides = pkgs.lib.composeManyExtensions [
-            (import ./overlay.nix { inherit pkgs; })
-            (import ./configuration.nix { inherit pkgs pkgs-libR; })
-          ];
+          (import ./overlay.nix { inherit pkgs; })
+          (import ./configuration.nix { inherit pkgs pkgs-libR; })
+        ];
 
         legacyPackages = horizon-platform.legacyPackages.${system}.override {
           inherit overrides;

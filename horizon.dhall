@@ -116,7 +116,7 @@ let otherLibraries =
           "cardano-crypto"
           "https://github.com/input-output-hk/cardano-crypto"
           "07397f0e50da97eaa0575d93bee7ac4b2b2576ec"
-          (None Text)
+          (None H.Subdir)
       , callCardanoBase "cardano-crypto-class" "cardano-crypto-class"
       , callCardanoBase "cardano-crypto-praos" "cardano-crypto-praos"
       , callCardanoLedger "cardano-crypto-test" "eras/byron/crypto/test"
@@ -151,28 +151,28 @@ let otherLibraries =
           "flat"
           "https://github.com/Quid2/flat"
           "2121ee96201e39764e3a6fcbc53241afb0050647"
-          (None Text)
+          (None H.Subdir)
       , H.callHackage "generic-monoid" "0.1.0.1"
       , H.callCabal2nix
           "ghc-typelits-knownnat"
           "https://github.com/clash-lang/ghc-typelits-knownnat"
           "1bc4ee33e005e96d1f7785c715588a289707cd48"
-          (None Text)
+          (None H.Subdir)
       , H.callCabal2nix
           "ghc-typelits-natnormalise"
           "https://github.com/clash-lang/ghc-typelits-natnormalise"
           "e0af5b3c69a7d8e1dd402eb727631801e7d9be3d"
-          (None Text)
+          (None H.Subdir)
       , H.callCabal2nix
           "goblins"
           "https://github.com/newhoggy/goblins"
           "a315f41ec7250097fa6073b5ef4773e45758578f"
-          (None Text)
+          (None H.Subdir)
       , H.callCabal2nix
           "gray-code"
           "https://github.com/milloni/gray-code-0.3.1"
           "f310a19e44416206633cfd084f10ffb7cfea9f1d"
-          (None Text)
+          (None H.Subdir)
       , H.callHackage "haskell-src" "1.0.4"
       , callCardanoBase "heapwords" "heapwords"
       , H.callHackage "hedgehog-fn" "1.0"
@@ -197,7 +197,7 @@ let otherLibraries =
           "moo"
           "https://github.com/astanin/moo"
           "dbda5e76ac3b4c72c805ec0cdb9bcdff7bb6247d"
-          (None Text)
+          (None H.Subdir)
       , H.callHackage "mtl-prelude" "2.0.3.1"
       , H.callHackage "multiset" "0.3.4.3"
       , H.callHackage "lazysmallcheck" "0.6"
@@ -210,7 +210,7 @@ let otherLibraries =
           "nothunks"
           "https://github.com/locallycompact/nothunks"
           "0d7e3565407aa4eb21d861d075dff6f20d090f97"
-          (None Text)
+          (None H.Subdir)
       , H.callHackage "optparse-generic" "1.4.8"
       , H.callHackage "partial-order" "0.2.0.0"
       , callCardanoLedger "plutus-preprocessor" "libs/plutus-preprocessor"
@@ -241,7 +241,7 @@ let otherLibraries =
           "typerep-map"
           "https://github.com/parsonsmatt/typerep-map"
           "75b7cd5d45986be07420a6821d352ad2adc0b697"
-          (None Text)
+          (None H.Subdir)
       , H.callHackage "validation-selective" "0.1.0.2"
       , callCardanoLedger "vector-map" "libs/vector-map"
       , callPlutus "word-array" "word-array"

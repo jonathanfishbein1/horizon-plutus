@@ -1,5 +1,15 @@
 let H = ./horizon-spec.dhall
 
+let callCardanoBase
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = λ(name : H.Name) →
+      λ(subdir : H.Subdir) →
+        H.callCabal2nix
+          name
+          "https://github.com/input-output-hk/cardano-base"
+          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
+          (Some subdir)
+
 let callCardanoLedger
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
     = λ(name : H.Name) →
@@ -63,11 +73,7 @@ let otherLibraries =
       , H.callHackage "algebraic-graphs" "0.7"
       , H.callHackage "base58-bytestring" "0.1.0"
       , H.callHackage "base64-bytestring-type" "1.0.1"
-      , H.callCabal2nix
-          "base-deriving-via"
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some "base-deriving-via")
+      , callCardanoBase "base-deriving-via" "base-deriving-via"
       , H.callHackage "base-prelude" "1.6.1"
       , H.callHackage "bech32" "1.1.2"
       , H.callHackage "bin" "0.1.2"
@@ -76,31 +82,15 @@ let otherLibraries =
           "byron-spec-ledger"
           "eras/byron/ledger/executable-spec"
       , H.callHackage "canonical-json" "0.6.0.1"
-      , H.callCabal2nix
-          "cardano-binary"
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some "binary")
-      , H.callCabal2nix
-          "cardano-binary-test"
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some "binary/test")
+      , callCardanoBase "cardano-binary" "binary"
+      , callCardanoBase "cardano-binary-test" "binary/test"
       , H.callCabal2nix
           "cardano-crypto"
           "https://github.com/input-output-hk/cardano-crypto"
           "07397f0e50da97eaa0575d93bee7ac4b2b2576ec"
           (None Text)
-      , H.callCabal2nix
-          "cardano-crypto-class"
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some "cardano-crypto-class")
-      , H.callCabal2nix
-          "cardano-crypto-praos"
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some "cardano-crypto-praos")
+      , callCardanoBase "cardano-crypto-class" "cardano-crypto-class"
+      , callCardanoBase "cardano-crypto-praos" "cardano-crypto-praos"
       , callCardanoLedger "cardano-crypto-test" "eras/byron/crypto/test"
       , callCardanoLedger "cardano-crypto-wrapper" "eras/byron/crypto"
       , callCardanoLedger "cardano-data" "libs/cardano-data"
@@ -110,16 +100,8 @@ let otherLibraries =
           "cardano-ledger-byron-test"
           "eras/byron/ledger/impl/test"
       , callCardanoLedger "cardano-ledger-core" "libs/cardano-ledger-core"
-      , H.callCabal2nix
-          "cardano-slotting"
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some "slotting")
-      , H.callCabal2nix
-          "cardano-strict-containers"
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some "cardano-strict-containers")
+      , callCardanoBase "cardano-slotting" "slotting"
+      , callCardanoBase "cardano-strict-containers" "cardano-strict-containers"
       , H.callCabal2nix
           "cardano-prelude"
           "https://github.com/input-output-hk/cardano-prelude"
@@ -164,11 +146,7 @@ let otherLibraries =
           "f310a19e44416206633cfd084f10ffb7cfea9f1d"
           (None Text)
       , H.callHackage "haskell-src" "1.0.4"
-      , H.callCabal2nix
-          "heapwords"
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some "heapwords")
+      , callCardanoBase "heapwords" "heapwords"
       , H.callHackage "hedgehog-fn" "1.0"
       , H.callHackage "hedgehog-quickcheck" "0.1.1"
       , H.callHackage "heredoc" "0.2.0.0"
@@ -184,11 +162,7 @@ let otherLibraries =
           "fe9b5bd06cd4d3988e47b9933b11d83b6108e255"
           (Some "inline-r")
       , H.callHackage "int-cast" "0.2.0.0"
-      , H.callCabal2nix
-          "measures"
-          "https://github.com/input-output-hk/cardano-base"
-          "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-          (Some "measures")
+      , callCardanoBase "measures" "measures"
       , H.callHackage "mersenne-random-pure64" "0.2.2.0"
       , H.callHackage "monoidal-containers" "0.6.3.0"
       , H.callCabal2nix

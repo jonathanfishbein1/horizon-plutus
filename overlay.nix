@@ -217,6 +217,8 @@ final: prev: with pkgs.haskell.lib; {
 
   time-units = final.callPackage (./pkgs/time-units.nix) { };
 
+  transformers-except = final.callPackage (./pkgs/transformers-except.nix) { };
+
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 
   validation-selective = final.callPackage (./pkgs/validation-selective.nix) { };

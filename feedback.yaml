@@ -1,3 +1,7 @@
 loops:
   build: cat .build-all.dhall | dhall text | bash
   check: nix flake check -L
+  gen:
+    command: nix run .#horizon-gen-nix overlay
+    filter:
+      find: horizon.dhall

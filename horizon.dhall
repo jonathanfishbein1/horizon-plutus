@@ -56,6 +56,12 @@ let callPlutus
         "https://github.com/milloni/plutus"
         "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
 
+let callTypedProtocols
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = callRepository
+        "https://github.com/input-output-hk/typed-protocols"
+        "ab4e0346c3215daad4c823f3ddc0eefae32091ff"
+
 let plutusLibraries =
       H.modPackageList
         H.Modifiers::{ enableProfiling = False }

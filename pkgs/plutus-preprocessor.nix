@@ -13,8 +13,8 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   executableHaskellDepends = [ base cardano-ledger-alonzo ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -41,6 +41,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-crypto-test = final.callPackage (./pkgs/cardano-crypto-test.nix) { };
 
+  cardano-crypto-tests = final.callPackage (./pkgs/cardano-crypto-tests.nix) { };
+
   cardano-crypto-wrapper = final.callPackage (./pkgs/cardano-crypto-wrapper.nix) { };
 
   cardano-data = final.callPackage (./pkgs/cardano-data.nix) { };
@@ -95,9 +97,13 @@ final: prev: with pkgs.haskell.lib; {
 
   dependent-sum-template = final.callPackage (./pkgs/dependent-sum-template.nix) { };
 
+  deque = final.callPackage (./pkgs/deque.nix) { };
+
   deriving-compat = final.callPackage (./pkgs/deriving-compat.nix) { };
 
   dictionary-sharing = final.callPackage (./pkgs/dictionary-sharing.nix) { };
+
+  doctest-discover = final.callPackage (./pkgs/doctest-discover.nix) { };
 
   dom-lt = final.callPackage (./pkgs/dom-lt.nix) { };
 
@@ -117,6 +123,8 @@ final: prev: with pkgs.haskell.lib; {
 
   heapwords = final.callPackage (./pkgs/heapwords.nix) { };
 
+  hedgehog-extras = final.callPackage (./pkgs/hedgehog-extras.nix) { };
+
   hedgehog-fn = final.callPackage (./pkgs/hedgehog-fn.nix) { };
 
   hedgehog-quickcheck = final.callPackage (./pkgs/hedgehog-quickcheck.nix) { };
@@ -124,6 +132,8 @@ final: prev: with pkgs.haskell.lib; {
   heredoc = final.callPackage (./pkgs/heredoc.nix) { };
 
   hex-text = final.callPackage (./pkgs/hex-text.nix) { };
+
+  hw-aeson = final.callPackage (./pkgs/hw-aeson.nix) { };
 
   hxt = final.callPackage (./pkgs/hxt.nix) { };
 
@@ -165,6 +175,12 @@ final: prev: with pkgs.haskell.lib; {
 
   nothunks = final.callPackage (./pkgs/nothunks.nix) { };
 
+  openapi3 = final.callPackage (./pkgs/openapi3.nix) { };
+
+  optparse-applicative-fork = final.callPackage (./pkgs/optparse-applicative-fork.nix) { };
+
+  optparse-generic = final.callPackage (./pkgs/optparse-generic.nix) { };
+
   partial-order = final.callPackage (./pkgs/partial-order.nix) { };
 
   plutus-core = final.callPackage (./pkgs/plutus-core.nix) { };
@@ -203,9 +219,15 @@ final: prev: with pkgs.haskell.lib; {
 
   strict-containers = final.callPackage (./pkgs/strict-containers.nix) { };
 
+  strict-list = final.callPackage (./pkgs/strict-list.nix) { };
+
   testing-type-modifiers = final.callPackage (./pkgs/testing-type-modifiers.nix) { };
 
   th-desugar = final.callPackage (./pkgs/th-desugar.nix) { };
+
+  time-units = final.callPackage (./pkgs/time-units.nix) { };
+
+  transformers-except = final.callPackage (./pkgs/transformers-except.nix) { };
 
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 

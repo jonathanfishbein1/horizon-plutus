@@ -38,7 +38,7 @@ let callIohkMonitoringFramework
         "https://github.com/input-output-hk/iohk-monitoring-framework"
         "1b5ae75d3186159f8175ad625db324d075450343"
 
-let callOuroboros
+let callOuroborosNetwork
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
     = callRepository
         "https://github.com/input-output-hk/ouroboros-network"

@@ -121,6 +121,7 @@ let otherLibraries =
           (None H.Subdir)
       , callCardanoBase "cardano-crypto-class" "cardano-crypto-class"
       , callCardanoBase "cardano-crypto-praos" "cardano-crypto-praos"
+      , callCardanoBase "cardano-crypto-tests" "cardano-crypto-tests"
       , callCardanoLedger "cardano-crypto-test" "eras/byron/crypto/test"
       , callCardanoLedger "cardano-crypto-wrapper" "eras/byron/crypto"
       , callCardanoLedger "cardano-data" "libs/cardano-data"

@@ -10,6 +10,8 @@ final: prev: {
 
   cardano-crypto-praos = addPkgconfigDepend prev.cardano-crypto-praos pkgs.libsodium;
 
+  cardano-crypto-tests = enableCabalFlag prev.cardano-crypto-tests "development";
+
   cardano-prelude = enableCabalFlag prev.cardano-prelude "development";
 
   plutus-core = setBuildTarget (dontBenchmark prev.plutus-core) "plc";

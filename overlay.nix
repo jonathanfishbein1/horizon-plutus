@@ -41,6 +41,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-crypto-test = final.callPackage (./pkgs/cardano-crypto-test.nix) { };
 
+  cardano-crypto-tests = final.callPackage (./pkgs/cardano-crypto-tests.nix) { };
+
   cardano-crypto-wrapper = final.callPackage (./pkgs/cardano-crypto-wrapper.nix) { };
 
   cardano-data = final.callPackage (./pkgs/cardano-data.nix) { };

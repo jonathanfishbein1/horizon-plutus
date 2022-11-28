@@ -1,4 +1,6 @@
 {
+  description = "horizon-plutus overlay";
+
   inputs = {
     get-flake.url = "github:ursi/get-flake";
     horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform?rev=51ffeae6e4cb64c4c0b5c2af322990d3d4089ca2";
@@ -10,6 +12,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
   };
+
   outputs =
     inputs@
     { self

@@ -29,10 +29,13 @@
       let
         pkgs-libR = import nixpkgs-libR { inherit system; };
         pkgs = import nixpkgs { inherit system; };
-
+      in
+      with pkgs.lib;
+      with pkgs.writers;
+      let
         horizon-gen-nix-app = get-flake horizon-gen-nix;
 
-        overrides = pkgs.lib.composeManyExtensions [
+        overrides = composeManyExtensions [
           (import ./overlay.nix { inherit pkgs; })
           (import ./configuration.nix { inherit pkgs pkgs-libR; })
         ];
@@ -41,7 +44,7 @@
           inherit overrides;
         };
 
-        packages = pkgs.lib.filterAttrs
+        packages = filterAttrs
           (n: v: v != null
             && builtins.typeOf v == "set"
             && pkgs.lib.hasAttr "type" v
@@ -49,7 +52,7 @@
             && v.meta.broken == false)
           legacyPackages;
 
-        horizon-gen-gitlab-ci = pkgs.writers.writeBashBin "gen-gitlab-ci" "${pkgs.dhall-json}/bin/dhall-to-yaml --file .gitlab-ci.dhall";
+        horizon-gen-gitlab-ci = writeBashBin "gen-gitlab-ci" "${pkgs.dhall-json}/bin/dhall-to-yaml --file .gitlab-ci.dhall";
 
       in
       {

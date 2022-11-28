@@ -226,6 +226,7 @@ let otherLibraries =
       , H.callHackage "ref-tf" "0.5.0.1"
       , callCardanoLedger "set-algebra" "libs/set-algebra"
       , H.callHackage "singletons-th" "3.1.1"
+      , H.callHackage "size-based" "0.1.3.1"
       , callCardanoLedger "small-steps" "libs/small-steps"
       , callCardanoLedger "small-steps-test" "libs/small-steps-test"
       , H.callHackage "streaming-binary" "0.3.0.1"
@@ -246,7 +247,6 @@ let otherLibraries =
       , callCardanoLedger "vector-map" "libs/vector-map"
       , callPlutus "word-array" "word-array"
       , H.callHackage "xmlgen" "0.6.2.2"
-      , H.callHackage "size-based" "0.1.3.1"
       ]
 
 in  plutusLibraries # otherLibraries

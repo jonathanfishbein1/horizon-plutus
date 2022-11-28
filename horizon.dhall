@@ -10,6 +10,16 @@ let callCardanoBase
           "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
           (Some subdir)
 
+let callCardanoNode
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = λ(name : Text) →
+      λ(subdir : H.Subdir) →
+        H.callCabal2nix
+          name
+          "https://github.com/input-output-hk/cardano-node"
+          "4198592a7ea9c4873def316d6f80df1d20d37891"
+          (Some subdir)
+
 let callCardanoLedger
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
     = λ(name : H.Name) →

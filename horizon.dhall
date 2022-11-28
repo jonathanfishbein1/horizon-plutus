@@ -20,6 +20,16 @@ let callCardanoLedger
           "3aa1fd8469424778454644f0d371988fb4490b4a"
           (Some subdir)
 
+let callPlutus
+    : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
+    = λ(name : H.Name) →
+      λ(subdir : H.Subdir) →
+        H.callCabal2nix
+          name
+          "https://github.com/milloni/plutus"
+          "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
+          (Some subdir)
+
 let plutusLibraries =
       H.modPackageList
         H.Modifiers::{ enableProfiling = False }
@@ -48,21 +58,9 @@ let plutusLibraries =
         , callCardanoLedger
             "cardano-protocol-tpraos"
             "libs/cardano-protocol-tpraos"
-        , H.callCabal2nix
-            "plutus-core"
-            "https://github.com/milloni/plutus"
-            "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-            (Some "plutus-core")
-        , H.callCabal2nix
-            "plutus-ledger-api"
-            "https://github.com/milloni/plutus"
-            "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-            (Some "plutus-ledger-api")
-        , H.callCabal2nix
-            "plutus-tx"
-            "https://github.com/milloni/plutus"
-            "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-            (Some "plutus-tx")
+        , callPlutus "plutus-core" "plutus-core"
+        , callPlutus "plutus-ledger-api" "plutus-ledger-api"
+        , callPlutus "plutus-tx" "plutus-tx"
         ]
 
 let otherLibraries =
@@ -215,11 +213,7 @@ let otherLibraries =
           (None Text)
       , H.callHackage "validation-selective" "0.1.0.2"
       , callCardanoLedger "vector-map" "libs/vector-map"
-      , H.callCabal2nix
-          "word-array"
-          "https://github.com/milloni/plutus"
-          "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-          (Some "word-array")
+      , callPlutus "word-array" "word-array"
       , H.callHackage "xmlgen" "0.6.2.2"
       , H.callHackage "size-based" "0.1.3.1"
       ]

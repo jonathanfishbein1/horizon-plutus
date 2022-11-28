@@ -40,15 +40,19 @@
       in
       {
         apps = {
+
           horizon-gen-nix = horizon-gen-nix-app.apps.${system}.horizon-gen-nix;
+
           horizon-gen-gitlab-ci = {
             type = "app";
             program = "${horizon-gen-gitlab-ci}/bin/gen-gitlab-ci";
           };
+
         };
+
         checks = {
-          dhall-format = lint-utils.outputs.linters.x86_64-linux.dhall-format ./.;
-          nixpkgs-fmt = lint-utils.outputs.linters.x86_64-linux.nixpkgs-fmt ./.;
+          dhall-format = lint-utils.outputs.linters.${system}.dhall-format ./.;
+          nixpkgs-fmt = lint-utils.outputs.linters.${system}.nixpkgs-fmt ./.;
         };
 
         inherit legacyPackages;

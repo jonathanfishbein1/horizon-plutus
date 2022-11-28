@@ -181,6 +181,7 @@ let otherLibraries =
       , H.callHackage "hedgehog-quickcheck" "0.1.1"
       , H.callHackage "heredoc" "0.2.0.0"
       , H.callHackage "hex-text" "0.1.0.7"
+      , H.callHackage "hw-aeson" "0.1.8.0"
       , H.callHackage "hxt" "9.3.1.22"
       , H.callHackage "hxt-charproperties" "9.5.0.0"
       , H.callHackage "hxt-regex-xmlschema" "9.2.0.7"

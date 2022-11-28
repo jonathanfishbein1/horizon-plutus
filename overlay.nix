@@ -127,6 +127,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hex-text = final.callPackage (./pkgs/hex-text.nix) { };
 
+  hw-aeson = final.callPackage (./pkgs/hw-aeson.nix) { };
+
   hxt = final.callPackage (./pkgs/hxt.nix) { };
 
   hxt-charproperties = final.callPackage (./pkgs/hxt-charproperties.nix) { };

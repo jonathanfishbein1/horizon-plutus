@@ -97,6 +97,8 @@ final: prev: with pkgs.haskell.lib; {
 
   dependent-sum-template = final.callPackage (./pkgs/dependent-sum-template.nix) { };
 
+  deque = final.callPackage (./pkgs/deque.nix) { };
+
   deriving-compat = final.callPackage (./pkgs/deriving-compat.nix) { };
 
   dictionary-sharing = final.callPackage (./pkgs/dictionary-sharing.nix) { };

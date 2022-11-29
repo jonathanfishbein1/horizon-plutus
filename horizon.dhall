@@ -208,6 +208,9 @@ let otherLibraries =
       , callCardanoBase "measures" "measures"
       , H.callHackage "mersenne-random-pure64" "0.2.2.0"
       , H.callHackage "monoidal-containers" "0.6.3.0"
+      , callOuroborosNetwork
+          "monoidal-synchronisation"
+          "monoidal-synchronisation"
       , H.callCabal2nix
           "moo"
           "https://github.com/astanin/moo"

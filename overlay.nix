@@ -167,6 +167,8 @@ final: prev: with pkgs.haskell.lib; {
 
   monoidal-containers = final.callPackage (./pkgs/monoidal-containers.nix) { };
 
+  monoidal-synchronisation = final.callPackage (./pkgs/monoidal-synchronisation.nix) { };
+
   moo = final.callPackage (./pkgs/moo.nix) { };
 
   mtl-prelude = final.callPackage (./pkgs/mtl-prelude.nix) { };

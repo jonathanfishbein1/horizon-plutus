@@ -95,6 +95,8 @@ final: prev: with pkgs.haskell.lib; {
 
   composition-prelude = final.callPackage (./pkgs/composition-prelude.nix) { };
 
+  concurrent-extra = final.callPackage (./pkgs/concurrent-extra.nix) { };
+
   contra-tracer = final.callPackage (./pkgs/contra-tracer.nix) { };
 
   data-ordlist = final.callPackage (./pkgs/data-ordlist.nix) { };

@@ -151,6 +151,7 @@ let otherLibraries =
           "b6053a23f53acd5c519cc559c3861dda3ebf8b35"
           (Some "cardano-prelude-test")
       , H.callHackage "composition-prelude" "3.0.0.2"
+      , H.callHackage "concurrent-extra" "0.7.0.12"
       , H.callHackage "contra-tracer" "0.2.0.0"
       , H.callHackage "data-ordlist" "0.4.7.0"
       , H.callHackage "dependent-sum-template" "0.1.1.1"

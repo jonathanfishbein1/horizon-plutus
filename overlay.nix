@@ -145,6 +145,8 @@ final: prev: with pkgs.haskell.lib; {
 
   http-common = final.callPackage (./pkgs/http-common.nix) { };
 
+  http-streams = final.callPackage (./pkgs/http-streams.nix) { };
+
   hw-aeson = final.callPackage (./pkgs/hw-aeson.nix) { };
 
   hxt = final.callPackage (./pkgs/hxt.nix) { };

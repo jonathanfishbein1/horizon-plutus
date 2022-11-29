@@ -200,6 +200,7 @@ let otherLibraries =
       , H.callHackage "heredoc" "0.2.0.0"
       , H.callHackage "hex-text" "0.1.0.7"
       , H.callHackage "http-common" "0.8.3.4"
+      , H.callHackage "http-streams" "0.8.9.6"
       , H.callHackage "hw-aeson" "0.1.8.0"
       , H.callHackage "hxt" "9.3.1.22"
       , H.callHackage "hxt-charproperties" "9.5.0.0"

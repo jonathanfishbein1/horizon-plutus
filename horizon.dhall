@@ -261,6 +261,7 @@ let otherLibraries =
       , H.callHackage "time-units" "1.0.0"
       , H.callHackage "transformers-except" "0.1.2"
       , callTypedProtocols "typed-protocols-cborg" "typed-protocols-cborg"
+      , callTypedProtocols "typed-protocols-examples" "typed-protocols-examples"
       , callTypedProtocols "typed-protocols" "typed-protocols"
       , H.callCabal2nix
           "typerep-map"

@@ -3,6 +3,8 @@
 final: prev: with pkgs.haskell.lib; {
   HTF = final.callPackage (./pkgs/HTF.nix) { };
 
+  HsOpenSSL = final.callPackage (./pkgs/HsOpenSSL.nix) { };
+
   PyF = final.callPackage (./pkgs/PyF.nix) { };
 
   Stream = final.callPackage (./pkgs/Stream.nix) { };

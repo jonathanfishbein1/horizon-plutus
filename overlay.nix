@@ -221,6 +221,8 @@ final: prev: with pkgs.haskell.lib; {
 
   small-steps-test = final.callPackage (./pkgs/small-steps-test.nix) { };
 
+  statistics-linreg = final.callPackage (./pkgs/statistics-linreg.nix) { };
+
   streaming-binary = final.callPackage (./pkgs/streaming-binary.nix) { };
 
   streaming-bytestring = final.callPackage (./pkgs/streaming-bytestring.nix) { };

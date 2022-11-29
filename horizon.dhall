@@ -196,6 +196,7 @@ let otherLibraries =
       , H.callHackage "hxt-regex-xmlschema" "9.2.0.7"
       , H.callHackage "hxt-unicode" "9.0.2.4"
       , callIoSim "io-classes" "io-classes"
+      , callIoSim "io-sim" "io-sim"
       , H.callHackage "inline-c" "0.9.1.6"
       , H.callCabal2nix
           "inline-r"

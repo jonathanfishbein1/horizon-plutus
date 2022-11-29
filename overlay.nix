@@ -271,4 +271,6 @@ final: prev: with pkgs.haskell.lib; {
 
   xmlgen = final.callPackage (./pkgs/xmlgen.nix) { };
 
+  zlib-bindings = final.callPackage (./pkgs/zlib-bindings.nix) { };
+
 }

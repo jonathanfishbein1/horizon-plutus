@@ -235,6 +235,8 @@ final: prev: with pkgs.haskell.lib; {
 
   typed-protocols = final.callPackage (./pkgs/typed-protocols.nix) { };
 
+  typed-protocols-cborg = final.callPackage (./pkgs/typed-protocols-cborg.nix) { };
+
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 
   validation-selective = final.callPackage (./pkgs/validation-selective.nix) { };

@@ -149,6 +149,8 @@ final: prev: with pkgs.haskell.lib; {
 
   int-cast = final.callPackage (./pkgs/int-cast.nix) { };
 
+  io-classes = final.callPackage (./pkgs/io-classes.nix) { };
+
   lazy-search = final.callPackage (./pkgs/lazy-search.nix) { };
 
   lazysmallcheck = final.callPackage (./pkgs/lazysmallcheck.nix) { };

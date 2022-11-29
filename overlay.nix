@@ -161,6 +161,8 @@ final: prev: with pkgs.haskell.lib; {
 
   io-sim = final.callPackage (./pkgs/io-sim.nix) { };
 
+  katip = final.callPackage (./pkgs/katip.nix) { };
+
   lazy-search = final.callPackage (./pkgs/lazy-search.nix) { };
 
   lazysmallcheck = final.callPackage (./pkgs/lazysmallcheck.nix) { };

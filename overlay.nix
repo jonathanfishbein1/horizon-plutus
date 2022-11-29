@@ -233,6 +233,8 @@ final: prev: with pkgs.haskell.lib; {
 
   transformers-except = final.callPackage (./pkgs/transformers-except.nix) { };
 
+  typed-protocols = final.callPackage (./pkgs/typed-protocols.nix) { };
+
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 
   validation-selective = final.callPackage (./pkgs/validation-selective.nix) { };

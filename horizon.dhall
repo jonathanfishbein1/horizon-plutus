@@ -260,6 +260,7 @@ let otherLibraries =
       , H.callHackage "th-desugar" "1.14"
       , H.callHackage "time-units" "1.0.0"
       , H.callHackage "transformers-except" "0.1.2"
+      , callTypedProtocols "typed-protocols" "typed-protocols"
       , H.callCabal2nix
           "typerep-map"
           "https://github.com/parsonsmatt/typerep-map"

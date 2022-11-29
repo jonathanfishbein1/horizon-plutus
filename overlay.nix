@@ -235,6 +235,8 @@ final: prev: with pkgs.haskell.lib; {
 
   small-steps-test = final.callPackage (./pkgs/small-steps-test.nix) { };
 
+  snap-core = final.callPackage (./pkgs/snap-core.nix) { };
+
   statistics-linreg = final.callPackage (./pkgs/statistics-linreg.nix) { };
 
   streaming-binary = final.callPackage (./pkgs/streaming-binary.nix) { };

@@ -141,6 +141,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hex-text = final.callPackage (./pkgs/hex-text.nix) { };
 
+  http-common = final.callPackage (./pkgs/http-common.nix) { };
+
   hw-aeson = final.callPackage (./pkgs/hw-aeson.nix) { };
 
   hxt = final.callPackage (./pkgs/hxt.nix) { };

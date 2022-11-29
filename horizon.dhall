@@ -42,7 +42,7 @@ let callOuroborosNetwork
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
     = callRepository
         "https://github.com/input-output-hk/ouroboros-network"
-        "3a2c7c296fa4d9748d89dbe592375bf7f60cd656"
+        "c175e75dd8bb3b0e4ea9db9360a64ed159e78013"
 
 let callPlutusApps
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type

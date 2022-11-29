@@ -161,6 +161,8 @@ final: prev: with pkgs.haskell.lib; {
 
   io-sim = final.callPackage (./pkgs/io-sim.nix) { };
 
+  io-streams = final.callPackage (./pkgs/io-streams.nix) { };
+
   katip = final.callPackage (./pkgs/katip.nix) { };
 
   lazy-search = final.callPackage (./pkgs/lazy-search.nix) { };

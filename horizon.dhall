@@ -271,6 +271,7 @@ let otherLibraries =
       , callIoSim "strict-stm" "strict-stm"
       , H.callHackage "testing-type-modifiers" "0.1.0.1"
       , H.callHackage "th-desugar" "1.14"
+      , H.callHackage "threads" "0.5.1.7"
       , H.callHackage "time-locale-compat" "0.1.1.5"
       , H.callHackage "time-units" "1.0.0"
       , H.callHackage "transformers-except" "0.1.2"

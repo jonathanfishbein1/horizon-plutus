@@ -243,6 +243,8 @@ final: prev: with pkgs.haskell.lib; {
 
   th-desugar = final.callPackage (./pkgs/th-desugar.nix) { };
 
+  threads = final.callPackage (./pkgs/threads.nix) { };
+
   time-locale-compat = final.callPackage (./pkgs/time-locale-compat.nix) { };
 
   time-units = final.callPackage (./pkgs/time-units.nix) { };

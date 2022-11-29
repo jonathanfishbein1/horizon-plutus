@@ -169,6 +169,8 @@ final: prev: with pkgs.haskell.lib; {
 
   io-streams = final.callPackage (./pkgs/io-streams.nix) { };
 
+  io-streams-haproxy = final.callPackage (./pkgs/io-streams-haproxy.nix) { };
+
   katip = final.callPackage (./pkgs/katip.nix) { };
 
   lazy-search = final.callPackage (./pkgs/lazy-search.nix) { };

@@ -243,6 +243,8 @@ final: prev: with pkgs.haskell.lib; {
 
   snap-core = final.callPackage (./pkgs/snap-core.nix) { };
 
+  snap-server = final.callPackage (./pkgs/snap-server.nix) { };
+
   statistics-linreg = final.callPackage (./pkgs/statistics-linreg.nix) { };
 
   streaming-binary = final.callPackage (./pkgs/streaming-binary.nix) { };

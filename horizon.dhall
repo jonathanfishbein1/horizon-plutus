@@ -267,6 +267,7 @@ let otherLibraries =
       , callCardanoLedger "small-steps" "libs/small-steps"
       , callCardanoLedger "small-steps-test" "libs/small-steps-test"
       , H.callHackage "snap-core" "1.0.5.0"
+      , H.callHackage "snap-server" "1.1.2.0"
       , H.callHackage "statistics-linreg" "0.3"
       , H.callHackage "streaming-binary" "0.3.0.1"
       , H.callHackage "streaming-bytestring" "0.2.4"

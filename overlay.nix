@@ -9,6 +9,8 @@ final: prev: with pkgs.haskell.lib; {
 
   Unique = final.callPackage (./pkgs/Unique.nix) { };
 
+  Win32-network = final.callPackage (./pkgs/Win32-network.nix) { };
+
   algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
 
   base-deriving-via = final.callPackage (./pkgs/base-deriving-via.nix) { };

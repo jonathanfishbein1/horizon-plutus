@@ -102,6 +102,11 @@ let otherLibraries =
       , H.callHackage "PyF" "0.11.0.0"
       , H.callHackage "Stream" "0.4.7.2"
       , H.callHackage "Unique" "0.4.7.9"
+      , H.callCabal2nix
+          "Win32-network"
+          "https://github.com/input-output-hk/Win32-network"
+          "1a6bd1f67d1463d7243ab4c34fc4f7d84ee0554a"
+          (None H.Subdir)
       , H.callHackage "algebraic-graphs" "0.7"
       , H.callHackage "base58-bytestring" "0.1.0"
       , H.callHackage "base64-bytestring-type" "1.0.1"

@@ -241,6 +241,7 @@ let otherLibraries =
           "0d7e3565407aa4eb21d861d075dff6f20d090f97"
           (None H.Subdir)
       , H.callHackage "openapi3" "3.2.2"
+      , H.callHackage "openssl-streams" "1.2.3.0"
       , H.callCabal2nix
           "optparse-applicative-fork"
           "https://github.com/input-output-hk/optparse-applicative/"

@@ -199,6 +199,8 @@ final: prev: with pkgs.haskell.lib; {
 
   openapi3 = final.callPackage (./pkgs/openapi3.nix) { };
 
+  openssl-streams = final.callPackage (./pkgs/openssl-streams.nix) { };
+
   optparse-applicative-fork = final.callPackage (./pkgs/optparse-applicative-fork.nix) { };
 
   optparse-generic = final.callPackage (./pkgs/optparse-generic.nix) { };

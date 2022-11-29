@@ -255,6 +255,7 @@ let otherLibraries =
           "9e833be00bc2c5cdb0b4e743b7a2cde00dd4f616"
           (Some "strict-containers")
       , H.callHackage "strict-list" "0.1.7"
+      , callIoSim "strict-stm" "strict-stm"
       , H.callHackage "testing-type-modifiers" "0.1.0.1"
       , H.callHackage "th-desugar" "1.14"
       , H.callHackage "time-units" "1.0.0"

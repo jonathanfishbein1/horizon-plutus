@@ -223,6 +223,8 @@ final: prev: with pkgs.haskell.lib; {
 
   strict-list = final.callPackage (./pkgs/strict-list.nix) { };
 
+  strict-stm = final.callPackage (./pkgs/strict-stm.nix) { };
+
   testing-type-modifiers = final.callPackage (./pkgs/testing-type-modifiers.nix) { };
 
   th-desugar = final.callPackage (./pkgs/th-desugar.nix) { };

@@ -108,6 +108,7 @@ let otherLibraries =
           "1a6bd1f67d1463d7243ab4c34fc4f7d84ee0554a"
           (None H.Subdir)
       , H.callHackage "algebraic-graphs" "0.7"
+      , H.callHackage "async-timer" "0.2.0.0"
       , H.callHackage "base58-bytestring" "0.1.0"
       , H.callHackage "base64-bytestring-type" "1.0.1"
       , callCardanoBase "base-deriving-via" "base-deriving-via"

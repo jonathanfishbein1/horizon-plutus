@@ -13,6 +13,8 @@ final: prev: with pkgs.haskell.lib; {
 
   algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
 
+  async-timer = final.callPackage (./pkgs/async-timer.nix) { };
+
   base-deriving-via = final.callPackage (./pkgs/base-deriving-via.nix) { };
 
   base-prelude = final.callPackage (./pkgs/base-prelude.nix) { };

@@ -252,6 +252,7 @@ let otherLibraries =
       , H.callHackage "protolude" "0.3.2"
       , H.callHackage "quiet" "0.2"
       , H.callHackage "ral" "0.1"
+      , H.callHackage "readable" "0.3.1"
       , H.callHackage "recursion-schemes" "5.2.2.2"
       , H.callHackage "ref-tf" "0.5.0.1"
       , callCardanoLedger "set-algebra" "libs/set-algebra"

@@ -213,6 +213,8 @@ final: prev: with pkgs.haskell.lib; {
 
   ral = final.callPackage (./pkgs/ral.nix) { };
 
+  readable = final.callPackage (./pkgs/readable.nix) { };
+
   recursion-schemes = final.callPackage (./pkgs/recursion-schemes.nix) { };
 
   ref-tf = final.callPackage (./pkgs/ref-tf.nix) { };

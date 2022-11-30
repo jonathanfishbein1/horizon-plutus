@@ -13,7 +13,7 @@ let input = Prelude.Map.keys Text H.HaskellPackage.Type ./horizon.dhall
 
 let packages = Prelude.List.map Text Text toStep (input : List Text)
 
-in      "nix build -L"
+in      "nix build -L --no-link "
     ++  Prelude.List.fold
           Text
           packages

@@ -291,6 +291,8 @@ final: prev: with pkgs.haskell.lib; {
 
   storable-record = final.callPackage (./pkgs/storable-record.nix) { };
 
+  storable-tuple = final.callPackage (./pkgs/storable-tuple.nix) { };
+
   streaming-binary = final.callPackage (./pkgs/streaming-binary.nix) { };
 
   streaming-bytestring = final.callPackage (./pkgs/streaming-bytestring.nix) { };

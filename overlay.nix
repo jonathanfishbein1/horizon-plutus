@@ -121,6 +121,8 @@ final: prev: with pkgs.haskell.lib; {
 
   dom-lt = final.callPackage (./pkgs/dom-lt.nix) { };
 
+  errors = final.callPackage (./pkgs/errors.nix) { };
+
   filelock = final.callPackage (./pkgs/filelock.nix) { };
 
   finite-typelits = final.callPackage (./pkgs/finite-typelits.nix) { };

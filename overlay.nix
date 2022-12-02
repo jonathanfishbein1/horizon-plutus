@@ -295,6 +295,8 @@ final: prev: with pkgs.haskell.lib; {
 
   set-algebra = final.callPackage (./pkgs/set-algebra.nix) { };
 
+  show-combinators = final.callPackage (./pkgs/show-combinators.nix) { };
+
   singletons-th = final.callPackage (./pkgs/singletons-th.nix) { };
 
   size-based = final.callPackage (./pkgs/size-based.nix) { };

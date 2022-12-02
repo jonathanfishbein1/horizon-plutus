@@ -305,6 +305,7 @@ let otherLibraries =
       , H.callHackage "say" "0.1.0.1"
       , H.callHackage "servant-openapi3" "2.0.1.5"
       , callCardanoLedger "set-algebra" "libs/set-algebra"
+      , H.callHackage "show-combinators" "0.2.0.0"
       , H.callHackage "singletons-th" "3.1.1"
       , H.callHackage "size-based" "0.1.3.1"
       , callCardanoLedger "small-steps" "libs/small-steps"

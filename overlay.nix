@@ -251,6 +251,8 @@ final: prev: with pkgs.haskell.lib; {
 
   multiset = final.callPackage (./pkgs/multiset.nix) { };
 
+  natural-arithmetic = final.callPackage (./pkgs/natural-arithmetic.nix) { };
+
   newtype = final.callPackage (./pkgs/newtype.nix) { };
 
   non-integral = final.callPackage (./pkgs/non-integral.nix) { };

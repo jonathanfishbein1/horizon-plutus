@@ -8,6 +8,14 @@ let callRepository
       λ(subdir : H.Subdir) →
         H.callGit name repo revision (Some subdir)
 
+let callCHaP
+    : H.Name → H.Version → H.Attr H.HaskellPackage.Type
+    = λ(name : H.Name) →
+      λ(version : H.Version) →
+        H.callTarball
+          name
+          "https://input-output-hk.github.io/cardano-haskell-packages/package/${name}-${version}.tar.gz"
+
 let callCardanoBase
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
     = callRepository

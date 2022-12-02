@@ -173,6 +173,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hsyslog = final.callPackage (./pkgs/hsyslog.nix) { };
 
+  html-entities = final.callPackage (./pkgs/html-entities.nix) { };
+
   http-common = final.callPackage (./pkgs/http-common.nix) { };
 
   http-streams = final.callPackage (./pkgs/http-streams.nix) { };

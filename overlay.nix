@@ -179,6 +179,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hspec-golden = final.callPackage (./pkgs/hspec-golden.nix) { };
 
+  hspec-golden-aeson = final.callPackage (./pkgs/hspec-golden-aeson.nix) { };
+
   hsyslog = final.callPackage (./pkgs/hsyslog.nix) { };
 
   html-entities = final.callPackage (./pkgs/html-entities.nix) { };

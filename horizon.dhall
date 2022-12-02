@@ -228,6 +228,7 @@ let otherLibraries =
       , H.callHackage "hedgehog-quickcheck" "0.1.1"
       , H.callHackage "heredoc" "0.2.0.0"
       , H.callHackage "hex-text" "0.1.0.7"
+      , H.callHackage "hspec-golden-aeson" "0.9.0.0"
       , H.callHackage "hspec-golden" "0.2.0.0"
       , H.callHackage "hsyslog" "5.0.2"
       , H.callHackage "html-entities" "1.1.4.6"

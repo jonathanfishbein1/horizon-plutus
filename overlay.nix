@@ -213,6 +213,8 @@ final: prev: with pkgs.haskell.lib; {
 
   libsystemd-journal = final.callPackage (./pkgs/libsystemd-journal.nix) { };
 
+  linear-base = final.callPackage (./pkgs/linear-base.nix) { };
+
   linear-generics = final.callPackage (./pkgs/linear-generics.nix) { };
 
   list-t = final.callPackage (./pkgs/list-t.nix) { };

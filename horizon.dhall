@@ -249,6 +249,7 @@ let otherLibraries =
       , H.callHackage "katip" "0.8.7.2"
       , H.callHackage "libsystemd-journal" "1.4.5"
       , H.callHackage "linear-generics" "0.2"
+      , H.callHackage "linear-base" "0.3.0"
       , H.callHackage "list-transformer" "1.0.9"
       , H.callHackage "matrix" "0.3.6.1"
       , H.callHackage "markov-chain-usage-model" "0.0.0"

@@ -261,6 +261,8 @@ final: prev: with pkgs.haskell.lib; {
 
   row-types = final.callPackage (./pkgs/row-types.nix) { };
 
+  say = final.callPackage (./pkgs/say.nix) { };
+
   servant-openapi3 = final.callPackage (./pkgs/servant-openapi3.nix) { };
 
   set-algebra = final.callPackage (./pkgs/set-algebra.nix) { };

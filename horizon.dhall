@@ -284,6 +284,7 @@ let otherLibraries =
       , H.callHackage "recursion-schemes" "5.2.2.2"
       , H.callHackage "ref-tf" "0.5.0.1"
       , H.callHackage "row-types" "1.0.1.2"
+      , H.callHackage "say" "0.1.0.1"
       , H.callHackage "servant-openapi3" "2.0.1.5"
       , callCardanoLedger "set-algebra" "libs/set-algebra"
       , H.callHackage "singletons-th" "3.1.1"

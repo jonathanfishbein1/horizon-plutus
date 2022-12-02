@@ -289,6 +289,8 @@ final: prev: with pkgs.haskell.lib; {
 
   statistics-linreg = final.callPackage (./pkgs/statistics-linreg.nix) { };
 
+  storable-record = final.callPackage (./pkgs/storable-record.nix) { };
+
   streaming-binary = final.callPackage (./pkgs/streaming-binary.nix) { };
 
   streaming-bytestring = final.callPackage (./pkgs/streaming-bytestring.nix) { };

@@ -311,6 +311,7 @@ let otherLibraries =
           (Some "strict-containers")
       , H.callHackage "strict-list" "0.1.7"
       , callIoSim "strict-stm" "strict-stm"
+      , H.callHackage "storable-record" "0.0.6"
       , H.callHackage "system-fileio" "0.3.16.4"
       , H.callHackage "testing-type-modifiers" "0.1.0.1"
       , H.callHackage "th-desugar" "1.14"

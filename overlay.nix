@@ -227,6 +227,8 @@ final: prev: with pkgs.haskell.lib; {
 
   plutus-tx = final.callPackage (./pkgs/plutus-tx.nix) { };
 
+  pqueue = final.callPackage (./pkgs/pqueue.nix) { };
+
   prettyprinter-configurable = final.callPackage (./pkgs/prettyprinter-configurable.nix) { };
 
   protolude = final.callPackage (./pkgs/protolude.nix) { };

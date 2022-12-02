@@ -249,6 +249,7 @@ let otherLibraries =
       , H.callHackage "linear-generics" "0.2"
       , H.callHackage "list-transformer" "1.0.9"
       , H.callHackage "matrix" "0.3.6.1"
+      , H.callHackage "markov-chain-usage-model" "0.0.0"
       , callCardanoBase "measures" "measures"
       , H.callHackage "mersenne-random-pure64" "0.2.2.0"
       , H.callHackage "monoidal-containers" "0.6.3.0"

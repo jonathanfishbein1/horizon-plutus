@@ -267,6 +267,8 @@ final: prev: with pkgs.haskell.lib; {
 
   partial-order = final.callPackage (./pkgs/partial-order.nix) { };
 
+  pcre-heavy = final.callPackage (./pkgs/pcre-heavy.nix) { };
+
   persistent-postgresql = final.callPackage (./pkgs/persistent-postgresql.nix) { };
 
   persistent-qq = final.callPackage (./pkgs/persistent-qq.nix) { };

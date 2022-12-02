@@ -296,6 +296,7 @@ let otherLibraries =
       , H.callHackage "persistent-sqlite" "2.13.1.0"
       , H.callHackage "persistent-test" "2.13.1.3"
       , H.callHackage "pipes-safe" "2.3.4"
+      , H.callHackage "pcre-heavy" "1.0.0.3"
       , H.callGit
           "prettyprinter-configurable"
           "https://github.com/milloni/plutus"

@@ -343,6 +343,8 @@ final: prev: with pkgs.haskell.lib; {
 
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 
+  universe-reverse-instances = final.callPackage (./pkgs/universe-reverse-instances.nix) { };
+
   unix-bytestring = final.callPackage (./pkgs/unix-bytestring.nix) { };
 
   validation-selective = final.callPackage (./pkgs/validation-selective.nix) { };

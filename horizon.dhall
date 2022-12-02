@@ -124,6 +124,7 @@ let otherLibraries =
       , callCardanoBase "base-deriving-via" "base-deriving-via"
       , H.callHackage "base-prelude" "1.6.1"
       , H.callHackage "bech32" "1.1.2"
+      , H.callHackage "bech32-th" "1.1.1"
       , H.callHackage "bin" "0.1.2"
       , callCardanoLedger "byron-spec-chain" "eras/byron/chain/executable-spec"
       , callCardanoLedger

@@ -29,6 +29,8 @@ final: prev: with pkgs.haskell.lib; {
 
   bech32 = final.callPackage (./pkgs/bech32.nix) { };
 
+  bech32-th = final.callPackage (./pkgs/bech32-th.nix) { };
+
   bin = final.callPackage (./pkgs/bin.nix) { };
 
   byron-spec-chain = final.callPackage (./pkgs/byron-spec-chain.nix) { };

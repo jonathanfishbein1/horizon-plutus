@@ -247,6 +247,8 @@ final: prev: with pkgs.haskell.lib; {
 
   ref-tf = final.callPackage (./pkgs/ref-tf.nix) { };
 
+  row-types = final.callPackage (./pkgs/row-types.nix) { };
+
   servant-openapi3 = final.callPackage (./pkgs/servant-openapi3.nix) { };
 
   set-algebra = final.callPackage (./pkgs/set-algebra.nix) { };

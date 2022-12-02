@@ -15,6 +15,8 @@ final: prev: with pkgs.haskell.lib; {
 
   Win32-network = final.callPackage (./pkgs/Win32-network.nix) { };
 
+  aeson-qq = final.callPackage (./pkgs/aeson-qq.nix) { };
+
   algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
 
   async-timer = final.callPackage (./pkgs/async-timer.nix) { };

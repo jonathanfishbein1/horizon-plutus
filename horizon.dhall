@@ -238,6 +238,7 @@ let otherLibraries =
       , H.callHackage "int-cast" "0.2.0.0"
       , H.callHackage "katip" "0.8.7.2"
       , H.callHackage "list-transformer" "1.0.9"
+      , H.callHackage "matrix" "0.3.6.1"
       , callCardanoBase "measures" "measures"
       , H.callHackage "mersenne-random-pure64" "0.2.2.0"
       , H.callHackage "monoidal-containers" "0.6.3.0"

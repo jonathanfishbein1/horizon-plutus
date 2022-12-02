@@ -293,6 +293,8 @@ final: prev: with pkgs.haskell.lib; {
 
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 
+  unix-bytestring = final.callPackage (./pkgs/unix-bytestring.nix) { };
+
   validation-selective = final.callPackage (./pkgs/validation-selective.nix) { };
 
   vector-map = final.callPackage (./pkgs/vector-map.nix) { };

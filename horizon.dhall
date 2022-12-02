@@ -234,6 +234,7 @@ let otherLibraries =
           (Some "inline-r")
       , H.callHackage "int-cast" "0.2.0.0"
       , H.callHackage "katip" "0.8.7.2"
+      , H.callHackage "list-transformer" "1.0.9"
       , callCardanoBase "measures" "measures"
       , H.callHackage "mersenne-random-pure64" "0.2.2.0"
       , H.callHackage "monoidal-containers" "0.6.3.0"

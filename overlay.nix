@@ -195,6 +195,8 @@ final: prev: with pkgs.haskell.lib; {
 
   list-t = final.callPackage (./pkgs/list-t.nix) { };
 
+  list-transformer = final.callPackage (./pkgs/list-transformer.nix) { };
+
   measures = final.callPackage (./pkgs/measures.nix) { };
 
   mersenne-random-pure64 = final.callPackage (./pkgs/mersenne-random-pure64.nix) { };

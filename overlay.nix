@@ -7,6 +7,8 @@ final: prev: with pkgs.haskell.lib; {
 
   HsOpenSSL = final.callPackage (./pkgs/HsOpenSSL.nix) { };
 
+  MemoTrie = final.callPackage (./pkgs/MemoTrie.nix) { };
+
   PyF = final.callPackage (./pkgs/PyF.nix) { };
 
   Stream = final.callPackage (./pkgs/Stream.nix) { };

@@ -109,6 +109,7 @@ let otherLibraries =
       [ H.callHackage "Boolean" "0.2.4"
       , H.callHackage "HTF" "0.15.0.0"
       , H.callHackage "HsOpenSSL" "0.11.7.2"
+      , H.callHackage "MemoTrie" "0.6.10"
       , H.callHackage "PyF" "0.11.0.0"
       , H.callHackage "Stream" "0.4.7.2"
       , H.callHackage "Unique" "0.4.7.9"

@@ -379,6 +379,8 @@ final: prev: with pkgs.haskell.lib; {
 
   vector-sized = final.callPackage (./pkgs/vector-sized.nix) { };
 
+  wide-word = final.callPackage (./pkgs/wide-word.nix) { };
+
   word-array = final.callPackage (./pkgs/word-array.nix) { };
 
   word-compat = final.callPackage (./pkgs/word-compat.nix) { };

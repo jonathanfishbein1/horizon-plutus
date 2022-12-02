@@ -352,6 +352,7 @@ let otherLibraries =
           (None H.Subdir)
       , H.callHackage "validation-selective" "0.1.0.2"
       , callCardanoLedger "vector-map" "libs/vector-map"
+      , H.callHackage "wide-word" "0.1.3.0"
       , callPlutus "word-array" "word-array"
       , H.callHackage "word-compat" "0.0.6"
       , H.callHackage "xmlgen" "0.6.2.2"

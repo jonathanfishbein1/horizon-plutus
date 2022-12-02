@@ -127,6 +127,8 @@ final: prev: with pkgs.haskell.lib; {
 
   flat = final.callPackage (./pkgs/flat.nix) { };
 
+  generic-lens = final.callPackage (./pkgs/generic-lens.nix) { };
+
   generic-monoid = final.callPackage (./pkgs/generic-monoid.nix) { };
 
   ghc-typelits-knownnat = final.callPackage (./pkgs/ghc-typelits-knownnat.nix) { };

@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 final: prev: with pkgs.haskell.lib; {
+  Boolean = final.callPackage (./pkgs/Boolean.nix) { };
+
   HTF = final.callPackage (./pkgs/HTF.nix) { };
 
   HsOpenSSL = final.callPackage (./pkgs/HsOpenSSL.nix) { };

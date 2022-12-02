@@ -295,6 +295,8 @@ final: prev: with pkgs.haskell.lib; {
 
   protolude = final.callPackage (./pkgs/protolude.nix) { };
 
+  quickcheck-arbitrary-adt = final.callPackage (./pkgs/quickcheck-arbitrary-adt.nix) { };
+
   quiet = final.callPackage (./pkgs/quiet.nix) { };
 
   ral = final.callPackage (./pkgs/ral.nix) { };

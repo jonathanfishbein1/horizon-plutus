@@ -305,6 +305,7 @@ let otherLibraries =
           (Some "prettyprinter-configurable")
       , H.callHackage "protolude" "0.3.2"
       , H.callHackage "pqueue" "1.4.3.0"
+      , H.callHackage "quickcheck-arbitrary-adt" "0.3.1.0"
       , H.callHackage "quiet" "0.2"
       , H.callHackage "ral" "0.1"
       , H.callHackage "readable" "0.3.1"

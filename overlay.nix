@@ -117,6 +117,8 @@ final: prev: with pkgs.haskell.lib; {
 
   dom-lt = final.callPackage (./pkgs/dom-lt.nix) { };
 
+  finite-typelits = final.callPackage (./pkgs/finite-typelits.nix) { };
+
   flat = final.callPackage (./pkgs/flat.nix) { };
 
   generic-monoid = final.callPackage (./pkgs/generic-monoid.nix) { };

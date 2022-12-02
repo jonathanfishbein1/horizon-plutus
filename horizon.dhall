@@ -162,6 +162,7 @@ let otherLibraries =
       , H.callHackage "dns" "4.1.0"
       , H.callHackage "doctest-discover" "0.2.0.0"
       , H.callHackage "dom-lt" "0.2.3"
+      , H.callHackage "finite-typelits" "0.1.6.0"
       , H.callGit
           "flat"
           "https://github.com/Quid2/flat"

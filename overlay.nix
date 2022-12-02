@@ -207,6 +207,8 @@ final: prev: with pkgs.haskell.lib; {
 
   lazysmallcheck = final.callPackage (./pkgs/lazysmallcheck.nix) { };
 
+  libsystemd-journal = final.callPackage (./pkgs/libsystemd-journal.nix) { };
+
   list-t = final.callPackage (./pkgs/list-t.nix) { };
 
   list-transformer = final.callPackage (./pkgs/list-transformer.nix) { };

@@ -309,6 +309,7 @@ let otherLibraries =
           "https://github.com/milloni/plutus"
           "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
           (Some "prettyprinter-configurable")
+      , H.callHackage "primitive-offset" "0.2.0.0"
       , H.callHackage "protolude" "0.3.2"
       , H.callHackage "pqueue" "1.4.3.0"
       , H.callHackage "quickcheck-arbitrary-adt" "0.3.1.0"

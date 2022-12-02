@@ -297,6 +297,8 @@ final: prev: with pkgs.haskell.lib; {
 
   prettyprinter-configurable = final.callPackage (./pkgs/prettyprinter-configurable.nix) { };
 
+  primitive-offset = final.callPackage (./pkgs/primitive-offset.nix) { };
+
   protolude = final.callPackage (./pkgs/protolude.nix) { };
 
   quickcheck-arbitrary-adt = final.callPackage (./pkgs/quickcheck-arbitrary-adt.nix) { };

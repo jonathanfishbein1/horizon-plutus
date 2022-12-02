@@ -169,6 +169,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hex-text = final.callPackage (./pkgs/hex-text.nix) { };
 
+  hsyslog = final.callPackage (./pkgs/hsyslog.nix) { };
+
   http-common = final.callPackage (./pkgs/http-common.nix) { };
 
   http-streams = final.callPackage (./pkgs/http-streams.nix) { };

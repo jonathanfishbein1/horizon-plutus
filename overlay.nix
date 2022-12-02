@@ -135,6 +135,8 @@ final: prev: with pkgs.haskell.lib; {
 
   exact-combinatorics = final.callPackage (./pkgs/exact-combinatorics.nix) { };
 
+  extended-reals = final.callPackage (./pkgs/extended-reals.nix) { };
+
   filelock = final.callPackage (./pkgs/filelock.nix) { };
 
   finite-typelits = final.callPackage (./pkgs/finite-typelits.nix) { };

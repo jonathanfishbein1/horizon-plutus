@@ -183,6 +183,7 @@ let otherLibraries =
       , H.callHackage "dom-lt" "0.2.3"
       , H.callHackage "errors" "2.3.0"
       , H.callHackage "exact-combinatorics" "0.2.0.11"
+      , H.callHackage "extended-reals" "0.2.4.0"
       , H.callHackage "filelock" "0.1.1.5"
       , H.callHackage "finite-typelits" "0.1.6.0"
       , H.callGit

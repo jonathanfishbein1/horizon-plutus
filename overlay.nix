@@ -123,6 +123,8 @@ final: prev: with pkgs.haskell.lib; {
 
   errors = final.callPackage (./pkgs/errors.nix) { };
 
+  exact-combinatorics = final.callPackage (./pkgs/exact-combinatorics.nix) { };
+
   filelock = final.callPackage (./pkgs/filelock.nix) { };
 
   finite-typelits = final.callPackage (./pkgs/finite-typelits.nix) { };

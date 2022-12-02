@@ -193,6 +193,7 @@ let otherLibraries =
           "2121ee96201e39764e3a6fcbc53241afb0050647"
           (None H.Subdir)
       , H.callHackage "generic-arbitrary" "1.0.1"
+      , H.callHackage "generic-data" "1.0.0.0"
       , H.callHackage "generic-lens" "2.2.1.0"
       , H.callHackage "generic-monoid" "0.1.0.1"
       , H.callGit

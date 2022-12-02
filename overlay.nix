@@ -147,6 +147,8 @@ final: prev: with pkgs.haskell.lib; {
 
   generic-arbitrary = final.callPackage (./pkgs/generic-arbitrary.nix) { };
 
+  generic-data = final.callPackage (./pkgs/generic-data.nix) { };
+
   generic-lens = final.callPackage (./pkgs/generic-lens.nix) { };
 
   generic-monoid = final.callPackage (./pkgs/generic-monoid.nix) { };

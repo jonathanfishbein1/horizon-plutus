@@ -251,6 +251,10 @@ let otherLibraries =
           "fe9b5bd06cd4d3988e47b9933b11d83b6108e255"
           (Some "inline-r")
       , H.callHackage "int-cast" "0.2.0.0"
+      , callIoSim "io-classes" "io-classes"
+      , callIoSim "io-sim" "io-sim"
+      , H.callHackage "io-streams" "1.5.2.2"
+      , H.callHackage "io-streams-haproxy" "1.0.1.0"
       , H.callHackage "katip" "0.8.7.2"
       , H.callHackage "libsystemd-journal" "1.4.5"
       , H.callHackage "linear-generics" "0.2"

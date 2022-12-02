@@ -9,6 +9,8 @@ final: prev: with pkgs.haskell.lib; {
 
   MemoTrie = final.callPackage (./pkgs/MemoTrie.nix) { };
 
+  NumInstances = final.callPackage (./pkgs/NumInstances.nix) { };
+
   PyF = final.callPackage (./pkgs/PyF.nix) { };
 
   Stream = final.callPackage (./pkgs/Stream.nix) { };

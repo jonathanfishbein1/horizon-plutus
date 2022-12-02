@@ -301,6 +301,7 @@ let otherLibraries =
       , callCardanoLedger "vector-map" "libs/vector-map"
       , callPlutus "word-array" "word-array"
       , H.callHackage "xmlgen" "0.6.2.2"
+      , H.callHackage "vector-sized" "1.5.0"
       , H.callHackage "zlib-bindings" "0.1.1.5"
       ]
 

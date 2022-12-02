@@ -291,6 +291,8 @@ final: prev: with pkgs.haskell.lib; {
 
   vector-map = final.callPackage (./pkgs/vector-map.nix) { };
 
+  vector-sized = final.callPackage (./pkgs/vector-sized.nix) { };
+
   word-array = final.callPackage (./pkgs/word-array.nix) { };
 
   xmlgen = final.callPackage (./pkgs/xmlgen.nix) { };

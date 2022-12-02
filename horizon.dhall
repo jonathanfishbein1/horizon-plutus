@@ -111,6 +111,11 @@ let otherLibraries =
       , H.callHackage "HsOpenSSL" "0.11.7.2"
       , H.callHackage "MemoTrie" "0.6.10"
       , H.callHackage "NumInstances" "1.4"
+      , H.callGit
+          "OddWord"
+          "https://github.com/locallycompact/OddWord"
+          "ace47523b97ac2bc4dcdef5542927e5216e32afd"
+          (None H.Subdir)
       , H.callHackage "PyF" "0.11.0.0"
       , H.callHackage "Stream" "0.4.7.2"
       , H.callHackage "Unique" "0.4.7.9"

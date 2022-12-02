@@ -11,6 +11,8 @@ final: prev: with pkgs.haskell.lib; {
 
   NumInstances = final.callPackage (./pkgs/NumInstances.nix) { };
 
+  OddWord = final.callPackage (./pkgs/OddWord.nix) { };
+
   PyF = final.callPackage (./pkgs/PyF.nix) { };
 
   Stream = final.callPackage (./pkgs/Stream.nix) { };

@@ -161,6 +161,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hxt-unicode = final.callPackage (./pkgs/hxt-unicode.nix) { };
 
+  indexed-list-literals = final.callPackage (./pkgs/indexed-list-literals.nix) { };
+
   inline-c = final.callPackage (./pkgs/inline-c.nix) { };
 
   inline-r = final.callPackage (./pkgs/inline-r.nix) { };

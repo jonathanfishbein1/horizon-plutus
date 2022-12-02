@@ -212,6 +212,7 @@ let otherLibraries =
       , callIoSim "io-sim" "io-sim"
       , H.callHackage "io-streams" "1.5.2.2"
       , H.callHackage "io-streams-haproxy" "1.0.1.0"
+      , H.callHackage "indexed-list-literals" "0.2.1.3"
       , H.callHackage "inline-c" "0.9.1.6"
       , H.callGit
           "inline-r"

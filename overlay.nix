@@ -299,6 +299,8 @@ final: prev: with pkgs.haskell.lib; {
 
   strict-stm = final.callPackage (./pkgs/strict-stm.nix) { };
 
+  system-fileio = final.callPackage (./pkgs/system-fileio.nix) { };
+
   testing-type-modifiers = final.callPackage (./pkgs/testing-type-modifiers.nix) { };
 
   th-desugar = final.callPackage (./pkgs/th-desugar.nix) { };

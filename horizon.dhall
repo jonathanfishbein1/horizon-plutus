@@ -279,6 +279,7 @@ let otherLibraries =
           (None H.Subdir)
       , H.callHackage "optparse-generic" "1.4.8"
       , H.callHackage "partial-order" "0.2.0.0"
+      , H.callHackage "pipes-safe" "2.3.4"
       , H.callGit
           "prettyprinter-configurable"
           "https://github.com/milloni/plutus"

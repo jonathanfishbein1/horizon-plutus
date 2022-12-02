@@ -243,6 +243,8 @@ final: prev: with pkgs.haskell.lib; {
 
   partial-order = final.callPackage (./pkgs/partial-order.nix) { };
 
+  pipes-safe = final.callPackage (./pkgs/pipes-safe.nix) { };
+
   plutus-core = final.callPackage (./pkgs/plutus-core.nix) { };
 
   plutus-ledger-api = final.callPackage (./pkgs/plutus-ledger-api.nix) { };

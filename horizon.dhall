@@ -6,7 +6,7 @@ let callRepository
       λ(revision : H.Revision) →
       λ(name : H.Name) →
       λ(subdir : H.Subdir) →
-        H.callCabal2nix name repo revision (Some subdir)
+        H.callGit name repo revision (Some subdir)
 
 let callCardanoBase
     : H.Name → H.Subdir → H.Attr H.HaskellPackage.Type
@@ -103,7 +103,7 @@ let otherLibraries =
       , H.callHackage "PyF" "0.11.0.0"
       , H.callHackage "Stream" "0.4.7.2"
       , H.callHackage "Unique" "0.4.7.9"
-      , H.callCabal2nix
+      , H.callGit
           "Win32-network"
           "https://github.com/input-output-hk/Win32-network"
           "1a6bd1f67d1463d7243ab4c34fc4f7d84ee0554a"
@@ -123,7 +123,7 @@ let otherLibraries =
       , H.callHackage "canonical-json" "0.6.0.1"
       , callCardanoBase "cardano-binary" "binary"
       , callCardanoBase "cardano-binary-test" "binary/test"
-      , H.callCabal2nix
+      , H.callGit
           "cardano-crypto"
           "https://github.com/input-output-hk/cardano-crypto"
           "07397f0e50da97eaa0575d93bee7ac4b2b2576ec"
@@ -141,12 +141,12 @@ let otherLibraries =
       , callCardanoLedger "cardano-ledger-core" "libs/cardano-ledger-core"
       , callCardanoBase "cardano-slotting" "slotting"
       , callCardanoBase "cardano-strict-containers" "cardano-strict-containers"
-      , H.callCabal2nix
+      , H.callGit
           "cardano-prelude"
           "https://github.com/input-output-hk/cardano-prelude"
           "b6053a23f53acd5c519cc559c3861dda3ebf8b35"
           (Some "cardano-prelude")
-      , H.callCabal2nix
+      , H.callGit
           "cardano-prelude-test"
           "https://github.com/input-output-hk/cardano-prelude"
           "b6053a23f53acd5c519cc559c3861dda3ebf8b35"
@@ -162,35 +162,35 @@ let otherLibraries =
       , H.callHackage "dns" "4.1.0"
       , H.callHackage "doctest-discover" "0.2.0.0"
       , H.callHackage "dom-lt" "0.2.3"
-      , H.callCabal2nix
+      , H.callGit
           "flat"
           "https://github.com/Quid2/flat"
           "2121ee96201e39764e3a6fcbc53241afb0050647"
           (None H.Subdir)
       , H.callHackage "generic-monoid" "0.1.0.1"
-      , H.callCabal2nix
+      , H.callGit
           "ghc-typelits-knownnat"
           "https://github.com/clash-lang/ghc-typelits-knownnat"
           "1bc4ee33e005e96d1f7785c715588a289707cd48"
           (None H.Subdir)
-      , H.callCabal2nix
+      , H.callGit
           "ghc-typelits-natnormalise"
           "https://github.com/clash-lang/ghc-typelits-natnormalise"
           "e0af5b3c69a7d8e1dd402eb727631801e7d9be3d"
           (None H.Subdir)
-      , H.callCabal2nix
+      , H.callGit
           "goblins"
           "https://github.com/newhoggy/goblins"
           "a315f41ec7250097fa6073b5ef4773e45758578f"
           (None H.Subdir)
-      , H.callCabal2nix
+      , H.callGit
           "gray-code"
           "https://github.com/milloni/gray-code-0.3.1"
           "f310a19e44416206633cfd084f10ffb7cfea9f1d"
           (None H.Subdir)
       , H.callHackage "haskell-src" "1.0.4"
       , callCardanoBase "heapwords" "heapwords"
-      , H.callCabal2nix
+      , H.callGit
           "hedgehog-extras"
           "https://github.com/input-output-hk/hedgehog-extras"
           "26b76bbcecfe48d0a87099f213f58e3778aa1f59"
@@ -211,7 +211,7 @@ let otherLibraries =
       , H.callHackage "io-streams" "1.5.2.2"
       , H.callHackage "io-streams-haproxy" "1.0.1.0"
       , H.callHackage "inline-c" "0.9.1.6"
-      , H.callCabal2nix
+      , H.callGit
           "inline-r"
           "https://github.com/tweag/HaskellR"
           "fe9b5bd06cd4d3988e47b9933b11d83b6108e255"
@@ -224,7 +224,7 @@ let otherLibraries =
       , callOuroborosNetwork
           "monoidal-synchronisation"
           "monoidal-synchronisation"
-      , H.callCabal2nix
+      , H.callGit
           "moo"
           "https://github.com/astanin/moo"
           "dbda5e76ac3b4c72c805ec0cdb9bcdff7bb6247d"
@@ -237,21 +237,21 @@ let otherLibraries =
       , H.callHackage "newtype" "0.2.2.0"
       , H.callHackage "nonempty-vector" "0.2.1.0"
       , callCardanoLedger "non-integral" "libs/non-integral"
-      , H.callCabal2nix
+      , H.callGit
           "nothunks"
           "https://github.com/locallycompact/nothunks"
           "0d7e3565407aa4eb21d861d075dff6f20d090f97"
           (None H.Subdir)
       , H.callHackage "openapi3" "3.2.2"
       , H.callHackage "openssl-streams" "1.2.3.0"
-      , H.callCabal2nix
+      , H.callGit
           "optparse-applicative-fork"
           "https://github.com/input-output-hk/optparse-applicative/"
           "7497a29cb998721a9068d5725d49461f2bba0e7a"
           (None H.Subdir)
       , H.callHackage "optparse-generic" "1.4.8"
       , H.callHackage "partial-order" "0.2.0.0"
-      , H.callCabal2nix
+      , H.callGit
           "prettyprinter-configurable"
           "https://github.com/milloni/plutus"
           "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
@@ -272,7 +272,7 @@ let otherLibraries =
       , H.callHackage "statistics-linreg" "0.3"
       , H.callHackage "streaming-binary" "0.3.0.1"
       , H.callHackage "streaming-bytestring" "0.2.4"
-      , H.callCabal2nix
+      , H.callGit
           "strict-containers"
           "https://github.com/milloni/strict-containers"
           "9e833be00bc2c5cdb0b4e743b7a2cde00dd4f616"
@@ -288,7 +288,7 @@ let otherLibraries =
       , callTypedProtocols "typed-protocols-cborg" "typed-protocols-cborg"
       , callTypedProtocols "typed-protocols-examples" "typed-protocols-examples"
       , callTypedProtocols "typed-protocols" "typed-protocols"
-      , H.callCabal2nix
+      , H.callGit
           "typerep-map"
           "https://github.com/parsonsmatt/typerep-map"
           "75b7cd5d45986be07420a6821d352ad2adc0b697"

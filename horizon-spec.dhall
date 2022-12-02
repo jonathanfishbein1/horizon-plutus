@@ -1,2 +1,2 @@
-https://gitlab.homotopic.tech/horizon/horizon-spec/-/raw/0.2.1/dhall/package.dhall
-  sha256:cfa9ee0679c61d8ac9daef43581b8edd61219afbbea9b74627057e33fe5d1abb
+https://gitlab.homotopic.tech/horizon/horizon-spec/-/raw/0.3.0/dhall/package.dhall
+  sha256:968e76de41a8e2a187704ee9288c361f33e4df2dc458bbad10d2c6e4c8744ae5

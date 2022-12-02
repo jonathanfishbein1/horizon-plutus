@@ -353,6 +353,8 @@ final: prev: with pkgs.haskell.lib; {
 
   word-array = final.callPackage (./pkgs/word-array.nix) { };
 
+  word-compat = final.callPackage (./pkgs/word-compat.nix) { };
+
   xmlgen = final.callPackage (./pkgs/xmlgen.nix) { };
 
   zlib-bindings = final.callPackage (./pkgs/zlib-bindings.nix) { };

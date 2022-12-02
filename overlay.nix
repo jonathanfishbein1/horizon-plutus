@@ -25,6 +25,8 @@ final: prev: with pkgs.haskell.lib; {
 
   algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
 
+  ap-normalize = final.callPackage (./pkgs/ap-normalize.nix) { };
+
   async-timer = final.callPackage (./pkgs/async-timer.nix) { };
 
   base-deriving-via = final.callPackage (./pkgs/base-deriving-via.nix) { };

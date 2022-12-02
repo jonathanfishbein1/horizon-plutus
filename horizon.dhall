@@ -127,6 +127,7 @@ let otherLibraries =
       , H.callHackage "aeson-qq" "0.8.4"
       , H.callHackage "algebraic-graphs" "0.7"
       , H.callHackage "async-timer" "0.2.0.0"
+      , H.callHackage "ap-normalize" "0.1.0.1"
       , H.callHackage "base58-bytestring" "0.1.0"
       , H.callHackage "base64-bytestring-type" "1.0.1"
       , callCardanoBase "base-deriving-via" "base-deriving-via"

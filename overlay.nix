@@ -173,6 +173,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hex-text = final.callPackage (./pkgs/hex-text.nix) { };
 
+  hspec-golden = final.callPackage (./pkgs/hspec-golden.nix) { };
+
   hsyslog = final.callPackage (./pkgs/hsyslog.nix) { };
 
   html-entities = final.callPackage (./pkgs/html-entities.nix) { };

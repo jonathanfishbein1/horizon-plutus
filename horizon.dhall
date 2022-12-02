@@ -291,6 +291,7 @@ let otherLibraries =
           (None H.Subdir)
       , H.callHackage "optparse-generic" "1.4.8"
       , H.callHackage "partial-order" "0.2.0.0"
+      , H.callHackage "persistent-postgresql" "2.13.5.0"
       , H.callHackage "persistent-qq" "2.12.0.5"
       , H.callHackage "persistent-sqlite" "2.13.1.0"
       , H.callHackage "persistent-test" "2.13.1.3"

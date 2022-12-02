@@ -95,6 +95,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-strict-containers = final.callPackage (./pkgs/cardano-strict-containers.nix) { };
 
+  casing = final.callPackage (./pkgs/casing.nix) { };
+
   composition-prelude = final.callPackage (./pkgs/composition-prelude.nix) { };
 
   concurrent-extra = final.callPackage (./pkgs/concurrent-extra.nix) { };

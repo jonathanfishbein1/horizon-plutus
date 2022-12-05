@@ -5,7 +5,7 @@
     get-flake.url = "github:ursi/get-flake";
     horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform?rev=51ffeae6e4cb64c4c0b5c2af322990d3d4089ca2";
     horizon-gen-nix = {
-      url = "git+https://gitlab.homotopic.tech/horizon/horizon-gen-nix?rev=066b21b5b0c3b7b2bee1b5954f89ae0b7845ade9";
+      url = "git+https://gitlab.homotopic.tech/horizon/horizon-gen-nix";
       flake = false;
     };
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";

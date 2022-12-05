@@ -145,6 +145,8 @@ final: prev: with pkgs.haskell.lib; {
 
   flat = final.callPackage (./pkgs/flat.nix) { };
 
+  fmt = final.callPackage (./pkgs/fmt.nix) { };
+
   generic-arbitrary = final.callPackage (./pkgs/generic-arbitrary.nix) { };
 
   generic-data = final.callPackage (./pkgs/generic-data.nix) { };

@@ -268,6 +268,7 @@ let otherLibraries =
       , H.callHackage "lazysmallcheck" "0.6"
       , H.callHackage "lazy-search" "0.1.3.0"
       , H.callHackage "list-t" "1.0.5.3"
+      , H.callHackage "loop" "0.3.0"
       , H.callHackage "newtype" "0.2.2.0"
       , H.callHackage "nonempty-vector" "0.2.1.0"
       , callCardanoLedger "non-integral" "libs/non-integral"

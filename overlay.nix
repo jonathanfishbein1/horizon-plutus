@@ -219,6 +219,8 @@ final: prev: with pkgs.haskell.lib; {
 
   list-transformer = final.callPackage (./pkgs/list-transformer.nix) { };
 
+  loop = final.callPackage (./pkgs/loop.nix) { };
+
   markov-chain-usage-model = final.callPackage (./pkgs/markov-chain-usage-model.nix) { };
 
   matrix = final.callPackage (./pkgs/matrix.nix) { };

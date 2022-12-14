@@ -372,4 +372,8 @@ let otherLibraries =
         , zlib-bindings = H.callHackage "zlib-bindings" "0.1.1.5"
         }
 
-in  plutusLibraries # otherLibraries
+in  H.HorizonExport.MakeOverlay
+      { packagesDir = "pkgs"
+      , overlayFile = "overlay.nix"
+      , overlay = plutusLibraries # otherLibraries
+      }

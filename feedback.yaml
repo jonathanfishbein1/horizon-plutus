@@ -5,6 +5,6 @@ loops:
       find: '*.nix'
   check: nix flake check -L
   gen:
-    command: nix run .#horizon-gen-nix overlay
+    command: nix run .#horizon-gen-nix
     filter:
       find: horizon.dhall

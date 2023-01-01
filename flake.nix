@@ -52,18 +52,11 @@
           && v.meta.broken == false)
         legacyPackages;
 
-      horizon-gen-gitlab-ci = writeBashBin "gen-gitlab-ci" "${pkgs.dhall-json}/bin/dhall-to-yaml --file .gitlab-ci.dhall";
-
     in
     {
       apps = {
 
         horizon-gen-nix = horizon-gen-nix-app.apps.${system}.horizon-gen-nix;
-
-        horizon-gen-gitlab-ci = {
-          type = "app";
-          program = "${horizon-gen-gitlab-ci}/bin/gen-gitlab-ci";
-        };
 
       };
 

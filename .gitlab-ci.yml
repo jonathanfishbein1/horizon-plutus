@@ -4,7 +4,7 @@ stages:
 
 generate-flake-ci:
   stage: generate
-  script: nix run ".#horizon-gen-gitlab-ci" > flake-ci.yml
+  script: nix run "git+https://gitlab.homotopic.tech/haskell/flake-to-gitlab-ci?ref=refs/tags/0.2.2.0" > flake-ci.yml
   artifacts:
     paths:
       - flake-ci.yml

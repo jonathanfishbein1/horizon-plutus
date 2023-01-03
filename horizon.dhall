@@ -290,7 +290,7 @@ let otherLibraries =
         , one-liner = H.callHackage "one-liner" "2.1"
         , openapi3 = H.callHackage "openapi3" "3.2.2"
         , openssl-streams = H.callHackage "openssl-streams" "1.2.3.0"
-        , optparse-applicative =
+        , optparse-applicative-fork =
             H.callGit
               "https://github.com/input-output-hk/optparse-applicative/"
               "7497a29cb998721a9068d5725d49461f2bba0e7a"
@@ -372,4 +372,8 @@ let otherLibraries =
         , zlib-bindings = H.callHackage "zlib-bindings" "0.1.1.5"
         }
 
-in  plutusLibraries # otherLibraries
+in  H.HorizonExport.MakeOverlay
+      { packagesDir = "pkgs"
+      , overlayFile = "overlay.nix"
+      , overlay = plutusLibraries # otherLibraries
+      }

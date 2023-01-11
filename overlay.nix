@@ -105,8 +105,6 @@ final: prev: with pkgs.haskell.lib; {
 
   optparse-applicative-fork = final.callPackage (./pkgs/optparse-applicative-fork.nix) { };
 
-  partial-order = final.callPackage (./pkgs/partial-order.nix) { };
-
   plutus-core = final.callPackage (./pkgs/plutus-core.nix) { };
 
   plutus-ledger-api = final.callPackage (./pkgs/plutus-ledger-api.nix) { };

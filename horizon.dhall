@@ -188,6 +188,7 @@ let otherLibraries =
         , ouroboros-network-mock = callOuroborosNetwork "ouroboros-network-mock"
         , ouroboros-network-protocols = callOuroborosNetwork "ouroboros-network-protocols"
         , ouroboros-network-testing = callOuroborosNetwork "ouroboros-network-testing"
+        , ouroboros-network = callOuroborosNetwork "ouroboros-network"
         , prettyprinter-configurable =
             H.callGit
               "https://github.com/milloni/plutus"

@@ -10,7 +10,7 @@
 , cardano-prelude
 , containers
 , cryptonite
-, fetchgit
+, fetchzip
 , formatting
 , ghc-heap
 , ghc-prim
@@ -27,13 +27,10 @@
 mkDerivation {
   pname = "cardano-prelude-test";
   version = "0.1.0.1";
-  src = fetchgit {
-    url = "https://github.com/input-output-hk/cardano-prelude";
-    sha256 = "1bshxlraxkm12kj5fn98n8vqwdl8ivxh069zr1y5icmfh8hv50zd";
-    rev = "b6053a23f53acd5c519cc559c3861dda3ebf8b35";
-    fetchSubmodules = true;
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-prelude-test-0.1.0.1.tar.gz";
+    sha256 = "0sf8pyil2h08kl3mr18ddrdhwz2caaqzj5mlys6g69xp4gf9b8lj";
   };
-  postUnpack = "sourceRoot+=/cardano-prelude-test/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -1,8 +1,11 @@
-{ mkDerivation, base, lib }:
+{ mkDerivation, base, fetchzip, lib }:
 mkDerivation {
   pname = "contra-tracer";
-  version = "0.2.0.0";
-  sha256 = "9eebc1e410b2e50a7da6418b9bf194e22c92f2c05b3724aec502d82ca87262e5";
+  version = "0.1.0.1";
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/contra-tracer-0.1.0.1.tar.gz";
+    sha256 = "03f3i1x08m9xjxfzjjh26cpjhvczslcc7hpn9cmdkmpkbdz2fdsd";
+  };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -14,7 +17,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  description = "Arrow and contravariant tracers";
+  description = "A simple interface for logging, tracing or monitoring";
   license = lib.licenses.asl20;
   broken = false;
 }

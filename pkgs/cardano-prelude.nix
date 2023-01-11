@@ -6,7 +6,7 @@
 , canonical-json
 , cborg
 , containers
-, fetchgit
+, fetchzip
 , formatting
 , ghc-heap
 , ghc-prim
@@ -22,13 +22,10 @@
 mkDerivation {
   pname = "cardano-prelude";
   version = "0.1.0.1";
-  src = fetchgit {
-    url = "https://github.com/input-output-hk/cardano-prelude";
-    sha256 = "1bshxlraxkm12kj5fn98n8vqwdl8ivxh069zr1y5icmfh8hv50zd";
-    rev = "b6053a23f53acd5c519cc559c3861dda3ebf8b35";
-    fetchSubmodules = true;
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-prelude-0.1.0.1.tar.gz";
+    sha256 = "12m6z877q2my47x4sgl4zikviha884ajkpp6grvxb3qgdvrxbnw1";
   };
-  postUnpack = "sourceRoot+=/cardano-prelude/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

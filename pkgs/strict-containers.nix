@@ -1,81 +1,38 @@
 { mkDerivation
-, ChasingBottoms
-, HUnit
-, QuickCheck
-, array
+, aeson
 , base
-, base-orphans
-, binary
+, cardano-binary
+, cborg
 , containers
+, data-default-class
 , deepseq
-, fetchgit
-, hashable
-, indexed-traversable
+, fetchzip
+, fingertree
 , lib
-, primitive
-, random
-, strict
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, transformers
-, unordered-containers
-, vector
-, vector-binary-instances
+, nothunks
+, serialise
 }:
 mkDerivation {
   pname = "strict-containers";
-  version = "0.1.1";
-  src = fetchgit {
-    url = "https://github.com/milloni/strict-containers";
-    sha256 = "1fpbfp8frvyhvy2qw63512llyswwm690bk890bi1rhqnm2v10q3k";
-    rev = "9e833be00bc2c5cdb0b4e743b7a2cde00dd4f616";
-    fetchSubmodules = true;
+  version = "0.1.0.0";
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/strict-containers-0.1.0.0.tar.gz";
+    sha256 = "1mrvds6j384f6ai099j2xk2c7rgyvhp8nlgyxpzbajpas6kw40si";
   };
-  postUnpack = "sourceRoot+=/strict-containers/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
+    aeson
     base
-    binary
+    cardano-binary
+    cborg
     containers
+    data-default-class
     deepseq
-    hashable
-    indexed-traversable
-    primitive
-    strict
-    unordered-containers
-    vector
-    vector-binary-instances
-  ];
-  testHaskellDepends = [
-    array
-    base
-    base-orphans
-    ChasingBottoms
-    containers
-    deepseq
-    hashable
-    HUnit
-    primitive
-    QuickCheck
-    random
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    template-haskell
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
-    transformers
-    unordered-containers
-    vector
+    fingertree
+    nothunks
+    serialise
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
@@ -84,8 +41,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/haskellari/strict-containers";
-  description = "Strict containers";
-  license = lib.licenses.bsd3;
+  description = "Various strict container types";
+  license = lib.licenses.asl20;
   broken = false;
 }

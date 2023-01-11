@@ -10,7 +10,7 @@
 , contra-tracer
 , directory
 , dns
-, fetchzip
+, fetchgit
 , hashable
 , io-classes
 , io-sim
@@ -22,6 +22,7 @@
 , network-mux
 , nothunks
 , optparse-applicative
+, ouroboros-network-api
 , ouroboros-network-testing
 , pretty-simple
 , quickcheck-instances
@@ -33,7 +34,6 @@
 , tasty
 , tasty-quickcheck
 , text
-, these
 , time
 , typed-protocols
 , typed-protocols-cborg
@@ -42,10 +42,13 @@
 mkDerivation {
   pname = "ouroboros-network-framework";
   version = "0.2.0.0";
-  src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/ouroboros-network-framework-0.2.0.0.tar.gz";
-    sha256 = "0m4n9wqscfc6js15hklv0jq37ig3n9h6zrd0s5d326i41agdz7ra";
+  src = fetchgit {
+    url = "https://github.com/input-output-hk/ouroboros-network";
+    sha256 = "0nr5qkphcc5hp1az6fw934zxi0yw9k5626ys1yyw6ybbw38xwpik";
+    rev = "c65353299ff3efde05bf07d628a2ac7ea3193458";
+    fetchSubmodules = true;
   };
+  postUnpack = "sourceRoot+=/ouroboros-network-framework/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -67,6 +70,7 @@ mkDerivation {
     network
     network-mux
     nothunks
+    ouroboros-network-api
     ouroboros-network-testing
     QuickCheck
     quiet
@@ -74,7 +78,6 @@ mkDerivation {
     stm
     strict-stm
     text
-    time
     typed-protocols
     typed-protocols-cborg
     Win32-network
@@ -83,15 +86,14 @@ mkDerivation {
     async
     base
     bytestring
-    cborg
     contra-tracer
     directory
     io-classes
     network
     network-mux
     optparse-applicative
+    ouroboros-network-api
     random
-    serialise
     strict-stm
     typed-protocols
     typed-protocols-examples
@@ -99,7 +101,6 @@ mkDerivation {
   testHaskellDepends = [
     base
     bytestring
-    cardano-prelude
     cborg
     containers
     contra-tracer
@@ -111,6 +112,7 @@ mkDerivation {
     monoidal-synchronisation
     network
     network-mux
+    ouroboros-network-api
     ouroboros-network-testing
     pretty-simple
     QuickCheck
@@ -121,7 +123,6 @@ mkDerivation {
     tasty
     tasty-quickcheck
     text
-    these
     time
     typed-protocols
     typed-protocols-cborg

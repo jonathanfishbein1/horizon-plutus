@@ -5,7 +5,7 @@
 , containers
 , contra-tracer
 , deque
-, fetchzip
+, fetchgit
 , io-classes
 , io-sim
 , lib
@@ -19,10 +19,13 @@
 mkDerivation {
   pname = "ouroboros-network-testing";
   version = "0.2.0.0";
-  src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/ouroboros-network-testing-0.2.0.0.tar.gz";
-    sha256 = "1cdmzrl1bx4rdyfb273m9lblzbbn9hzppzayq5yn2q4g30adjf7b";
+  src = fetchgit {
+    url = "https://github.com/input-output-hk/ouroboros-network";
+    sha256 = "0nr5qkphcc5hp1az6fw934zxi0yw9k5626ys1yyw6ybbw38xwpik";
+    rev = "c65353299ff3efde05bf07d628a2ac7ea3193458";
+    fetchSubmodules = true;
   };
+  postUnpack = "sourceRoot+=/ouroboros-network-testing/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

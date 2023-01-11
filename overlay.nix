@@ -103,6 +103,8 @@ final: prev: with pkgs.haskell.lib; {
 
   optparse-applicative-fork = final.callPackage (./pkgs/optparse-applicative-fork.nix) { };
 
+  ouroboros-network-api = final.callPackage (./pkgs/ouroboros-network-api.nix) { };
+
   ouroboros-network-framework = final.callPackage (./pkgs/ouroboros-network-framework.nix) { };
 
   ouroboros-network-testing = final.callPackage (./pkgs/ouroboros-network-testing.nix) { };

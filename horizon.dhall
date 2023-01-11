@@ -183,6 +183,7 @@ let otherLibraries =
               "https://github.com/input-output-hk/optparse-applicative/"
               "7497a29cb998721a9068d5725d49461f2bba0e7a"
               (None H.Subdir)
+        , ouroboros-network-api = callOuroborosNetwork "ouroboros-network-api"
         , ouroboros-network-framework = callCHaP "ouroboros-network-framework" "0.2.0.0"
         , ouroboros-network-testing = callCHaP "ouroboros-network-testing" "0.2.0.0"
         , prettyprinter-configurable =

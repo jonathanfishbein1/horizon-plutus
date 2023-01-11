@@ -81,10 +81,6 @@ final: prev: with pkgs.haskell.lib; {
 
   heapwords = final.callPackage (./pkgs/heapwords.nix) { };
 
-  hedgehog-extras = final.callPackage (./pkgs/hedgehog-extras.nix) { };
-
-  inline-r = final.callPackage (./pkgs/inline-r.nix) { };
-
   io-classes = final.callPackage (./pkgs/io-classes.nix) { };
 
   io-sim = final.callPackage (./pkgs/io-sim.nix) { };

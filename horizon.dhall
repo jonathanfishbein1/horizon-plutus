@@ -159,16 +159,6 @@ let otherLibraries =
               "f310a19e44416206633cfd084f10ffb7cfea9f1d"
               (None H.Subdir)
         , heapwords = callCardanoBase "heapwords"
-        , hedgehog-extras =
-            H.callGit
-              "https://github.com/input-output-hk/hedgehog-extras"
-              "26b76bbcecfe48d0a87099f213f58e3778aa1f59"
-              (None H.Subdir)
-        , inline-r =
-            H.callGit
-              "https://github.com/tweag/HaskellR"
-              "fe9b5bd06cd4d3988e47b9933b11d83b6108e255"
-              (Some "inline-r")
         , io-classes = callIoSim "io-classes"
         , io-sim = callIoSim "io-sim"
         , iohk-monitoring = callCHaP "iohk-monitoring" "0.1.11.1"

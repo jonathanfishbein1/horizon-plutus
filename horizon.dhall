@@ -49,8 +49,8 @@ let callIohkMonitoringFramework
 let callOuroborosNetwork
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
-        "https://github.com/input-output-hk/ouroboros-network"
-        "c65353299ff3efde05bf07d628a2ac7ea3193458"
+        "https://github.com/locallycompact/ouroboros-network"
+        "13dbe0bf9bca33469d105f22cdcb2b6d1a32c9b9"
 
 let callPlutusApps
     : H.Subdir → H.HaskellPackage.Type

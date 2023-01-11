@@ -185,6 +185,7 @@ let otherLibraries =
               (None H.Subdir)
         , ouroboros-network-api = callOuroborosNetwork "ouroboros-network-api"
         , ouroboros-network-framework = callCHaP "ouroboros-network-framework" "0.2.0.0"
+        , ouroboros-network-mock = callOuroborosNetwork "ouroboros-network-mock"
         , ouroboros-network-testing = callCHaP "ouroboros-network-testing" "0.2.0.0"
         , prettyprinter-configurable =
             H.callGit

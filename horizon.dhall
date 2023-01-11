@@ -140,16 +140,8 @@ let otherLibraries =
         , cardano-slotting = callCardanoBase "slotting"
         , cardano-strict-containers =
             callCardanoBase "cardano-strict-containers"
-        , cardano-prelude =
-            H.callGit
-              "https://github.com/input-output-hk/cardano-prelude"
-              "b6053a23f53acd5c519cc559c3861dda3ebf8b35"
-              (Some "cardano-prelude")
-        , cardano-prelude-test =
-            H.callGit
-              "https://github.com/input-output-hk/cardano-prelude"
-              "b6053a23f53acd5c519cc559c3861dda3ebf8b35"
-              (Some "cardano-prelude-test")
+        , cardano-prelude = callCHaP "cardano-prelude" "0.1.0.1"
+        , cardano-prelude-test = callCHaP "cardano-prelude-test" "0.1.0.1"
         , contra-tracer = callCHaP "contra-tracer" "0.1.0.1"
         , flat =
             H.callGit

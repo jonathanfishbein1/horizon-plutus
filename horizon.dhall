@@ -173,7 +173,7 @@ let otherLibraries =
         , casing = H.callHackage "casing" "0.1.4.1"
         , composition-prelude = H.callHackage "composition-prelude" "3.0.0.2"
         , concurrent-extra = H.callHackage "concurrent-extra" "0.7.0.12"
-        , contra-tracer = H.callHackage "contra-tracer" "0.2.0.0"
+        , contra-tracer = callCHaP "contra-tracer" "0.1.0.1"
         , data-ordlist = H.callHackage "data-ordlist" "0.4.7.0"
         , dependent-sum-template =
             H.callHackage "dependent-sum-template" "0.1.1.1"

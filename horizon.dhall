@@ -184,10 +184,13 @@ let otherLibraries =
               "7497a29cb998721a9068d5725d49461f2bba0e7a"
               (None H.Subdir)
         , ouroboros-network-api = callOuroborosNetwork "ouroboros-network-api"
-        , ouroboros-network-framework = callOuroborosNetwork "ouroboros-network-framework"
+        , ouroboros-network-framework =
+            callOuroborosNetwork "ouroboros-network-framework"
         , ouroboros-network-mock = callOuroborosNetwork "ouroboros-network-mock"
-        , ouroboros-network-protocols = callOuroborosNetwork "ouroboros-network-protocols"
-        , ouroboros-network-testing = callOuroborosNetwork "ouroboros-network-testing"
+        , ouroboros-network-protocols =
+            callOuroborosNetwork "ouroboros-network-protocols"
+        , ouroboros-network-testing =
+            callOuroborosNetwork "ouroboros-network-testing"
         , ouroboros-network = callOuroborosNetwork "ouroboros-network"
         , prettyprinter-configurable =
             H.callGit

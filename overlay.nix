@@ -93,6 +93,8 @@ final: prev: with pkgs.haskell.lib; {
 
   moo = final.callPackage (./pkgs/moo.nix) { };
 
+  network-mux = final.callPackage (./pkgs/network-mux.nix) { };
+
   non-integral = final.callPackage (./pkgs/non-integral.nix) { };
 
   nothunks = final.callPackage (./pkgs/nothunks.nix) { };

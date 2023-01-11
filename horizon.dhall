@@ -170,6 +170,7 @@ let otherLibraries =
               "https://github.com/astanin/moo"
               "dbda5e76ac3b4c72c805ec0cdb9bcdff7bb6247d"
               (None H.Subdir)
+        , network-mux = callCHaP "network-mux" "0.2.0.0"
         , non-integral = callCardanoLedger "libs/non-integral"
         , nothunks =
             H.callGit

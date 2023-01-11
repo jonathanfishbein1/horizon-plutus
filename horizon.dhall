@@ -211,11 +211,6 @@ let otherLibraries =
         , typed-protocols-examples =
             callTypedProtocols "typed-protocols-examples"
         , typed-protocols = callTypedProtocols "typed-protocols"
-        , typerep-map =
-            H.callGit
-              "https://github.com/parsonsmatt/typerep-map"
-              "75b7cd5d45986be07420a6821d352ad2adc0b697"
-              (None H.Subdir)
         , vector-map = callCardanoLedger "libs/vector-map"
         , word-array = callPlutus "word-array"
         }

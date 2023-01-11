@@ -133,8 +133,6 @@ final: prev: with pkgs.haskell.lib; {
 
   typed-protocols-examples = final.callPackage (./pkgs/typed-protocols-examples.nix) { };
 
-  typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
-
   vector-map = final.callPackage (./pkgs/vector-map.nix) { };
 
   word-array = final.callPackage (./pkgs/word-array.nix) { };

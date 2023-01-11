@@ -28,7 +28,11 @@
     with pkgs.lib;
     with pkgs.writers;
     let
-      horizon-gen-nix = horizon-platform.legacyPackages.${system}.horizon-gen-nix;
+      horizon-gen-nix = writeBashBin "horizon-gen-nix" ''
+        ${horizon-platform.legacyPackages.${system}.horizon-gen-nix}/bin/horizon-gen-nix;
+        ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt pkgs/*
+        ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt overlay.nix
+      '';
 
       overrides = composeManyExtensions [
         (import ./overlay.nix { inherit pkgs; })

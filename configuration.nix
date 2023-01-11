@@ -22,4 +22,5 @@ final: prev: {
 
   secp256k1 = pkgs.secp256k1;
 
+  strict-containers = enableCabalFlag prev.strict-containers "development";
 }

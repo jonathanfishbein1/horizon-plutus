@@ -193,11 +193,7 @@ let otherLibraries =
         , set-algebra = callCardanoLedger "libs/set-algebra"
         , small-steps = callCardanoLedger "libs/small-steps"
         , small-steps-test = callCardanoLedger "libs/small-steps-test"
-        , strict-containers =
-            H.callGit
-              "https://github.com/milloni/strict-containers"
-              "9e833be00bc2c5cdb0b4e743b7a2cde00dd4f616"
-              (Some "strict-containers")
+        , strict-containers = callCHaP "strict-containers" "0.1.0.0"
         , strict-stm = callIoSim "strict-stm"
         , tracer-transformers = callCHaP "tracer-transformers" "0.1.0.2"
         , typed-protocols-cborg = callTypedProtocols "typed-protocols-cborg"

@@ -287,6 +287,7 @@ let otherLibraries =
               "https://github.com/locallycompact/nothunks"
               "0d7e3565407aa4eb21d861d075dff6f20d090f97"
               (None H.Subdir)
+        , ntp-client = callCHaP "ntp-client" "0.0.1"
         , one-liner = H.callHackage "one-liner" "2.1"
         , openapi3 = H.callHackage "openapi3" "3.2.2"
         , openssl-streams = H.callHackage "openssl-streams" "1.2.3.0"

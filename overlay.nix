@@ -261,6 +261,8 @@ final: prev: with pkgs.haskell.lib; {
 
   nothunks = final.callPackage (./pkgs/nothunks.nix) { };
 
+  ntp-client = final.callPackage (./pkgs/ntp-client.nix) { };
+
   one-liner = final.callPackage (./pkgs/one-liner.nix) { };
 
   openapi3 = final.callPackage (./pkgs/openapi3.nix) { };

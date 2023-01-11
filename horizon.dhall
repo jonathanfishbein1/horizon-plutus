@@ -148,16 +148,6 @@ let otherLibraries =
               "https://github.com/Quid2/flat"
               "2121ee96201e39764e3a6fcbc53241afb0050647"
               (None H.Subdir)
-        , ghc-typelits-knownnat =
-            H.callGit
-              "https://github.com/clash-lang/ghc-typelits-knownnat"
-              "1bc4ee33e005e96d1f7785c715588a289707cd48"
-              (None H.Subdir)
-        , ghc-typelits-natnormalise =
-            H.callGit
-              "https://github.com/clash-lang/ghc-typelits-natnormalise"
-              "e0af5b3c69a7d8e1dd402eb727631801e7d9be3d"
-              (None H.Subdir)
         , goblins =
             H.callGit
               "https://github.com/newhoggy/goblins"

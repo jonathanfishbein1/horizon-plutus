@@ -75,10 +75,6 @@ final: prev: with pkgs.haskell.lib; {
 
   flat = final.callPackage (./pkgs/flat.nix) { };
 
-  ghc-typelits-knownnat = final.callPackage (./pkgs/ghc-typelits-knownnat.nix) { };
-
-  ghc-typelits-natnormalise = final.callPackage (./pkgs/ghc-typelits-natnormalise.nix) { };
-
   goblins = final.callPackage (./pkgs/goblins.nix) { };
 
   gray-code = final.callPackage (./pkgs/gray-code.nix) { };

@@ -3,11 +3,7 @@
 
   inputs = {
     get-flake.url = "github:ursi/get-flake";
-    horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform?rev=51ffeae6e4cb64c4c0b5c2af322990d3d4089ca2";
-    horizon-gen-nix = {
-      url = "git+https://gitlab.homotopic.tech/horizon/horizon-gen-nix?rev=8eb5ffc81cd8331f340546d746a786c7b2f021a6";
-      flake = false;
-    };
+    horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
@@ -18,7 +14,6 @@
     { self
     , flake-utils
     , get-flake
-    , horizon-gen-nix
     , horizon-platform
     , lint-utils
     , nixpkgs
@@ -33,7 +28,7 @@
     with pkgs.lib;
     with pkgs.writers;
     let
-      horizon-gen-nix-app = get-flake horizon-gen-nix;
+      horizon-gen-nix = horizon-platform.legacyPackages.${system}.horizon-gen-nix;
 
       overrides = composeManyExtensions [
         (import ./overlay.nix { inherit pkgs; })
@@ -56,7 +51,10 @@
     {
       apps = {
 
-        horizon-gen-nix = horizon-gen-nix-app.apps.${system}.horizon-gen-nix;
+        horizon-gen-nix = {
+          type = "app";
+          program = "${horizon-gen-nix}/bin/horizon-gen-nix";
+        };
 
       };
 

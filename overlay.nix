@@ -109,6 +109,8 @@ final: prev: with pkgs.haskell.lib; {
 
   ouroboros-network-mock = final.callPackage (./pkgs/ouroboros-network-mock.nix) { };
 
+  ouroboros-network-protocols = final.callPackage (./pkgs/ouroboros-network-protocols.nix) { };
+
   ouroboros-network-testing = final.callPackage (./pkgs/ouroboros-network-testing.nix) { };
 
   plutus-core = final.callPackage (./pkgs/plutus-core.nix) { };

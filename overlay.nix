@@ -365,6 +365,8 @@ final: prev: with pkgs.haskell.lib; {
 
   time-units = final.callPackage (./pkgs/time-units.nix) { };
 
+  tracer-transformers = final.callPackage (./pkgs/tracer-transformers.nix) { };
+
   transformers-except = final.callPackage (./pkgs/transformers-except.nix) { };
 
   typed-protocols = final.callPackage (./pkgs/typed-protocols.nix) { };

@@ -350,6 +350,7 @@ let otherLibraries =
         , threads = H.callHackage "threads" "0.5.1.7"
         , time-locale-compat = H.callHackage "time-locale-compat" "0.1.1.5"
         , time-units = H.callHackage "time-units" "1.0.0"
+        , tracer-transformers = callCHaP "tracer-transformers" "0.1.0.2"
         , transformers-except = H.callHackage "transformers-except" "0.1.2"
         , typed-protocols-cborg = callTypedProtocols "typed-protocols-cborg"
         , typed-protocols-examples =

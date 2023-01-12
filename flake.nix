@@ -39,9 +39,7 @@
         (import ./configuration.nix { inherit pkgs pkgs-libR; })
       ];
 
-      legacyPackages = horizon-platform.legacyPackages.${system}.override {
-        inherit overrides;
-      };
+      legacyPackages = horizon-platform.legacyPackages.${system}.extend overrides;
 
       packages = filterAttrs
         (n: v: v != null

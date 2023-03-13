@@ -1,6 +1,7 @@
 stages:
 - generate
 - check
+- cache
 
 generate-flake-ci:
   stage: generate
@@ -16,3 +17,11 @@ flake-ci:
       - artifact: flake-ci.yml
         job: generate-flake-ci
     strategy: depend
+
+cachix:
+  stage: cache
+  only:
+    refs:
+    - master
+    - cachix
+  script: nix-shell -p jq cachix parallel --command 'dhall --file .cachix.dhall | dhall text | bash'

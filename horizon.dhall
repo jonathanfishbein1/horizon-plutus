@@ -214,5 +214,6 @@ let otherLibraries =
 in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
-      , overlay = { compiler = "ghc-9.4.4", packages = plutusLibraries # otherLibraries }
+      , overlay =
+        { compiler = "ghc-9.4.4", packages = plutusLibraries # otherLibraries }
       }

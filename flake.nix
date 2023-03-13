@@ -1,6 +1,11 @@
 {
   description = "horizon-plutus overlay";
 
+  nixConfig = {
+    extra-substituters = "https://horizon.cachix.org";
+    extra-trusted-public-keys = "horizon.cachix.org-1:MeEEDRhRZTgv/FFGCv3479/dmJDfJ82G6kfUDxMSAw0=";
+  };
+
   inputs = {
     get-flake.url = "github:ursi/get-flake";
     horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";

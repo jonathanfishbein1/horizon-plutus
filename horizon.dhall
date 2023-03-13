@@ -1,6 +1,6 @@
 let H =
-      https://gitlab.homotopic.tech/horizon/horizon-spec/-/raw/0.4.2/dhall/package.dhall
-        sha256:63d99b8dc5d0a7b25230dfde746003c5f4b30a607c89f6a104634062eec44503
+      https://gitlab.horizon-haskell.net/dhall/horizon-spec/-/raw/0.6/dhall/package.dhall
+        sha256:9a80164572526dc5350f105c8db0790fdf36634629b4cf03402ba14fd173d121
 
 let callRepository
     : H.Url → H.Revision → H.Subdir → H.HaskellPackage.Type
@@ -214,5 +214,6 @@ let otherLibraries =
 in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
-      , overlay = plutusLibraries # otherLibraries
+      , overlay =
+        { compiler = "ghc-9.4.4", packages = plutusLibraries # otherLibraries }
       }

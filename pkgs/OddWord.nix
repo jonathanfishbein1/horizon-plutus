@@ -1,10 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, criterion
-, fetchgit
-, hspec
-, lib
+{ mkDerivation, QuickCheck, base, criterion, fetchgit, hspec, lib
 }:
 mkDerivation {
   pname = "OddWord";

@@ -1,60 +1,16 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, base16-bytestring
-, binary
-, bytestring
-, cardano-binary
-, cardano-crypto
-, cardano-crypto-class
-, cardano-crypto-praos
-, cardano-crypto-test
-, cardano-crypto-wrapper
-, cardano-data
-, cardano-ledger-byron
-, cardano-ledger-byron-test
-, cardano-ledger-core
-, cardano-ledger-pretty
-, cardano-ledger-shelley
-, cardano-protocol-tpraos
-, cardano-slotting
-, cardano-strict-containers
-, cborg
-, containers
-, criterion
-, data-default-class
-, deepseq
-, fetchgit
-, generic-random
-, groups
-, hashable
-, hedgehog
-, hedgehog-quickcheck
-, iproute
-, lib
-, microlens
-, mtl
-, nothunks
-, plutus-ledger-api
-, prettyprinter
-, process-extras
-, scientific
-, serialise
-, set-algebra
-, small-steps
-, small-steps-test
-, tasty
-, tasty-hedgehog
-, tasty-hunit
-, tasty-quickcheck
-, text
-, time
-, transformers
-, tree-diff
-, unliftio
-, vector
-, vector-map
+{ mkDerivation, QuickCheck, aeson, base, base16-bytestring, binary
+, bytestring, cardano-binary, cardano-crypto, cardano-crypto-class
+, cardano-crypto-praos, cardano-crypto-test, cardano-crypto-wrapper
+, cardano-data, cardano-ledger-byron, cardano-ledger-byron-test
+, cardano-ledger-core, cardano-ledger-pretty
+, cardano-ledger-shelley, cardano-protocol-tpraos, cardano-slotting
+, cardano-strict-containers, cborg, containers, criterion
+, data-default-class, deepseq, fetchgit, generic-random, groups
+, hashable, hedgehog, hedgehog-quickcheck, iproute, lib, microlens
+, mtl, nothunks, plutus-ledger-api, prettyprinter, process-extras
+, scientific, serialise, set-algebra, small-steps, small-steps-test
+, tasty, tasty-hedgehog, tasty-hunit, tasty-quickcheck, text, time
+, transformers, tree-diff, unliftio, vector, vector-map
 }:
 mkDerivation {
   pname = "cardano-ledger-shelley-test";
@@ -70,106 +26,33 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    base16-bytestring
-    binary
-    bytestring
-    cardano-binary
-    cardano-crypto
-    cardano-crypto-class
-    cardano-crypto-test
-    cardano-crypto-wrapper
-    cardano-data
-    cardano-ledger-byron
-    cardano-ledger-byron-test
-    cardano-ledger-core
-    cardano-ledger-pretty
-    cardano-ledger-shelley
-    cardano-protocol-tpraos
-    cardano-slotting
-    cardano-strict-containers
-    cborg
-    containers
-    data-default-class
-    deepseq
-    generic-random
-    hashable
-    hedgehog
-    hedgehog-quickcheck
-    iproute
-    microlens
-    mtl
-    nothunks
-    plutus-ledger-api
-    process-extras
-    QuickCheck
-    serialise
-    set-algebra
-    small-steps
-    small-steps-test
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
-    time
-    transformers
-    tree-diff
-    unliftio
-    vector
-    vector-map
+    base base16-bytestring binary bytestring cardano-binary
+    cardano-crypto cardano-crypto-class cardano-crypto-test
+    cardano-crypto-wrapper cardano-data cardano-ledger-byron
+    cardano-ledger-byron-test cardano-ledger-core cardano-ledger-pretty
+    cardano-ledger-shelley cardano-protocol-tpraos cardano-slotting
+    cardano-strict-containers cborg containers data-default-class
+    deepseq generic-random hashable hedgehog hedgehog-quickcheck
+    iproute microlens mtl nothunks plutus-ledger-api process-extras
+    QuickCheck serialise set-algebra small-steps small-steps-test tasty
+    tasty-hunit tasty-quickcheck text time transformers tree-diff
+    unliftio vector vector-map
   ];
   testHaskellDepends = [
-    aeson
-    base
-    base16-bytestring
-    binary
-    bytestring
-    cardano-binary
-    cardano-crypto-class
-    cardano-data
-    cardano-ledger-byron
-    cardano-ledger-core
-    cardano-ledger-pretty
-    cardano-ledger-shelley
-    cardano-protocol-tpraos
-    cardano-slotting
-    cardano-strict-containers
-    cborg
-    containers
-    data-default-class
-    groups
-    hedgehog
-    iproute
-    microlens
-    prettyprinter
-    QuickCheck
-    scientific
-    small-steps
-    small-steps-test
-    tasty
-    tasty-hedgehog
-    tasty-hunit
-    tasty-quickcheck
+    aeson base base16-bytestring binary bytestring cardano-binary
+    cardano-crypto-class cardano-data cardano-ledger-byron
+    cardano-ledger-core cardano-ledger-pretty cardano-ledger-shelley
+    cardano-protocol-tpraos cardano-slotting cardano-strict-containers
+    cborg containers data-default-class groups hedgehog iproute
+    microlens prettyprinter QuickCheck scientific small-steps
+    small-steps-test tasty tasty-hedgehog tasty-hunit tasty-quickcheck
     time
   ];
   benchmarkHaskellDepends = [
-    base
-    cardano-crypto-class
-    cardano-crypto-praos
-    cardano-data
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-protocol-tpraos
-    cardano-slotting
-    cardano-strict-containers
-    containers
-    criterion
-    deepseq
-    mtl
-    QuickCheck
-    set-algebra
-    small-steps
-    small-steps-test
+    base cardano-crypto-class cardano-crypto-praos cardano-data
+    cardano-ledger-core cardano-ledger-shelley cardano-protocol-tpraos
+    cardano-slotting cardano-strict-containers containers criterion
+    deepseq mtl QuickCheck set-algebra small-steps small-steps-test
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

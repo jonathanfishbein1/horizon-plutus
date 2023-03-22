@@ -1,19 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, cardano-binary
-, containers
-, criterion
-, deepseq
-, fetchgit
-, lib
-, nothunks
-, primitive
-, quickcheck-classes-base
-, random
-, tasty
-, tasty-quickcheck
-, vector
+{ mkDerivation, QuickCheck, base, cardano-binary, containers
+, criterion, deepseq, fetchgit, lib, nothunks, primitive
+, quickcheck-classes-base, random, tasty, tasty-quickcheck, vector
 , vector-algorithms
 }:
 mkDerivation {
@@ -30,21 +17,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    cardano-binary
-    containers
-    deepseq
-    nothunks
-    primitive
-    vector
+    base cardano-binary containers deepseq nothunks primitive vector
     vector-algorithms
   ];
   testHaskellDepends = [
-    base
-    containers
-    QuickCheck
-    quickcheck-classes-base
-    tasty
+    base containers QuickCheck quickcheck-classes-base tasty
     tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ base containers criterion random ];

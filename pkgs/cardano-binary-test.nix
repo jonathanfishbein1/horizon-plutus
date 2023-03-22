@@ -1,21 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, cardano-binary
-, cardano-prelude-test
-, cborg
-, containers
-, fetchgit
-, formatting
-, hedgehog
-, hspec
-, lib
-, pretty-show
-, quickcheck-instances
-, text
-, time
-, vector
+{ mkDerivation, QuickCheck, base, bytestring, cardano-binary
+, cardano-prelude-test, cborg, containers, fetchgit, formatting
+, hedgehog, hspec, lib, pretty-show, quickcheck-instances, text
+, time, vector
 }:
 mkDerivation {
   pname = "cardano-binary-test";
@@ -31,21 +17,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cardano-binary
-    cardano-prelude-test
-    cborg
-    containers
-    formatting
-    hedgehog
-    hspec
-    pretty-show
-    QuickCheck
-    quickcheck-instances
-    text
-    time
-    vector
+    base bytestring cardano-binary cardano-prelude-test cborg
+    containers formatting hedgehog hspec pretty-show QuickCheck
+    quickcheck-instances text time vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,40 +1,12 @@
-{ mkDerivation
-, aeson
-, array
-, base
-, base-deriving-via
-, base64-bytestring
-, bytestring
-, cardano-binary
-, cardano-crypto-class
-, cardano-data
-, cardano-ledger-core
-, cardano-ledger-shelley
-, cardano-ledger-shelley-ma
-, cardano-slotting
-, cardano-strict-containers
-, containers
-, data-default
-, deepseq
-, fetchgit
-, heapwords
-, lib
-, measures
-, microlens
-, mtl
-, nothunks
-, plutus-core
-, plutus-ledger-api
-, prettyprinter
-, scientific
-, serialise
-, set-algebra
-, small-steps
-, text
-, time
-, transformers
-, utf8-string
-, validation-selective
+{ mkDerivation, aeson, array, base, base-deriving-via
+, base64-bytestring, bytestring, cardano-binary
+, cardano-crypto-class, cardano-data, cardano-ledger-core
+, cardano-ledger-shelley, cardano-ledger-shelley-ma
+, cardano-slotting, cardano-strict-containers, containers
+, data-default, deepseq, fetchgit, heapwords, lib, measures
+, microlens, mtl, nothunks, plutus-core, plutus-ledger-api
+, prettyprinter, scientific, serialise, set-algebra, small-steps
+, text, time, transformers, utf8-string, validation-selective
 }:
 mkDerivation {
   pname = "cardano-ledger-alonzo";
@@ -50,40 +22,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    array
-    base
-    base-deriving-via
-    base64-bytestring
-    bytestring
-    cardano-binary
-    cardano-crypto-class
-    cardano-data
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-ledger-shelley-ma
-    cardano-slotting
-    cardano-strict-containers
-    containers
-    data-default
-    deepseq
-    heapwords
-    measures
-    microlens
-    mtl
-    nothunks
-    plutus-core
-    plutus-ledger-api
-    prettyprinter
-    scientific
-    serialise
-    set-algebra
-    small-steps
-    text
-    time
-    transformers
-    utf8-string
-    validation-selective
+    aeson array base base-deriving-via base64-bytestring bytestring
+    cardano-binary cardano-crypto-class cardano-data
+    cardano-ledger-core cardano-ledger-shelley
+    cardano-ledger-shelley-ma cardano-slotting
+    cardano-strict-containers containers data-default deepseq heapwords
+    measures microlens mtl nothunks plutus-core plutus-ledger-api
+    prettyprinter scientific serialise set-algebra small-steps text
+    time transformers utf8-string validation-selective
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

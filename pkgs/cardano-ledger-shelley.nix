@@ -1,37 +1,11 @@
-{ mkDerivation
-, aeson
-, base
-, base16-bytestring
-, bytestring
-, cardano-binary
-, cardano-crypto
-, cardano-crypto-class
-, cardano-crypto-wrapper
-, cardano-data
-, cardano-ledger-byron
-, cardano-ledger-core
-, cardano-slotting
-, cardano-strict-containers
-, cborg
-, containers
-, data-default-class
-, deepseq
-, fetchgit
-, groups
-, heapwords
-, iproute
-, lib
-, microlens
-, mtl
-, nothunks
-, quiet
-, set-algebra
-, small-steps
-, text
-, time
-, transformers
-, validation-selective
-, vector-map
+{ mkDerivation, aeson, base, base16-bytestring, bytestring
+, cardano-binary, cardano-crypto, cardano-crypto-class
+, cardano-crypto-wrapper, cardano-data, cardano-ledger-byron
+, cardano-ledger-core, cardano-slotting, cardano-strict-containers
+, cborg, containers, data-default-class, deepseq, fetchgit, groups
+, heapwords, iproute, lib, microlens, mtl, nothunks, quiet
+, set-algebra, small-steps, text, time, transformers
+, validation-selective, vector-map
 }:
 mkDerivation {
   pname = "cardano-ledger-shelley";
@@ -47,37 +21,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    base16-bytestring
-    bytestring
-    cardano-binary
-    cardano-crypto
-    cardano-crypto-class
-    cardano-crypto-wrapper
-    cardano-data
-    cardano-ledger-byron
-    cardano-ledger-core
-    cardano-slotting
-    cardano-strict-containers
-    cborg
-    containers
-    data-default-class
-    deepseq
-    groups
-    heapwords
-    iproute
-    microlens
-    mtl
-    nothunks
-    quiet
-    set-algebra
-    small-steps
-    text
-    time
-    transformers
-    validation-selective
-    vector-map
+    aeson base base16-bytestring bytestring cardano-binary
+    cardano-crypto cardano-crypto-class cardano-crypto-wrapper
+    cardano-data cardano-ledger-byron cardano-ledger-core
+    cardano-slotting cardano-strict-containers cborg containers
+    data-default-class deepseq groups heapwords iproute microlens mtl
+    nothunks quiet set-algebra small-steps text time transformers
+    validation-selective vector-map
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

@@ -1,28 +1,9 @@
-{ mkDerivation
-, aeson
-, base
-, base16-bytestring
-, base64-bytestring
-, base64-bytestring-type
-, binary
-, bytestring
-, canonical-json
-, cardano-binary
-, cardano-binary-test
-, cardano-crypto
-, cardano-prelude
-, cardano-prelude-test
-, cryptonite
-, data-default
-, fetchgit
-, filepath
-, formatting
-, heapwords
-, hedgehog
-, lib
-, memory
-, nothunks
-, text
+{ mkDerivation, aeson, base, base16-bytestring, base64-bytestring
+, base64-bytestring-type, binary, bytestring, canonical-json
+, cardano-binary, cardano-binary-test, cardano-crypto
+, cardano-prelude, cardano-prelude-test, cryptonite, data-default
+, fetchgit, filepath, formatting, heapwords, hedgehog, lib, memory
+, nothunks, text
 }:
 mkDerivation {
   pname = "cardano-crypto-wrapper";
@@ -38,38 +19,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson
-    base
-    base16-bytestring
-    base64-bytestring
-    base64-bytestring-type
-    binary
-    bytestring
-    canonical-json
-    cardano-binary
-    cardano-crypto
-    cardano-prelude
-    cryptonite
-    data-default
-    formatting
-    heapwords
-    memory
-    nothunks
-    text
+    aeson base base16-bytestring base64-bytestring
+    base64-bytestring-type binary bytestring canonical-json
+    cardano-binary cardano-crypto cardano-prelude cryptonite
+    data-default formatting heapwords memory nothunks text
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    cardano-binary
-    cardano-binary-test
-    cardano-crypto
-    cardano-prelude
-    cardano-prelude-test
-    cryptonite
-    filepath
-    formatting
-    hedgehog
-    memory
+    base bytestring cardano-binary cardano-binary-test cardano-crypto
+    cardano-prelude cardano-prelude-test cryptonite filepath formatting
+    hedgehog memory
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

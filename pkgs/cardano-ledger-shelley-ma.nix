@@ -1,28 +1,9 @@
-{ mkDerivation
-, base
-, base16-bytestring
-, bytestring
-, cardano-binary
-, cardano-crypto-class
-, cardano-data
-, cardano-ledger-core
-, cardano-ledger-shelley
-, cardano-slotting
-, cardano-strict-containers
-, cborg
-, containers
-, deepseq
-, fetchgit
-, groups
-, lib
-, microlens
-, mtl
-, nothunks
-, primitive
-, small-steps
-, text
-, transformers
-, validation-selective
+{ mkDerivation, base, base16-bytestring, bytestring, cardano-binary
+, cardano-crypto-class, cardano-data, cardano-ledger-core
+, cardano-ledger-shelley, cardano-slotting
+, cardano-strict-containers, cborg, containers, deepseq, fetchgit
+, groups, lib, microlens, mtl, nothunks, primitive, small-steps
+, text, transformers, validation-selective
 }:
 mkDerivation {
   pname = "cardano-ledger-shelley-ma";
@@ -38,28 +19,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base16-bytestring
-    bytestring
-    cardano-binary
-    cardano-crypto-class
-    cardano-data
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-slotting
-    cardano-strict-containers
-    cborg
-    containers
-    deepseq
-    groups
-    microlens
-    mtl
-    nothunks
-    primitive
-    small-steps
-    text
-    transformers
-    validation-selective
+    base base16-bytestring bytestring cardano-binary
+    cardano-crypto-class cardano-data cardano-ledger-core
+    cardano-ledger-shelley cardano-slotting cardano-strict-containers
+    cborg containers deepseq groups microlens mtl nothunks primitive
+    small-steps text transformers validation-selective
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

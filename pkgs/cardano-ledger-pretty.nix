@@ -1,28 +1,10 @@
-{ mkDerivation
-, base
-, bech32
-, bytestring
-, cardano-crypto-class
-, cardano-ledger-alonzo
-, cardano-ledger-babbage
-, cardano-ledger-byron
-, cardano-ledger-core
-, cardano-ledger-shelley
-, cardano-ledger-shelley-ma
-, cardano-protocol-tpraos
-, cardano-slotting
-, cardano-strict-containers
-, containers
-, fetchgit
-, hashable
-, iproute
-, lib
-, microlens
-, plutus-ledger-api
-, prettyprinter
-, small-steps
-, text
-, vector-map
+{ mkDerivation, base, bech32, bytestring, cardano-crypto-class
+, cardano-ledger-alonzo, cardano-ledger-babbage
+, cardano-ledger-byron, cardano-ledger-core, cardano-ledger-shelley
+, cardano-ledger-shelley-ma, cardano-protocol-tpraos
+, cardano-slotting, cardano-strict-containers, containers, fetchgit
+, hashable, iproute, lib, microlens, plutus-ledger-api
+, prettyprinter, small-steps, text, vector-map
 }:
 mkDerivation {
   pname = "cardano-ledger-pretty";
@@ -38,28 +20,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bech32
-    bytestring
-    cardano-crypto-class
-    cardano-ledger-alonzo
-    cardano-ledger-babbage
-    cardano-ledger-byron
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-ledger-shelley-ma
-    cardano-protocol-tpraos
-    cardano-slotting
-    cardano-strict-containers
-    containers
-    hashable
-    iproute
-    microlens
-    plutus-ledger-api
-    prettyprinter
-    small-steps
-    text
-    vector-map
+    base bech32 bytestring cardano-crypto-class cardano-ledger-alonzo
+    cardano-ledger-babbage cardano-ledger-byron cardano-ledger-core
+    cardano-ledger-shelley cardano-ledger-shelley-ma
+    cardano-protocol-tpraos cardano-slotting cardano-strict-containers
+    containers hashable iproute microlens plutus-ledger-api
+    prettyprinter small-steps text vector-map
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

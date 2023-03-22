@@ -1,26 +1,10 @@
-{ mkDerivation
-, base
-, bytestring
-, cardano-binary
-, cardano-crypto-class
-, cardano-ledger-alonzo
-, cardano-ledger-babbage
-, cardano-ledger-conway
-, cardano-ledger-core
-, cardano-ledger-shelley
-, cardano-ledger-shelley-ma
-, cardano-slotting
-, containers
-, deepseq
-, fetchgit
-, lib
-, mtl
-, non-integral
-, nothunks
-, quiet
-, set-algebra
-, small-steps
-, transformers
+{ mkDerivation, base, bytestring, cardano-binary
+, cardano-crypto-class, cardano-ledger-alonzo
+, cardano-ledger-babbage, cardano-ledger-conway
+, cardano-ledger-core, cardano-ledger-shelley
+, cardano-ledger-shelley-ma, cardano-slotting, containers, deepseq
+, fetchgit, lib, mtl, non-integral, nothunks, quiet, set-algebra
+, small-steps, transformers
 }:
 mkDerivation {
   pname = "cardano-protocol-tpraos";
@@ -36,26 +20,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cardano-binary
-    cardano-crypto-class
-    cardano-ledger-alonzo
-    cardano-ledger-babbage
-    cardano-ledger-conway
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-ledger-shelley-ma
-    cardano-slotting
-    containers
-    deepseq
-    mtl
-    non-integral
-    nothunks
-    quiet
-    set-algebra
-    small-steps
-    transformers
+    base bytestring cardano-binary cardano-crypto-class
+    cardano-ledger-alonzo cardano-ledger-babbage cardano-ledger-conway
+    cardano-ledger-core cardano-ledger-shelley
+    cardano-ledger-shelley-ma cardano-slotting containers deepseq mtl
+    non-integral nothunks quiet set-algebra small-steps transformers
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

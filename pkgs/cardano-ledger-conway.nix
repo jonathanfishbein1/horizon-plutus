@@ -1,19 +1,8 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, cardano-binary
-, cardano-ledger-alonzo
-, cardano-ledger-babbage
-, cardano-ledger-core
-, cardano-ledger-shelley
-, cardano-ledger-shelley-ma
-, cardano-strict-containers
-, containers
-, fetchgit
-, lib
-, microlens
-, nothunks
+{ mkDerivation, aeson, base, bytestring, cardano-binary
+, cardano-ledger-alonzo, cardano-ledger-babbage
+, cardano-ledger-core, cardano-ledger-shelley
+, cardano-ledger-shelley-ma, cardano-strict-containers, containers
+, fetchgit, lib, microlens, nothunks
 }:
 mkDerivation {
   pname = "cardano-ledger-conway";
@@ -29,19 +18,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    cardano-binary
-    cardano-ledger-alonzo
-    cardano-ledger-babbage
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-ledger-shelley-ma
-    cardano-strict-containers
-    containers
-    microlens
-    nothunks
+    aeson base bytestring cardano-binary cardano-ledger-alonzo
+    cardano-ledger-babbage cardano-ledger-core cardano-ledger-shelley
+    cardano-ledger-shelley-ma cardano-strict-containers containers
+    microlens nothunks
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

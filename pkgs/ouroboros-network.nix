@@ -1,50 +1,14 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, array
-, async
-, base
-, bytestring
-, cardano-prelude
-, cardano-slotting
-, cardano-strict-containers
-, cborg
-, containers
-, contra-tracer
-, directory
-, dns
-, fetchgit
-, hashable
-, io-classes
-, io-sim
-, iproute
-, lib
-, monoidal-synchronisation
-, mtl
-, network
-, network-mux
-, nothunks
-, ouroboros-network-api
-, ouroboros-network-framework
-, ouroboros-network-mock
-, ouroboros-network-protocols
-, ouroboros-network-testing
-, pipes
-, pretty-simple
-, process
-, psqueues
-, random
-, serialise
-, stm
-, strict-stm
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, text
-, time
-, typed-protocols
-, typed-protocols-examples
-, unix
+{ mkDerivation, QuickCheck, aeson, array, async, base, bytestring
+, cardano-prelude, cardano-slotting, cardano-strict-containers
+, cborg, containers, contra-tracer, directory, dns, fetchgit
+, hashable, io-classes, io-sim, iproute, lib
+, monoidal-synchronisation, mtl, network, network-mux, nothunks
+, ouroboros-network-api, ouroboros-network-framework
+, ouroboros-network-mock, ouroboros-network-protocols
+, ouroboros-network-testing, pipes, pretty-simple, process
+, psqueues, random, serialise, stm, strict-stm, tasty, tasty-hunit
+, tasty-quickcheck, text, time, typed-protocols
+, typed-protocols-examples, unix
 }:
 mkDerivation {
   pname = "ouroboros-network";
@@ -60,91 +24,28 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    async
-    base
-    bytestring
-    cardano-prelude
-    cardano-slotting
-    cardano-strict-containers
-    cborg
-    containers
-    contra-tracer
-    directory
-    dns
-    hashable
-    io-classes
-    iproute
-    monoidal-synchronisation
-    mtl
-    network
-    network-mux
-    nothunks
-    ouroboros-network-api
-    ouroboros-network-framework
-    ouroboros-network-protocols
-    psqueues
-    random
-    strict-stm
-    typed-protocols
-    unix
+    aeson async base bytestring cardano-prelude cardano-slotting
+    cardano-strict-containers cborg containers contra-tracer directory
+    dns hashable io-classes iproute monoidal-synchronisation mtl
+    network network-mux nothunks ouroboros-network-api
+    ouroboros-network-framework ouroboros-network-protocols psqueues
+    random strict-stm typed-protocols unix
   ];
   executableHaskellDepends = [
-    async
-    base
-    bytestring
-    containers
-    contra-tracer
-    directory
-    ouroboros-network-api
-    ouroboros-network-framework
-    ouroboros-network-mock
-    ouroboros-network-protocols
-    random
-    serialise
-    stm
-    typed-protocols
+    async base bytestring containers contra-tracer directory
+    ouroboros-network-api ouroboros-network-framework
+    ouroboros-network-mock ouroboros-network-protocols random serialise
+    stm typed-protocols
   ];
   testHaskellDepends = [
-    aeson
-    array
-    base
-    bytestring
-    cardano-prelude
-    cardano-slotting
-    cborg
-    containers
-    contra-tracer
-    dns
-    hashable
-    io-classes
-    io-sim
-    iproute
-    monoidal-synchronisation
-    mtl
-    network
-    network-mux
-    nothunks
-    ouroboros-network-api
-    ouroboros-network-framework
-    ouroboros-network-mock
-    ouroboros-network-protocols
-    ouroboros-network-testing
-    pipes
-    pretty-simple
-    process
-    psqueues
-    QuickCheck
-    random
-    serialise
-    strict-stm
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
-    time
-    typed-protocols
-    typed-protocols-examples
+    aeson array base bytestring cardano-prelude cardano-slotting cborg
+    containers contra-tracer dns hashable io-classes io-sim iproute
+    monoidal-synchronisation mtl network network-mux nothunks
+    ouroboros-network-api ouroboros-network-framework
+    ouroboros-network-mock ouroboros-network-protocols
+    ouroboros-network-testing pipes pretty-simple process psqueues
+    QuickCheck random serialise strict-stm tasty tasty-hunit
+    tasty-quickcheck text time typed-protocols typed-protocols-examples
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

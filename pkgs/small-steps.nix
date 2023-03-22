@@ -1,17 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, cardano-strict-containers
-, containers
-, data-default-class
-, fetchgit
-, free
-, lib
-, mtl
-, nothunks
-, text
-, transformers
-, validation-selective
+{ mkDerivation, aeson, base, cardano-strict-containers, containers
+, data-default-class, fetchgit, free, lib, mtl, nothunks, text
+, transformers, validation-selective
 }:
 mkDerivation {
   pname = "small-steps";
@@ -27,17 +16,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    cardano-strict-containers
-    containers
-    data-default-class
-    free
-    mtl
-    nothunks
-    text
-    transformers
-    validation-selective
+    aeson base cardano-strict-containers containers data-default-class
+    free mtl nothunks text transformers validation-selective
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

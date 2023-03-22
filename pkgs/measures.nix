@@ -1,11 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, base-deriving-via
-, fetchgit
-, lib
-, tasty
-, tasty-quickcheck
+{ mkDerivation, QuickCheck, base, base-deriving-via, fetchgit, lib
+, tasty, tasty-quickcheck
 }:
 mkDerivation {
   pname = "measures";

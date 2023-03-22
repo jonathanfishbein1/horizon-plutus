@@ -4,8 +4,7 @@ let Prelude =
           sha256:26b0ef498663d269e4dc6a82b0ee289ec565d683ef4c00d0ebdd25333a5a3c98
 
 let H =
-      https://gitlab.horizon-haskell.net/dhall/horizon-spec/-/raw/0.6/dhall/package.dhall
-        sha256:9a80164572526dc5350f105c8db0790fdf36634629b4cf03402ba14fd173d121
+      https://gitlab.horizon-haskell.net/dhall/horizon-spec/-/raw/0.10.0/horizon-spec/package.dhall
 
 let toStep
     : Text → Text

@@ -1,19 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, cardano-binary
-, cardano-ledger-alonzo
-, cardano-ledger-babbage
-, cardano-ledger-babbage-test
-, cardano-ledger-conway
-, cardano-ledger-core
-, cardano-ledger-shelley
-, cardano-ledger-shelley-ma
-, fetchgit
-, lib
-, microlens
-, tasty
+{ mkDerivation, QuickCheck, base, bytestring, cardano-binary
+, cardano-ledger-alonzo, cardano-ledger-babbage
+, cardano-ledger-babbage-test, cardano-ledger-conway
+, cardano-ledger-core, cardano-ledger-shelley
+, cardano-ledger-shelley-ma, fetchgit, lib, microlens, tasty
 , tasty-quickcheck
 }:
 mkDerivation {
@@ -30,28 +19,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    cardano-ledger-alonzo
-    cardano-ledger-babbage
-    cardano-ledger-conway
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-ledger-shelley-ma
-    microlens
+    base cardano-ledger-alonzo cardano-ledger-babbage
+    cardano-ledger-conway cardano-ledger-core cardano-ledger-shelley
+    cardano-ledger-shelley-ma microlens
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    cardano-binary
-    cardano-ledger-alonzo
-    cardano-ledger-babbage
-    cardano-ledger-babbage-test
-    cardano-ledger-core
-    cardano-ledger-shelley
-    microlens
-    QuickCheck
-    tasty
-    tasty-quickcheck
+    base bytestring cardano-binary cardano-ledger-alonzo
+    cardano-ledger-babbage cardano-ledger-babbage-test
+    cardano-ledger-core cardano-ledger-shelley microlens QuickCheck
+    tasty tasty-quickcheck
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

@@ -1,27 +1,10 @@
-{ mkDerivation
-, base
-, bytestring
-, cardano-binary
-, cardano-crypto-class
-, cardano-data
-, cardano-ledger-alonzo
-, cardano-ledger-core
-, cardano-ledger-shelley
-, cardano-ledger-shelley-ma
-, cardano-slotting
-, cardano-strict-containers
-, containers
-, data-default
-, deepseq
-, fetchgit
-, lib
-, microlens
-, nothunks
-, plutus-ledger-api
-, set-algebra
-, small-steps
-, text
-, transformers
+{ mkDerivation, base, bytestring, cardano-binary
+, cardano-crypto-class, cardano-data, cardano-ledger-alonzo
+, cardano-ledger-core, cardano-ledger-shelley
+, cardano-ledger-shelley-ma, cardano-slotting
+, cardano-strict-containers, containers, data-default, deepseq
+, fetchgit, lib, microlens, nothunks, plutus-ledger-api
+, set-algebra, small-steps, text, transformers
 , validation-selective
 }:
 mkDerivation {
@@ -38,28 +21,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cardano-binary
-    cardano-crypto-class
-    cardano-data
-    cardano-ledger-alonzo
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-ledger-shelley-ma
-    cardano-slotting
-    cardano-strict-containers
-    containers
-    data-default
-    deepseq
-    microlens
-    nothunks
-    plutus-ledger-api
-    set-algebra
-    small-steps
-    text
-    transformers
-    validation-selective
+    base bytestring cardano-binary cardano-crypto-class cardano-data
+    cardano-ledger-alonzo cardano-ledger-core cardano-ledger-shelley
+    cardano-ledger-shelley-ma cardano-slotting
+    cardano-strict-containers containers data-default deepseq microlens
+    nothunks plutus-ledger-api set-algebra small-steps text
+    transformers validation-selective
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

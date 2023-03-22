@@ -1,26 +1,7 @@
-{ mkDerivation
-, base
-, bimap
-, binary
-, bytestring
-, containers
-, extra
-, fetchgit
-, hedgehog
-, lib
-, microlens
-, microlens-mtl
-, microlens-th
-, mmorph
-, monad-control
-, moo
-, random
-, template-haskell
-, temporary
-, th-utilities
-, transformers
-, tree-diff
-, typerep-map
+{ mkDerivation, base, bimap, binary, bytestring, containers, extra
+, fetchgit, hedgehog, lib, microlens, microlens-mtl, microlens-th
+, mmorph, monad-control, moo, random, template-haskell, temporary
+, th-utilities, transformers, tree-diff, typerep-map
 }:
 mkDerivation {
   pname = "goblins";
@@ -35,25 +16,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bimap
-    binary
-    bytestring
-    containers
-    extra
-    hedgehog
-    microlens
-    microlens-mtl
-    microlens-th
-    mmorph
-    monad-control
-    moo
-    random
-    template-haskell
-    th-utilities
-    transformers
-    tree-diff
-    typerep-map
+    base bimap binary bytestring containers extra hedgehog microlens
+    microlens-mtl microlens-th mmorph monad-control moo random
+    template-haskell th-utilities transformers tree-diff typerep-map
   ];
   testHaskellDepends = [ base hedgehog temporary ];
   enableLibraryProfiling = true;

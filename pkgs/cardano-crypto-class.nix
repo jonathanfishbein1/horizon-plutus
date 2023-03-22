@@ -1,27 +1,8 @@
-{ mkDerivation
-, aeson
-, base
-, base16-bytestring
-, bytestring
-, cardano-binary
-, cardano-strict-containers
-, cryptonite
-, deepseq
-, fetchgit
-, heapwords
-, lib
-, libsodium
-, memory
-, nothunks
-, primitive
-, secp256k1
-, serialise
-, template-haskell
-, text
-, th-compat
-, transformers
-, unix
-, vector
+{ mkDerivation, aeson, base, base16-bytestring, bytestring
+, cardano-binary, cardano-strict-containers, cryptonite, deepseq
+, fetchgit, heapwords, lib, libsodium, memory, nothunks, primitive
+, secp256k1, serialise, template-haskell, text, th-compat
+, transformers, unix, vector
 }:
 mkDerivation {
   pname = "cardano-crypto-class";
@@ -37,24 +18,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    base16-bytestring
-    bytestring
-    cardano-binary
-    cardano-strict-containers
-    cryptonite
-    deepseq
-    heapwords
-    memory
-    nothunks
-    primitive
-    serialise
-    template-haskell
-    text
-    th-compat
-    transformers
-    vector
+    aeson base base16-bytestring bytestring cardano-binary
+    cardano-strict-containers cryptonite deepseq heapwords memory
+    nothunks primitive serialise template-haskell text th-compat
+    transformers vector
   ];
   libraryPkgconfigDepends = [ libsodium secp256k1 ];
   testHaskellDepends = [ base bytestring unix ];

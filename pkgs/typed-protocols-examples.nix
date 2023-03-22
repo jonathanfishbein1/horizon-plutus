@@ -1,19 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, cborg
-, contra-tracer
-, fetchgit
-, io-classes
-, io-sim
-, lib
-, serialise
-, tasty
-, tasty-quickcheck
-, time
-, typed-protocols
-, typed-protocols-cborg
+{ mkDerivation, QuickCheck, base, bytestring, cborg, contra-tracer
+, fetchgit, io-classes, io-sim, lib, serialise, tasty
+, tasty-quickcheck, time, typed-protocols, typed-protocols-cborg
 }:
 mkDerivation {
   pname = "typed-protocols-examples";
@@ -29,27 +16,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cborg
-    contra-tracer
-    io-classes
-    serialise
-    time
-    typed-protocols
-    typed-protocols-cborg
+    base bytestring cborg contra-tracer io-classes serialise time
+    typed-protocols typed-protocols-cborg
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    contra-tracer
-    io-classes
-    io-sim
-    QuickCheck
-    tasty
-    tasty-quickcheck
-    typed-protocols
-    typed-protocols-cborg
+    base bytestring contra-tracer io-classes io-sim QuickCheck tasty
+    tasty-quickcheck typed-protocols typed-protocols-cborg
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

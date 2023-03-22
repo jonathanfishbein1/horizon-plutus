@@ -1,33 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, Win32-network
-, aeson
-, array
-, base
-, binary
-, bytestring
-, cborg
-, containers
-, contra-tracer
-, directory
-, fetchzip
-, io-classes
-, io-sim
-, lib
-, monoidal-synchronisation
-, network
-, process
-, quiet
-, serialise
-, splitmix
-, statistics-linreg
-, stm
-, strict-stm
-, tasty
-, tasty-quickcheck
-, tdigest
-, text
-, time
+{ mkDerivation, QuickCheck, Win32-network, aeson, array, base
+, binary, bytestring, cborg, containers, contra-tracer, directory
+, fetchzip, io-classes, io-sim, lib, monoidal-synchronisation
+, network, process, quiet, serialise, splitmix, statistics-linreg
+, stm, strict-stm, tasty, tasty-quickcheck, tdigest, text, time
 , vector
 }:
 mkDerivation {
@@ -41,56 +16,18 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    binary
-    bytestring
-    containers
-    contra-tracer
-    io-classes
-    monoidal-synchronisation
-    network
-    process
-    quiet
-    statistics-linreg
-    strict-stm
-    time
-    vector
+    array base binary bytestring containers contra-tracer io-classes
+    monoidal-synchronisation network process quiet statistics-linreg
+    strict-stm time vector
   ];
   executableHaskellDepends = [
-    aeson
-    base
-    bytestring
-    cborg
-    contra-tracer
-    directory
-    io-classes
-    network
-    serialise
-    stm
-    strict-stm
-    tdigest
-    text
+    aeson base bytestring cborg contra-tracer directory io-classes
+    network serialise stm strict-stm tdigest text
   ];
   testHaskellDepends = [
-    base
-    binary
-    bytestring
-    cborg
-    containers
-    contra-tracer
-    io-classes
-    io-sim
-    network
-    process
-    QuickCheck
-    serialise
-    splitmix
-    strict-stm
-    tasty
-    tasty-quickcheck
-    time
-    Win32-network
+    base binary bytestring cborg containers contra-tracer io-classes
+    io-sim network process QuickCheck serialise splitmix strict-stm
+    tasty tasty-quickcheck time Win32-network
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,35 +1,9 @@
-{ mkDerivation
-, PyF
-, async
-, barbies
-, base
-, base16-bytestring
-, base64-bytestring
-, bytestring
-, cborg
-, containers
-, deepseq
-, extra
-, fetchgit
-, filepath
-, flat
-, hedgehog
-, lens
-, lib
-, mtl
-, nothunks
-, plutus-core
-, plutus-tx
-, prettyprinter
-, serialise
-, tagged
-, tasty
-, tasty-hedgehog
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, text
-, transformers
+{ mkDerivation, PyF, async, barbies, base, base16-bytestring
+, base64-bytestring, bytestring, cborg, containers, deepseq, extra
+, fetchgit, filepath, flat, hedgehog, lens, lib, mtl, nothunks
+, plutus-core, plutus-tx, prettyprinter, serialise, tagged, tasty
+, tasty-hedgehog, tasty-hunit, tasty-quickcheck, template-haskell
+, text, transformers
 }:
 mkDerivation {
   pname = "plutus-ledger-api";
@@ -45,55 +19,18 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base16-bytestring
-    base64-bytestring
-    bytestring
-    cborg
-    containers
-    deepseq
-    extra
-    flat
-    lens
-    mtl
-    nothunks
-    plutus-core
-    plutus-tx
-    prettyprinter
-    PyF
-    serialise
-    tagged
-    template-haskell
-    text
+    base base16-bytestring base64-bytestring bytestring cborg
+    containers deepseq extra flat lens mtl nothunks plutus-core
+    plutus-tx prettyprinter PyF serialise tagged template-haskell text
     transformers
   ];
   executableHaskellDepends = [
-    async
-    base
-    extra
-    filepath
-    mtl
-    plutus-core
-    serialise
-    tasty
+    async base extra filepath mtl plutus-core serialise tasty
     tasty-hunit
   ];
   testHaskellDepends = [
-    barbies
-    base
-    bytestring
-    containers
-    extra
-    hedgehog
-    lens
-    mtl
-    nothunks
-    plutus-core
-    tasty
-    tasty-hedgehog
-    tasty-hunit
-    tasty-quickcheck
-    text
+    barbies base bytestring containers extra hedgehog lens mtl nothunks
+    plutus-core tasty tasty-hedgehog tasty-hunit tasty-quickcheck text
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

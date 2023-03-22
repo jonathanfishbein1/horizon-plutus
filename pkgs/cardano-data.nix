@@ -1,26 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, bytestring
-, cardano-binary
-, cardano-strict-containers
-, cborg
-, containers
-, deepseq
-, fetchgit
-, formatting
-, lib
-, microlens
-, mtl
-, nothunks
-, primitive
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, text
-, transformers
-, vector
+{ mkDerivation, QuickCheck, aeson, base, bytestring, cardano-binary
+, cardano-strict-containers, cborg, containers, deepseq, fetchgit
+, formatting, lib, microlens, mtl, nothunks, primitive, tasty
+, tasty-hunit, tasty-quickcheck, text, transformers, vector
 , vector-map
 }:
 mkDerivation {
@@ -37,37 +18,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    cardano-binary
-    cardano-strict-containers
-    cborg
-    containers
-    deepseq
-    formatting
-    microlens
-    mtl
-    nothunks
-    primitive
-    QuickCheck
-    text
-    transformers
-    vector
-    vector-map
+    aeson base bytestring cardano-binary cardano-strict-containers
+    cborg containers deepseq formatting microlens mtl nothunks
+    primitive QuickCheck text transformers vector vector-map
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    cardano-binary
-    cardano-strict-containers
-    cborg
-    containers
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
+    base bytestring cardano-binary cardano-strict-containers cborg
+    containers QuickCheck tasty tasty-hunit tasty-quickcheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,21 +1,7 @@
-{ mkDerivation
-, base
-, bimap
-, byron-spec-ledger
-, bytestring
-, containers
-, data-ordlist
-, fetchgit
-, hashable
-, hedgehog
-, lib
-, microlens
-, microlens-th
-, small-steps
-, small-steps-test
-, tasty
-, tasty-hedgehog
-, tasty-hunit
+{ mkDerivation, base, bimap, byron-spec-ledger, bytestring
+, containers, data-ordlist, fetchgit, hashable, hedgehog, lib
+, microlens, microlens-th, small-steps, small-steps-test, tasty
+, tasty-hedgehog, tasty-hunit
 }:
 mkDerivation {
   pname = "byron-spec-chain";
@@ -31,30 +17,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bimap
-    byron-spec-ledger
-    bytestring
-    containers
-    hashable
-    hedgehog
-    microlens
-    microlens-th
-    small-steps
-    small-steps-test
+    base bimap byron-spec-ledger bytestring containers hashable
+    hedgehog microlens microlens-th small-steps small-steps-test
   ];
   testHaskellDepends = [
-    base
-    byron-spec-ledger
-    containers
-    data-ordlist
-    hedgehog
-    microlens
-    small-steps
-    small-steps-test
-    tasty
-    tasty-hedgehog
-    tasty-hunit
+    base byron-spec-ledger containers data-ordlist hedgehog microlens
+    small-steps small-steps-test tasty tasty-hedgehog tasty-hunit
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

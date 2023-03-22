@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, bytestring
-, cborg
-, fetchgit
-, io-classes
-, lib
+{ mkDerivation, base, bytestring, cborg, fetchgit, io-classes, lib
 , typed-protocols
 }:
 mkDerivation {
@@ -21,11 +15,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cborg
-    io-classes
-    typed-protocols
+    base bytestring cborg io-classes typed-protocols
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

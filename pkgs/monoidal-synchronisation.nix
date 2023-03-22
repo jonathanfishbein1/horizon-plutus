@@ -1,20 +1,13 @@
-{ mkDerivation
-, QuickCheck
-, base
-, fetchgit
-, io-classes
-, io-sim
-, lib
-, tasty
-, tasty-quickcheck
+{ mkDerivation, QuickCheck, base, fetchgit, io-classes, io-sim, lib
+, tasty, tasty-quickcheck
 }:
 mkDerivation {
   pname = "monoidal-synchronisation";
   version = "0.1.0.0";
   src = fetchgit {
-    url = "https://github.com/input-output-hk/ouroboros-network";
-    sha256 = "06sis1hwh9d7g65qivvb55ab8yli8af0vgc66acp08dj0v4gb2im";
-    rev = "c175e75dd8bb3b0e4ea9db9360a64ed159e78013";
+    url = "https://github.com/locallycompact/ouroboros-network";
+    sha256 = "1ds14l3x83q21ngvzxj1yfgkw3ng9akpy1c8cvdv3yyl2drbn1g9";
+    rev = "13dbe0bf9bca33469d105f22cdcb2b6d1a32c9b9";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/monoidal-synchronisation/; echo source root reset to $sourceRoot";
@@ -23,12 +16,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [
-    base
-    io-classes
-    io-sim
-    QuickCheck
-    tasty
-    tasty-quickcheck
+    base io-classes io-sim QuickCheck tasty tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

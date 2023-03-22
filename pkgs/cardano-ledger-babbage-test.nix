@@ -1,33 +1,12 @@
-{ mkDerivation
-, QuickCheck
-, base
-, base16-bytestring
-, bytestring
-, cardano-binary
-, cardano-data
-, cardano-ledger-alonzo
-, cardano-ledger-alonzo-test
-, cardano-ledger-babbage
-, cardano-ledger-core
-, cardano-ledger-shelley
-, cardano-ledger-shelley-ma
-, cardano-ledger-shelley-ma-test
-, cardano-ledger-shelley-test
-, cardano-protocol-tpraos
-, cardano-slotting
-, cardano-strict-containers
-, cborg
-, containers
-, data-default-class
-, fetchgit
-, lib
-, plutus-ledger-api
-, plutus-tx
-, pretty-show
-, small-steps
-, tasty
-, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, QuickCheck, base, base16-bytestring, bytestring
+, cardano-binary, cardano-data, cardano-ledger-alonzo
+, cardano-ledger-alonzo-test, cardano-ledger-babbage
+, cardano-ledger-core, cardano-ledger-shelley
+, cardano-ledger-shelley-ma, cardano-ledger-shelley-ma-test
+, cardano-ledger-shelley-test, cardano-protocol-tpraos
+, cardano-slotting, cardano-strict-containers, cborg, containers
+, data-default-class, fetchgit, lib, plutus-ledger-api, plutus-tx
+, pretty-show, small-steps, tasty, tasty-hunit, tasty-quickcheck
 , time
 }:
 mkDerivation {
@@ -44,50 +23,23 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    cardano-binary
-    cardano-ledger-alonzo
-    cardano-ledger-alonzo-test
-    cardano-ledger-babbage
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-ledger-shelley-ma
-    cardano-ledger-shelley-ma-test
-    cardano-ledger-shelley-test
-    cardano-slotting
-    cardano-strict-containers
-    containers
-    data-default-class
-    plutus-tx
-    QuickCheck
-    small-steps
+    base cardano-binary cardano-ledger-alonzo
+    cardano-ledger-alonzo-test cardano-ledger-babbage
+    cardano-ledger-core cardano-ledger-shelley
+    cardano-ledger-shelley-ma cardano-ledger-shelley-ma-test
+    cardano-ledger-shelley-test cardano-slotting
+    cardano-strict-containers containers data-default-class plutus-tx
+    QuickCheck small-steps
   ];
   testHaskellDepends = [
-    base
-    base16-bytestring
-    bytestring
-    cardano-binary
-    cardano-data
-    cardano-ledger-alonzo
-    cardano-ledger-alonzo-test
-    cardano-ledger-babbage
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-ledger-shelley-ma
-    cardano-ledger-shelley-ma-test
-    cardano-ledger-shelley-test
-    cardano-protocol-tpraos
-    cardano-slotting
-    cardano-strict-containers
-    cborg
-    containers
-    data-default-class
-    plutus-ledger-api
-    pretty-show
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    time
+    base base16-bytestring bytestring cardano-binary cardano-data
+    cardano-ledger-alonzo cardano-ledger-alonzo-test
+    cardano-ledger-babbage cardano-ledger-core cardano-ledger-shelley
+    cardano-ledger-shelley-ma cardano-ledger-shelley-ma-test
+    cardano-ledger-shelley-test cardano-protocol-tpraos
+    cardano-slotting cardano-strict-containers cborg containers
+    data-default-class plutus-ledger-api pretty-show tasty tasty-hunit
+    tasty-quickcheck time
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

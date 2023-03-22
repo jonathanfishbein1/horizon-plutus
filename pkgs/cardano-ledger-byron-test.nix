@@ -1,37 +1,11 @@
-{ mkDerivation
-, base
-, base16-bytestring
-, bimap
-, byron-spec-chain
-, byron-spec-ledger
-, bytestring
-, cardano-binary
-, cardano-binary-test
-, cardano-crypto
-, cardano-crypto-test
-, cardano-crypto-wrapper
-, cardano-ledger-byron
-, cardano-prelude
-, cardano-prelude-test
-, containers
-, directory
-, fetchgit
-, filepath
-, formatting
-, generic-monoid
-, heapwords
-, hedgehog
-, lib
-, microlens
-, resourcet
-, small-steps
-, small-steps-test
-, streaming
-, tasty
-, tasty-hedgehog
-, text
-, time
-, vector
+{ mkDerivation, base, base16-bytestring, bimap, byron-spec-chain
+, byron-spec-ledger, bytestring, cardano-binary
+, cardano-binary-test, cardano-crypto, cardano-crypto-test
+, cardano-crypto-wrapper, cardano-ledger-byron, cardano-prelude
+, cardano-prelude-test, containers, directory, fetchgit, filepath
+, formatting, generic-monoid, heapwords, hedgehog, lib, microlens
+, resourcet, small-steps, small-steps-test, streaming, tasty
+, tasty-hedgehog, text, time, vector
 }:
 mkDerivation {
   pname = "cardano-ledger-byron-test";
@@ -47,37 +21,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    base16-bytestring
-    bimap
-    byron-spec-chain
-    byron-spec-ledger
-    bytestring
-    cardano-binary
-    cardano-binary-test
-    cardano-crypto
-    cardano-crypto-test
-    cardano-crypto-wrapper
-    cardano-ledger-byron
-    cardano-prelude
-    cardano-prelude-test
-    containers
-    directory
-    filepath
-    formatting
-    generic-monoid
-    heapwords
-    hedgehog
-    microlens
-    resourcet
-    small-steps
-    small-steps-test
-    streaming
-    tasty
-    tasty-hedgehog
-    text
-    time
-    vector
+    base base16-bytestring bimap byron-spec-chain byron-spec-ledger
+    bytestring cardano-binary cardano-binary-test cardano-crypto
+    cardano-crypto-test cardano-crypto-wrapper cardano-ledger-byron
+    cardano-prelude cardano-prelude-test containers directory filepath
+    formatting generic-monoid heapwords hedgehog microlens resourcet
+    small-steps small-steps-test streaming tasty tasty-hedgehog text
+    time vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

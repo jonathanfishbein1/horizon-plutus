@@ -1,38 +1,9 @@
-{ mkDerivation
-, aeson
-, base
-, base16-bytestring
-, bytestring
-, cborg
-, containers
-, deepseq
-, deriving-compat
-, doctest
-, extra
-, fetchgit
-, filepath
-, flat
-, ghc-prim
-, hashable
-, hedgehog
-, hedgehog-fn
-, lens
-, lib
-, memory
-, mtl
-, plutus-core
-, pretty-show
-, prettyprinter
-, serialise
-, tagged
-, tasty
-, tasty-hedgehog
-, tasty-hunit
-, template-haskell
-, text
-, th-abstraction
-, th-compat
-, transformers
+{ mkDerivation, aeson, base, base16-bytestring, bytestring, cborg
+, containers, deepseq, deriving-compat, doctest, extra, fetchgit
+, filepath, flat, ghc-prim, hashable, hedgehog, hedgehog-fn, lens
+, lib, memory, mtl, plutus-core, pretty-show, prettyprinter
+, serialise, tagged, tasty, tasty-hedgehog, tasty-hunit
+, template-haskell, text, th-abstraction, th-compat, transformers
 }:
 mkDerivation {
   pname = "plutus-tx";
@@ -48,48 +19,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    containers
-    deepseq
-    deriving-compat
-    extra
-    filepath
-    flat
-    ghc-prim
-    hashable
-    lens
-    memory
-    mtl
-    plutus-core
-    prettyprinter
-    serialise
-    tagged
-    tasty
-    template-haskell
-    text
-    th-abstraction
-    th-compat
-    transformers
+    aeson base bytestring containers deepseq deriving-compat extra
+    filepath flat ghc-prim hashable lens memory mtl plutus-core
+    prettyprinter serialise tagged tasty template-haskell text
+    th-abstraction th-compat transformers
   ];
   testHaskellDepends = [
-    aeson
-    base
-    base16-bytestring
-    bytestring
-    cborg
-    filepath
-    hedgehog
-    hedgehog-fn
-    plutus-core
-    pretty-show
-    serialise
-    tasty
-    tasty-hedgehog
-    tasty-hunit
-    text
-    transformers
+    aeson base base16-bytestring bytestring cborg filepath hedgehog
+    hedgehog-fn plutus-core pretty-show serialise tasty tasty-hedgehog
+    tasty-hunit text transformers
   ];
   testToolDepends = [ doctest ];
   enableLibraryProfiling = false;

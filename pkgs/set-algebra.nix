@@ -1,13 +1,5 @@
-{ mkDerivation
-, ansi-wl-pprint
-, base
-, cardano-data
-, containers
-, fetchgit
-, lib
-, tasty
-, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, ansi-wl-pprint, base, cardano-data, containers
+, fetchgit, lib, tasty, tasty-hunit, tasty-quickcheck
 }:
 mkDerivation {
   pname = "set-algebra";
@@ -23,18 +15,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-wl-pprint
-    base
-    cardano-data
-    containers
+    ansi-wl-pprint base cardano-data containers
   ];
   testHaskellDepends = [
-    base
-    cardano-data
-    containers
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base cardano-data containers tasty tasty-hunit tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

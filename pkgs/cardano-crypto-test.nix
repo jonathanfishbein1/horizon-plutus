@@ -1,17 +1,7 @@
-{ mkDerivation
-, base
-, bytestring
-, cardano-binary
-, cardano-binary-test
-, cardano-crypto
-, cardano-crypto-wrapper
-, cardano-prelude
-, cardano-prelude-test
-, cryptonite
-, fetchgit
-, hedgehog
-, lib
-, memory
+{ mkDerivation, base, bytestring, cardano-binary
+, cardano-binary-test, cardano-crypto, cardano-crypto-wrapper
+, cardano-prelude, cardano-prelude-test, cryptonite, fetchgit
+, hedgehog, lib, memory
 }:
 mkDerivation {
   pname = "cardano-crypto-test";
@@ -27,17 +17,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cardano-binary
-    cardano-binary-test
-    cardano-crypto
-    cardano-crypto-wrapper
-    cardano-prelude
-    cardano-prelude-test
-    cryptonite
-    hedgehog
-    memory
+    base bytestring cardano-binary cardano-binary-test cardano-crypto
+    cardano-crypto-wrapper cardano-prelude cardano-prelude-test
+    cryptonite hedgehog memory
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

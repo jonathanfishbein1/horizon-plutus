@@ -1,43 +1,12 @@
-{ mkDerivation
-, aeson
-, base
-, base16-bytestring
-, binary
-, bytestring
-, cardano-binary
-, cardano-crypto
-, cardano-crypto-class
-, cardano-crypto-praos
-, cardano-crypto-wrapper
-, cardano-data
-, cardano-ledger-byron
-, cardano-prelude
-, cardano-slotting
-, cardano-strict-containers
-, cborg
-, containers
-, data-default-class
-, deepseq
-, fetchgit
-, groups
-, heapwords
-, iproute
-, lib
-, microlens
-, mtl
-, network
-, non-integral
-, nothunks
-, partial-order
-, primitive
-, quiet
-, scientific
-, set-algebra
-, small-steps
-, text
-, time
-, transformers
-, validation-selective
+{ mkDerivation, aeson, base, base16-bytestring, binary, bytestring
+, cardano-binary, cardano-crypto, cardano-crypto-class
+, cardano-crypto-praos, cardano-crypto-wrapper, cardano-data
+, cardano-ledger-byron, cardano-prelude, cardano-slotting
+, cardano-strict-containers, cborg, containers, data-default-class
+, deepseq, fetchgit, groups, heapwords, iproute, lib, microlens
+, mtl, network, non-integral, nothunks, partial-order, primitive
+, quiet, scientific, set-algebra, small-steps, text, time
+, transformers, validation-selective
 }:
 mkDerivation {
   pname = "cardano-ledger-core";
@@ -53,42 +22,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    base16-bytestring
-    binary
-    bytestring
-    cardano-binary
-    cardano-crypto
-    cardano-crypto-class
-    cardano-crypto-praos
-    cardano-crypto-wrapper
-    cardano-data
-    cardano-ledger-byron
-    cardano-prelude
-    cardano-slotting
-    cardano-strict-containers
-    cborg
-    containers
-    data-default-class
-    deepseq
-    groups
-    heapwords
-    iproute
-    microlens
-    mtl
-    network
-    non-integral
-    nothunks
-    partial-order
-    primitive
-    quiet
-    scientific
-    set-algebra
-    small-steps
-    text
-    time
-    transformers
+    aeson base base16-bytestring binary bytestring cardano-binary
+    cardano-crypto cardano-crypto-class cardano-crypto-praos
+    cardano-crypto-wrapper cardano-data cardano-ledger-byron
+    cardano-prelude cardano-slotting cardano-strict-containers cborg
+    containers data-default-class deepseq groups heapwords iproute
+    microlens mtl network non-integral nothunks partial-order primitive
+    quiet scientific set-algebra small-steps text time transformers
     validation-selective
   ];
   enableLibraryProfiling = true;

@@ -1,6 +1,5 @@
 let H =
-      https://gitlab.horizon-haskell.net/dhall/horizon-spec/-/raw/0.6/dhall/package.dhall
-        sha256:9a80164572526dc5350f105c8db0790fdf36634629b4cf03402ba14fd173d121
+      https://gitlab.horizon-haskell.net/dhall/horizon-spec/-/raw/0.10.0/horizon-spec/package.dhall
 
 let callRepository
     : H.Url → H.Revision → H.Subdir → H.HaskellPackage.Type
@@ -15,6 +14,7 @@ let callCHaP
       λ(version : H.Version) →
         H.callTarball
           "https://input-output-hk.github.io/cardano-haskell-packages/package/${name}-${version}.tar.gz"
+          (None H.Subdir)
 
 let callCardanoBase
     : H.Subdir → H.HaskellPackage.Type

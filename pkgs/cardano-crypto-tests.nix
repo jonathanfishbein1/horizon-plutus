@@ -1,22 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, cardano-binary
-, cardano-crypto-class
-, cardano-crypto-praos
-, cborg
-, criterion
-, cryptonite
-, deepseq
-, fetchgit
-, formatting
-, lib
-, nothunks
-, pretty-show
-, quickcheck-instances
-, tasty
-, tasty-hunit
+{ mkDerivation, QuickCheck, base, bytestring, cardano-binary
+, cardano-crypto-class, cardano-crypto-praos, cborg, criterion
+, cryptonite, deepseq, fetchgit, formatting, lib, nothunks
+, pretty-show, quickcheck-instances, tasty, tasty-hunit
 , tasty-quickcheck
 }:
 mkDerivation {
@@ -33,29 +18,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cardano-binary
-    cardano-crypto-class
-    cardano-crypto-praos
-    cborg
-    criterion
-    cryptonite
-    deepseq
-    formatting
-    nothunks
-    pretty-show
-    QuickCheck
-    quickcheck-instances
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base bytestring cardano-binary cardano-crypto-class
+    cardano-crypto-praos cborg criterion cryptonite deepseq formatting
+    nothunks pretty-show QuickCheck quickcheck-instances tasty
+    tasty-hunit tasty-quickcheck
   ];
   testHaskellDepends = [
-    base
-    cardano-crypto-class
-    tasty
-    tasty-quickcheck
+    base cardano-crypto-class tasty tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ base cardano-crypto-class criterion ];
   enableLibraryProfiling = true;

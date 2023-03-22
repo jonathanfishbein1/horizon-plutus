@@ -1,25 +1,11 @@
-{ mkDerivation
-, QuickCheck
-, base
-, cardano-ledger-alonzo
-, cardano-ledger-alonzo-test
-, cardano-ledger-babbage
-, cardano-ledger-babbage-test
-, cardano-ledger-conway
-, cardano-ledger-core
-, cardano-ledger-shelley
-, cardano-ledger-shelley-ma
-, cardano-ledger-shelley-ma-test
-, cardano-ledger-shelley-test
-, cardano-slotting
-, cardano-strict-containers
-, containers
-, data-default-class
-, fetchgit
-, lib
-, plutus-tx
-, tasty
-, tasty-quickcheck
+{ mkDerivation, QuickCheck, base, cardano-ledger-alonzo
+, cardano-ledger-alonzo-test, cardano-ledger-babbage
+, cardano-ledger-babbage-test, cardano-ledger-conway
+, cardano-ledger-core, cardano-ledger-shelley
+, cardano-ledger-shelley-ma, cardano-ledger-shelley-ma-test
+, cardano-ledger-shelley-test, cardano-slotting
+, cardano-strict-containers, containers, data-default-class
+, fetchgit, lib, plutus-tx, tasty, tasty-quickcheck
 }:
 mkDerivation {
   pname = "cardano-ledger-conway-test";
@@ -35,31 +21,16 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    cardano-ledger-alonzo
-    cardano-ledger-alonzo-test
-    cardano-ledger-babbage
-    cardano-ledger-babbage-test
-    cardano-ledger-conway
-    cardano-ledger-core
-    cardano-ledger-shelley
-    cardano-ledger-shelley-ma
-    cardano-ledger-shelley-ma-test
-    cardano-ledger-shelley-test
-    cardano-slotting
-    cardano-strict-containers
-    containers
-    data-default-class
-    plutus-tx
-    QuickCheck
-    tasty
-    tasty-quickcheck
+    base cardano-ledger-alonzo cardano-ledger-alonzo-test
+    cardano-ledger-babbage cardano-ledger-babbage-test
+    cardano-ledger-conway cardano-ledger-core cardano-ledger-shelley
+    cardano-ledger-shelley-ma cardano-ledger-shelley-ma-test
+    cardano-ledger-shelley-test cardano-slotting
+    cardano-strict-containers containers data-default-class plutus-tx
+    QuickCheck tasty tasty-quickcheck
   ];
   testHaskellDepends = [
-    base
-    cardano-ledger-conway
-    cardano-ledger-shelley-test
-    tasty
+    base cardano-ledger-conway cardano-ledger-shelley-test tasty
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

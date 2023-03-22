@@ -1,26 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, Unique
-, base
-, cardano-binary
-, cardano-crypto-class
-, cardano-strict-containers
-, containers
-, deepseq
-, fetchgit
-, hedgehog
-, lib
-, microlens
-, microlens-th
-, mtl
-, nothunks
-, small-steps
-, tasty
-, tasty-expected-failure
-, tasty-hedgehog
-, tasty-hunit
-, tasty-quickcheck
-, transformers
+{ mkDerivation, QuickCheck, Unique, base, cardano-binary
+, cardano-crypto-class, cardano-strict-containers, containers
+, deepseq, fetchgit, hedgehog, lib, microlens, microlens-th, mtl
+, nothunks, small-steps, tasty, tasty-expected-failure
+, tasty-hedgehog, tasty-hunit, tasty-quickcheck, transformers
 }:
 mkDerivation {
   pname = "small-steps-test";
@@ -36,34 +18,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    cardano-strict-containers
-    deepseq
-    hedgehog
-    microlens
-    microlens-th
-    mtl
-    nothunks
-    QuickCheck
-    small-steps
-    tasty-hunit
+    base cardano-strict-containers deepseq hedgehog microlens
+    microlens-th mtl nothunks QuickCheck small-steps tasty-hunit
     transformers
   ];
   testHaskellDepends = [
-    base
-    cardano-binary
-    cardano-crypto-class
-    containers
-    hedgehog
-    mtl
-    QuickCheck
-    small-steps
-    tasty
-    tasty-expected-failure
-    tasty-hedgehog
-    tasty-hunit
-    tasty-quickcheck
-    Unique
+    base cardano-binary cardano-crypto-class containers hedgehog mtl
+    QuickCheck small-steps tasty tasty-expected-failure tasty-hedgehog
+    tasty-hunit tasty-quickcheck Unique
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,24 +1,7 @@
-{ mkDerivation
-, Unique
-, base
-, bimap
-, bytestring
-, cardano-binary
-, cardano-crypto-class
-, containers
-, cryptonite
-, fetchgit
-, hashable
-, hedgehog
-, lib
-, microlens
-, microlens-th
-, nothunks
-, small-steps
-, small-steps-test
-, tasty
-, tasty-hedgehog
-, tasty-hunit
+{ mkDerivation, Unique, base, bimap, bytestring, cardano-binary
+, cardano-crypto-class, containers, cryptonite, fetchgit, hashable
+, hedgehog, lib, microlens, microlens-th, nothunks, small-steps
+, small-steps-test, tasty, tasty-hedgehog, tasty-hunit
 }:
 mkDerivation {
   pname = "byron-spec-ledger";
@@ -34,35 +17,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bimap
-    bytestring
-    cardano-binary
-    cardano-crypto-class
-    containers
-    cryptonite
-    hashable
-    hedgehog
-    microlens
-    microlens-th
-    nothunks
-    small-steps
-    small-steps-test
-    Unique
+    base bimap bytestring cardano-binary cardano-crypto-class
+    containers cryptonite hashable hedgehog microlens microlens-th
+    nothunks small-steps small-steps-test Unique
   ];
   testHaskellDepends = [
-    base
-    bimap
-    containers
-    hedgehog
-    microlens
-    microlens-th
-    small-steps
-    small-steps-test
-    tasty
-    tasty-hedgehog
-    tasty-hunit
-    Unique
+    base bimap containers hedgehog microlens microlens-th small-steps
+    small-steps-test tasty tasty-hedgehog tasty-hunit Unique
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

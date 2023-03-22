@@ -54,7 +54,7 @@
 
       checks = with lint-utils.outputs.linters.${system}; {
         dhall-format = dhall-format { src = self; };
-        nixpkgs-fmt = nixpkgs-fmt { src = self; };
+        nixpkgs-fmt = nixpkgs-fmt { src = self; find = "flake.nix"; };
       };
 
       inherit legacyPackages;

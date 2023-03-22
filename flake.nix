@@ -33,11 +33,6 @@
     with pkgs.lib;
     with pkgs.writers;
     let
-      horizon-gen-nix = writeBashBin "horizon-gen-nix" ''
-        ${horizon-platform.legacyPackages.${system}.horizon-gen-nix}/bin/horizon-gen-nix;
-        ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt pkgs/*
-        ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt overlay.nix
-      '';
 
       overrides = composeManyExtensions [
         (import ./overlay.nix { inherit pkgs; })
@@ -56,14 +51,6 @@
 
     in
     {
-      apps = {
-
-        horizon-gen-nix = {
-          type = "app";
-          program = "${horizon-gen-nix}/bin/horizon-gen-nix";
-        };
-
-      };
 
       checks = with lint-utils.outputs.linters.${system}; {
         dhall-format = dhall-format { src = self; };

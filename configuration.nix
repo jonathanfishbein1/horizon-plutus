@@ -14,6 +14,13 @@ final: prev: {
 
   cardano-prelude = enableCabalFlag prev.cardano-prelude "development";
 
+  ghcide = null;
+
+  ghcide-bench = null;
+
+  ghcide-test-utils = null;
+
+  haskell-language-server = null;
 
   plutus-core = pkgs.haskell.lib.addSetupDepend prev.plutus-core pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
 

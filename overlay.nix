@@ -5,6 +5,8 @@ final: prev: with pkgs.haskell.lib; {
 
   Win32-network = final.callPackage (./pkgs/Win32-network.nix) { };
 
+  algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
+
   base-deriving-via = final.callPackage (./pkgs/base-deriving-via.nix) { };
 
   byron-spec-chain = final.callPackage (./pkgs/byron-spec-chain.nix) { };

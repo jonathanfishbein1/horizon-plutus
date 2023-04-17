@@ -6,6 +6,10 @@
   , mapValue =
       "2ff8d3e110d321955411e20cb11b4a85d91674c44a01495c79dd7190d4548525"
   }
+, { mapKey = "algebraic-graphs"
+  , mapValue =
+      "ca5bc8ce71ff08c6f19f81ef7ec93669bb29157ddc03661418b76e1f87e01fb2"
+  }
 , { mapKey = "base-deriving-via"
   , mapValue =
       "4742225d769be244f3d43ce3e8df32c29e56655faf5fd30dca570c89d738eb8b"

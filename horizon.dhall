@@ -116,6 +116,7 @@ let otherLibraries =
               "https://github.com/input-output-hk/Win32-network"
               "1a6bd1f67d1463d7243ab4c34fc4f7d84ee0554a"
               (None H.Subdir)
+        , algebraic-graphs = H.callHackage "algebraic-graphs" "0.7"
         , base-deriving-via = callCardanoBase "base-deriving-via"
         , byron-spec-chain =
             callCardanoLedger "eras/byron/chain/executable-spec"

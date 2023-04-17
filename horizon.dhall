@@ -215,5 +215,5 @@ in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
       , overlay =
-        { compiler = "ghc-9.4.4", packages = plutusLibraries # otherLibraries }
+        { compiler = "ghc-9.2.5", packages = plutusLibraries # otherLibraries }
       }

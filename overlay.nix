@@ -89,6 +89,8 @@ final: prev: with pkgs.haskell.lib; {
 
   measures = final.callPackage (./pkgs/measures.nix) { };
 
+  monoidal-containers = final.callPackage (./pkgs/monoidal-containers.nix) { };
+
   monoidal-synchronisation = final.callPackage (./pkgs/monoidal-synchronisation.nix) { };
 
   moo = final.callPackage (./pkgs/moo.nix) { };
@@ -126,6 +128,8 @@ final: prev: with pkgs.haskell.lib; {
   plutus-tx-plugin = final.callPackage (./pkgs/plutus-tx-plugin.nix) { };
 
   prettyprinter-configurable = final.callPackage (./pkgs/prettyprinter-configurable.nix) { };
+
+  quickcheck-transformer = final.callPackage (./pkgs/quickcheck-transformer.nix) { };
 
   set-algebra = final.callPackage (./pkgs/set-algebra.nix) { };
 

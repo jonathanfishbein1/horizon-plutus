@@ -5,22 +5,22 @@
 }:
 mkDerivation {
   pname = "prettyprinter-configurable";
-  version = "0.1.0.0";
+  version = "1.1.0.0";
   src = fetchgit {
-    url = "https://github.com/milloni/plutus";
-    sha256 = "0pzzqqbp6jvrzxp7gyi4dnnc5pg0jnr76dsaq6pzn3zgr46pgbd3";
-    rev = "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd";
+    url = "https://github.com/input-output-hk/plutus";
+    sha256 = "0wxydqj949hi1zzybblfwmbj5j05sy51kn3byhpnizspqjjcjb07";
+    rev = "b94d0e001c8f7350b5120b20cbc9d9021d377a8a";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/prettyprinter-configurable/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  setupHaskellDepends = [ base Cabal cabal-doctest ];
+  setupHaskellDepends = [ base Cabal cabal-doctest doctest ];
   libraryHaskellDepends = [ base microlens mtl prettyprinter text ];
   testHaskellDepends = [
-    base doctest megaparsec parser-combinators prettyprinter QuickCheck
-    quickcheck-text tasty tasty-hunit tasty-quickcheck text
+    base megaparsec parser-combinators QuickCheck quickcheck-text tasty
+    tasty-hunit tasty-quickcheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

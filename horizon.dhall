@@ -61,8 +61,8 @@ let callPlutusApps
 let callPlutus
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
-        "https://github.com/milloni/plutus"
-        "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
+        "https://github.com/input-output-hk/plutus"
+        "b94d0e001c8f7350b5120b20cbc9d9021d377a8a"
 
 let callTypedProtocols
     : H.Subdir → H.HaskellPackage.Type
@@ -164,6 +164,7 @@ let otherLibraries =
         , io-sim = callIoSim "io-sim"
         , iohk-monitoring = callCHaP "iohk-monitoring" "0.1.11.1"
         , measures = callCardanoBase "measures"
+        , monoidal-containers = H.callHackage "monoidal-containers" "0.6.4.0"
         , monoidal-synchronisation =
             callOuroborosNetwork "monoidal-synchronisation"
         , moo =
@@ -194,10 +195,8 @@ let otherLibraries =
             callOuroborosNetwork "ouroboros-network-testing"
         , ouroboros-network = callOuroborosNetwork "ouroboros-network"
         , prettyprinter-configurable =
-            H.callGit
-              "https://github.com/milloni/plutus"
-              "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-              (Some "prettyprinter-configurable")
+            callPlutus "prettyprinter-configurable"
+        , quickcheck-transformer = H.callHackage "quickcheck-transformer" "0.3.1.2"
         , set-algebra = callCardanoLedger "libs/set-algebra"
         , small-steps = callCardanoLedger "libs/small-steps"
         , small-steps-test = callCardanoLedger "libs/small-steps-test"

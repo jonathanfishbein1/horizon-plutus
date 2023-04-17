@@ -1,16 +1,16 @@
 { mkDerivation, PyF, array, base, bytestring, containers, deepseq
-, either, extra, fetchgit, flat, ghc, ghc-prim, hedgehog
-, integer-gmp, lens, lib, mtl, optparse-applicative, plutus-core
-, plutus-tx, prettyprinter, tagged, tasty, tasty-hedgehog
-, tasty-hunit, template-haskell, text, transformers
+, either, extra, fetchgit, flat, ghc, hedgehog, lens, lib, mtl
+, optparse-applicative, plutus-core, plutus-tx, prettyprinter
+, tagged, tasty, tasty-hedgehog, tasty-hunit, template-haskell
+, text
 }:
 mkDerivation {
   pname = "plutus-tx-plugin";
-  version = "1.0.0.0";
+  version = "1.3.0.0";
   src = fetchgit {
-    url = "https://github.com/milloni/plutus";
-    sha256 = "0pzzqqbp6jvrzxp7gyi4dnnc5pg0jnr76dsaq6pzn3zgr46pgbd3";
-    rev = "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd";
+    url = "https://github.com/input-output-hk/plutus";
+    sha256 = "0wxydqj949hi1zzybblfwmbj5j05sy51kn3byhpnizspqjjcjb07";
+    rev = "b94d0e001c8f7350b5120b20cbc9d9021d377a8a";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/plutus-tx-plugin/; echo source root reset to $sourceRoot";
@@ -18,17 +18,16 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array base bytestring containers either extra flat ghc ghc-prim
-    lens mtl plutus-core plutus-tx prettyprinter PyF template-haskell
-    text transformers
+    array base bytestring containers either extra flat ghc lens mtl
+    plutus-core plutus-tx prettyprinter PyF template-haskell text
   ];
   executableHaskellDepends = [
     base containers lens optparse-applicative prettyprinter PyF text
   ];
   testHaskellDepends = [
-    base containers deepseq flat ghc-prim hedgehog integer-gmp lens mtl
-    plutus-core plutus-tx prettyprinter tagged tasty tasty-hedgehog
-    tasty-hunit template-haskell text
+    base containers deepseq flat hedgehog lens mtl plutus-core
+    plutus-tx tagged tasty tasty-hedgehog tasty-hunit template-haskell
+    text
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

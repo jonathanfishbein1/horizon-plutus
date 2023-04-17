@@ -174,6 +174,10 @@
   , mapValue =
       "3a4d2300de3608d700ab1e8c450bb584ece69840af1d7bddf5af370618c6c025"
   }
+, { mapKey = "monoidal-containers"
+  , mapValue =
+      "ca96ee44399f848d6d08464a2a20770c8ef668617a884f67343ffb0ca06a1377"
+  }
 , { mapKey = "monoidal-synchronisation"
   , mapValue =
       "d54718f5a26c98d6abe81df43f0c3b36e3d3f526bbd4ac099c6d66c4d2ca48e2"
@@ -228,11 +232,11 @@
   }
 , { mapKey = "plutus-core"
   , mapValue =
-      "ea968cf76f6e044d002b5a186598b608e0c0a89715066497f816e9c30125952a"
+      "e4ec9f825232f7fcf0a7cf5f4e4ebe82b286beb8f68741efd8b9f4c4259c8590"
   }
 , { mapKey = "plutus-ledger-api"
   , mapValue =
-      "a7d4b2429756f2714e521ee6614e9dea36a1650fb624bb92b34a384350f65047"
+      "c858b2e368dc5a8361164e3c70e512e7b4869e461538ed0e80c3409416af55e5"
   }
 , { mapKey = "plutus-preprocessor"
   , mapValue =
@@ -240,15 +244,19 @@
   }
 , { mapKey = "plutus-tx"
   , mapValue =
-      "8255a62028f97dcd241ec55770d114c52cc10d75102d6f8a435b1a197ac234df"
+      "ca700bc478affcea251ec3d9c263ec79df1ea3292171158ab46d45fe5f67c8e0"
   }
 , { mapKey = "plutus-tx-plugin"
   , mapValue =
-      "0ce94b1e14c63eac93f2300adbd956bea35e9b19abb4107388ef53029ff23f52"
+      "276a5412ee51eb2a2a5b5d0d462041eef166df84d36b642df79c756773c9395c"
   }
 , { mapKey = "prettyprinter-configurable"
   , mapValue =
-      "defef2f748b5e3044cacab26a18b947045a853459d29d7da80c289b7aedf188b"
+      "3b6415054252cd46f877a56207da8c3f1cac07f1226cbdffc8c5f9a9fdb415ab"
+  }
+, { mapKey = "quickcheck-transformer"
+  , mapValue =
+      "b7e5440c22e5219fdc6861114fa5cd178abad7135f0a0d155ead9812cbc9d368"
   }
 , { mapKey = "set-algebra"
   , mapValue =
@@ -292,6 +300,6 @@
   }
 , { mapKey = "word-array"
   , mapValue =
-      "85c6d54211d08c057c1828022c134659367b42426bbb7ee841917f616488b826"
+      "7194caf15db2079f9c089054772e5f3355ffd9af32280cb5a476906a7a25f482"
   }
 ]

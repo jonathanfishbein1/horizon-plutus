@@ -101,11 +101,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1681756888,
-        "narHash": "sha256-Dsl8T3SEH0KTKDupHJQcxZsjCNkFJtYYIcabm9UdbHQ=",
+        "lastModified": 1681760021,
+        "narHash": "sha256-UrET9YMM4SVk4dcYtwZwva49A2QEMyriFhVhitlbh7s=",
         "ref": "refs/heads/sts-925",
-        "rev": "174e3134c81a2145548da1b0060aad876c221c9e",
-        "revCount": 1068,
+        "rev": "ca0c17ca15e69f1b2bfa3c7aa6eab841ce18d867",
+        "revCount": 1071,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-platform"
       },

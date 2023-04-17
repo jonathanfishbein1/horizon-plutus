@@ -53,7 +53,8 @@
           && x.isHaskellLibrary == true;
 
       mapHaskellLibraries = f: builtins.mapAttrs (n: v: if isHaskellLibrary v then f n v else v);
-      addCabalSetupDepends = _: v: pkgs.haskell.lib.addSetupDepend v pkgs.haskell.packages.ghc8107.Cabal_3_8_1_0;
+
+      addCabalSetupDepends = _: v: pkgs.haskell.lib.addSetupDepend v pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
 
       legacyPackages = mapHaskellLibraries addCabalSetupDepends legacyPackages';
 
@@ -67,7 +68,6 @@
       };
 
       inherit legacyPackages;
-      inherit overrides;
       inherit packages;
     });
 }

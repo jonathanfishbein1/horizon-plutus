@@ -19,12 +19,15 @@
       }
     },
     "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
       "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "lastModified": 1681202837,
+        "narHash": "sha256-H+Rh19JDwRtpVPAWp64F+rlEtxUWBAQW28eAi3SRSzg=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "rev": "cfacdce06f30d2b68473a46042957675eebb3401",
         "type": "github"
       },
       "original": {
@@ -64,11 +67,11 @@
     },
     "get-flake": {
       "locked": {
-        "lastModified": 1644686428,
-        "narHash": "sha256-zkhYsURWFrvEZLkIoBeqFBzSu+cA2u5mo6M8vq9LN7M=",
+        "lastModified": 1673819588,
+        "narHash": "sha256-gRtwKAlu4htvS6dxyZnW3n+vMS1acqnMGVHqxUdETeY=",
         "owner": "ursi",
         "repo": "get-flake",
-        "rev": "703f15558daa56dfae19d1858bb3046afe68831a",
+        "rev": "e0917b6f564aa5acefb1484b5baf76da21746c3c",
         "type": "github"
       },
       "original": {
@@ -101,11 +104,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1681760021,
-        "narHash": "sha256-UrET9YMM4SVk4dcYtwZwva49A2QEMyriFhVhitlbh7s=",
+        "lastModified": 1681760349,
+        "narHash": "sha256-4uTOEoMu14AMi2S/8Aav4yC9GgtHNQ3Kul9+NxWWFrc=",
         "ref": "refs/heads/sts-925",
-        "rev": "ca0c17ca15e69f1b2bfa3c7aa6eab841ce18d867",
-        "revCount": 1071,
+        "rev": "2a526de2127ffffeda9486d19d9bf1a9e7c0b047",
+        "revCount": 1073,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-platform"
       },
@@ -157,11 +160,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1670623736,
-        "narHash": "sha256-CrA/yua5H0NfZ2tu1QZ2WpYi6pkWzyFxiwGk+KoF620=",
+        "lastModified": 1676204115,
+        "narHash": "sha256-cYYt6sN9t+lYYYelAbRtM/ioVJ27kMcUtR4unA8jfd4=",
         "ref": "refs/heads/master",
-        "rev": "ee76287dc9987dd01ec38d38839b788a26ee5f24",
-        "revCount": 45,
+        "rev": "cc55bca9b25e65f7060de642c99e51bd96dfc190",
+        "revCount": 47,
         "type": "git",
         "url": "https://gitlab.homotopic.tech/nix/lint-utils"
       },
@@ -254,11 +257,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1664989420,
-        "narHash": "sha256-Q8IxomUjjmewsoJgO3htkXLfCckQ7HkDJ/ZhdYVf/fA=",
+        "lastModified": 1681648924,
+        "narHash": "sha256-pzi3HISK8+7mpEtv08Yr80wswyHKsz+RP1CROG1Qf6s=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "37bd39839acf99c5b738319f42478296f827f274",
+        "rev": "f294325aed382b66c7a188482101b0f336d1d7db",
         "type": "github"
       },
       "original": {
@@ -276,6 +279,21 @@
         "lint-utils": "lint-utils_2",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-libR": "nixpkgs-libR"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     }
   },

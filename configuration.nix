@@ -14,11 +14,18 @@ final: prev: {
 
   cardano-prelude = enableCabalFlag prev.cardano-prelude "development";
 
-  plutus-core = setBuildTarget (dontBenchmark prev.plutus-core) "plc";
+
+  plutus-core = pkgs.haskell.lib.addSetupDepend prev.plutus-core pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
+
+  plutus-tx = pkgs.haskell.lib.addSetupDepend prev.plutus-tx pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
+
+  plutus-tx-plugin = pkgs.haskell.lib.addSetupDepend prev.plutus-tx-plugin pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
+
+#  plutus-core = setBuildTarget (dontBenchmark prev.plutus-core) "plc";
 
   plutus-ledger-api = dontBenchmark prev.plutus-ledger-api;
 
-  plutus-tx = dontBenchmark prev.plutus-tx;
+#  plutus-tx = dontBenchmark prev.plutus-tx;
 
   secp256k1 = pkgs.secp256k1;
 

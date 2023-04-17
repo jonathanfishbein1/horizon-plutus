@@ -30,7 +30,7 @@ final: prev: {
 
   hls-cabal-plugin = null;
 
-  hls-call-heirarchy-plugin = null;
+  hls-call-hierarchy-plugin = null;
 
   hls-change-type-signature-plugin = null;
 

@@ -242,6 +242,10 @@
   , mapValue =
       "8255a62028f97dcd241ec55770d114c52cc10d75102d6f8a435b1a197ac234df"
   }
+, { mapKey = "plutus-tx-plugin"
+  , mapValue =
+      "0ce94b1e14c63eac93f2300adbd956bea35e9b19abb4107388ef53029ff23f52"
+  }
 , { mapKey = "prettyprinter-configurable"
   , mapValue =
       "defef2f748b5e3044cacab26a18b947045a853459d29d7da80c289b7aedf188b"

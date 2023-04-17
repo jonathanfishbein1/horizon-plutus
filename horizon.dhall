@@ -100,6 +100,7 @@ let plutusLibraries =
             , plutus-ledger-api = callPlutus "plutus-ledger-api"
             , plutus-preprocessor = callCardanoLedger "libs/plutus-preprocessor"
             , plutus-tx = callPlutus "plutus-tx"
+            , plutus-tx-plugin = callPlutus "plutus-tx-plugin"
             }
         )
 

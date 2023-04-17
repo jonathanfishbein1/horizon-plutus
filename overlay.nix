@@ -123,6 +123,8 @@ final: prev: with pkgs.haskell.lib; {
 
   plutus-tx = final.callPackage (./pkgs/plutus-tx.nix) { };
 
+  plutus-tx-plugin = final.callPackage (./pkgs/plutus-tx-plugin.nix) { };
+
   prettyprinter-configurable = final.callPackage (./pkgs/prettyprinter-configurable.nix) { };
 
   set-algebra = final.callPackage (./pkgs/set-algebra.nix) { };

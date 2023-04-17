@@ -195,9 +195,9 @@ let otherLibraries =
         , ouroboros-network-testing =
             callOuroborosNetwork "ouroboros-network-testing"
         , ouroboros-network = callOuroborosNetwork "ouroboros-network"
-        , prettyprinter-configurable =
-            callPlutus "prettyprinter-configurable"
-        , quickcheck-transformer = H.callHackage "quickcheck-transformer" "0.3.1.2"
+        , prettyprinter-configurable = callPlutus "prettyprinter-configurable"
+        , quickcheck-transformer =
+            H.callHackage "quickcheck-transformer" "0.3.1.2"
         , set-algebra = callCardanoLedger "libs/set-algebra"
         , small-steps = callCardanoLedger "libs/small-steps"
         , small-steps-test = callCardanoLedger "libs/small-steps-test"

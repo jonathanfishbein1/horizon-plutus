@@ -4,20 +4,18 @@
 }:
 mkDerivation {
   pname = "word-array";
-  version = "0.1.0.0";
+  version = "1.1.0.0";
   src = fetchgit {
-    url = "https://github.com/milloni/plutus";
-    sha256 = "0pzzqqbp6jvrzxp7gyi4dnnc5pg0jnr76dsaq6pzn3zgr46pgbd3";
-    rev = "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd";
+    url = "https://github.com/input-output-hk/plutus";
+    sha256 = "0wxydqj949hi1zzybblfwmbj5j05sy51kn3byhpnizspqjjcjb07";
+    rev = "b94d0e001c8f7350b5120b20cbc9d9021d377a8a";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/word-array/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [
-    base deepseq mono-traversable primitive
-  ];
+  libraryHaskellDepends = [ base deepseq mono-traversable ];
   testHaskellDepends = [
     base mono-traversable QuickCheck tasty tasty-quickcheck vector
   ];

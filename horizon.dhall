@@ -22,12 +22,6 @@ let callCardanoBase
         "https://github.com/input-output-hk/cardano-base"
         "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
 
-let callCardanoLedger
-    : H.Subdir → H.HaskellPackage.Type
-    = callRepository
-        "https://github.com/milloni/cardano-ledger"
-        "3aa1fd8469424778454644f0d371988fb4490b4a"
-
 let callCardanoNode
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
@@ -61,8 +55,8 @@ let callPlutusApps
 let callPlutus
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
-        "https://github.com/milloni/plutus"
-        "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
+        "https://github.com/input-output-hk/plutus"
+        "b94d0e001c8f7350b5120b20cbc9d9021d377a8a"
 
 let callTypedProtocols
     : H.Subdir → H.HaskellPackage.Type
@@ -74,32 +68,10 @@ let plutusLibraries =
       H.modPackageList
         H.Modifiers::{ enableProfiling = False }
         ( toMap
-            { cardano-ledger-alonzo-test =
-                callCardanoLedger "eras/alonzo/test-suite"
-            , cardano-ledger-alonzo = callCardanoLedger "eras/alonzo/impl"
-            , cardano-ledger-api = callCardanoLedger "libs/cardano-ledger-api"
-            , cardano-ledger-babbage = callCardanoLedger "eras/babbage/impl"
-            , cardano-ledger-babbage-test =
-                callCardanoLedger "eras/babbage/test-suite"
-            , cardano-ledger-conway = callCardanoLedger "eras/conway/impl"
-            , cardano-ledger-conway-test =
-                callCardanoLedger "eras/conway/test-suite"
-            , cardano-ledger-pretty =
-                callCardanoLedger "libs/cardano-ledger-pretty"
-            , cardano-ledger-shelley = callCardanoLedger "eras/shelley/impl"
-            , cardano-ledger-shelley-test =
-                callCardanoLedger "eras/shelley/test-suite"
-            , cardano-ledger-shelley-ma =
-                callCardanoLedger "eras/shelley-ma/impl"
-            , cardano-ledger-shelley-ma-test =
-                callCardanoLedger "eras/shelley-ma/test-suite"
-            , cardano-ledger-test = callCardanoLedger "libs/cardano-ledger-test"
-            , cardano-protocol-tpraos =
-                callCardanoLedger "libs/cardano-protocol-tpraos"
-            , plutus-core = callPlutus "plutus-core"
+            { plutus-core = callPlutus "plutus-core"
             , plutus-ledger-api = callPlutus "plutus-ledger-api"
-            , plutus-preprocessor = callCardanoLedger "libs/plutus-preprocessor"
             , plutus-tx = callPlutus "plutus-tx"
+            , plutus-tx-plugin = callPlutus "plutus-tx-plugin"
             }
         )
 
@@ -115,11 +87,8 @@ let otherLibraries =
               "https://github.com/input-output-hk/Win32-network"
               "1a6bd1f67d1463d7243ab4c34fc4f7d84ee0554a"
               (None H.Subdir)
+        , algebraic-graphs = H.callHackage "algebraic-graphs" "0.7"
         , base-deriving-via = callCardanoBase "base-deriving-via"
-        , byron-spec-chain =
-            callCardanoLedger "eras/byron/chain/executable-spec"
-        , byron-spec-ledger =
-            callCardanoLedger "eras/byron/ledger/executable-spec"
         , cardano-binary = callCardanoBase "binary"
         , cardano-binary-test = callCardanoBase "binary/test"
         , cardano-crypto =
@@ -130,13 +99,6 @@ let otherLibraries =
         , cardano-crypto-class = callCardanoBase "cardano-crypto-class"
         , cardano-crypto-praos = callCardanoBase "cardano-crypto-praos"
         , cardano-crypto-tests = callCardanoBase "cardano-crypto-tests"
-        , cardano-crypto-test = callCardanoLedger "eras/byron/crypto/test"
-        , cardano-crypto-wrapper = callCardanoLedger "eras/byron/crypto"
-        , cardano-data = callCardanoLedger "libs/cardano-data"
-        , cardano-ledger-byron = callCardanoLedger "eras/byron/ledger/impl"
-        , cardano-ledger-byron-test =
-            callCardanoLedger "eras/byron/ledger/impl/test"
-        , cardano-ledger-core = callCardanoLedger "libs/cardano-ledger-core"
         , cardano-slotting = callCardanoBase "slotting"
         , cardano-strict-containers =
             callCardanoBase "cardano-strict-containers"
@@ -163,6 +125,7 @@ let otherLibraries =
         , io-sim = callIoSim "io-sim"
         , iohk-monitoring = callCHaP "iohk-monitoring" "0.1.11.1"
         , measures = callCardanoBase "measures"
+        , monoidal-containers = H.callHackage "monoidal-containers" "0.6.4.0"
         , monoidal-synchronisation =
             callOuroborosNetwork "monoidal-synchronisation"
         , moo =
@@ -171,7 +134,6 @@ let otherLibraries =
               "dbda5e76ac3b4c72c805ec0cdb9bcdff7bb6247d"
               (None H.Subdir)
         , network-mux = callCHaP "network-mux" "0.2.0.0"
-        , non-integral = callCardanoLedger "libs/non-integral"
         , nothunks =
             H.callGit
               "https://github.com/locallycompact/nothunks"
@@ -192,14 +154,9 @@ let otherLibraries =
         , ouroboros-network-testing =
             callOuroborosNetwork "ouroboros-network-testing"
         , ouroboros-network = callOuroborosNetwork "ouroboros-network"
-        , prettyprinter-configurable =
-            H.callGit
-              "https://github.com/milloni/plutus"
-              "81cd1ada745c12af2c2c28afce1f6b6b28b38fdd"
-              (Some "prettyprinter-configurable")
-        , set-algebra = callCardanoLedger "libs/set-algebra"
-        , small-steps = callCardanoLedger "libs/small-steps"
-        , small-steps-test = callCardanoLedger "libs/small-steps-test"
+        , prettyprinter-configurable = callPlutus "prettyprinter-configurable"
+        , quickcheck-transformer =
+            H.callHackage "quickcheck-transformer" "0.3.1.2"
         , strict-containers = callCHaP "strict-containers" "0.1.0.0"
         , strict-stm = callIoSim "strict-stm"
         , tracer-transformers = callCHaP "tracer-transformers" "0.1.0.2"
@@ -207,7 +164,6 @@ let otherLibraries =
         , typed-protocols-examples =
             callTypedProtocols "typed-protocols-examples"
         , typed-protocols = callTypedProtocols "typed-protocols"
-        , vector-map = callCardanoLedger "libs/vector-map"
         , word-array = callPlutus "word-array"
         }
 
@@ -215,5 +171,5 @@ in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
       , overlay =
-        { compiler = "ghc-9.4.4", packages = plutusLibraries # otherLibraries }
+        { compiler = "ghc-9.2.5", packages = plutusLibraries # otherLibraries }
       }

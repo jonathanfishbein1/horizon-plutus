@@ -5,11 +5,9 @@ final: prev: with pkgs.haskell.lib; {
 
   Win32-network = final.callPackage (./pkgs/Win32-network.nix) { };
 
+  algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
+
   base-deriving-via = final.callPackage (./pkgs/base-deriving-via.nix) { };
-
-  byron-spec-chain = final.callPackage (./pkgs/byron-spec-chain.nix) { };
-
-  byron-spec-ledger = final.callPackage (./pkgs/byron-spec-ledger.nix) { };
 
   cardano-binary = final.callPackage (./pkgs/cardano-binary.nix) { };
 
@@ -21,51 +19,11 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-crypto-praos = final.callPackage (./pkgs/cardano-crypto-praos.nix) { };
 
-  cardano-crypto-test = final.callPackage (./pkgs/cardano-crypto-test.nix) { };
-
   cardano-crypto-tests = final.callPackage (./pkgs/cardano-crypto-tests.nix) { };
-
-  cardano-crypto-wrapper = final.callPackage (./pkgs/cardano-crypto-wrapper.nix) { };
-
-  cardano-data = final.callPackage (./pkgs/cardano-data.nix) { };
-
-  cardano-ledger-alonzo = final.callPackage (./pkgs/cardano-ledger-alonzo.nix) { };
-
-  cardano-ledger-alonzo-test = final.callPackage (./pkgs/cardano-ledger-alonzo-test.nix) { };
-
-  cardano-ledger-api = final.callPackage (./pkgs/cardano-ledger-api.nix) { };
-
-  cardano-ledger-babbage = final.callPackage (./pkgs/cardano-ledger-babbage.nix) { };
-
-  cardano-ledger-babbage-test = final.callPackage (./pkgs/cardano-ledger-babbage-test.nix) { };
-
-  cardano-ledger-byron = final.callPackage (./pkgs/cardano-ledger-byron.nix) { };
-
-  cardano-ledger-byron-test = final.callPackage (./pkgs/cardano-ledger-byron-test.nix) { };
-
-  cardano-ledger-conway = final.callPackage (./pkgs/cardano-ledger-conway.nix) { };
-
-  cardano-ledger-conway-test = final.callPackage (./pkgs/cardano-ledger-conway-test.nix) { };
-
-  cardano-ledger-core = final.callPackage (./pkgs/cardano-ledger-core.nix) { };
-
-  cardano-ledger-pretty = final.callPackage (./pkgs/cardano-ledger-pretty.nix) { };
-
-  cardano-ledger-shelley = final.callPackage (./pkgs/cardano-ledger-shelley.nix) { };
-
-  cardano-ledger-shelley-ma = final.callPackage (./pkgs/cardano-ledger-shelley-ma.nix) { };
-
-  cardano-ledger-shelley-ma-test = final.callPackage (./pkgs/cardano-ledger-shelley-ma-test.nix) { };
-
-  cardano-ledger-shelley-test = final.callPackage (./pkgs/cardano-ledger-shelley-test.nix) { };
-
-  cardano-ledger-test = final.callPackage (./pkgs/cardano-ledger-test.nix) { };
 
   cardano-prelude = final.callPackage (./pkgs/cardano-prelude.nix) { };
 
   cardano-prelude-test = final.callPackage (./pkgs/cardano-prelude-test.nix) { };
-
-  cardano-protocol-tpraos = final.callPackage (./pkgs/cardano-protocol-tpraos.nix) { };
 
   cardano-slotting = final.callPackage (./pkgs/cardano-slotting.nix) { };
 
@@ -89,13 +47,13 @@ final: prev: with pkgs.haskell.lib; {
 
   measures = final.callPackage (./pkgs/measures.nix) { };
 
+  monoidal-containers = final.callPackage (./pkgs/monoidal-containers.nix) { };
+
   monoidal-synchronisation = final.callPackage (./pkgs/monoidal-synchronisation.nix) { };
 
   moo = final.callPackage (./pkgs/moo.nix) { };
 
   network-mux = final.callPackage (./pkgs/network-mux.nix) { };
-
-  non-integral = final.callPackage (./pkgs/non-integral.nix) { };
 
   nothunks = final.callPackage (./pkgs/nothunks.nix) { };
 
@@ -119,17 +77,13 @@ final: prev: with pkgs.haskell.lib; {
 
   plutus-ledger-api = final.callPackage (./pkgs/plutus-ledger-api.nix) { };
 
-  plutus-preprocessor = final.callPackage (./pkgs/plutus-preprocessor.nix) { };
-
   plutus-tx = final.callPackage (./pkgs/plutus-tx.nix) { };
+
+  plutus-tx-plugin = final.callPackage (./pkgs/plutus-tx-plugin.nix) { };
 
   prettyprinter-configurable = final.callPackage (./pkgs/prettyprinter-configurable.nix) { };
 
-  set-algebra = final.callPackage (./pkgs/set-algebra.nix) { };
-
-  small-steps = final.callPackage (./pkgs/small-steps.nix) { };
-
-  small-steps-test = final.callPackage (./pkgs/small-steps-test.nix) { };
+  quickcheck-transformer = final.callPackage (./pkgs/quickcheck-transformer.nix) { };
 
   strict-containers = final.callPackage (./pkgs/strict-containers.nix) { };
 
@@ -142,8 +96,6 @@ final: prev: with pkgs.haskell.lib; {
   typed-protocols-cborg = final.callPackage (./pkgs/typed-protocols-cborg.nix) { };
 
   typed-protocols-examples = final.callPackage (./pkgs/typed-protocols-examples.nix) { };
-
-  vector-map = final.callPackage (./pkgs/vector-map.nix) { };
 
   word-array = final.callPackage (./pkgs/word-array.nix) { };
 

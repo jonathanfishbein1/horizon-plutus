@@ -39,16 +39,25 @@
         (import ./configuration.nix { inherit pkgs pkgs-libR; })
       ];
 
-      legacyPackages = horizon-platform.legacyPackages.${system}.extend overrides;
+      legacyPackages' = horizon-platform.legacyPackages.${system}.extend overrides;
 
-      packages = filterAttrs
-        (n: v: v != null
-          && builtins.typeOf v == "set"
-          && pkgs.lib.hasAttr "type" v
-          && v.type == "derivation"
-          && v.meta.broken == false)
-        legacyPackages;
+      isDerivation =
+        x: x != null
+          && builtins.typeOf x == "set"
+          && pkgs.lib.hasAttr "type" x
+          && x.type == "derivation";
 
+      isHaskellLibrary =
+        x: isDerivation x
+          && pkgs.lib.hasAttr "isHaskellLibrary" x
+          && x.isHaskellLibrary == true;
+
+      mapHaskellLibraries = f: builtins.mapAttrs (n: v: if isHaskellLibrary v then f n v else v);
+      addCabalSetupDepends = _: v: pkgs.haskell.lib.addSetupDepend v pkgs.haskell.packages.ghc8107.Cabal_3_8_1_0;
+
+      legacyPackages = mapHaskellLibraries addCabalSetupDepends legacyPackages';
+
+      packages = filterAttrs (_: isDerivation) legacyPackages';
     in
     {
 

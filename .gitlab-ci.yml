@@ -1,20 +1,21 @@
 stages:
 - generate
-- check
+- flake
 - cache
 
 generate-flake-ci:
   stage: generate
-  script: nix run "git+https://gitlab.homotopic.tech/haskell/flake-to-gitlab-ci?ref=refs/tags/0.2.2.0" > flake-ci.yml
+  script:
+  - nix run "git+https://gitlab.nixica.dev/haskell/flake-to-gitlab-ci?ref=refs/tags/0.2.4.1" > flake-ci-x86_64-linux.yml
   artifacts:
     paths:
-      - flake-ci.yml
+      - flake-ci-x86_64-linux.yml
 
-flake-ci:
-  stage: check
+x86_64-linux-ci:
+  stage: flake
   trigger:
     include:
-      - artifact: flake-ci.yml
+      - artifact: flake-ci-x86_64-linux.yml
         job: generate-flake-ci
     strategy: depend
 
@@ -24,4 +25,5 @@ cachix:
     refs:
     - master
     - cachix
-  script: nix-shell -p jq cachix parallel --command 'dhall --file .cachix.dhall | dhall text | bash'
+  script:
+  - nix-shell -p cachix --command "nix build github:srid/devour-flake -L --no-link --print-out-paths --override-input flake . | xargs cat | cachix push horizon"

@@ -9,7 +9,7 @@
   inputs = {
     get-flake.url = "github:ursi/get-flake";
     horizon-platform.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-platform?ref=refs/heads/sts-925";
-    lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
+    lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
   };

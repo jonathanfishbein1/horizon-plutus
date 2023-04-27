@@ -160,17 +160,17 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1676204115,
-        "narHash": "sha256-cYYt6sN9t+lYYYelAbRtM/ioVJ27kMcUtR4unA8jfd4=",
+        "lastModified": 1681737193,
+        "narHash": "sha256-c+0eLyF/VWZWGeB1DA88aDUZ3BjO6+jnsJpVW4wxs4w=",
         "ref": "refs/heads/master",
-        "rev": "cc55bca9b25e65f7060de642c99e51bd96dfc190",
-        "revCount": 47,
+        "rev": "efaf89d12a6811f0e00034444904b8d169f0fa34",
+        "revCount": 48,
         "type": "git",
-        "url": "https://gitlab.homotopic.tech/nix/lint-utils"
+        "url": "https://gitlab.nixica.dev/nix/lint-utils"
       },
       "original": {
         "type": "git",
-        "url": "https://gitlab.homotopic.tech/nix/lint-utils"
+        "url": "https://gitlab.nixica.dev/nix/lint-utils"
       }
     },
     "nixpkgs": {

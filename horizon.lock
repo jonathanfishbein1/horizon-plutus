@@ -16,7 +16,7 @@
   }
 , { mapKey = "base-deriving-via"
   , mapValue =
-      "8effe720829a50150e669554f6f655614bb43b27b023ac55f277dbc1b3cd1339"
+      "7ac6a11ffeba343986361a4bab2f6b0558d7409a99c80ee2743c0e02c0ebad1f"
   }
 , { mapKey = "byron-spec-chain"
   , mapValue =
@@ -28,11 +28,11 @@
   }
 , { mapKey = "cardano-binary"
   , mapValue =
-      "dc3697cd554c6da312ae4923329cb55fcf12fd3448b91f708930d1fc454ff839"
+      "8d1af1906c1f17cd0e12d8ee5087b015c0f6da5f548b74a44ccb390539100dcd"
   }
 , { mapKey = "cardano-binary-test"
   , mapValue =
-      "3fccf37998a84b9b1844590fe9d6816d362f4ed7cac3588f16da88c22977d27f"
+      "32477dbcfb44118fbdf0d8480d38dd04afaea90864a79e95bb72b61ae87c9565"
   }
 , { mapKey = "cardano-crypto"
   , mapValue =
@@ -40,11 +40,11 @@
   }
 , { mapKey = "cardano-crypto-class"
   , mapValue =
-      "61345d8c5644355b3db679130e164a788dbdfda07411dd9dbfdcaf59208e6f22"
+      "1d87bf9141ef24ce01437583b18916b77a622b52f37c3f26922bb6000feb2e27"
   }
 , { mapKey = "cardano-crypto-praos"
   , mapValue =
-      "5853a2ca684de0c917789c447aaea903ef46db4c8e6d9ed04ffb4729918e2b56"
+      "af7a9213317e6175277d86072766c08d5d917e0f23cd864c0b7647d51ff08dcc"
   }
 , { mapKey = "cardano-crypto-test"
   , mapValue =
@@ -52,7 +52,7 @@
   }
 , { mapKey = "cardano-crypto-tests"
   , mapValue =
-      "ae423524baeaab4523d23b8c3bc99d13dad44550d940d8bba952204ab23b0b1f"
+      "9bb44f4e2266b0e04d01c5ceaff77c81fdd721486cc9c87911e8e61c4ed31b2d"
   }
 , { mapKey = "cardano-crypto-wrapper"
   , mapValue =
@@ -140,7 +140,7 @@
   }
 , { mapKey = "cardano-mempool"
   , mapValue =
-      "f24f17cd1222aebfa98aa5724990e95ae6143e73229e98eb3c52c28b28b870e4"
+      "c806492b1ee53fd2e689b966a58f9c7612421af839cf8c0e4a399f41c6483e45"
   }
 , { mapKey = "cardano-prelude"
   , mapValue =
@@ -156,11 +156,11 @@
   }
 , { mapKey = "cardano-slotting"
   , mapValue =
-      "cab7981950ecf12fefc8d56996f79ccdaed5f09447294b4b4e18bd3769d74543"
+      "4b0cccec58d6d837e00155499de008f0b88359ba1347d3f6ee3fcabd52c8391a"
   }
 , { mapKey = "cardano-strict-containers"
   , mapValue =
-      "a9483f8b05cc8798797093ed4ca6968a8f040cbe9119345e87995da459ca99c0"
+      "45e0630e1c10d160a206ffa1d7e536bc2c6825113e31e3a255f675176408912e"
   }
 , { mapKey = "contra-tracer"
   , mapValue =
@@ -180,7 +180,7 @@
   }
 , { mapKey = "heapwords"
   , mapValue =
-      "b0a896a45ddd816438145f1edaca7a14a358037db32f2eba0def7a55d5de5672"
+      "be2ebaef98ebac113c8e7b2043b8d12205a917f884d448db1d08a502ad5e6f81"
   }
 , { mapKey = "io-classes"
   , mapValue =
@@ -196,7 +196,7 @@
   }
 , { mapKey = "measures"
   , mapValue =
-      "65dd4875c21fcf7811b23307bdaa2e6470bf6bae8c5cc40d615fc4444b8e4d4c"
+      "531cee45605e587f99db63e869f8e6b8853e07a86201de6b0dddb402ad51139b"
   }
 , { mapKey = "monoidal-containers"
   , mapValue =

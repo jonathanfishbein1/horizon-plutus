@@ -19,8 +19,8 @@ let callCHaP
 let callCardanoBase
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
-        "https://github.com/input-output-hk/cardano-base"
-        "1ffb694513f33ba043d93bae87ee71b026ccb62f"
+        "https://github.com/locallycompact/cardano-base"
+        "e64551f135e6e968609be2e32e87cf7e962a0288"
 
 let callCardanoLedger
     : H.Subdir → H.HaskellPackage.Type

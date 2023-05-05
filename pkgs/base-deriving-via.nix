@@ -3,9 +3,9 @@ mkDerivation {
   pname = "base-deriving-via";
   version = "0.1.0.2";
   src = fetchgit {
-    url = "https://github.com/input-output-hk/cardano-base";
-    sha256 = "02j77wa5km222cxs2pyxl5zqwplxp1da0qp9spwlbivli63xgacd";
-    rev = "1ffb694513f33ba043d93bae87ee71b026ccb62f";
+    url = "https://github.com/locallycompact/cardano-base";
+    sha256 = "1kch4q7qxvnnb0c8mhvap6xia9mqz8l01i94cfz78z6yj2ybjqf1";
+    rev = "e64551f135e6e968609be2e32e87cf7e962a0288";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/base-deriving-via/; echo source root reset to $sourceRoot";

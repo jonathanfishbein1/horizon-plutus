@@ -11,13 +11,19 @@ final: prev: with pkgs.haskell.lib; {
 
   base-deriving-via = final.callPackage (./pkgs/base-deriving-via.nix) { };
 
+  binary-search = final.callPackage (./pkgs/binary-search.nix) { };
+
   byron-spec-chain = final.callPackage (./pkgs/byron-spec-chain.nix) { };
 
   byron-spec-ledger = final.callPackage (./pkgs/byron-spec-ledger.nix) { };
 
+  cardano-api = final.callPackage (./pkgs/cardano-api.nix) { };
+
   cardano-binary = final.callPackage (./pkgs/cardano-binary.nix) { };
 
   cardano-binary-test = final.callPackage (./pkgs/cardano-binary-test.nix) { };
+
+  cardano-cli = final.callPackage (./pkgs/cardano-cli.nix) { };
 
   cardano-crypto = final.callPackage (./pkgs/cardano-crypto.nix) { };
 
@@ -32,6 +38,8 @@ final: prev: with pkgs.haskell.lib; {
   cardano-crypto-wrapper = final.callPackage (./pkgs/cardano-crypto-wrapper.nix) { };
 
   cardano-data = final.callPackage (./pkgs/cardano-data.nix) { };
+
+  cardano-git-rev = final.callPackage (./pkgs/cardano-git-rev.nix) { };
 
   cardano-ledger-allegra = final.callPackage (./pkgs/cardano-ledger-allegra.nix) { };
 
@@ -73,6 +81,10 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-mempool = final.callPackage (./pkgs/cardano-mempool.nix) { };
 
+  cardano-node = final.callPackage (./pkgs/cardano-node.nix) { };
+
+  cardano-ping = final.callPackage (./pkgs/cardano-ping.nix) { };
+
   cardano-prelude = final.callPackage (./pkgs/cardano-prelude.nix) { };
 
   cardano-prelude-test = final.callPackage (./pkgs/cardano-prelude-test.nix) { };
@@ -85,21 +97,57 @@ final: prev: with pkgs.haskell.lib; {
 
   contra-tracer = final.callPackage (./pkgs/contra-tracer.nix) { };
 
+  ekg-forward = final.callPackage (./pkgs/ekg-forward.nix) { };
+
+  fgl = final.callPackage (./pkgs/fgl.nix) { };
+
+  fgl-arbitrary = final.callPackage (./pkgs/fgl-arbitrary.nix) { };
+
   flat = final.callPackage (./pkgs/flat.nix) { };
 
+  fs-api = final.callPackage (./pkgs/fs-api.nix) { };
+
+  fs-sim = final.callPackage (./pkgs/fs-sim.nix) { };
+
   goblins = final.callPackage (./pkgs/goblins.nix) { };
+
+  graphviz = final.callPackage (./pkgs/graphviz.nix) { };
 
   gray-code = final.callPackage (./pkgs/gray-code.nix) { };
 
   heapwords = final.callPackage (./pkgs/heapwords.nix) { };
 
+  hedgehog-corpus = final.callPackage (./pkgs/hedgehog-corpus.nix) { };
+
+  hs-rqlite = final.callPackage (./pkgs/hs-rqlite.nix) { };
+
   io-classes = final.callPackage (./pkgs/io-classes.nix) { };
+
+  io-classes-mtl = final.callPackage (./pkgs/io-classes-mtl.nix) { };
 
   io-sim = final.callPackage (./pkgs/io-sim.nix) { };
 
   iohk-monitoring = final.callPackage (./pkgs/iohk-monitoring.nix) { };
 
+  lobemo-backend-aggregation = final.callPackage (./pkgs/lobemo-backend-aggregation.nix) { };
+
+  lobemo-backend-editor = final.callPackage (./pkgs/lobemo-backend-editor.nix) { };
+
+  lobemo-backend-ekg = final.callPackage (./pkgs/lobemo-backend-ekg.nix) { };
+
+  lobemo-backend-graylog = final.callPackage (./pkgs/lobemo-backend-graylog.nix) { };
+
+  lobemo-backend-monitoring = final.callPackage (./pkgs/lobemo-backend-monitoring.nix) { };
+
+  lobemo-backend-trace-acceptor = final.callPackage (./pkgs/lobemo-backend-trace-acceptor.nix) { };
+
+  lobemo-backend-trace-forwarder = final.callPackage (./pkgs/lobemo-backend-trace-forwarder.nix) { };
+
+  lobemo-scribe-systemd = final.callPackage (./pkgs/lobemo-scribe-systemd.nix) { };
+
   measures = final.callPackage (./pkgs/measures.nix) { };
+
+  microbench = final.callPackage (./pkgs/microbench.nix) { };
 
   monoidal-containers = final.callPackage (./pkgs/monoidal-containers.nix) { };
 
@@ -116,6 +164,14 @@ final: prev: with pkgs.haskell.lib; {
   ntp-client = final.callPackage (./pkgs/ntp-client.nix) { };
 
   optparse-applicative-fork = final.callPackage (./pkgs/optparse-applicative-fork.nix) { };
+
+  ouroboros-consensus = final.callPackage (./pkgs/ouroboros-consensus.nix) { };
+
+  ouroboros-consensus-cardano = final.callPackage (./pkgs/ouroboros-consensus-cardano.nix) { };
+
+  ouroboros-consensus-diffusion = final.callPackage (./pkgs/ouroboros-consensus-diffusion.nix) { };
+
+  ouroboros-consensus-protocol = final.callPackage (./pkgs/ouroboros-consensus-protocol.nix) { };
 
   ouroboros-network = final.callPackage (./pkgs/ouroboros-network.nix) { };
 
@@ -143,9 +199,13 @@ final: prev: with pkgs.haskell.lib; {
 
   pvar = final.callPackage (./pkgs/pvar.nix) { };
 
+  quickcheck-state-machine = final.callPackage (./pkgs/quickcheck-state-machine.nix) { };
+
   quickcheck-transformer = final.callPackage (./pkgs/quickcheck-transformer.nix) { };
 
   set-algebra = final.callPackage (./pkgs/set-algebra.nix) { };
+
+  si-timers = final.callPackage (./pkgs/si-timers.nix) { };
 
   small-steps = final.callPackage (./pkgs/small-steps.nix) { };
 
@@ -155,6 +215,14 @@ final: prev: with pkgs.haskell.lib; {
 
   strict-stm = final.callPackage (./pkgs/strict-stm.nix) { };
 
+  threepenny-gui = final.callPackage (./pkgs/threepenny-gui.nix) { };
+
+  trace-dispatcher = final.callPackage (./pkgs/trace-dispatcher.nix) { };
+
+  trace-forward = final.callPackage (./pkgs/trace-forward.nix) { };
+
+  trace-resources = final.callPackage (./pkgs/trace-resources.nix) { };
+
   tracer-transformers = final.callPackage (./pkgs/tracer-transformers.nix) { };
 
   typed-protocols = final.callPackage (./pkgs/typed-protocols.nix) { };
@@ -163,7 +231,13 @@ final: prev: with pkgs.haskell.lib; {
 
   typed-protocols-examples = final.callPackage (./pkgs/typed-protocols-examples.nix) { };
 
+  unix-bytestring = final.callPackage (./pkgs/unix-bytestring.nix) { };
+
   vector-map = final.callPackage (./pkgs/vector-map.nix) { };
+
+  websockets-snap = final.callPackage (./pkgs/websockets-snap.nix) { };
+
+  wl-pprint-text = final.callPackage (./pkgs/wl-pprint-text.nix) { };
 
   word-array = final.callPackage (./pkgs/word-array.nix) { };
 

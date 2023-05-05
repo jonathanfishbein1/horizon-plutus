@@ -1,8 +1,9 @@
-{ mkDerivation, base, bytestring, cborg, containers, fetchgit
-, hashable, lib, nothunks, ouroboros-network-api, serialise, time
+{ mkDerivation, aeson, base, bytestring, cborg, contra-tracer
+, fetchgit, io-classes, lib, network, network-mux, si-timers
+, strict-stm, tdigest, text
 }:
 mkDerivation {
-  pname = "ouroboros-network-mock";
+  pname = "cardano-ping";
   version = "0.1.0.1";
   src = fetchgit {
     url = "https://github.com/input-output-hk/ouroboros-network";
@@ -10,13 +11,13 @@ mkDerivation {
     rev = "3c91184485de25d17d8a4c1979b7ad106e2a5512";
     fetchSubmodules = true;
   };
-  postUnpack = "sourceRoot+=/ouroboros-network-mock/; echo source root reset to $sourceRoot";
+  postUnpack = "sourceRoot+=/cardano-ping/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base bytestring cborg containers hashable nothunks
-    ouroboros-network-api serialise time
+    aeson base bytestring cborg contra-tracer io-classes network
+    network-mux si-timers strict-stm tdigest text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
@@ -25,7 +26,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  description = "Ouroboros Network Chain for testing purposes";
+  description = "Utility for pinging cardano nodes";
   license = lib.licenses.asl20;
   broken = false;
 }

@@ -1,35 +1,16 @@
-{ mkDerivation
-, aeson
-, base
-, base16-bytestring
-, bytestring
-, cardano-binary
-, cardano-slotting
-, cardano-strict-containers
-, cborg
-, containers
-, contra-tracer
-, deepseq
-, dns
-, fetchgit
-, io-classes
-, iproute
-, lib
-, network
-, network-mux
-, nothunks
-, serialise
-, strict-stm
-, text
-, typed-protocols
+{ mkDerivation, aeson, base, base16-bytestring, bytestring
+, cardano-slotting, cardano-strict-containers, cborg, containers
+, contra-tracer, deepseq, dns, fetchgit, io-classes, iproute, lib
+, network, network-mux, nothunks, serialise, si-timers, strict-stm
+, text, typed-protocols
 }:
 mkDerivation {
   pname = "ouroboros-network-api";
-  version = "0.1.0.0";
+  version = "0.3.0.0";
   src = fetchgit {
-    url = "https://github.com/locallycompact/ouroboros-network";
-    sha256 = "1ds14l3x83q21ngvzxj1yfgkw3ng9akpy1c8cvdv3yyl2drbn1g9";
-    rev = "13dbe0bf9bca33469d105f22cdcb2b6d1a32c9b9";
+    url = "https://github.com/input-output-hk/ouroboros-network";
+    sha256 = "004j8p2masjrsck2sv8905vyfqynqr654g93a2qmm7x96jsq64bg";
+    rev = "3c91184485de25d17d8a4c1979b7ad106e2a5512";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/ouroboros-network-api/; echo source root reset to $sourceRoot";
@@ -37,27 +18,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    base16-bytestring
-    bytestring
-    cardano-binary
-    cardano-slotting
-    cardano-strict-containers
-    cborg
-    containers
-    contra-tracer
-    deepseq
-    dns
-    io-classes
-    iproute
-    network
-    network-mux
-    nothunks
-    serialise
-    strict-stm
-    text
-    typed-protocols
+    aeson base base16-bytestring bytestring cardano-slotting
+    cardano-strict-containers cborg containers contra-tracer deepseq
+    dns io-classes iproute network network-mux nothunks serialise
+    si-timers strict-stm text typed-protocols
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

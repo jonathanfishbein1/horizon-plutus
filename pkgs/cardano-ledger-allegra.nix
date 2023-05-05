@@ -1,68 +1,57 @@
 { mkDerivation
-, Unique
+, QuickCheck
 , base
-, bimap
 , bytestring
 , cardano-crypto-class
 , cardano-ledger-binary
+, cardano-ledger-core
+, cardano-ledger-shelley
+, cardano-slotting
+, cardano-strict-containers
+, cborg
 , containers
-, cryptonite
+, deepseq
 , fetchgit
-, hashable
-, hedgehog
+, generic-random
 , lib
 , microlens
-, microlens-th
 , nothunks
 , small-steps
-, small-steps-test
-, tasty
-, tasty-hedgehog
-, tasty-hunit
+, transformers
+, validation-selective
 }:
 mkDerivation {
-  pname = "byron-spec-ledger";
-  version = "1.0.0.0";
+  pname = "cardano-ledger-allegra";
+  version = "1.1.1.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-ledger";
     sha256 = "120995ssz1nf21pp52xwhmcs4cdfndzv4459l8cjvwbaygs7nvvl";
     rev = "180271602640bcac1214084b6de61d0468332f00";
     fetchSubmodules = true;
   };
-  postUnpack = "sourceRoot+=/eras/byron/ledger/executable-spec/; echo source root reset to $sourceRoot";
+  postUnpack = "sourceRoot+=/eras/allegra/impl/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
-    bimap
     bytestring
     cardano-crypto-class
     cardano-ledger-binary
+    cardano-ledger-core
+    cardano-ledger-shelley
+    cardano-slotting
+    cardano-strict-containers
+    cborg
     containers
-    cryptonite
-    hashable
-    hedgehog
+    deepseq
+    generic-random
     microlens
-    microlens-th
     nothunks
+    QuickCheck
     small-steps
-    small-steps-test
-    Unique
-  ];
-  testHaskellDepends = [
-    base
-    bimap
-    containers
-    hedgehog
-    microlens
-    microlens-th
-    small-steps
-    small-steps-test
-    tasty
-    tasty-hedgehog
-    tasty-hunit
-    Unique
+    transformers
+    validation-selective
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
@@ -71,8 +60,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/input-output-hk/cardano-legder";
-  description = "Executable specification of Cardano ledger";
+  description = "Allegra ledger era that introduces time lock support";
   license = lib.licenses.asl20;
   broken = false;
 }

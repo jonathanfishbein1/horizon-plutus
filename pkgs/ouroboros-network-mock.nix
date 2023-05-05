@@ -1,5 +1,15 @@
-{ mkDerivation, base, bytestring, cborg, containers, fetchgit
-, hashable, lib, nothunks, ouroboros-network-api, serialise, time
+{ mkDerivation
+, base
+, bytestring
+, cborg
+, containers
+, fetchgit
+, hashable
+, lib
+, nothunks
+, ouroboros-network-api
+, serialise
+, time
 }:
 mkDerivation {
   pname = "ouroboros-network-mock";
@@ -15,8 +25,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base bytestring cborg containers hashable nothunks
-    ouroboros-network-api serialise time
+    base
+    bytestring
+    cborg
+    containers
+    hashable
+    nothunks
+    ouroboros-network-api
+    serialise
+    time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

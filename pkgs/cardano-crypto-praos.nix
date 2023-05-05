@@ -1,5 +1,13 @@
-{ mkDerivation, base, bytestring, cardano-binary
-, cardano-crypto-class, deepseq, fetchgit, lib, libsodium, nothunks
+{ mkDerivation
+, base
+, bytestring
+, cardano-binary
+, cardano-crypto-class
+, deepseq
+, fetchgit
+, lib
+, libsodium
+, nothunks
 }:
 mkDerivation {
   pname = "cardano-crypto-praos";
@@ -15,7 +23,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base bytestring cardano-binary cardano-crypto-class deepseq
+    base
+    bytestring
+    cardano-binary
+    cardano-crypto-class
+    deepseq
     nothunks
   ];
   libraryPkgconfigDepends = [ libsodium ];

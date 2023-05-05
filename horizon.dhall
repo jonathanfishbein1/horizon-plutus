@@ -25,8 +25,8 @@ let callCardanoBase
 let callCardanoLedger
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
-        "https://github.com/milloni/cardano-ledger"
-        "3aa1fd8469424778454644f0d371988fb4490b4a"
+        "https://github.com/input-output-hk/cardano-ledger"
+        "180271602640bcac1214084b6de61d0468332f00"
 
 let callCardanoNode
     : H.Subdir → H.HaskellPackage.Type
@@ -81,6 +81,7 @@ let plutusLibraries =
             , cardano-ledger-babbage = callCardanoLedger "eras/babbage/impl"
             , cardano-ledger-babbage-test =
                 callCardanoLedger "eras/babbage/test-suite"
+            , cardano-ledger-binary = callCardanoLedger "libs/cardano-ledger-binary"
             , cardano-ledger-conway = callCardanoLedger "eras/conway/impl"
             , cardano-ledger-conway-test =
                 callCardanoLedger "eras/conway/test-suite"
@@ -116,6 +117,7 @@ let otherLibraries =
               "https://github.com/input-output-hk/Win32-network"
               "1a6bd1f67d1463d7243ab4c34fc4f7d84ee0554a"
               (None H.Subdir)
+        , FailT = H.callHackage "FailT" "0.1.2.0"
         , algebraic-graphs = H.callHackage "algebraic-graphs" "0.7"
         , base-deriving-via = callCardanoBase "base-deriving-via"
         , byron-spec-chain =
@@ -135,6 +137,8 @@ let otherLibraries =
         , cardano-crypto-test = callCardanoLedger "eras/byron/crypto/test"
         , cardano-crypto-wrapper = callCardanoLedger "eras/byron/crypto"
         , cardano-data = callCardanoLedger "libs/cardano-data"
+        , cardano-ledger-allegra = callCardanoLedger "eras/allegra/impl"
+        , cardano-ledger-mary = callCardanoLedger "eras/mary/impl"
         , cardano-ledger-byron = callCardanoLedger "eras/byron/ledger/impl"
         , cardano-ledger-byron-test =
             callCardanoLedger "eras/byron/ledger/impl/test"

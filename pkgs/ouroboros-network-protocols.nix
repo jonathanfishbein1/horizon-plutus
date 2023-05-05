@@ -1,11 +1,35 @@
-{ mkDerivation, QuickCheck, base, bytestring
-, cardano-strict-containers, cborg, containers, contra-tracer
-, directory, fetchgit, filepath, io-classes, io-sim, lib, mtl
-, network-mux, ouroboros-network-api, ouroboros-network-framework
-, ouroboros-network-mock, ouroboros-network-testing, pipes
-, process-extras, quickcheck-instances, serialise, strict-stm
-, tasty, tasty-hunit, tasty-quickcheck, temporary, text
-, typed-protocols, typed-protocols-cborg
+{ mkDerivation
+, QuickCheck
+, base
+, bytestring
+, cardano-strict-containers
+, cborg
+, containers
+, contra-tracer
+, directory
+, fetchgit
+, filepath
+, io-classes
+, io-sim
+, lib
+, mtl
+, network-mux
+, ouroboros-network-api
+, ouroboros-network-framework
+, ouroboros-network-mock
+, ouroboros-network-testing
+, pipes
+, process-extras
+, quickcheck-instances
+, serialise
+, strict-stm
+, tasty
+, tasty-hunit
+, tasty-quickcheck
+, temporary
+, text
+, typed-protocols
+, typed-protocols-cborg
 }:
 mkDerivation {
   pname = "ouroboros-network-protocols";
@@ -21,18 +45,51 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base bytestring cardano-strict-containers cborg containers
-    contra-tracer io-classes io-sim network-mux ouroboros-network-api
-    ouroboros-network-framework ouroboros-network-mock pipes QuickCheck
-    quickcheck-instances serialise strict-stm tasty tasty-quickcheck
-    text typed-protocols typed-protocols-cborg
+    base
+    bytestring
+    cardano-strict-containers
+    cborg
+    containers
+    contra-tracer
+    io-classes
+    io-sim
+    network-mux
+    ouroboros-network-api
+    ouroboros-network-framework
+    ouroboros-network-mock
+    pipes
+    QuickCheck
+    quickcheck-instances
+    serialise
+    strict-stm
+    tasty
+    tasty-quickcheck
+    text
+    typed-protocols
+    typed-protocols-cborg
   ];
   testHaskellDepends = [
-    base bytestring cborg containers directory filepath mtl
-    ouroboros-network-api ouroboros-network-framework
-    ouroboros-network-mock ouroboros-network-testing process-extras
-    QuickCheck quickcheck-instances serialise tasty tasty-hunit
-    tasty-quickcheck temporary text typed-protocols
+    base
+    bytestring
+    cborg
+    containers
+    directory
+    filepath
+    mtl
+    ouroboros-network-api
+    ouroboros-network-framework
+    ouroboros-network-mock
+    ouroboros-network-testing
+    process-extras
+    QuickCheck
+    quickcheck-instances
+    serialise
+    tasty
+    tasty-hunit
+    tasty-quickcheck
+    temporary
+    text
+    typed-protocols
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

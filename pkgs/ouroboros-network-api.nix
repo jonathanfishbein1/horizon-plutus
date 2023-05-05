@@ -1,8 +1,27 @@
-{ mkDerivation, aeson, base, base16-bytestring, bytestring
-, cardano-binary, cardano-slotting, cardano-strict-containers
-, cborg, containers, contra-tracer, deepseq, dns, fetchgit
-, io-classes, iproute, lib, network, network-mux, nothunks
-, serialise, strict-stm, text, typed-protocols
+{ mkDerivation
+, aeson
+, base
+, base16-bytestring
+, bytestring
+, cardano-binary
+, cardano-slotting
+, cardano-strict-containers
+, cborg
+, containers
+, contra-tracer
+, deepseq
+, dns
+, fetchgit
+, io-classes
+, iproute
+, lib
+, network
+, network-mux
+, nothunks
+, serialise
+, strict-stm
+, text
+, typed-protocols
 }:
 mkDerivation {
   pname = "ouroboros-network-api";
@@ -18,10 +37,27 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson base base16-bytestring bytestring cardano-binary
-    cardano-slotting cardano-strict-containers cborg containers
-    contra-tracer deepseq dns io-classes iproute network network-mux
-    nothunks serialise strict-stm text typed-protocols
+    aeson
+    base
+    base16-bytestring
+    bytestring
+    cardano-binary
+    cardano-slotting
+    cardano-strict-containers
+    cborg
+    containers
+    contra-tracer
+    deepseq
+    dns
+    io-classes
+    iproute
+    network
+    network-mux
+    nothunks
+    serialise
+    strict-stm
+    text
+    typed-protocols
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,8 +1,28 @@
-{ mkDerivation, QuickCheck, aeson, base, bytestring
-, cardano-prelude-test, cborg, containers, data-fix, deepseq
-, fetchgit, formatting, hedgehog, hspec, lib, nothunks, pretty-show
-, primitive, quickcheck-instances, recursion-schemes
-, safe-exceptions, tagged, text, time, vector
+{ mkDerivation
+, QuickCheck
+, aeson
+, base
+, bytestring
+, cardano-prelude-test
+, cborg
+, containers
+, data-fix
+, deepseq
+, fetchgit
+, formatting
+, hedgehog
+, hspec
+, lib
+, nothunks
+, pretty-show
+, primitive
+, quickcheck-instances
+, recursion-schemes
+, safe-exceptions
+, tagged
+, text
+, time
+, vector
 }:
 mkDerivation {
   pname = "cardano-binary";
@@ -18,14 +38,39 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson base bytestring cborg containers data-fix deepseq formatting
-    nothunks primitive recursion-schemes safe-exceptions tagged text
-    time vector
+    aeson
+    base
+    bytestring
+    cborg
+    containers
+    data-fix
+    deepseq
+    formatting
+    nothunks
+    primitive
+    recursion-schemes
+    safe-exceptions
+    tagged
+    text
+    time
+    vector
   ];
   testHaskellDepends = [
-    base bytestring cardano-prelude-test cborg containers formatting
-    hedgehog hspec pretty-show QuickCheck quickcheck-instances tagged
-    text time vector
+    base
+    bytestring
+    cardano-prelude-test
+    cborg
+    containers
+    formatting
+    hedgehog
+    hspec
+    pretty-show
+    QuickCheck
+    quickcheck-instances
+    tagged
+    text
+    time
+    vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

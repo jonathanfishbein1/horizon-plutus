@@ -1,5 +1,12 @@
-{ mkDerivation, QuickCheck, base, fetchgit, io-classes, io-sim, lib
-, tasty, tasty-quickcheck
+{ mkDerivation
+, QuickCheck
+, base
+, fetchgit
+, io-classes
+, io-sim
+, lib
+, tasty
+, tasty-quickcheck
 }:
 mkDerivation {
   pname = "monoidal-synchronisation";
@@ -16,7 +23,12 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [
-    base io-classes io-sim QuickCheck tasty tasty-quickcheck
+    base
+    io-classes
+    io-sim
+    QuickCheck
+    tasty
+    tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,5 +1,14 @@
-{ mkDerivation, QuickCheck, base, deepseq, fetchgit, lib
-, mono-traversable, primitive, tasty, tasty-bench, tasty-quickcheck
+{ mkDerivation
+, QuickCheck
+, base
+, deepseq
+, fetchgit
+, lib
+, mono-traversable
+, primitive
+, tasty
+, tasty-bench
+, tasty-quickcheck
 , vector
 }:
 mkDerivation {
@@ -17,7 +26,12 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq mono-traversable ];
   testHaskellDepends = [
-    base mono-traversable QuickCheck tasty tasty-quickcheck vector
+    base
+    mono-traversable
+    QuickCheck
+    tasty
+    tasty-quickcheck
+    vector
   ];
   benchmarkHaskellDepends = [ base primitive tasty-bench ];
   enableLibraryProfiling = true;

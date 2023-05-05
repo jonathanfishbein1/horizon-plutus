@@ -1,8 +1,28 @@
-{ mkDerivation, QuickCheck, aeson, aeson-pretty, attoparsec, base
-, base16-bytestring, bytestring, canonical-json, cardano-prelude
-, containers, cryptonite, fetchzip, formatting, ghc-heap, ghc-prim
-, hedgehog, hspec, lib, pretty-show, quickcheck-instances
-, template-haskell, text, th-compat, time
+{ mkDerivation
+, QuickCheck
+, aeson
+, aeson-pretty
+, attoparsec
+, base
+, base16-bytestring
+, bytestring
+, canonical-json
+, cardano-prelude
+, containers
+, cryptonite
+, fetchzip
+, formatting
+, ghc-heap
+, ghc-prim
+, hedgehog
+, hspec
+, lib
+, pretty-show
+, quickcheck-instances
+, template-haskell
+, text
+, th-compat
+, time
 }:
 mkDerivation {
   pname = "cardano-prelude-test";
@@ -15,13 +35,35 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson aeson-pretty attoparsec base base16-bytestring bytestring
-    canonical-json cardano-prelude containers cryptonite formatting
-    hedgehog hspec pretty-show QuickCheck quickcheck-instances
-    template-haskell text th-compat time
+    aeson
+    aeson-pretty
+    attoparsec
+    base
+    base16-bytestring
+    bytestring
+    canonical-json
+    cardano-prelude
+    containers
+    cryptonite
+    formatting
+    hedgehog
+    hspec
+    pretty-show
+    QuickCheck
+    quickcheck-instances
+    template-haskell
+    text
+    th-compat
+    time
   ];
   testHaskellDepends = [
-    base bytestring cardano-prelude ghc-heap ghc-prim hedgehog text
+    base
+    bytestring
+    cardano-prelude
+    ghc-heap
+    ghc-prim
+    hedgehog
+    text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

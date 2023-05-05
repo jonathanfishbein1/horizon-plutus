@@ -1,7 +1,21 @@
-{ mkDerivation, Cabal, QuickCheck, base, cabal-doctest, doctest
-, fetchgit, lib, megaparsec, microlens, mtl, parser-combinators
-, prettyprinter, quickcheck-text, tasty, tasty-hunit
-, tasty-quickcheck, text
+{ mkDerivation
+, Cabal
+, QuickCheck
+, base
+, cabal-doctest
+, doctest
+, fetchgit
+, lib
+, megaparsec
+, microlens
+, mtl
+, parser-combinators
+, prettyprinter
+, quickcheck-text
+, tasty
+, tasty-hunit
+, tasty-quickcheck
+, text
 }:
 mkDerivation {
   pname = "prettyprinter-configurable";
@@ -19,8 +33,15 @@ mkDerivation {
   setupHaskellDepends = [ base Cabal cabal-doctest doctest ];
   libraryHaskellDepends = [ base microlens mtl prettyprinter text ];
   testHaskellDepends = [
-    base megaparsec parser-combinators QuickCheck quickcheck-text tasty
-    tasty-hunit tasty-quickcheck text
+    base
+    megaparsec
+    parser-combinators
+    QuickCheck
+    quickcheck-text
+    tasty
+    tasty-hunit
+    tasty-quickcheck
+    text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

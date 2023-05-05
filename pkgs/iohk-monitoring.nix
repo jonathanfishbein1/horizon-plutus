@@ -1,12 +1,51 @@
-{ mkDerivation, QuickCheck, Win32-network, aeson, array, async
-, async-timer, attoparsec, auto-update, base, base64-bytestring
-, bytestring, clock, containers, contra-tracer, contravariant
-, directory, ekg, fetchzip, filepath, katip, lib, libyaml, mtl
-, network, process, random, safe, safe-exceptions, scientific
-, semigroups, split, stm, tasty, tasty-hunit, tasty-quickcheck
-, template-haskell, temporary, text, time, time-units
-, tracer-transformers, transformers, unix, unordered-containers
-, vector, void, yaml
+{ mkDerivation
+, QuickCheck
+, Win32-network
+, aeson
+, array
+, async
+, async-timer
+, attoparsec
+, auto-update
+, base
+, base64-bytestring
+, bytestring
+, clock
+, containers
+, contra-tracer
+, contravariant
+, directory
+, ekg
+, fetchzip
+, filepath
+, katip
+, lib
+, libyaml
+, mtl
+, network
+, process
+, random
+, safe
+, safe-exceptions
+, scientific
+, semigroups
+, split
+, stm
+, tasty
+, tasty-hunit
+, tasty-quickcheck
+, template-haskell
+, temporary
+, text
+, time
+, time-units
+, tracer-transformers
+, transformers
+, unix
+, unordered-containers
+, vector
+, void
+, yaml
 }:
 mkDerivation {
   pname = "iohk-monitoring";
@@ -19,19 +58,74 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson array async async-timer attoparsec auto-update base
-    base64-bytestring bytestring clock containers contra-tracer
-    contravariant directory ekg filepath katip libyaml mtl network safe
-    safe-exceptions scientific stm template-haskell text time
-    time-units tracer-transformers transformers unix
-    unordered-containers vector Win32-network yaml
+    aeson
+    array
+    async
+    async-timer
+    attoparsec
+    auto-update
+    base
+    base64-bytestring
+    bytestring
+    clock
+    containers
+    contra-tracer
+    contravariant
+    directory
+    ekg
+    filepath
+    katip
+    libyaml
+    mtl
+    network
+    safe
+    safe-exceptions
+    scientific
+    stm
+    template-haskell
+    text
+    time
+    time-units
+    tracer-transformers
+    transformers
+    unix
+    unordered-containers
+    vector
+    Win32-network
+    yaml
   ];
   testHaskellDepends = [
-    aeson array async base bytestring clock containers contra-tracer
-    directory filepath libyaml mtl process QuickCheck random semigroups
-    split stm tasty tasty-hunit tasty-quickcheck temporary text time
-    time-units tracer-transformers transformers unordered-containers
-    vector void yaml
+    aeson
+    array
+    async
+    base
+    bytestring
+    clock
+    containers
+    contra-tracer
+    directory
+    filepath
+    libyaml
+    mtl
+    process
+    QuickCheck
+    random
+    semigroups
+    split
+    stm
+    tasty
+    tasty-hunit
+    tasty-quickcheck
+    temporary
+    text
+    time
+    time-units
+    tracer-transformers
+    transformers
+    unordered-containers
+    vector
+    void
+    yaml
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

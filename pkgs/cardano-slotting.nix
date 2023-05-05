@@ -1,5 +1,17 @@
-{ mkDerivation, aeson, base, cardano-binary, deepseq, fetchgit, lib
-, mmorph, nothunks, quiet, serialise, tasty, tasty-quickcheck, time
+{ mkDerivation
+, aeson
+, base
+, cardano-binary
+, deepseq
+, fetchgit
+, lib
+, mmorph
+, nothunks
+, quiet
+, serialise
+, tasty
+, tasty-quickcheck
+, time
 }:
 mkDerivation {
   pname = "cardano-slotting";
@@ -15,7 +27,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson base cardano-binary deepseq mmorph nothunks quiet serialise
+    aeson
+    base
+    cardano-binary
+    deepseq
+    mmorph
+    nothunks
+    quiet
+    serialise
     time
   ];
   testHaskellDepends = [ base tasty tasty-quickcheck ];

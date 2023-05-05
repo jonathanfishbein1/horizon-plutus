@@ -1,14 +1,25 @@
-{ mkDerivation, aeson, base, cardano-strict-containers, containers
-, data-default-class, fetchgit, free, lib, mtl, nothunks, text
-, transformers, validation-selective
+{ mkDerivation
+, aeson
+, base
+, cardano-strict-containers
+, containers
+, data-default-class
+, fetchgit
+, free
+, lib
+, mtl
+, nothunks
+, text
+, transformers
+, validation-selective
 }:
 mkDerivation {
   pname = "small-steps";
-  version = "0.1.0.0";
+  version = "1.0.0.0";
   src = fetchgit {
-    url = "https://github.com/milloni/cardano-ledger";
-    sha256 = "08nj6hcqj5apvb17n1irc8j7rzf10bcdh5gh1mkmhwbyw6h2d4ab";
-    rev = "3aa1fd8469424778454644f0d371988fb4490b4a";
+    url = "https://github.com/input-output-hk/cardano-ledger";
+    sha256 = "120995ssz1nf21pp52xwhmcs4cdfndzv4459l8cjvwbaygs7nvvl";
+    rev = "180271602640bcac1214084b6de61d0468332f00";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/libs/small-steps/; echo source root reset to $sourceRoot";
@@ -16,8 +27,17 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson base cardano-strict-containers containers data-default-class
-    free mtl nothunks text transformers validation-selective
+    aeson
+    base
+    cardano-strict-containers
+    containers
+    data-default-class
+    free
+    mtl
+    nothunks
+    text
+    transformers
+    validation-selective
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

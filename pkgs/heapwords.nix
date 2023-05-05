@@ -1,5 +1,14 @@
-{ mkDerivation, array, base, bytestring, containers, fetchgit
-, ghc-prim, lib, text, time, vector
+{ mkDerivation
+, array
+, base
+, bytestring
+, containers
+, fetchgit
+, ghc-prim
+, lib
+, text
+, time
+, vector
 }:
 mkDerivation {
   pname = "heapwords";
@@ -15,7 +24,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array base bytestring containers ghc-prim text time vector
+    array
+    base
+    bytestring
+    containers
+    ghc-prim
+    text
+    time
+    vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

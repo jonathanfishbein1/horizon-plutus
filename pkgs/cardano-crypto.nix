@@ -1,5 +1,16 @@
-{ mkDerivation, base, basement, bytestring, cryptonite, deepseq
-, fetchgit, foundation, gauge, hashable, integer-gmp, lib, memory
+{ mkDerivation
+, base
+, basement
+, bytestring
+, cryptonite
+, deepseq
+, fetchgit
+, foundation
+, gauge
+, hashable
+, integer-gmp
+, lib
+, memory
 }:
 mkDerivation {
   pname = "cardano-crypto";
@@ -14,14 +25,30 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base basement bytestring cryptonite deepseq foundation hashable
-    integer-gmp memory
+    base
+    basement
+    bytestring
+    cryptonite
+    deepseq
+    foundation
+    hashable
+    integer-gmp
+    memory
   ];
   testHaskellDepends = [
-    base basement bytestring cryptonite foundation memory
+    base
+    basement
+    bytestring
+    cryptonite
+    foundation
+    memory
   ];
   benchmarkHaskellDepends = [
-    base bytestring cryptonite gauge memory
+    base
+    bytestring
+    cryptonite
+    gauge
+    memory
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

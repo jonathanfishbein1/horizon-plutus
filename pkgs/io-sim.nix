@@ -1,8 +1,29 @@
-{ mkDerivation, QuickCheck, array, base, containers, contra-tracer
-, criterion, deque, exceptions, fetchgit, io-classes, lib, parallel
-, pretty-simple, psqueues, quiet, strict-stm, syb, tasty
-, tasty-hunit, tasty-quickcheck, text, time, typed-protocols
-, typed-protocols-cborg, typed-protocols-examples
+{ mkDerivation
+, QuickCheck
+, array
+, base
+, containers
+, contra-tracer
+, criterion
+, deque
+, exceptions
+, fetchgit
+, io-classes
+, lib
+, parallel
+, pretty-simple
+, psqueues
+, quiet
+, strict-stm
+, syb
+, tasty
+, tasty-hunit
+, tasty-quickcheck
+, text
+, time
+, typed-protocols
+, typed-protocols-cborg
+, typed-protocols-examples
 }:
 mkDerivation {
   pname = "io-sim";
@@ -18,16 +39,41 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base containers deque exceptions io-classes parallel pretty-simple
-    psqueues QuickCheck quiet syb text time
+    base
+    containers
+    deque
+    exceptions
+    io-classes
+    parallel
+    pretty-simple
+    psqueues
+    QuickCheck
+    quiet
+    syb
+    text
+    time
   ];
   testHaskellDepends = [
-    array base containers io-classes parallel QuickCheck strict-stm
-    tasty tasty-hunit tasty-quickcheck time
+    array
+    base
+    containers
+    io-classes
+    parallel
+    QuickCheck
+    strict-stm
+    tasty
+    tasty-hunit
+    tasty-quickcheck
+    time
   ];
   benchmarkHaskellDepends = [
-    base contra-tracer criterion io-classes typed-protocols
-    typed-protocols-cborg typed-protocols-examples
+    base
+    contra-tracer
+    criterion
+    io-classes
+    typed-protocols
+    typed-protocols-cborg
+    typed-protocols-examples
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

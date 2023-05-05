@@ -1,7 +1,28 @@
-{ mkDerivation, PyF, array, base, bytestring, containers, deepseq
-, either, extra, fetchgit, flat, ghc, hedgehog, lens, lib, mtl
-, optparse-applicative, plutus-core, plutus-tx, prettyprinter
-, tagged, tasty, tasty-hedgehog, tasty-hunit, template-haskell
+{ mkDerivation
+, PyF
+, array
+, base
+, bytestring
+, containers
+, deepseq
+, either
+, extra
+, fetchgit
+, flat
+, ghc
+, hedgehog
+, lens
+, lib
+, mtl
+, optparse-applicative
+, plutus-core
+, plutus-tx
+, prettyprinter
+, tagged
+, tasty
+, tasty-hedgehog
+, tasty-hunit
+, template-haskell
 , text
 }:
 mkDerivation {
@@ -18,15 +39,47 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array base bytestring containers either extra flat ghc lens mtl
-    plutus-core plutus-tx prettyprinter PyF template-haskell text
+    array
+    base
+    bytestring
+    containers
+    either
+    extra
+    flat
+    ghc
+    lens
+    mtl
+    plutus-core
+    plutus-tx
+    prettyprinter
+    PyF
+    template-haskell
+    text
   ];
   executableHaskellDepends = [
-    base containers lens optparse-applicative prettyprinter PyF text
+    base
+    containers
+    lens
+    optparse-applicative
+    prettyprinter
+    PyF
+    text
   ];
   testHaskellDepends = [
-    base containers deepseq flat hedgehog lens mtl plutus-core
-    plutus-tx tagged tasty tasty-hedgehog tasty-hunit template-haskell
+    base
+    containers
+    deepseq
+    flat
+    hedgehog
+    lens
+    mtl
+    plutus-core
+    plutus-tx
+    tagged
+    tasty
+    tasty-hedgehog
+    tasty-hunit
+    template-haskell
     text
   ];
   enableLibraryProfiling = false;

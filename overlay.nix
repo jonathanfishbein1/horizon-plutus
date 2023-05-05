@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 final: prev: with pkgs.haskell.lib; {
+  FailT = final.callPackage (./pkgs/FailT.nix) { };
+
   OddWord = final.callPackage (./pkgs/OddWord.nix) { };
 
   Win32-network = final.callPackage (./pkgs/Win32-network.nix) { };
@@ -31,6 +33,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-data = final.callPackage (./pkgs/cardano-data.nix) { };
 
+  cardano-ledger-allegra = final.callPackage (./pkgs/cardano-ledger-allegra.nix) { };
+
   cardano-ledger-alonzo = final.callPackage (./pkgs/cardano-ledger-alonzo.nix) { };
 
   cardano-ledger-alonzo-test = final.callPackage (./pkgs/cardano-ledger-alonzo-test.nix) { };
@@ -41,6 +45,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-ledger-babbage-test = final.callPackage (./pkgs/cardano-ledger-babbage-test.nix) { };
 
+  cardano-ledger-binary = final.callPackage (./pkgs/cardano-ledger-binary.nix) { };
+
   cardano-ledger-byron = final.callPackage (./pkgs/cardano-ledger-byron.nix) { };
 
   cardano-ledger-byron-test = final.callPackage (./pkgs/cardano-ledger-byron-test.nix) { };
@@ -50,6 +56,8 @@ final: prev: with pkgs.haskell.lib; {
   cardano-ledger-conway-test = final.callPackage (./pkgs/cardano-ledger-conway-test.nix) { };
 
   cardano-ledger-core = final.callPackage (./pkgs/cardano-ledger-core.nix) { };
+
+  cardano-ledger-mary = final.callPackage (./pkgs/cardano-ledger-mary.nix) { };
 
   cardano-ledger-pretty = final.callPackage (./pkgs/cardano-ledger-pretty.nix) { };
 

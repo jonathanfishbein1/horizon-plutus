@@ -1,68 +1,67 @@
 { mkDerivation
-, Unique
+, QuickCheck
+, aeson
 , base
-, bimap
+, base16-bytestring
 , bytestring
 , cardano-crypto-class
+, cardano-data
+, cardano-ledger-allegra
 , cardano-ledger-binary
+, cardano-ledger-core
+, cardano-ledger-shelley
+, cardano-strict-containers
 , containers
-, cryptonite
+, deepseq
 , fetchgit
-, hashable
-, hedgehog
+, groups
 , lib
 , microlens
-, microlens-th
 , nothunks
-, small-steps
-, small-steps-test
-, tasty
-, tasty-hedgehog
-, tasty-hunit
+, primitive
+, text
 }:
 mkDerivation {
-  pname = "byron-spec-ledger";
-  version = "1.0.0.0";
+  pname = "cardano-ledger-mary";
+  version = "1.1.1.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-ledger";
     sha256 = "120995ssz1nf21pp52xwhmcs4cdfndzv4459l8cjvwbaygs7nvvl";
     rev = "180271602640bcac1214084b6de61d0468332f00";
     fetchSubmodules = true;
   };
-  postUnpack = "sourceRoot+=/eras/byron/ledger/executable-spec/; echo source root reset to $sourceRoot";
+  postUnpack = "sourceRoot+=/eras/mary/impl/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
+    aeson
     base
-    bimap
+    base16-bytestring
     bytestring
     cardano-crypto-class
+    cardano-data
+    cardano-ledger-allegra
     cardano-ledger-binary
+    cardano-ledger-core
+    cardano-ledger-shelley
+    cardano-strict-containers
     containers
-    cryptonite
-    hashable
-    hedgehog
+    deepseq
+    groups
     microlens
-    microlens-th
     nothunks
-    small-steps
-    small-steps-test
-    Unique
+    primitive
+    QuickCheck
+    text
   ];
   testHaskellDepends = [
     base
-    bimap
-    containers
-    hedgehog
-    microlens
-    microlens-th
-    small-steps
-    small-steps-test
-    tasty
-    tasty-hedgehog
-    tasty-hunit
-    Unique
+    base16-bytestring
+    bytestring
+    cardano-data
+    cardano-ledger-binary
+    cardano-ledger-core
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
@@ -71,8 +70,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/input-output-hk/cardano-legder";
-  description = "Executable specification of Cardano ledger";
+  description = "Cardano ledger with multiasset support";
   license = lib.licenses.asl20;
   broken = false;
 }

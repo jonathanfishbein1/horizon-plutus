@@ -1,6 +1,20 @@
-{ mkDerivation, QuickCheck, base, cborg, containers, contra-tracer
-, deque, fetchgit, io-classes, io-sim, lib, network-mux, psqueues
-, serialise, tasty, tasty-expected-failure, tasty-quickcheck
+{ mkDerivation
+, QuickCheck
+, base
+, cborg
+, containers
+, contra-tracer
+, deque
+, fetchgit
+, io-classes
+, io-sim
+, lib
+, network-mux
+, psqueues
+, serialise
+, tasty
+, tasty-expected-failure
+, tasty-quickcheck
 }:
 mkDerivation {
   pname = "ouroboros-network-testing";
@@ -16,8 +30,18 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base cborg containers contra-tracer deque io-classes io-sim
-    network-mux psqueues QuickCheck serialise tasty
+    base
+    cborg
+    containers
+    contra-tracer
+    deque
+    io-classes
+    io-sim
+    network-mux
+    psqueues
+    QuickCheck
+    serialise
+    tasty
     tasty-expected-failure
   ];
   testHaskellDepends = [ base QuickCheck tasty tasty-quickcheck ];

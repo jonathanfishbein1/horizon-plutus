@@ -1,31 +1,25 @@
 { mkDerivation
-, FailT
 , QuickCheck
 , aeson
 , base
 , base16-bytestring
 , binary
 , bytestring
-, cardano-crypto
+, cardano-binary
 , cardano-crypto-class
 , cardano-crypto-praos
-, cardano-crypto-wrapper
-, cardano-data
-, cardano-ledger-binary
-, cardano-ledger-byron
-, cardano-ledger-byron-test
-, cardano-prelude
+, cardano-crypto-tests
+, cardano-prelude-test
 , cardano-slotting
 , cardano-strict-containers
+, cborg
 , containers
-, data-default-class
+, data-fix
 , deepseq
 , fetchgit
-, generic-random
-, genvalidity
-, genvalidity-scientific
-, groups
-, heapwords
+, formatting
+, half
+, hedgehog
 , hedgehog-quickcheck
 , hspec
 , iproute
@@ -33,31 +27,33 @@
 , microlens
 , mtl
 , network
-, non-integral
 , nothunks
-, partial-order
+, plutus-ledger-api
+, pretty-show
 , primitive
-, quiet
-, scientific
-, set-algebra
-, small-steps
+, quickcheck-instances
+, random
+, recursion-schemes
+, serialise
+, tagged
+, tasty-hunit
 , text
 , time
 , transformers
 , tree-diff
-, validation-selective
+, vector
 , vector-map
 }:
 mkDerivation {
-  pname = "cardano-ledger-core";
-  version = "1.2.0.0";
+  pname = "cardano-ledger-binary";
+  version = "1.1.1.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-ledger";
     sha256 = "120995ssz1nf21pp52xwhmcs4cdfndzv4459l8cjvwbaygs7nvvl";
     rev = "180271602640bcac1214084b6de61d0468332f00";
     fetchSubmodules = true;
   };
-  postUnpack = "sourceRoot+=/libs/cardano-ledger-core/; echo source root reset to $sourceRoot";
+  postUnpack = "sourceRoot+=/libs/cardano-ledger-binary/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -67,68 +63,74 @@ mkDerivation {
     base16-bytestring
     binary
     bytestring
-    cardano-crypto
+    cardano-binary
     cardano-crypto-class
     cardano-crypto-praos
-    cardano-crypto-wrapper
-    cardano-data
-    cardano-ledger-binary
-    cardano-ledger-byron
-    cardano-ledger-byron-test
-    cardano-prelude
+    cardano-crypto-tests
+    cardano-prelude-test
     cardano-slotting
     cardano-strict-containers
+    cborg
     containers
-    data-default-class
+    data-fix
     deepseq
-    FailT
-    generic-random
-    genvalidity
-    groups
-    heapwords
-    hedgehog-quickcheck
+    formatting
+    half
+    hedgehog
     hspec
     iproute
     microlens
     mtl
     network
-    non-integral
     nothunks
-    partial-order
+    plutus-ledger-api
+    pretty-show
     primitive
     QuickCheck
-    quiet
-    scientific
-    set-algebra
-    small-steps
+    quickcheck-instances
+    random
+    recursion-schemes
+    serialise
+    tagged
+    tasty-hunit
     text
     time
     transformers
     tree-diff
-    validation-selective
+    vector
     vector-map
   ];
   testHaskellDepends = [
-    aeson
     base
-    binary
     bytestring
     cardano-crypto-class
-    cardano-ledger-binary
+    cardano-crypto-praos
+    cardano-prelude-test
+    cardano-slotting
+    cardano-strict-containers
+    cborg
     containers
-    FailT
-    genvalidity
-    genvalidity-scientific
-    scientific
+    hedgehog
+    hedgehog-quickcheck
+    hspec
+    iproute
+    primitive
+    QuickCheck
+    tagged
+    text
+    time
+    vector
+    vector-map
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  description = "Core components of Cardano ledgers from the Shelley release on";
+  homepage = "https://github.com/input-output-hk/cardano-ledger";
+  description = "Binary serialization library used throughout ledger";
   license = lib.licenses.asl20;
   broken = false;
 }

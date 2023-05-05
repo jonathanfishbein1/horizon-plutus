@@ -1,5 +1,17 @@
-{ mkDerivation, QuickCheck, array, async, base, bytestring, deque
-, fetchgit, lib, mtl, stm, tasty, tasty-quickcheck, time
+{ mkDerivation
+, QuickCheck
+, array
+, async
+, base
+, bytestring
+, deque
+, fetchgit
+, lib
+, mtl
+, stm
+, tasty
+, tasty-quickcheck
+, time
 }:
 mkDerivation {
   pname = "io-classes";
@@ -15,7 +27,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array async base bytestring deque mtl stm time
+    array
+    async
+    base
+    bytestring
+    deque
+    mtl
+    stm
+    time
   ];
   testHaskellDepends = [ base QuickCheck tasty tasty-quickcheck ];
   enableLibraryProfiling = true;

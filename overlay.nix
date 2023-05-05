@@ -239,6 +239,4 @@ final: prev: with pkgs.haskell.lib; {
 
   wl-pprint-text = final.callPackage (./pkgs/wl-pprint-text.nix) { };
 
-  word-array = final.callPackage (./pkgs/word-array.nix) { };
-
 }

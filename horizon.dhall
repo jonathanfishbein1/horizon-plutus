@@ -20,7 +20,7 @@ let callCardanoBase
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
         "https://github.com/locallycompact/cardano-base"
-        "e64551f135e6e968609be2e32e87cf7e962a0288"
+        "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d"
 
 let callCardanoLedger
     : H.Subdir → H.HaskellPackage.Type
@@ -69,7 +69,7 @@ let callPlutus
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
         "https://github.com/input-output-hk/plutus"
-        "b94d0e001c8f7350b5120b20cbc9d9021d377a8a"
+        "cfccccc8596859bfaa992100b11199301eb6d2bd"
 
 let callTypedProtocols
     : H.Subdir → H.HaskellPackage.Type
@@ -265,7 +265,7 @@ let otherLibraries =
         , vector-map = callCardanoLedger "libs/vector-map"
         , websockets-snap = H.callHackage "websockets-snap" "0.10.3.1"
         , wl-pprint-text = H.callHackage "wl-pprint-text" "1.2.0.2"
-        , word-array = callPlutus "word-array"
+--        , word-array = callPlutus "word-array"
         }
 
 in  H.HorizonExport.MakeOverlay

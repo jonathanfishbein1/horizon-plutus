@@ -3,11 +3,11 @@
 }:
 mkDerivation {
   pname = "cardano-crypto-praos";
-  version = "2.1.1.2";
+  version = "2.1.1.1";
   src = fetchgit {
     url = "https://github.com/locallycompact/cardano-base";
-    sha256 = "1kch4q7qxvnnb0c8mhvap6xia9mqz8l01i94cfz78z6yj2ybjqf1";
-    rev = "e64551f135e6e968609be2e32e87cf7e962a0288";
+    sha256 = "0n3w1k30ivdppyidyws9riy1qyx4881gxw8v1v34sixbraj0ng5k";
+    rev = "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/cardano-crypto-praos/; echo source root reset to $sourceRoot";

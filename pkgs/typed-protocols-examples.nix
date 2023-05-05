@@ -1,27 +1,14 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, cborg
-, contra-tracer
-, fetchgit
-, io-classes
-, io-sim
-, lib
-, serialise
-, tasty
-, tasty-quickcheck
-, time
-, typed-protocols
-, typed-protocols-cborg
+{ mkDerivation, QuickCheck, base, bytestring, cborg, contra-tracer
+, fetchgit, io-classes, io-sim, lib, serialise, si-timers, tasty
+, tasty-quickcheck, time, typed-protocols, typed-protocols-cborg
 }:
 mkDerivation {
   pname = "typed-protocols-examples";
-  version = "0.1.0.1";
+  version = "0.2.0.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/typed-protocols";
-    sha256 = "0dfba0q2qjsbg4cyyqb2dvk84mrgh94vnwp1zc1x8wyvpshfnkbr";
-    rev = "ab4e0346c3215daad4c823f3ddc0eefae32091ff";
+    sha256 = "0a6sb0917xpn9rzlw6dsrw0bjzyh7ljy5wdfhq9svnmg6sbmmk7x";
+    rev = "a8af24cab3a5be0a27f398e6e068c29bed053d1e";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/typed-protocols-examples/; echo source root reset to $sourceRoot";
@@ -29,26 +16,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cborg
-    contra-tracer
-    io-classes
-    serialise
-    time
-    typed-protocols
-    typed-protocols-cborg
+    base bytestring cborg contra-tracer io-classes serialise si-timers
+    time typed-protocols typed-protocols-cborg
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    contra-tracer
-    io-classes
-    io-sim
-    QuickCheck
-    tasty
-    tasty-quickcheck
-    typed-protocols
+    base bytestring contra-tracer io-classes io-sim QuickCheck
+    si-timers tasty tasty-quickcheck typed-protocols
     typed-protocols-cborg
   ];
   enableLibraryProfiling = true;

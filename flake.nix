@@ -10,7 +10,7 @@
     get-flake.url = "github:ursi/get-flake";
     horizon-platform.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-platform?ref=refs/heads/sts-925";
     iohk-nix = {
-      url = "github:input-output-hk/iohk-nix";
+      url = "github:input-output-hk/iohk-nix/26f56e32169dcc9ef72ac754eccdb3c96d714751";
       flake = false;
     };
     lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
@@ -41,14 +41,14 @@
     with pkgs.writers;
     let
 
-      libsodium = iohk-pkgs.libsodium;
+      libsodium = iohk-pkgs.libsodium-vrf;
       R = pkgs-libR.R;
       secp256k1 = iohk-pkgs.secp256k1;
-      blst = iohk-pkgs.libblst;
+      libblst = iohk-pkgs.blst;
       
       overrides = composeManyExtensions [
         (import ./overlay.nix { inherit pkgs; })
-        (import ./configuration.nix { inherit libsodium R secp256k1 blst; } { inherit pkgs; })
+        (import ./configuration.nix { inherit libsodium R secp256k1 libblst; } { inherit pkgs; })
       ];
 
       legacyPackages' = horizon-platform.legacyPackages.${system}.extend overrides;

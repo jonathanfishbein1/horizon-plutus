@@ -1,11 +1,11 @@
 { mkDerivation, base, fetchgit, io-classes, lib }:
 mkDerivation {
   pname = "typed-protocols";
-  version = "0.1.0.3";
+  version = "0.1.0.4";
   src = fetchgit {
     url = "https://github.com/input-output-hk/typed-protocols";
-    sha256 = "0dfba0q2qjsbg4cyyqb2dvk84mrgh94vnwp1zc1x8wyvpshfnkbr";
-    rev = "ab4e0346c3215daad4c823f3ddc0eefae32091ff";
+    sha256 = "0a6sb0917xpn9rzlw6dsrw0bjzyh7ljy5wdfhq9svnmg6sbmmk7x";
+    rev = "a8af24cab3a5be0a27f398e6e068c29bed053d1e";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/typed-protocols/; echo source root reset to $sourceRoot";

@@ -71,6 +71,8 @@ final: prev: with pkgs.haskell.lib; {
 
   cardano-ledger-test = final.callPackage (./pkgs/cardano-ledger-test.nix) { };
 
+  cardano-mempool = final.callPackage (./pkgs/cardano-mempool.nix) { };
+
   cardano-prelude = final.callPackage (./pkgs/cardano-prelude.nix) { };
 
   cardano-prelude-test = final.callPackage (./pkgs/cardano-prelude-test.nix) { };
@@ -138,6 +140,8 @@ final: prev: with pkgs.haskell.lib; {
   plutus-tx-plugin = final.callPackage (./pkgs/plutus-tx-plugin.nix) { };
 
   prettyprinter-configurable = final.callPackage (./pkgs/prettyprinter-configurable.nix) { };
+
+  pvar = final.callPackage (./pkgs/pvar.nix) { };
 
   quickcheck-transformer = final.callPackage (./pkgs/quickcheck-transformer.nix) { };
 

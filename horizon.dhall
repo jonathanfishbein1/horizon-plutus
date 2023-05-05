@@ -20,7 +20,7 @@ let callCardanoBase
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
         "https://github.com/input-output-hk/cardano-base"
-        "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
+        "1ffb694513f33ba043d93bae87ee71b026ccb62f"
 
 let callCardanoLedger
     : H.Subdir → H.HaskellPackage.Type
@@ -124,8 +124,8 @@ let otherLibraries =
             callCardanoLedger "eras/byron/chain/executable-spec"
         , byron-spec-ledger =
             callCardanoLedger "eras/byron/ledger/executable-spec"
-        , cardano-binary = callCardanoBase "binary"
-        , cardano-binary-test = callCardanoBase "binary/test"
+        , cardano-binary = callCardanoBase "cardano-binary"
+        , cardano-binary-test = callCardanoBase "cardano-binary/test"
         , cardano-crypto =
             H.callGit
               "https://github.com/input-output-hk/cardano-crypto"
@@ -137,13 +137,14 @@ let otherLibraries =
         , cardano-crypto-test = callCardanoLedger "eras/byron/crypto/test"
         , cardano-crypto-wrapper = callCardanoLedger "eras/byron/crypto"
         , cardano-data = callCardanoLedger "libs/cardano-data"
+        , cardano-mempool = callCardanoBase "cardano-mempool"
         , cardano-ledger-allegra = callCardanoLedger "eras/allegra/impl"
         , cardano-ledger-mary = callCardanoLedger "eras/mary/impl"
         , cardano-ledger-byron = callCardanoLedger "eras/byron/ledger/impl"
         , cardano-ledger-byron-test =
             callCardanoLedger "eras/byron/ledger/impl/test"
         , cardano-ledger-core = callCardanoLedger "libs/cardano-ledger-core"
-        , cardano-slotting = callCardanoBase "slotting"
+        , cardano-slotting = callCardanoBase "cardano-slotting"
         , cardano-strict-containers =
             callCardanoBase "cardano-strict-containers"
         , cardano-prelude = callCHaP "cardano-prelude" "0.1.0.1"
@@ -200,6 +201,7 @@ let otherLibraries =
             callOuroborosNetwork "ouroboros-network-testing"
         , ouroboros-network = callOuroborosNetwork "ouroboros-network"
         , prettyprinter-configurable = callPlutus "prettyprinter-configurable"
+        , pvar = H.callHackage "pvar" "1.0.0.0"
         , quickcheck-transformer =
             H.callHackage "quickcheck-transformer" "0.3.1.2"
         , set-algebra = callCardanoLedger "libs/set-algebra"

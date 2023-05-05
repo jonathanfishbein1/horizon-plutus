@@ -1,19 +1,16 @@
 { mkDerivation
 , QuickCheck
-, aeson
 , base
 , bytestring
 , cardano-prelude-test
 , cborg
 , containers
 , data-fix
-, deepseq
 , fetchgit
 , formatting
 , hedgehog
 , hspec
 , lib
-, nothunks
 , pretty-show
 , primitive
 , quickcheck-instances
@@ -26,27 +23,24 @@
 }:
 mkDerivation {
   pname = "cardano-binary";
-  version = "1.5.0.1";
+  version = "1.7.0.1";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-base";
-    sha256 = "0qn56ahqmy79riwyaq5m0d4vpamdjkkk04b0x8zwlyd5y3pg58xd";
-    rev = "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee";
+    sha256 = "02j77wa5km222cxs2pyxl5zqwplxp1da0qp9spwlbivli63xgacd";
+    rev = "1ffb694513f33ba043d93bae87ee71b026ccb62f";
     fetchSubmodules = true;
   };
-  postUnpack = "sourceRoot+=/binary/; echo source root reset to $sourceRoot";
+  postUnpack = "sourceRoot+=/cardano-binary/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
     base
     bytestring
     cborg
     containers
     data-fix
-    deepseq
     formatting
-    nothunks
     primitive
     recursion-schemes
     safe-exceptions

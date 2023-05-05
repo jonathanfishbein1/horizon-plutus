@@ -35,8 +35,8 @@ mkDerivation {
     QuickCheck quickcheck-instances serialise tasty tasty-hunit
     tasty-quickcheck temporary text typed-protocols
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

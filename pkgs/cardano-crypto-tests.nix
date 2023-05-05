@@ -27,8 +27,8 @@ mkDerivation {
     base cardano-crypto-class tasty tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ base cardano-crypto-class criterion ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

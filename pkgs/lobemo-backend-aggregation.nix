@@ -18,8 +18,8 @@ mkDerivation {
     aeson async base iohk-monitoring safe-exceptions stm text time unix
     unordered-containers
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

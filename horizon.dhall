@@ -26,7 +26,7 @@ let callCardanoLedger
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
         "https://github.com/input-output-hk/cardano-ledger"
-        "180271602640bcac1214084b6de61d0468332f00"
+        "81548171f2cd336714bb0425640a6553c46aa09e"
 
 let callCardanoNode
     : H.Subdir → H.HaskellPackage.Type
@@ -83,43 +83,11 @@ let callFsSim
         "https://github.com/input-output-hk/fs-sim"
         "ee0ddcda91c8a66465e442096ba7c7289f3662f8"
 
-let plutusLibraries =
+
+let packages = 
       H.modPackageList
         H.Modifiers::{ enableProfiling = False }
-        ( toMap
-            { cardano-ledger-alonzo-test =
-                callCardanoLedger "eras/alonzo/test-suite"
-            , cardano-ledger-alonzo = callCardanoLedger "eras/alonzo/impl"
-            , cardano-ledger-api = callCardanoLedger "libs/cardano-ledger-api"
-            , cardano-ledger-babbage = callCardanoLedger "eras/babbage/impl"
-            , cardano-ledger-babbage-test =
-                callCardanoLedger "eras/babbage/test-suite"
-            , cardano-ledger-binary = callCardanoLedger "libs/cardano-ledger-binary"
-            , cardano-ledger-conway = callCardanoLedger "eras/conway/impl"
-            , cardano-ledger-conway-test =
-                callCardanoLedger "eras/conway/test-suite"
-            , cardano-ledger-pretty =
-                callCardanoLedger "libs/cardano-ledger-pretty"
-            , cardano-ledger-shelley = callCardanoLedger "eras/shelley/impl"
-            , cardano-ledger-shelley-test =
-                callCardanoLedger "eras/shelley/test-suite"
-            , cardano-ledger-shelley-ma =
-                callCardanoLedger "eras/shelley-ma/impl"
-            , cardano-ledger-shelley-ma-test =
-                callCardanoLedger "eras/shelley-ma/test-suite"
-            , cardano-ledger-test = callCardanoLedger "libs/cardano-ledger-test"
-            , cardano-protocol-tpraos =
-                callCardanoLedger "libs/cardano-protocol-tpraos"
-            , plutus-core = callPlutus "plutus-core"
-            , plutus-ledger-api = callPlutus "plutus-ledger-api"
-            , plutus-preprocessor = callCardanoLedger "libs/plutus-preprocessor"
-            , plutus-tx = callPlutus "plutus-tx"
-            , plutus-tx-plugin = callPlutus "plutus-tx-plugin"
-            }
-        )
-
-let otherLibraries =
-      toMap
+      (toMap
         { OddWord =
             H.callGit
               "https://github.com/locallycompact/OddWord"
@@ -161,6 +129,31 @@ let otherLibraries =
         , cardano-ledger-byron-test =
             callCardanoLedger "eras/byron/ledger/impl/test"
         , cardano-ledger-core = callCardanoLedger "libs/cardano-ledger-core"
+        , cardano-ledger-alonzo-test =
+                callCardanoLedger "eras/alonzo/test-suite"
+            , cardano-ledger-alonzo = callCardanoLedger "eras/alonzo/impl"
+            , cardano-ledger-api = callCardanoLedger "libs/cardano-ledger-api"
+            , cardano-ledger-babbage = callCardanoLedger "eras/babbage/impl"
+            , cardano-ledger-babbage-test =
+                callCardanoLedger "eras/babbage/test-suite"
+            , cardano-ledger-binary = callCardanoLedger "libs/cardano-ledger-binary"
+            , cardano-ledger-conway = callCardanoLedger "eras/conway/impl"
+            , cardano-ledger-conway-test =
+                callCardanoLedger "eras/conway/test-suite"
+            , cardano-ledger-pretty =
+                callCardanoLedger "libs/cardano-ledger-pretty"
+            , cardano-ledger-shelley = callCardanoLedger "eras/shelley/impl"
+            , cardano-ledger-shelley-test =
+                callCardanoLedger "eras/shelley/test-suite"
+            , cardano-ledger-shelley-ma =
+                callCardanoLedger "eras/shelley-ma/impl"
+            , cardano-ledger-shelley-ma-test =
+                callCardanoLedger "eras/shelley-ma/test-suite"
+            , cardano-ledger-test = callCardanoLedger "libs/cardano-ledger-test"
+            , cardano-protocol-tpraos =
+                callCardanoLedger "libs/cardano-protocol-tpraos"
+
+
         , cardano-node = callCardanoNode "cardano-node"
         , cardano-ping = callOuroborosNetwork "cardano-ping"
         , cardano-slotting = callCardanoBase "cardano-slotting"
@@ -197,6 +190,7 @@ let otherLibraries =
         , io-classes-mtl = callIoSim "io-classes-mtl"
         , io-sim = callIoSim "io-sim"
         , iohk-monitoring = callCHaP "iohk-monitoring" "0.1.11.1"
+        , libsystemd-journal = H.callHackage "libsystemd-journal" "1.4.5"
         , lobemo-backend-aggregation = callIohkMonitoringFramework "plugins/backend-aggregation"
         , lobemo-backend-editor = callIohkMonitoringFramework "plugins/backend-editor"
         , lobemo-backend-ekg = callIohkMonitoringFramework "plugins/backend-ekg"
@@ -241,6 +235,11 @@ let otherLibraries =
         , ouroboros-network-testing =
             callOuroborosNetwork "ouroboros-network-testing"
         , ouroboros-network = callOuroborosNetwork "ouroboros-network"
+        , plutus-core = callPlutus "plutus-core"
+        , plutus-ledger-api = callPlutus "plutus-ledger-api"
+        , plutus-preprocessor = callCardanoLedger "libs/plutus-preprocessor"
+        , plutus-tx = callPlutus "plutus-tx"
+        , plutus-tx-plugin = callPlutus "plutus-tx-plugin"
         , prettyprinter-configurable = callPlutus "prettyprinter-configurable"
         , pvar = H.callHackage "pvar" "1.0.0.0"
         , quickcheck-state-machine = H.callHackage "quickcheck-state-machine" "0.7.2"
@@ -266,11 +265,11 @@ let otherLibraries =
         , websockets-snap = H.callHackage "websockets-snap" "0.10.3.1"
         , wl-pprint-text = H.callHackage "wl-pprint-text" "1.2.0.2"
 --        , word-array = callPlutus "word-array"
-        }
+        })
 
 in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
       , overlay =
-        { compiler = "ghc-9.2.5", packages = plutusLibraries # otherLibraries }
+        { compiler = "ghc-9.2.5", packages = packages }
       }

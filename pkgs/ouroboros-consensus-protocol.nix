@@ -25,8 +25,8 @@ mkDerivation {
     cardano-protocol-tpraos cardano-slotting cborg containers mtl
     nothunks ouroboros-consensus QuickCheck serialise text
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

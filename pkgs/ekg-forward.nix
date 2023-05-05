@@ -28,8 +28,8 @@ mkDerivation {
   testHaskellDepends = [
     base contra-tracer ekg-core hspec stm time unordered-containers
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

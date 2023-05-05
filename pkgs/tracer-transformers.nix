@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, contra-tracer
-, fetchzip
-, lib
-, safe-exceptions
-, text
-, time
+{ mkDerivation, base, contra-tracer, fetchzip, lib, safe-exceptions
+, text, time
 }:
 mkDerivation {
   pname = "tracer-transformers";
@@ -18,14 +12,11 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    contra-tracer
-    safe-exceptions
-    time
+    base contra-tracer safe-exceptions time
   ];
   executableHaskellDepends = [ base contra-tracer text time ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

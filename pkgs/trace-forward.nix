@@ -27,8 +27,8 @@ mkDerivation {
     ouroboros-network-api ouroboros-network-framework QuickCheck
     serialise tasty tasty-quickcheck text typed-protocols
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

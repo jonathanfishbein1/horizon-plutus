@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, doctest
-, exceptions
-, hspec
-, lib
-, mtl
-, quickcheck-classes
-, text
+{ mkDerivation, QuickCheck, base, doctest, exceptions, hspec, lib
+, mtl, quickcheck-classes, text
 }:
 mkDerivation {
   pname = "FailT";
@@ -18,16 +10,10 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base exceptions mtl text ];
   testHaskellDepends = [
-    base
-    doctest
-    exceptions
-    hspec
-    mtl
-    QuickCheck
-    quickcheck-classes
+    base doctest exceptions hspec mtl QuickCheck quickcheck-classes
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

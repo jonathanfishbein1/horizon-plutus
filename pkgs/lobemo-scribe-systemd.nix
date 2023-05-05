@@ -19,8 +19,8 @@ mkDerivation {
     aeson base bytestring hsyslog iohk-monitoring katip
     libsystemd-journal template-haskell text unix unordered-containers
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

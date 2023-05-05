@@ -26,8 +26,8 @@ mkDerivation {
     pretty-show QuickCheck quickcheck-state-machine random tasty
     tasty-hunit tasty-quickcheck temporary text tree-diff
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

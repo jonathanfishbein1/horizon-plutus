@@ -17,8 +17,8 @@ mkDerivation {
   libraryHaskellDepends = [
     base bytestring cborg io-classes typed-protocols
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -42,8 +42,8 @@ mkDerivation {
     si-timers strict-stm tasty tasty-quickcheck text time
     typed-protocols typed-protocols-cborg typed-protocols-examples
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -12,8 +12,8 @@ mkDerivation {
   testHaskellDepends = [
     base directory doctest filepath hspec QuickCheck
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

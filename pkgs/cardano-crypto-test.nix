@@ -1,24 +1,14 @@
-{ mkDerivation
-, base
-, bytestring
-, cardano-crypto
-, cardano-crypto-wrapper
-, cardano-ledger-binary
-, cardano-prelude
-, cardano-prelude-test
-, cryptonite
-, fetchgit
-, hedgehog
-, lib
-, memory
+{ mkDerivation, base, bytestring, cardano-crypto
+, cardano-crypto-wrapper, cardano-ledger-binary, cardano-prelude
+, cardano-prelude-test, cryptonite, fetchgit, hedgehog, lib, memory
 }:
 mkDerivation {
   pname = "cardano-crypto-test";
   version = "1.5.0.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-ledger";
-    sha256 = "120995ssz1nf21pp52xwhmcs4cdfndzv4459l8cjvwbaygs7nvvl";
-    rev = "180271602640bcac1214084b6de61d0468332f00";
+    sha256 = "0lfd6l3pzlwipvvv1i4v47ha25qmx0vxc1k23g71f17lzakjs4gm";
+    rev = "81548171f2cd336714bb0425640a6553c46aa09e";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/byron/crypto/test/; echo source root reset to $sourceRoot";
@@ -26,19 +16,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cardano-crypto
-    cardano-crypto-wrapper
-    cardano-ledger-binary
-    cardano-prelude
-    cardano-prelude-test
-    cryptonite
-    hedgehog
-    memory
+    base bytestring cardano-crypto cardano-crypto-wrapper
+    cardano-ledger-binary cardano-prelude cardano-prelude-test
+    cryptonite hedgehog memory
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

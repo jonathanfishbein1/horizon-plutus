@@ -20,8 +20,8 @@ mkDerivation {
     safe-exceptions snap-core snap-server stm text time
     unordered-containers
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

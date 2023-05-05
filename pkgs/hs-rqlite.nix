@@ -12,8 +12,8 @@ mkDerivation {
     aeson base bifunctors bytestring containers HTTP scientific text
     unordered-containers
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

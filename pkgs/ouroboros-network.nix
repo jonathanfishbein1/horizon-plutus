@@ -48,8 +48,8 @@ mkDerivation {
     QuickCheck random serialise si-timers strict-stm tasty tasty-hunit
     tasty-quickcheck text time typed-protocols typed-protocols-examples
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -1,18 +1,13 @@
-{ mkDerivation
-, base
-, cardano-ledger-allegra
-, cardano-ledger-mary
-, cardano-ledger-shelley
-, fetchgit
-, lib
+{ mkDerivation, base, cardano-ledger-allegra, cardano-ledger-mary
+, cardano-ledger-shelley, fetchgit, lib
 }:
 mkDerivation {
   pname = "cardano-ledger-shelley-ma";
   version = "1.1.0.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-ledger";
-    sha256 = "120995ssz1nf21pp52xwhmcs4cdfndzv4459l8cjvwbaygs7nvvl";
-    rev = "180271602640bcac1214084b6de61d0468332f00";
+    sha256 = "0lfd6l3pzlwipvvv1i4v47ha25qmx0vxc1k23g71f17lzakjs4gm";
+    rev = "81548171f2cd336714bb0425640a6553c46aa09e";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/shelley-ma/impl/; echo source root reset to $sourceRoot";
@@ -20,9 +15,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    cardano-ledger-allegra
-    cardano-ledger-mary
+    base cardano-ledger-allegra cardano-ledger-mary
     cardano-ledger-shelley
   ];
   enableLibraryProfiling = false;

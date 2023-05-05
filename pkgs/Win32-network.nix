@@ -14,8 +14,8 @@ mkDerivation {
   libraryHaskellDepends = [ base ];
   executableHaskellDepends = [ base ];
   testHaskellDepends = [ base ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

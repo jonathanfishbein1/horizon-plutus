@@ -64,8 +64,8 @@ mkDerivation {
     ouroboros-consensus-diffusion ouroboros-network
     ouroboros-network-api text time unix vector
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -129,6 +129,8 @@ final: prev: with pkgs.haskell.lib; {
 
   iohk-monitoring = final.callPackage (./pkgs/iohk-monitoring.nix) { };
 
+  libsystemd-journal = final.callPackage (./pkgs/libsystemd-journal.nix) { };
+
   lobemo-backend-aggregation = final.callPackage (./pkgs/lobemo-backend-aggregation.nix) { };
 
   lobemo-backend-editor = final.callPackage (./pkgs/lobemo-backend-editor.nix) { };

@@ -1,24 +1,14 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, cardano-ledger-binary
-, containers
-, deepseq
-, fetchgit
-, hspec
-, lib
-, mtl
-, nothunks
-, vector
+{ mkDerivation, QuickCheck, aeson, base, cardano-ledger-binary
+, cardano-strict-containers, containers, deepseq, fetchgit, hspec
+, lib, mtl, nothunks, transformers, vector, vector-map
 }:
 mkDerivation {
   pname = "cardano-data";
-  version = "1.1.0.0";
+  version = "1.0.1.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-ledger";
-    sha256 = "120995ssz1nf21pp52xwhmcs4cdfndzv4459l8cjvwbaygs7nvvl";
-    rev = "180271602640bcac1214084b6de61d0468332f00";
+    sha256 = "0lfd6l3pzlwipvvv1i4v47ha25qmx0vxc1k23g71f17lzakjs4gm";
+    rev = "81548171f2cd336714bb0425640a6553c46aa09e";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/libs/cardano-data/; echo source root reset to $sourceRoot";
@@ -26,20 +16,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    cardano-ledger-binary
-    containers
-    deepseq
-    hspec
-    mtl
-    nothunks
-    QuickCheck
-    vector
+    aeson base cardano-ledger-binary cardano-strict-containers
+    containers deepseq hspec mtl nothunks QuickCheck transformers
+    vector vector-map
   ];
   testHaskellDepends = [ base containers hspec QuickCheck ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

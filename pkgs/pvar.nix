@@ -14,8 +14,8 @@ mkDerivation {
   testHaskellDepends = [
     async base deepseq genvalidity hspec primitive QuickCheck
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -19,8 +19,8 @@ mkDerivation {
     stm template-haskell text transformers unordered-containers vault
     vector websockets websockets-snap
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -23,8 +23,8 @@ mkDerivation {
     dns io-classes iproute network network-mux nothunks serialise
     si-timers strict-stm text typed-protocols
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

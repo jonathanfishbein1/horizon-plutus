@@ -22,8 +22,8 @@ mkDerivation {
   testSystemDepends = [ graphviz ];
   testToolDepends = [ hspec-discover ];
   benchmarkHaskellDepends = [ base criterion deepseq text ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

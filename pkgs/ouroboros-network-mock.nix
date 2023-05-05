@@ -18,8 +18,8 @@ mkDerivation {
     base bytestring cborg containers hashable nothunks
     ouroboros-network-api serialise time
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

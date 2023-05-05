@@ -1,19 +1,6 @@
-{ mkDerivation
-, base
-, bytestring
-, containers
-, fetchgit
-, ghc-heap
-, ghc-prim
-, hedgehog
-, lib
-, random
-, stm
-, tasty
-, tasty-hedgehog
-, text
-, time
-, vector
+{ mkDerivation, base, bytestring, containers, fetchgit, ghc-heap
+, ghc-prim, hedgehog, lib, random, stm, tasty, tasty-hedgehog, text
+, time, vector
 }:
 mkDerivation {
   pname = "nothunks";
@@ -28,27 +15,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    ghc-heap
-    stm
-    text
-    time
-    vector
+    base bytestring containers ghc-heap stm text time vector
   ];
   testHaskellDepends = [
-    base
-    containers
-    ghc-prim
-    hedgehog
-    random
-    stm
-    tasty
-    tasty-hedgehog
+    base containers ghc-prim hedgehog random stm tasty tasty-hedgehog
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

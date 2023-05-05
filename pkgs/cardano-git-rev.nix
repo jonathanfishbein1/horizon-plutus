@@ -17,8 +17,8 @@ mkDerivation {
   libraryHaskellDepends = [
     base file-embed process template-haskell text
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

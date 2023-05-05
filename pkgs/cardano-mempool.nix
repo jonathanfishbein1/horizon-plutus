@@ -21,8 +21,8 @@ mkDerivation {
     tasty-hunit tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ base criterion deepseq unliftio ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

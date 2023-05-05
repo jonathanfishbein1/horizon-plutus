@@ -25,8 +25,8 @@ mkDerivation {
     strict-stm tasty tasty-hunit tasty-quickcheck time
   ];
   benchmarkHaskellDepends = [ base criterion io-classes ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

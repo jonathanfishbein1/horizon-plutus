@@ -19,8 +19,8 @@ mkDerivation {
     aeson async base bytestring directory filepath iohk-monitoring safe
     safe-exceptions text threepenny-gui time unix unordered-containers
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

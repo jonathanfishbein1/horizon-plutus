@@ -19,8 +19,8 @@ mkDerivation {
     base bytestring containers deepseq digest directory filepath
     io-classes text unix unix-bytestring
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

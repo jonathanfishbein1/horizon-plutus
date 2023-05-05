@@ -14,8 +14,8 @@ mkDerivation {
     base bytestring bytestring-builder io-streams mtl snap-core
     snap-server websockets
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

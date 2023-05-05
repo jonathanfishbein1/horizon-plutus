@@ -70,8 +70,8 @@ mkDerivation {
     ouroboros-network-api ouroboros-network-mock QuickCheck small-steps
     small-steps-test sop-core tasty tasty-hunit tasty-quickcheck
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

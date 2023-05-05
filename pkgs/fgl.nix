@@ -13,8 +13,8 @@ mkDerivation {
   ];
   testHaskellDepends = [ base containers hspec QuickCheck ];
   benchmarkHaskellDepends = [ base deepseq microbench ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

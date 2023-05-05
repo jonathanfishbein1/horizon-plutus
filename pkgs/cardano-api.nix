@@ -65,8 +65,8 @@ mkDerivation {
     hedgehog-extras hedgehog-quickcheck microlens mtl QuickCheck tasty
     tasty-hedgehog tasty-quickcheck time
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

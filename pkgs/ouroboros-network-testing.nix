@@ -22,8 +22,8 @@ mkDerivation {
     tasty-expected-failure
   ];
   testHaskellDepends = [ base QuickCheck tasty tasty-quickcheck ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

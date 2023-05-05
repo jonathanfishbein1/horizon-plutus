@@ -57,8 +57,8 @@ mkDerivation {
     contra-tracer deepseq nothunks serialise strict-stm tasty
     tasty-bench tasty-hunit text transformers tree-diff
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

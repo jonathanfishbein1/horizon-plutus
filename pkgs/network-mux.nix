@@ -31,8 +31,8 @@ mkDerivation {
     io-sim network process QuickCheck serialise si-timers splitmix
     strict-stm tasty tasty-quickcheck Win32-network
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

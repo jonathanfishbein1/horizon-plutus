@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, ansi-terminal
-, base
-, fetchgit
-, lib
-, prettyprinter
-, process
-, text
-, transformers
-, transformers-compat
+{ mkDerivation, QuickCheck, ansi-terminal, base, fetchgit, lib
+, prettyprinter, process, text, transformers, transformers-compat
 }:
 mkDerivation {
   pname = "optparse-applicative-fork";
@@ -23,17 +14,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    base
-    prettyprinter
-    process
-    text
-    transformers
+    ansi-terminal base prettyprinter process text transformers
     transformers-compat
   ];
   testHaskellDepends = [ base QuickCheck ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

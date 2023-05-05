@@ -18,8 +18,8 @@ mkDerivation {
   testHaskellDepends = [
     aeson base QuickCheck tasty tasty-quickcheck text trace-dispatcher
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

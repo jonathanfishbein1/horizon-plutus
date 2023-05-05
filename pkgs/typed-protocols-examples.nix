@@ -24,8 +24,8 @@ mkDerivation {
     si-timers tasty tasty-quickcheck typed-protocols
     typed-protocols-cborg
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

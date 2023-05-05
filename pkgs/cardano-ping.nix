@@ -19,8 +19,8 @@ mkDerivation {
     aeson base bytestring cborg contra-tracer io-classes network
     network-mux si-timers strict-stm tdigest text
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

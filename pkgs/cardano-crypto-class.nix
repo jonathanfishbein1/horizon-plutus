@@ -24,8 +24,8 @@ mkDerivation {
     transformers vector
   ];
   libraryPkgconfigDepends = [ libsodium secp256k1 ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

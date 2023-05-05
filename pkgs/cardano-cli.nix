@@ -58,8 +58,8 @@ mkDerivation {
     exceptions filepath hedgehog hedgehog-extras parsec text time
     transformers unix unordered-containers yaml
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

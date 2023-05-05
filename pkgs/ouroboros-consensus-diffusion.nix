@@ -36,8 +36,8 @@ mkDerivation {
     serialise si-timers tasty tasty-hunit tasty-quickcheck temporary
     time
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

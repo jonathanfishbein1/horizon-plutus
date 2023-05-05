@@ -1,16 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, deepseq
-, hashable
-, lens
-, lib
-, newtype
-, semialign
-, these
-, unordered-containers
-, witherable
+{ mkDerivation, aeson, base, containers, deepseq, hashable, lens
+, lib, newtype, semialign, these, unordered-containers, witherable
 }:
 mkDerivation {
   pname = "monoidal-containers";
@@ -20,20 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    deepseq
-    hashable
-    lens
-    newtype
-    semialign
-    these
-    unordered-containers
-    witherable
+    aeson base containers deepseq hashable lens newtype semialign these
+    unordered-containers witherable
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

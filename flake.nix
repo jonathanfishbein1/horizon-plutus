@@ -44,7 +44,7 @@
       libsodium = iohk-pkgs.libsodium-vrf;
       R = pkgs-libR.R;
       secp256k1 = iohk-pkgs.secp256k1;
-      libblst = iohk-pkgs.blst;
+      libblst = iohk-pkgs.libblst;
       
       overrides = composeManyExtensions [
         (import ./overlay.nix { inherit pkgs; })

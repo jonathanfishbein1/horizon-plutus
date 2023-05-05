@@ -1,15 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, cardano-binary
-, cborg
-, containers
-, data-default-class
-, deepseq
-, fetchzip
-, fingertree
-, lib
-, nothunks
+{ mkDerivation, aeson, base, cardano-binary, cborg, containers
+, data-default-class, deepseq, fetchzip, fingertree, lib, nothunks
 , serialise
 }:
 mkDerivation {
@@ -23,19 +13,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    cardano-binary
-    cborg
-    containers
-    data-default-class
-    deepseq
-    fingertree
-    nothunks
-    serialise
+    aeson base cardano-binary cborg containers data-default-class
+    deepseq fingertree nothunks serialise
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

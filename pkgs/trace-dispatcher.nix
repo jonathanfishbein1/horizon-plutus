@@ -41,8 +41,8 @@ mkDerivation {
   benchmarkHaskellDepends = [
     aeson base containers criterion ekg QuickCheck text time
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

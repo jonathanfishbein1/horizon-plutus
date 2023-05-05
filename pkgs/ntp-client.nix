@@ -1,18 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, Win32-network
-, async
-, base
-, binary
-, bytestring
-, contra-tracer
-, fetchzip
-, lib
-, network
-, stm
-, tasty
-, tasty-quickcheck
-, time
+{ mkDerivation, QuickCheck, Win32-network, async, base, binary
+, bytestring, contra-tracer, fetchzip, lib, network, stm, tasty
+, tasty-quickcheck, time
 }:
 mkDerivation {
   pname = "ntp-client";
@@ -25,32 +13,17 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    async
-    base
-    binary
-    bytestring
-    contra-tracer
-    network
-    stm
-    time
+    async base binary bytestring contra-tracer network stm time
     Win32-network
   ];
   executableHaskellDepends = [
-    async
-    base
-    contra-tracer
-    Win32-network
+    async base contra-tracer Win32-network
   ];
   testHaskellDepends = [
-    base
-    binary
-    QuickCheck
-    tasty
-    tasty-quickcheck
-    time
+    base binary QuickCheck tasty tasty-quickcheck time
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

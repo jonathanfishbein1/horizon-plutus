@@ -33,8 +33,8 @@ mkDerivation {
     string-conversions tasty tasty-hunit tasty-quickcheck text
     tree-diff unliftio unliftio-core vector wai warp
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

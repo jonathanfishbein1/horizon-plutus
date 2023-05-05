@@ -22,8 +22,8 @@ mkDerivation {
     base megaparsec parser-combinators QuickCheck quickcheck-text tasty
     tasty-hunit tasty-quickcheck text
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

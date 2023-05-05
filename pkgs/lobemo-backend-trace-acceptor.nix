@@ -19,8 +19,8 @@ mkDerivation {
     aeson async base bytestring directory iohk-monitoring network
     safe-exceptions stm text time unix unix-compat
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -24,15 +24,15 @@
   }
 , { mapKey = "byron-spec-chain"
   , mapValue =
-      "08ec7c6af4443a1270d0591d5d79016fd242aa9c8a5169035228a5781bc60ffc"
+      "3314b607158de9a45deadcf1f5eeaf9df26012dc51b7d39ddb9b1531572bf4f5"
   }
 , { mapKey = "byron-spec-ledger"
   , mapValue =
-      "23e531c3aa1ccb8a46d16f1b90f14e646a76ca1840712173637ffbc75e7fbd18"
+      "27dfdc24c602205c31c5b54c732c6c17713d8e811bdf63726627a506a4ea6b22"
   }
 , { mapKey = "cardano-api"
   , mapValue =
-      "6d1d5e01b1af30db1d770a67792af511ddb8a6066161dd43f4d238d580266398"
+      "149981e2ed26c71169a03e25a47f3bbda4d810633107653b554b34bb2a66be09"
   }
 , { mapKey = "cardano-binary"
   , mapValue =
@@ -44,7 +44,7 @@
   }
 , { mapKey = "cardano-cli"
   , mapValue =
-      "7ba6e8bdb16741f512ff99f6e2a2059f576559cb316c9eede87f9f3047714593"
+      "8f1ea2232a33b06f1b9b4c22dca73a270ce2834057892fd783c56933504e6446"
   }
 , { mapKey = "cardano-crypto"
   , mapValue =
@@ -60,7 +60,7 @@
   }
 , { mapKey = "cardano-crypto-test"
   , mapValue =
-      "c43c0981597342653006c4ebf00d00e56f5b49998ce7a415fc9825488f6bddcd"
+      "55ea608c9b3c328d5a67138405c61e8d831536e088a00ac84fdb583a2752c660"
   }
 , { mapKey = "cardano-crypto-tests"
   , mapValue =
@@ -68,91 +68,91 @@
   }
 , { mapKey = "cardano-crypto-wrapper"
   , mapValue =
-      "7d7b62e271eb61631af26a65262c3aeacd9a67003410347a23175d3d8a1803c8"
+      "0f6d72d0843e97797958d691fbbf730f08f40d0849f4b66cdb01a4b44233402f"
   }
 , { mapKey = "cardano-data"
   , mapValue =
-      "22b68e9704229c19d3ff3691ccb7512c2b0c5c961fc7308be06bc35ccd5a6536"
+      "ef0697942d50cfee78612797ca4809a3e2f3d77667cacd00e381e4bd31967041"
   }
 , { mapKey = "cardano-git-rev"
   , mapValue =
-      "bfbe5bc27aed8a87fb719825b781125f44b1b054fccfffd64e3e1620985cfeb3"
+      "8e8c6f70f0b4ea555ef4fdcb9bf4a4d91581ae28be68a4e05132a343b012114e"
   }
 , { mapKey = "cardano-ledger-allegra"
   , mapValue =
-      "7894658aa94cdbc33883665c15a7124fc17eff31c284b5087bf01abcabf50d2c"
+      "e847f6a7bdf6dc95dfc8de1f3b7f73f9ec60b3d6157ad002ea3ed81feb1ec408"
   }
 , { mapKey = "cardano-ledger-alonzo"
   , mapValue =
-      "45e1ae6b3cc8e5f4ed9de9c373f55d9d3bcb522c0b6b2816eb7f928827e72dcf"
+      "3badc3bf2cd06bea9998302266cc4d8f51323752a2516168082af2aa927d4ffe"
   }
 , { mapKey = "cardano-ledger-alonzo-test"
   , mapValue =
-      "89b24e4375f860a8ee5f8ec2dfb810eee83f31a590725e2250f43edffd4b53d3"
+      "80ff4748a83a945f88d8b40d34c2eaaa1bdb1e7807f34cba5179053d46451a61"
   }
 , { mapKey = "cardano-ledger-api"
   , mapValue =
-      "94e05d39a610e8788f0a1ce8bfd63176bf97b07f21f68fe385953f59ac98cc00"
+      "8bf7036dd18ee5392e2d5cc38b26586ad13d656b3ff9bdaab893665270d64e01"
   }
 , { mapKey = "cardano-ledger-babbage"
   , mapValue =
-      "56ad2f43eac6543d0ab14c369b3c785bb6aeaf67d04331073bedf32c9ae94e80"
+      "26316c3618fbfa8cf13a4c362d2fb39212b6dabb8dd4bb30942c1a71ff3366e5"
   }
 , { mapKey = "cardano-ledger-babbage-test"
   , mapValue =
-      "3177919cb096b957dd966f19a7a7d1f1f104ea527563ae819c82f13827ab514b"
+      "868cdb9ddceadb704f2c4ca78106c206d697431c340e3ca4e77f65890c6b393e"
   }
 , { mapKey = "cardano-ledger-binary"
   , mapValue =
-      "a5be9934f031fd0b8e83156c30bd0104475a9e2a5992643e46a1b62871889f1d"
+      "f1ddf643d6d25525d55eff1e07a308946945f3e5127951c91f75ac345f95e55f"
   }
 , { mapKey = "cardano-ledger-byron"
   , mapValue =
-      "cbe1c8c2d9ec717866460db3e3df98d5fa1ccafe69509c1d5d27d2599a2c050a"
+      "21693e787bb28c88932c6324df11fbc0b1f9579eddc4e4b3c8dfa7b5c8a7483e"
   }
 , { mapKey = "cardano-ledger-byron-test"
   , mapValue =
-      "acab2de15e944ad434c18144009cb658930c59d838ea2064839df5975fc4fc4f"
+      "f4c9046055426f346b6eaaeb251889e3cb99a6b83d468bd2f10c8ca0256f1700"
   }
 , { mapKey = "cardano-ledger-conway"
   , mapValue =
-      "f7155e63efe762965ab7b3f2fdd6356296b3a53b9f7371df60dee42d8a6190d7"
+      "9ca7abb7e003d79e5a323e386d99976203b1752b63c045fbc48adabb8cd96bdb"
   }
 , { mapKey = "cardano-ledger-conway-test"
   , mapValue =
-      "3ea8e4cc08a369ecb479abece652d6eb1954c6407dd4e779bbfbb2dbb691ad3b"
+      "d2c8e5b594cc550342a6390bd88355954e35a794f76ff7b9d36aa76e63949c80"
   }
 , { mapKey = "cardano-ledger-core"
   , mapValue =
-      "9a5573c9074a03c7dd965e6f544816b5d4266c6d310b41431b7158ae2e6f346c"
+      "00c812d0217f2e15adfe63f987dae4f2b760baf571cd2157bc2ddd4e3afcd133"
   }
 , { mapKey = "cardano-ledger-mary"
   , mapValue =
-      "8c8375c32b610c9b26debe0ac1a44eb8c2b351589a8a5f7ef01fa3cc86126671"
+      "1cf6d80ac1585ef5ab8034789c3d6bd0ac7e7c336e538c1ea6e76ec11a1e6a94"
   }
 , { mapKey = "cardano-ledger-pretty"
   , mapValue =
-      "dff81c1b8d83c26885e67cdfe1d676007064239741d63da25028441642f7d7ed"
+      "8ea7e20da57fad8396332462f2e182139e10ed8e5a447a1709973bcc22a649ba"
   }
 , { mapKey = "cardano-ledger-shelley"
   , mapValue =
-      "6eec8c526d28edae88fdd8f1acc3638988b1470c504219be656f6d47c8236064"
+      "dfadd8b8831ad09195c75a0cdeb6e21131e393936c7b3fd54f7686ddc43bc318"
   }
 , { mapKey = "cardano-ledger-shelley-ma"
   , mapValue =
-      "7dacabaa41f6baa5206aaccefc5e3797b7e32fdff10eadfd48ea9e8684e7ed4e"
+      "845bc018c31cbdf41785a35f9fc38e4360650227720c594b207b5848706ee35b"
   }
 , { mapKey = "cardano-ledger-shelley-ma-test"
   , mapValue =
-      "51d63898b02f1a8d9b96b700a8deee810aefed329bba60fa7c2971407b3cc38b"
+      "03bb14ab328d051e0818729e403df1cf1db46ec50828050af3ae490fe51967d3"
   }
 , { mapKey = "cardano-ledger-shelley-test"
   , mapValue =
-      "c636a6b54a159b151e841efe8c81161277299dcc5750dccae11bcaf6a6b6921d"
+      "857fbdfb92e3fbdff1d7c41549246effce51dd276bb29570552f5051e944fc8e"
   }
 , { mapKey = "cardano-ledger-test"
   , mapValue =
-      "abb536144920796b2e9b4a8eceb488e9759f7314838457d2a836c5ffb56ea035"
+      "ed67d0e14dee55a2038153d1cccadca8c0663a20f4ec04b3b08b8ba199040e75"
   }
 , { mapKey = "cardano-mempool"
   , mapValue =
@@ -160,7 +160,7 @@
   }
 , { mapKey = "cardano-node"
   , mapValue =
-      "9ab11c402d766cb6b11c261a62144b79858ed17c52412c846ff5886ba36ebbfd"
+      "59ff88f9717c123be2d8cc7b46996af1805365f8d3815690ef88bee9d3063546"
   }
 , { mapKey = "cardano-ping"
   , mapValue =
@@ -176,11 +176,11 @@
   }
 , { mapKey = "cardano-protocol-tpraos"
   , mapValue =
-      "b6c12d22b490665bb7bb59a2fd5a01e4693f0f39856d8ef42b76dd26635b128e"
+      "a452cb5d6baa8193ff66c702712b067622c4085526298d7e10237a603c12860b"
   }
 , { mapKey = "cardano-slotting"
   , mapValue =
-      "347ebe4a75c9be58ca14a84c42ad8f24591f7e96a5c7aa7fb64ecbe46fb363be"
+      "d58010cbfc96c4a52a288a8c0634ce0772f58c11baa95ee35e292876cae3660a"
   }
 , { mapKey = "cardano-strict-containers"
   , mapValue =
@@ -316,7 +316,7 @@
   }
 , { mapKey = "non-integral"
   , mapValue =
-      "8710de33d6fb3159faafcf6497e23d6b0a07be53e86c2f5360bdb7e26f88872c"
+      "d99c557bc35081781de5946f978b83c52c859a7cd6f8d2e70c4e075f35c987e5"
   }
 , { mapKey = "nothunks"
   , mapValue =
@@ -372,27 +372,27 @@
   }
 , { mapKey = "plutus-core"
   , mapValue =
-      "91753b020af70ae3215ad6fc1254031b2162d46f23537e64849ffa360f5c8a41"
+      "109540a3c9f0545ea3caf36db7692ca6458f05caeb2c4393747603e6f8a15e3d"
   }
 , { mapKey = "plutus-ledger-api"
   , mapValue =
-      "4cd693b76a5924dc1c6b4261a396f02b62f1edc510355b61fdca029d192ca93a"
+      "c5edf17782d506d329ea4909fe9c2b9ff03544a1f547778b2aaacb996cf1f28c"
   }
 , { mapKey = "plutus-preprocessor"
   , mapValue =
-      "3a4c4d5e3288ceca077c6f905965c2771719772986173a3917b42dcf293d7547"
+      "5dd24ff518abf85ccc2d24d4f8bb7ff9282c5f16444d6ab886f327127853e608"
   }
 , { mapKey = "plutus-tx"
   , mapValue =
-      "860395aa08e1fe2a022ead0fdf3415c1cb48d0b5089434dd1ac822b8f4f78b40"
+      "d5bfaa27cf83fc8e92b3191526448fb60f9c781056ca64c3ffc724aece72b19d"
   }
 , { mapKey = "plutus-tx-plugin"
   , mapValue =
-      "7f66a77037922d7119d5702bb77e59f086eb15a023e104e3ef79d70c8bf137d2"
+      "29af08ca2569081ef4dec2865aa8880906483c32b885526236ffcff3168366c3"
   }
 , { mapKey = "prettyprinter-configurable"
   , mapValue =
-      "5ac991c78422b3114f354fb0bcf9abe50050cc920cb1ddf6dc899949c9f29983"
+      "3e49a0f1390264ee03c2ccc3865b4b7a56e9a420a9033172fe9fdc0c68096d48"
   }
 , { mapKey = "pvar"
   , mapValue =
@@ -408,7 +408,7 @@
   }
 , { mapKey = "set-algebra"
   , mapValue =
-      "cc41316007b6048111cf7904f97a5f9c4b748ad91464e4d0cf868448aa1e0300"
+      "4d4302caa1bd8c7697256de0ac1e97d3d73aee08d6670207bff36aa4719298a5"
   }
 , { mapKey = "si-timers"
   , mapValue =
@@ -416,11 +416,11 @@
   }
 , { mapKey = "small-steps"
   , mapValue =
-      "7ce39e32c9bf75c160b12e3991b283db1d0389ee42f57eb5327aff1c320458ff"
+      "1150725307a90237f01349366fd368d207000681e0feea49198e75e9aa09dfa3"
   }
 , { mapKey = "small-steps-test"
   , mapValue =
-      "360f9554ab5676f1db66cf066e4a60cbd66c6ba43b9c78364d3da3b1b396c6cb"
+      "8f366326fb5db90ab2bfeeec61a729f685e399a6b3805ed9a579cd9984a8a83f"
   }
 , { mapKey = "strict-containers"
   , mapValue =
@@ -436,15 +436,15 @@
   }
 , { mapKey = "trace-dispatcher"
   , mapValue =
-      "3a41d9de7401dff392fcec316c8107207650514b2f584859961dc020be76ea8a"
+      "3458379da361fb3c178a947a2e7ce987905b36c8e3979f0b572bd1d00f35137c"
   }
 , { mapKey = "trace-forward"
   , mapValue =
-      "b8c2ade2e2217339e0701973200a0b579bf3d3e702ca0bff6f473139cf7481dd"
+      "3c617c1546f77b48065dc825554e61dfaa8844f2fe20637b834e51fa44365136"
   }
 , { mapKey = "trace-resources"
   , mapValue =
-      "a496aa4f3d7b9a8169fc9e5743509c016b0d184d754fefeff664cdcbb4cd390f"
+      "70eddf6b1d618012e013d147b91285a9ae691738d73c7c8b14b3c9e58074fb23"
   }
 , { mapKey = "tracer-transformers"
   , mapValue =
@@ -468,7 +468,7 @@
   }
 , { mapKey = "vector-map"
   , mapValue =
-      "2a7f879961d86ec6881653391cabfa726dc2c6b9b2c2c725055c2ec8021d31bb"
+      "efb9f5338a7df0fd8c4c28ba090d11510435349f3c997b323aa563d210de0173"
   }
 , { mapKey = "websockets-snap"
   , mapValue =
@@ -477,5 +477,9 @@
 , { mapKey = "wl-pprint-text"
   , mapValue =
       "3043d774587e2579934901189f8cd202948c1f79a24045925baec457ac6dc42b"
+  }
+, { mapKey = "word-array"
+  , mapValue =
+      "7b1471286997d64148746fdbc1a039098c51daa1fa9cb75b41540ec09a7cb091"
   }
 ]

@@ -1,4 +1,4 @@
-{ mkDerivation, PyF, async, base, base16-bytestring
+{ mkDerivation, PyF, async, barbies, base, base16-bytestring
 , base64-bytestring, bytestring, cborg, containers, deepseq, extra
 , fetchgit, filepath, flat, hedgehog, lens, lib, mtl, nothunks
 , plutus-core, plutus-tx, prettyprinter, serialise, tagged, tasty
@@ -6,11 +6,11 @@
 }:
 mkDerivation {
   pname = "plutus-ledger-api";
-  version = "1.5.0.0";
+  version = "1.1.1.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/plutus";
-    sha256 = "13r06l98ndv9l4ph7mv4pv3djgq8iylp59m8lnm5hyfg59ypayr0";
-    rev = "cfccccc8596859bfaa992100b11199301eb6d2bd";
+    sha256 = "1xf2jn46rk57mq8kskp2g4ijsi69mi5awsv2jm4qnzvxvgv897da";
+    rev = "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/plutus-ledger-api/; echo source root reset to $sourceRoot";
@@ -27,8 +27,8 @@ mkDerivation {
     tasty-hunit
   ];
   testHaskellDepends = [
-    base bytestring containers extra hedgehog mtl nothunks plutus-core
-    plutus-tx tasty tasty-hedgehog tasty-hunit tasty-quickcheck text
+    barbies base bytestring containers extra hedgehog lens mtl nothunks
+    plutus-core tasty tasty-hedgehog tasty-hunit tasty-quickcheck text
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

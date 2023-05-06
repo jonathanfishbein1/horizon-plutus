@@ -7,11 +7,11 @@
 }:
 mkDerivation {
   pname = "plutus-tx";
-  version = "1.5.0.0";
+  version = "1.1.1.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/plutus";
-    sha256 = "13r06l98ndv9l4ph7mv4pv3djgq8iylp59m8lnm5hyfg59ypayr0";
-    rev = "cfccccc8596859bfaa992100b11199301eb6d2bd";
+    sha256 = "1xf2jn46rk57mq8kskp2g4ijsi69mi5awsv2jm4qnzvxvgv897da";
+    rev = "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/plutus-tx/; echo source root reset to $sourceRoot";
@@ -20,9 +20,9 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson base bytestring containers deepseq deriving-compat extra
-    filepath flat ghc-prim hashable hedgehog lens memory mtl
-    plutus-core prettyprinter serialise tagged tasty tasty-hedgehog
-    template-haskell text th-abstraction th-compat transformers
+    filepath flat ghc-prim hashable lens memory mtl plutus-core
+    prettyprinter serialise tagged tasty template-haskell text
+    th-abstraction th-compat transformers
   ];
   testHaskellDepends = [
     aeson base base16-bytestring bytestring cborg filepath hedgehog

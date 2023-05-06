@@ -1,16 +1,13 @@
-{ mkDerivation, aeson, base, cardano-binary, deepseq, fetchgit, lib
+{ mkDerivation, aeson, base, cardano-binary, deepseq, fetchzip, lib
 , mmorph, nothunks, quiet, serialise, tasty, tasty-quickcheck, time
 }:
 mkDerivation {
   pname = "cardano-slotting";
-  version = "0.1.1.0";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/cardano-base";
-    sha256 = "0n3w1k30ivdppyidyws9riy1qyx4881gxw8v1v34sixbraj0ng5k";
-    rev = "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d";
-    fetchSubmodules = true;
+  version = "0.1.1.1";
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-slotting-0.1.1.1.tar.gz";
+    sha256 = "0ylyx4xka8xm6si99dpyvwzzf5xy76kh569j3n3yci43lkd5ial6";
   };
-  postUnpack = "sourceRoot+=/cardano-slotting/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

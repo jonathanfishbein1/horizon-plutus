@@ -22,17 +22,24 @@ let callCardanoBase
         "https://github.com/locallycompact/cardano-base"
         "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d"
 
+let callCardanoWallet
+    : H.Subdir → H.HaskellPackage.Type
+    = callRepository
+        "https://github.com/input-output-hk/cardano-wallet"
+        "14ab2f7b42a7805892fcb626340dce0736e9257a"
+
+
 let callCardanoLedger
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
         "https://github.com/input-output-hk/cardano-ledger"
-        "81548171f2cd336714bb0425640a6553c46aa09e"
+        "62846d6de6464095ab7aae6d7f466c5173460937"
 
 let callCardanoNode
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
         "https://github.com/input-output-hk/cardano-node"
-        "b7d70f3a54921669519e1de1ec6ed381d01b28fb"
+        "d6228270e9b6811ca1d00ca9ce9d0254e63c2d6c"
 
 let callIoSim
     : H.Subdir → H.HaskellPackage.Type
@@ -69,7 +76,7 @@ let callPlutus
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
         "https://github.com/input-output-hk/plutus"
-        "cfccccc8596859bfaa992100b11199301eb6d2bd"
+        "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8"
 
 let callTypedProtocols
     : H.Subdir → H.HaskellPackage.Type
@@ -156,7 +163,7 @@ let packages =
 
         , cardano-node = callCardanoNode "cardano-node"
         , cardano-ping = callOuroborosNetwork "cardano-ping"
-        , cardano-slotting = callCardanoBase "cardano-slotting"
+        , cardano-slotting = callCHaP "cardano-slotting" "0.1.1.1" 
         , cardano-strict-containers =
             callCardanoBase "cardano-strict-containers"
         , cardano-prelude = callCHaP "cardano-prelude" "0.1.0.1"
@@ -264,7 +271,7 @@ let packages =
         , vector-map = callCardanoLedger "libs/vector-map"
         , websockets-snap = H.callHackage "websockets-snap" "0.10.3.1"
         , wl-pprint-text = H.callHackage "wl-pprint-text" "1.2.0.2"
---        , word-array = callPlutus "word-array"
+        , word-array = callPlutus "word-array"
         })
 
 in  H.HorizonExport.MakeOverlay

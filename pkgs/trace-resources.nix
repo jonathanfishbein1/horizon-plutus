@@ -6,8 +6,8 @@ mkDerivation {
   version = "0.1.0.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-node";
-    sha256 = "0wkbz2yxwaaxx6w5j2snbp8gg8imjjipw8zka3lcnrp3jx9gx1ha";
-    rev = "b7d70f3a54921669519e1de1ec6ed381d01b28fb";
+    sha256 = "1gzhzjdjvf4qinrkw32gglbsd7gwi7r3q4972z1z3vpbg70ky7z7";
+    rev = "d6228270e9b6811ca1d00ca9ce9d0254e63c2d6c";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/trace-resources/; echo source root reset to $sourceRoot";

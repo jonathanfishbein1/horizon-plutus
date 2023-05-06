@@ -10,8 +10,8 @@ mkDerivation {
   version = "1.1.0.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/cardano-ledger";
-    sha256 = "0lfd6l3pzlwipvvv1i4v47ha25qmx0vxc1k23g71f17lzakjs4gm";
-    rev = "81548171f2cd336714bb0425640a6553c46aa09e";
+    sha256 = "015b386n97xlp6d26s9njs5w75wv3i82jh1iywksifqyz2539wg6";
+    rev = "62846d6de6464095ab7aae6d7f466c5173460937";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/eras/allegra/impl/; echo source root reset to $sourceRoot";

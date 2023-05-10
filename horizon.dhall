@@ -28,6 +28,8 @@ let callPlutus
         "https://github.com/input-output-hk/plutus"
         "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8"
 
+let overrides = toMap { algebraic-graphs = H.callHackage "algebraic-graphs" "0.7" }
+
 let packages =
       H.modPackageList
         H.Modifiers::{ enableProfiling = False }
@@ -37,7 +39,6 @@ let packages =
                   "https://github.com/locallycompact/OddWord"
                   "ace47523b97ac2bc4dcdef5542927e5216e32afd"
                   (None H.Subdir)
-            , algebraic-graphs = H.callHackage "algebraic-graphs" "0.7"
             , base-deriving-via = callCardanoBase "base-deriving-via"
             , cardano-binary = callCardanoBase "cardano-binary"
             , cardano-binary-test = callCardanoBase "cardano-binary/test"
@@ -77,5 +78,5 @@ let packages =
 in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
-      , overlay = { compiler = "ghc-9.2.5", packages }
+      , overlay = { compiler = "ghc-9.2.5", packages = overrides # packages }
       }

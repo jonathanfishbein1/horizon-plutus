@@ -45,7 +45,7 @@
       R = pkgs-libR.R;
       secp256k1 = iohk-pkgs.secp256k1;
       libblst = iohk-pkgs.libblst;
-      
+
       overrides = composeManyExtensions [
         (import ./overlay.nix { inherit pkgs; })
         (import ./configuration.nix { inherit libsodium R secp256k1 libblst; } { inherit pkgs; })

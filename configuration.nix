@@ -61,6 +61,12 @@ final: prev: {
 
   hls-test-utils = null;
 
+  hnix-store-core = null;
+
+  hnix-store-remote = null;
+
+  hnix = null;
+
   plutus-core = addPkgconfigDepend (addSetupDepend prev.plutus-core pkgs.haskell.packages.ghc925.Cabal_3_8_1_0) libblst;
 
   plutus-tx = addSetupDepend prev.plutus-tx pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;

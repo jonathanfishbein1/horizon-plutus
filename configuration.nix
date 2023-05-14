@@ -61,6 +61,8 @@ final: prev: {
 
   hls-test-utils = null;
 
+  dhall-nixpkgs = null;
+
   hnix-store-core = null;
 
   hnix-store-remote = null;

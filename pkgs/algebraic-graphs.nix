@@ -15,8 +15,8 @@ mkDerivation {
     array base containers deepseq extra inspection-testing QuickCheck
     transformers
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

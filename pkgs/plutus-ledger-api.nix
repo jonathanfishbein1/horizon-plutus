@@ -6,11 +6,11 @@
 }:
 mkDerivation {
   pname = "plutus-ledger-api";
-  version = "1.3.0.0";
+  version = "1.1.1.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/plutus";
-    sha256 = "0wxydqj949hi1zzybblfwmbj5j05sy51kn3byhpnizspqjjcjb07";
-    rev = "b94d0e001c8f7350b5120b20cbc9d9021d377a8a";
+    sha256 = "1xf2jn46rk57mq8kskp2g4ijsi69mi5awsv2jm4qnzvxvgv897da";
+    rev = "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/plutus-ledger-api/; echo source root reset to $sourceRoot";
@@ -28,8 +28,7 @@ mkDerivation {
   ];
   testHaskellDepends = [
     barbies base bytestring containers extra hedgehog lens mtl nothunks
-    plutus-core plutus-tx tasty tasty-hedgehog tasty-hunit
-    tasty-quickcheck text
+    plutus-core tasty tasty-hedgehog tasty-hunit tasty-quickcheck text
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

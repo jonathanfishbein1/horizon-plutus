@@ -23,8 +23,8 @@ mkDerivation {
   benchmarkHaskellDepends = [
     base bytestring cryptonite gauge memory
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

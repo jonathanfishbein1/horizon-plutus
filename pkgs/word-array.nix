@@ -7,8 +7,8 @@ mkDerivation {
   version = "1.1.0.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/plutus";
-    sha256 = "0wxydqj949hi1zzybblfwmbj5j05sy51kn3byhpnizspqjjcjb07";
-    rev = "b94d0e001c8f7350b5120b20cbc9d9021d377a8a";
+    sha256 = "1xf2jn46rk57mq8kskp2g4ijsi69mi5awsv2jm4qnzvxvgv897da";
+    rev = "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/word-array/; echo source root reset to $sourceRoot";
@@ -20,8 +20,8 @@ mkDerivation {
     base mono-traversable QuickCheck tasty tasty-quickcheck vector
   ];
   benchmarkHaskellDepends = [ base primitive tasty-bench ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

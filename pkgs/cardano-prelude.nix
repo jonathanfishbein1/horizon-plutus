@@ -18,8 +18,8 @@ mkDerivation {
     containers formatting ghc-heap ghc-prim integer-gmp microlens mtl
     protolude tagged text time
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

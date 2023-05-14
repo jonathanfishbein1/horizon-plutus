@@ -19,157 +19,65 @@ let callCHaP
 let callCardanoBase
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
-        "https://github.com/input-output-hk/cardano-base"
-        "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee"
-
-let callCardanoNode
-    : H.Subdir → H.HaskellPackage.Type
-    = callRepository
-        "https://github.com/input-output-hk/cardano-node"
-        "4198592a7ea9c4873def316d6f80df1d20d37891"
-
-let callIoSim
-    : H.Subdir → H.HaskellPackage.Type
-    = callRepository
-        "https://github.com/input-output-hk/io-sim"
-        "dcafd44cdc101a3e213de6a2d5ba7f674c2bc13c"
-
-let callIohkMonitoringFramework
-    : H.Subdir → H.HaskellPackage.Type
-    = callRepository
-        "https://github.com/input-output-hk/iohk-monitoring-framework"
-        "1b5ae75d3186159f8175ad625db324d075450343"
-
-let callOuroborosNetwork
-    : H.Subdir → H.HaskellPackage.Type
-    = callRepository
-        "https://github.com/locallycompact/ouroboros-network"
-        "13dbe0bf9bca33469d105f22cdcb2b6d1a32c9b9"
-
-let callPlutusApps
-    : H.Subdir → H.HaskellPackage.Type
-    = callRepository
-        "https://github.com/input-output-hk/plutus-apps"
-        "b7ac5b2035f3675b3ceb289cf3a1551230714987"
+        "https://github.com/locallycompact/cardano-base"
+        "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d"
 
 let callPlutus
     : H.Subdir → H.HaskellPackage.Type
     = callRepository
         "https://github.com/input-output-hk/plutus"
-        "b94d0e001c8f7350b5120b20cbc9d9021d377a8a"
+        "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8"
 
-let callTypedProtocols
-    : H.Subdir → H.HaskellPackage.Type
-    = callRepository
-        "https://github.com/input-output-hk/typed-protocols"
-        "ab4e0346c3215daad4c823f3ddc0eefae32091ff"
+let overrides =
+      toMap { algebraic-graphs = H.callHackage "algebraic-graphs" "0.7" }
 
-let plutusLibraries =
+let packages =
       H.modPackageList
         H.Modifiers::{ enableProfiling = False }
         ( toMap
-            { plutus-core = callPlutus "plutus-core"
+            { OddWord =
+                H.callGit
+                  "https://github.com/locallycompact/OddWord"
+                  "ace47523b97ac2bc4dcdef5542927e5216e32afd"
+                  (None H.Subdir)
+            , base-deriving-via = callCardanoBase "base-deriving-via"
+            , cardano-binary = callCardanoBase "cardano-binary"
+            , cardano-binary-test = callCardanoBase "cardano-binary/test"
+            , cardano-crypto =
+                H.callGit
+                  "https://github.com/input-output-hk/cardano-crypto"
+                  "07397f0e50da97eaa0575d93bee7ac4b2b2576ec"
+                  (None H.Subdir)
+            , cardano-crypto-class = callCardanoBase "cardano-crypto-class"
+            , cardano-crypto-praos = callCardanoBase "cardano-crypto-praos"
+            , cardano-crypto-tests = callCardanoBase "cardano-crypto-tests"
+            , cardano-slotting = callCHaP "cardano-slotting" "0.1.1.1"
+            , cardano-strict-containers =
+                callCardanoBase "cardano-strict-containers"
+            , cardano-prelude = callCHaP "cardano-prelude" "0.1.0.1"
+            , cardano-prelude-test = callCHaP "cardano-prelude-test" "0.1.0.1"
+            , flat =
+                H.callGit
+                  "https://github.com/Quid2/flat"
+                  "2121ee96201e39764e3a6fcbc53241afb0050647"
+                  (None H.Subdir)
+            , heapwords = callCardanoBase "heapwords"
+            , monoidal-containers =
+                H.callHackage "monoidal-containers" "0.6.4.0"
+            , plutus-core = callPlutus "plutus-core"
             , plutus-ledger-api = callPlutus "plutus-ledger-api"
             , plutus-tx = callPlutus "plutus-tx"
             , plutus-tx-plugin = callPlutus "plutus-tx-plugin"
+            , prettyprinter-configurable =
+                callPlutus "prettyprinter-configurable"
+            , quickcheck-transformer =
+                H.callHackage "quickcheck-transformer" "0.3.1.2"
+            , word-array = callPlutus "word-array"
             }
         )
-
-let otherLibraries =
-      toMap
-        { OddWord =
-            H.callGit
-              "https://github.com/locallycompact/OddWord"
-              "ace47523b97ac2bc4dcdef5542927e5216e32afd"
-              (None H.Subdir)
-        , Win32-network =
-            H.callGit
-              "https://github.com/input-output-hk/Win32-network"
-              "1a6bd1f67d1463d7243ab4c34fc4f7d84ee0554a"
-              (None H.Subdir)
-        , algebraic-graphs = H.callHackage "algebraic-graphs" "0.7"
-        , base-deriving-via = callCardanoBase "base-deriving-via"
-        , cardano-binary = callCardanoBase "binary"
-        , cardano-binary-test = callCardanoBase "binary/test"
-        , cardano-crypto =
-            H.callGit
-              "https://github.com/input-output-hk/cardano-crypto"
-              "07397f0e50da97eaa0575d93bee7ac4b2b2576ec"
-              (None H.Subdir)
-        , cardano-crypto-class = callCardanoBase "cardano-crypto-class"
-        , cardano-crypto-praos = callCardanoBase "cardano-crypto-praos"
-        , cardano-crypto-tests = callCardanoBase "cardano-crypto-tests"
-        , cardano-slotting = callCardanoBase "slotting"
-        , cardano-strict-containers =
-            callCardanoBase "cardano-strict-containers"
-        , cardano-prelude = callCHaP "cardano-prelude" "0.1.0.1"
-        , cardano-prelude-test = callCHaP "cardano-prelude-test" "0.1.0.1"
-        , contra-tracer = callCHaP "contra-tracer" "0.1.0.1"
-        , flat =
-            H.callGit
-              "https://github.com/Quid2/flat"
-              "2121ee96201e39764e3a6fcbc53241afb0050647"
-              (None H.Subdir)
-        , goblins =
-            H.callGit
-              "https://github.com/newhoggy/goblins"
-              "a315f41ec7250097fa6073b5ef4773e45758578f"
-              (None H.Subdir)
-        , gray-code =
-            H.callGit
-              "https://github.com/milloni/gray-code-0.3.1"
-              "f310a19e44416206633cfd084f10ffb7cfea9f1d"
-              (None H.Subdir)
-        , heapwords = callCardanoBase "heapwords"
-        , io-classes = callIoSim "io-classes"
-        , io-sim = callIoSim "io-sim"
-        , iohk-monitoring = callCHaP "iohk-monitoring" "0.1.11.1"
-        , measures = callCardanoBase "measures"
-        , monoidal-containers = H.callHackage "monoidal-containers" "0.6.4.0"
-        , monoidal-synchronisation =
-            callOuroborosNetwork "monoidal-synchronisation"
-        , moo =
-            H.callGit
-              "https://github.com/astanin/moo"
-              "dbda5e76ac3b4c72c805ec0cdb9bcdff7bb6247d"
-              (None H.Subdir)
-        , network-mux = callCHaP "network-mux" "0.2.0.0"
-        , nothunks =
-            H.callGit
-              "https://github.com/locallycompact/nothunks"
-              "0d7e3565407aa4eb21d861d075dff6f20d090f97"
-              (None H.Subdir)
-        , ntp-client = callCHaP "ntp-client" "0.0.1"
-        , optparse-applicative-fork =
-            H.callGit
-              "https://github.com/input-output-hk/optparse-applicative/"
-              "7497a29cb998721a9068d5725d49461f2bba0e7a"
-              (None H.Subdir)
-        , ouroboros-network-api = callOuroborosNetwork "ouroboros-network-api"
-        , ouroboros-network-framework =
-            callOuroborosNetwork "ouroboros-network-framework"
-        , ouroboros-network-mock = callOuroborosNetwork "ouroboros-network-mock"
-        , ouroboros-network-protocols =
-            callOuroborosNetwork "ouroboros-network-protocols"
-        , ouroboros-network-testing =
-            callOuroborosNetwork "ouroboros-network-testing"
-        , ouroboros-network = callOuroborosNetwork "ouroboros-network"
-        , prettyprinter-configurable = callPlutus "prettyprinter-configurable"
-        , quickcheck-transformer =
-            H.callHackage "quickcheck-transformer" "0.3.1.2"
-        , strict-containers = callCHaP "strict-containers" "0.1.0.0"
-        , strict-stm = callIoSim "strict-stm"
-        , tracer-transformers = callCHaP "tracer-transformers" "0.1.0.2"
-        , typed-protocols-cborg = callTypedProtocols "typed-protocols-cborg"
-        , typed-protocols-examples =
-            callTypedProtocols "typed-protocols-examples"
-        , typed-protocols = callTypedProtocols "typed-protocols"
-        , word-array = callPlutus "word-array"
-        }
 
 in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
-      , overlay =
-        { compiler = "ghc-9.2.5", packages = plutusLibraries # otherLibraries }
+      , overlay = { compiler = "ghc-9.2.5", packages = overrides # packages }
       }

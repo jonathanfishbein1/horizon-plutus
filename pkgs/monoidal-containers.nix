@@ -12,8 +12,8 @@ mkDerivation {
     aeson base containers deepseq hashable lens newtype semialign these
     unordered-containers witherable
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

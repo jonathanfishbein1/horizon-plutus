@@ -1,18 +1,13 @@
-{ pkgs, pkgs-libR, ... }:
+{ libsodium, secp256k1, R, libblst }:
+{ pkgs, ... }:
 
 with pkgs.haskell.lib;
 
 final: prev: {
 
-  R = pkgs-libR.R;
+  cardano-crypto-class = addPkgconfigDepend (prev.callPackage ./pkgs/cardano-crypto-class.nix { inherit libsodium secp256k1;}) libblst;
 
-  cardano-crypto-class = enableCabalFlag (addPkgconfigDepend prev.cardano-crypto-class pkgs.libsodium) "development";
-
-  cardano-crypto-praos = addPkgconfigDepend prev.cardano-crypto-praos pkgs.libsodium;
-
-  cardano-crypto-tests = enableCabalFlag prev.cardano-crypto-tests "development";
-
-  cardano-prelude = enableCabalFlag prev.cardano-prelude "development";
+  cardano-crypto-praos = addSetupDepend (addPkgconfigDepends prev.cardano-crypto-praos [libblst libsodium]) pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
 
   ghcide = null;
 
@@ -66,19 +61,20 @@ final: prev: {
 
   hls-test-utils = null;
 
-  plutus-core = pkgs.haskell.lib.addSetupDepend prev.plutus-core pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
+  dhall-nixpkgs = null;
 
-  plutus-tx = pkgs.haskell.lib.addSetupDepend prev.plutus-tx pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
+  hnix-store-core = null;
 
-  plutus-tx-plugin = pkgs.haskell.lib.addSetupDepend prev.plutus-tx-plugin pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
+  hnix-store-remote = null;
 
-#  plutus-core = setBuildTarget (dontBenchmark prev.plutus-core) "plc";
+  hnix = null;
+
+  plutus-core = addPkgconfigDepend (addSetupDepend prev.plutus-core pkgs.haskell.packages.ghc925.Cabal_3_8_1_0) libblst;
+
+  plutus-tx = addSetupDepend prev.plutus-tx pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
+
+  plutus-tx-plugin = addSetupDepend prev.plutus-tx-plugin pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
 
   plutus-ledger-api = dontBenchmark prev.plutus-ledger-api;
 
-#  plutus-tx = dontBenchmark prev.plutus-tx;
-
-  secp256k1 = pkgs.secp256k1;
-
-  strict-containers = enableCabalFlag prev.strict-containers "development";
 }

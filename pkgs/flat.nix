@@ -27,8 +27,8 @@ mkDerivation {
     tasty-hunit tasty-quickcheck text timeit unordered-containers
     vector
   ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

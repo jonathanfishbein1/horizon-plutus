@@ -3,11 +3,11 @@
 }:
 mkDerivation {
   pname = "cardano-crypto-praos";
-  version = "2.0.0.1";
+  version = "2.1.1.1";
   src = fetchgit {
-    url = "https://github.com/input-output-hk/cardano-base";
-    sha256 = "0qn56ahqmy79riwyaq5m0d4vpamdjkkk04b0x8zwlyd5y3pg58xd";
-    rev = "46cd4c97cff9f1f0a0da976aa9e32bd2899c85ee";
+    url = "https://github.com/locallycompact/cardano-base";
+    sha256 = "0n3w1k30ivdppyidyws9riy1qyx4881gxw8v1v34sixbraj0ng5k";
+    rev = "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/cardano-crypto-praos/; echo source root reset to $sourceRoot";
@@ -19,8 +19,8 @@ mkDerivation {
     nothunks
   ];
   libraryPkgconfigDepends = [ libsodium ];
-  enableLibraryProfiling = true;
-  enableExecutableProfiling = true;
+  enableLibraryProfiling = false;
+  enableExecutableProfiling = false;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

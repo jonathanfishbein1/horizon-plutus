@@ -6,11 +6,11 @@
 }:
 mkDerivation {
   pname = "plutus-tx-plugin";
-  version = "1.3.0.0";
+  version = "1.1.1.0";
   src = fetchgit {
     url = "https://github.com/input-output-hk/plutus";
-    sha256 = "0wxydqj949hi1zzybblfwmbj5j05sy51kn3byhpnizspqjjcjb07";
-    rev = "b94d0e001c8f7350b5120b20cbc9d9021d377a8a";
+    sha256 = "1xf2jn46rk57mq8kskp2g4ijsi69mi5awsv2jm4qnzvxvgv897da";
+    rev = "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/plutus-tx-plugin/; echo source root reset to $sourceRoot";

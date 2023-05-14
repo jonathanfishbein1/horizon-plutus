@@ -9,6 +9,10 @@
   inputs = {
     get-flake.url = "github:ursi/get-flake";
     horizon-platform.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-platform?ref=refs/heads/sts-925";
+    iohk-nix = {
+      url = "github:input-output-hk/iohk-nix/26f56e32169dcc9ef72ac754eccdb3c96d714751";
+      flake = false;
+    };
     lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
@@ -20,6 +24,7 @@
     , flake-utils
     , get-flake
     , horizon-platform
+    , iohk-nix
     , lint-utils
     , nixpkgs
     , nixpkgs-libR
@@ -29,14 +34,21 @@
     let
       pkgs-libR = import nixpkgs-libR { inherit system; };
       pkgs = import nixpkgs { inherit system; };
+      crypto = (import iohk-nix { }).overlays.crypto;
+      iohk-pkgs = import nixpkgs { inherit system; overlays = crypto; };
     in
     with pkgs.lib;
     with pkgs.writers;
     let
 
+      libsodium = iohk-pkgs.libsodium-vrf;
+      R = pkgs-libR.R;
+      secp256k1 = iohk-pkgs.secp256k1;
+      libblst = iohk-pkgs.libblst;
+
       overrides = composeManyExtensions [
         (import ./overlay.nix { inherit pkgs; })
-        (import ./configuration.nix { inherit pkgs pkgs-libR; })
+        (import ./configuration.nix { inherit libsodium R secp256k1 libblst; } { inherit pkgs; })
       ];
 
       legacyPackages' = horizon-platform.legacyPackages.${system}.extend overrides;

@@ -135,6 +135,23 @@
         "url": "https://gitlab.horizon-haskell.net/shells/horizon-shell"
       }
     },
+    "iohk-nix": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1681957618,
+        "narHash": "sha256-6fo/QohImV8buYiIhnSniquMmBj4IgtgQrq0JDpsav4=",
+        "owner": "input-output-hk",
+        "repo": "iohk-nix",
+        "rev": "26f56e32169dcc9ef72ac754eccdb3c96d714751",
+        "type": "github"
+      },
+      "original": {
+        "owner": "input-output-hk",
+        "repo": "iohk-nix",
+        "rev": "26f56e32169dcc9ef72ac754eccdb3c96d714751",
+        "type": "github"
+      }
+    },
     "lint-utils": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -276,6 +293,7 @@
         "flake-utils": "flake-utils",
         "get-flake": "get-flake",
         "horizon-platform": "horizon-platform",
+        "iohk-nix": "iohk-nix",
         "lint-utils": "lint-utils_2",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-libR": "nixpkgs-libR"

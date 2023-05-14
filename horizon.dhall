@@ -28,7 +28,8 @@ let callPlutus
         "https://github.com/input-output-hk/plutus"
         "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8"
 
-let overrides = toMap { algebraic-graphs = H.callHackage "algebraic-graphs" "0.7" }
+let overrides =
+      toMap { algebraic-graphs = H.callHackage "algebraic-graphs" "0.7" }
 
 let packages =
       H.modPackageList

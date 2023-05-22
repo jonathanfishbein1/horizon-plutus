@@ -1,17 +1,14 @@
-{ mkDerivation, QuickCheck, base, deepseq, fetchgit, lib
+{ mkDerivation, QuickCheck, base, deepseq, fetchzip, lib
 , mono-traversable, primitive, tasty, tasty-bench, tasty-quickcheck
 , vector
 }:
 mkDerivation {
   pname = "word-array";
   version = "1.1.0.0";
-  src = fetchgit {
-    url = "https://github.com/input-output-hk/plutus";
-    sha256 = "1xf2jn46rk57mq8kskp2g4ijsi69mi5awsv2jm4qnzvxvgv897da";
-    rev = "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8";
-    fetchSubmodules = true;
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/word-array-1.1.0.0.tar.gz";
+    sha256 = "0afl8mrwrbl393y564d3gn6kh4xjhqs3cwczb4l606bxzj0a88n4";
   };
-  postUnpack = "sourceRoot+=/word-array/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

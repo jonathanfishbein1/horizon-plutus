@@ -1,16 +1,13 @@
 { mkDerivation, base, bytestring, cardano-binary
-, cardano-crypto-class, deepseq, fetchgit, lib, libsodium, nothunks
+, cardano-crypto-class, deepseq, fetchzip, lib, libsodium, nothunks
 }:
 mkDerivation {
   pname = "cardano-crypto-praos";
-  version = "2.1.1.1";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/cardano-base";
-    sha256 = "0n3w1k30ivdppyidyws9riy1qyx4881gxw8v1v34sixbraj0ng5k";
-    rev = "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d";
-    fetchSubmodules = true;
+  version = "2.1.2.0";
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-crypto-praos-2.1.2.0.tar.gz";
+    sha256 = "195krv2vyx7zngdgiv3csv6m0b8vg6xhfrf0vqwc0dp3yavhdwiz";
   };
-  postUnpack = "sourceRoot+=/cardano-crypto-praos/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

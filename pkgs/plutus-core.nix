@@ -1,33 +1,32 @@
 { mkDerivation, HUnit, QuickCheck, Stream, aeson, algebraic-graphs
-, array, barbies, base, base64-bytestring, bifunctors, bimap
+, array, barbies, base, base64-bytestring, bifunctors, bimap, brick
 , bytestring, cardano-crypto, cardano-crypto-class, cassava, cborg
 , composition-prelude, containers, criterion, criterion-measurement
 , cryptonite, data-default-class, deepseq, dependent-map
-, dependent-sum-template, deriving-aeson, deriving-compat
-, directory, dlist, dom-lt, exceptions, extra, fetchgit, filepath
-, flat, ghc-prim, hashable, hedgehog, hex-text, int-cast
-, lazy-search, lens, lib, megaparsec, mmorph, monoidal-containers
-, mtl, multiset, nonempty-vector, nothunks, optparse-applicative
-, parser-combinators, pretty-show, prettyprinter
-, prettyprinter-configurable, primitive, quickcheck-instances
-, quickcheck-transformer, ral, random, recursion-schemes
-, semigroupoids, semigroups, serialise, size-based, some, split
-, tagged, tasty, tasty-golden, tasty-hedgehog, tasty-hunit
-, tasty-quickcheck, template-haskell, test-framework
-, test-framework-hunit, test-framework-quickcheck2, text, th-compat
-, th-lift, th-lift-instances, th-utilities, time, transformers
-, unordered-containers, vector, witherable, word-array
+, dependent-sum, dependent-sum-template, deriving-aeson
+, deriving-compat, directory, dlist, dom-lt, exceptions, extra
+, fetchzip, filepath, flat, free, ghc-prim, hashable, haskeline
+, hedgehog, hex-text, int-cast, lazy-search, lens, lib, megaparsec
+, microlens, microlens-th, mmorph, mono-traversable
+, monoidal-containers, mtl, multiset, nonempty-vector, nothunks
+, optparse-applicative, parser-combinators, pretty-show
+, prettyprinter, prettyprinter-configurable, primitive, profunctors
+, quickcheck-instances, quickcheck-transformer, ral, random
+, recursion-schemes, semigroupoids, semigroups, serialise
+, size-based, some, split, tagged, tasty, tasty-golden
+, tasty-hedgehog, tasty-hunit, tasty-quickcheck, template-haskell
+, test-framework, test-framework-hunit, test-framework-quickcheck2
+, text, text-zipper, th-compat, th-lift, th-lift-instances
+, th-utilities, time, transformers, unordered-containers, vector
+, vty, witherable
 }:
 mkDerivation {
   pname = "plutus-core";
-  version = "1.1.1.0";
-  src = fetchgit {
-    url = "https://github.com/input-output-hk/plutus";
-    sha256 = "1xf2jn46rk57mq8kskp2g4ijsi69mi5awsv2jm4qnzvxvgv897da";
-    rev = "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8";
-    fetchSubmodules = true;
+  version = "1.7.0.0";
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-core-1.7.0.0.tar.gz";
+    sha256 = "043f46zgy337ngc9hl0cr8wh0lkhvbsb4fi3is8ydlia7xr7nhla";
   };
-  postUnpack = "sourceRoot+=/plutus-core/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -35,33 +34,35 @@ mkDerivation {
     aeson algebraic-graphs array barbies base base64-bytestring
     bifunctors bimap bytestring cardano-crypto cardano-crypto-class
     cassava cborg composition-prelude containers cryptonite
-    data-default-class deepseq dependent-map dependent-sum-template
-    deriving-aeson deriving-compat dlist dom-lt exceptions extra
-    filepath flat ghc-prim hashable hedgehog int-cast lazy-search lens
-    megaparsec mmorph monoidal-containers mtl multiset nonempty-vector
-    nothunks parser-combinators prettyprinter
-    prettyprinter-configurable primitive QuickCheck
-    quickcheck-transformer ral recursion-schemes semigroupoids
-    semigroups serialise size-based some Stream tagged tasty
-    tasty-golden tasty-hedgehog tasty-hunit template-haskell text
+    data-default-class deepseq dependent-map dependent-sum
+    dependent-sum-template deriving-aeson deriving-compat dlist dom-lt
+    exceptions extra filepath flat free ghc-prim hashable hedgehog
+    int-cast lazy-search lens megaparsec mmorph mono-traversable
+    monoidal-containers mtl multiset nonempty-vector nothunks
+    optparse-applicative parser-combinators prettyprinter
+    prettyprinter-configurable primitive profunctors QuickCheck
+    quickcheck-instances quickcheck-transformer ral recursion-schemes
+    semigroupoids semigroups serialise size-based some Stream tagged
+    tasty tasty-golden tasty-hedgehog tasty-hunit template-haskell text
     th-compat th-lift th-lift-instances th-utilities time transformers
-    unordered-containers witherable word-array
+    unordered-containers witherable
   ];
   executableHaskellDepends = [
-    aeson base bytestring cardano-crypto-class cassava containers
-    criterion criterion-measurement deepseq directory filepath flat
-    hedgehog lens megaparsec monoidal-containers mtl
-    optparse-applicative prettyprinter QuickCheck quickcheck-instances
-    random split text time transformers vector
+    aeson base brick bytestring cardano-crypto-class cassava containers
+    criterion criterion-measurement deepseq directory filepath
+    haskeline hedgehog lens megaparsec microlens microlens-th
+    mono-traversable mtl optparse-applicative prettyprinter QuickCheck
+    quickcheck-instances random split text text-zipper time
+    transformers vector vty
   ];
   testHaskellDepends = [
     aeson base bytestring cardano-crypto-class cassava containers
-    data-default-class filepath flat hedgehog hex-text HUnit lens
-    megaparsec mmorph mtl nonempty-vector pretty-show prettyprinter
+    data-default-class dlist filepath flat hashable hedgehog hex-text
+    HUnit lens mmorph mtl nonempty-vector pretty-show prettyprinter
     QuickCheck quickcheck-instances serialise split tasty tasty-golden
     tasty-hedgehog tasty-hunit tasty-quickcheck template-haskell
     test-framework test-framework-hunit test-framework-quickcheck2 text
-    th-lift-instances th-utilities vector
+    th-lift-instances th-utilities unordered-containers vector
   ];
   benchmarkHaskellDepends = [
     base criterion nonempty-vector ral random

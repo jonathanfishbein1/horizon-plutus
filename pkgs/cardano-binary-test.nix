@@ -1,18 +1,15 @@
 { mkDerivation, QuickCheck, base, bytestring, cardano-binary
-, cardano-prelude-test, cborg, containers, fetchgit, formatting
+, cardano-prelude-test, cborg, containers, fetchzip, formatting
 , hedgehog, hspec, lib, pretty-show, quickcheck-instances, text
 , time, vector
 }:
 mkDerivation {
   pname = "cardano-binary-test";
-  version = "1.4.0.1";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/cardano-base";
-    sha256 = "0n3w1k30ivdppyidyws9riy1qyx4881gxw8v1v34sixbraj0ng5k";
-    rev = "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d";
-    fetchSubmodules = true;
+  version = "1.4.0.2";
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-binary-test-1.4.0.2.tar.gz";
+    sha256 = "0jmxdijillfvm0i9mbsmlkj6zd2xchrygb5j8dn8srxh723xg8gy";
   };
-  postUnpack = "sourceRoot+=/cardano-binary/test/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

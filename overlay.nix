@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 final: prev: with pkgs.haskell.lib; {
-  OddWord = final.callPackage (./pkgs/OddWord.nix) { };
-
   algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
 
   base-deriving-via = final.callPackage (./pkgs/base-deriving-via.nix) { };
@@ -44,6 +42,8 @@ final: prev: with pkgs.haskell.lib; {
   prettyprinter-configurable = final.callPackage (./pkgs/prettyprinter-configurable.nix) { };
 
   quickcheck-transformer = final.callPackage (./pkgs/quickcheck-transformer.nix) { };
+
+  ral = final.callPackage (./pkgs/ral.nix) { };
 
   word-array = final.callPackage (./pkgs/word-array.nix) { };
 

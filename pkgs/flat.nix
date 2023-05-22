@@ -1,18 +1,13 @@
 { mkDerivation, QuickCheck, array, base, bytestring, containers
-, deepseq, dlist, fetchgit, filepath, ghc-prim, hashable, lib
-, list-t, mono-traversable, pretty, primitive, quickcheck-text
-, tasty, tasty-hunit, tasty-quickcheck, text, timeit
-, unordered-containers, vector
+, deepseq, dlist, filepath, ghc-prim, hashable, lib, list-t
+, mono-traversable, pretty, primitive, quickcheck-text, tasty
+, tasty-hunit, tasty-quickcheck, text, timeit, unordered-containers
+, vector
 }:
 mkDerivation {
   pname = "flat";
-  version = "0.5.2";
-  src = fetchgit {
-    url = "https://github.com/Quid2/flat";
-    sha256 = "19dhz3gg9fv4mjkrwckiv2269z1x07ah691s38yk7ysp6rxygvbn";
-    rev = "2121ee96201e39764e3a6fcbc53241afb0050647";
-    fetchSubmodules = true;
-  };
+  version = "0.6";
+  sha256 = "a4324174159b79dabbb155572a33d109ea4bd3b105a6c1c658a36e604e1daf86";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

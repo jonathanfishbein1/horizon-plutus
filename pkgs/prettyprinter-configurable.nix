@@ -1,18 +1,15 @@
 { mkDerivation, Cabal, QuickCheck, base, cabal-doctest, doctest
-, fetchgit, lib, megaparsec, microlens, mtl, parser-combinators
+, fetchzip, lib, megaparsec, microlens, mtl, parser-combinators
 , prettyprinter, quickcheck-text, tasty, tasty-hunit
 , tasty-quickcheck, text
 }:
 mkDerivation {
   pname = "prettyprinter-configurable";
-  version = "1.1.0.0";
-  src = fetchgit {
-    url = "https://github.com/input-output-hk/plutus";
-    sha256 = "1xf2jn46rk57mq8kskp2g4ijsi69mi5awsv2jm4qnzvxvgv897da";
-    rev = "5efe047b034bdd1f79df6dfa64a3c5d205ffa8f8";
-    fetchSubmodules = true;
+  version = "1.7.0.0";
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/prettyprinter-configurable-1.7.0.0.tar.gz";
+    sha256 = "083nks2pyzkfs58h4mbr0idbd3bwwn9yxix43wdiwaijmp5fxkpz";
   };
-  postUnpack = "sourceRoot+=/prettyprinter-configurable/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -1,19 +1,16 @@
 { mkDerivation, QuickCheck, base, base16-bytestring, bytestring
 , cardano-binary, cardano-crypto-class, cardano-crypto-praos, cborg
-, criterion, cryptonite, deepseq, fetchgit, formatting, lib
+, criterion, cryptonite, deepseq, fetchzip, formatting, lib
 , nothunks, pretty-show, quickcheck-instances, tasty, tasty-hunit
 , tasty-quickcheck
 }:
 mkDerivation {
   pname = "cardano-crypto-tests";
-  version = "2.1.0.1";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/cardano-base";
-    sha256 = "0n3w1k30ivdppyidyws9riy1qyx4881gxw8v1v34sixbraj0ng5k";
-    rev = "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d";
-    fetchSubmodules = true;
+  version = "2.1.1.0";
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-crypto-tests-2.1.1.0.tar.gz";
+    sha256 = "1g8j7lw4x480sdy83ihnpd2hayypqyl5yl3ap4qjqijjdycs8rlz";
   };
-  postUnpack = "sourceRoot+=/cardano-crypto-tests/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

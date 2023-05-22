@@ -5,11 +5,11 @@
         "nixpkgs-lib": "nixpkgs-lib"
       },
       "locked": {
-        "lastModified": 1678379998,
-        "narHash": "sha256-TZdfNqftHhDuIFwBcN9MUThx5sQXCTeZk9je5byPKRw=",
+        "lastModified": 1683560683,
+        "narHash": "sha256-XAygPMN5Xnk/W2c1aW0jyEa6lfMDZWlQgiNtmHXytPc=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "c13d60b89adea3dc20704c045ec4d50dd964d447",
+        "rev": "006c75898cf814ef9497252b022e91c946ba8e17",
         "type": "github"
       },
       "original": {
@@ -104,16 +104,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1681760349,
-        "narHash": "sha256-4uTOEoMu14AMi2S/8Aav4yC9GgtHNQ3Kul9+NxWWFrc=",
-        "ref": "refs/heads/sts-925",
-        "rev": "2a526de2127ffffeda9486d19d9bf1a9e7c0b047",
-        "revCount": 1073,
+        "lastModified": 1684509807,
+        "narHash": "sha256-TP6vNrr5cvWutgN7cj0xooYL4JGsSdTS/CRlJ5irbeQ=",
+        "ref": "refs/heads/master",
+        "rev": "076fb696fc2b78604c931ffc2099e30fb67dbb09",
+        "revCount": 1082,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-platform"
       },
       "original": {
-        "ref": "refs/heads/sts-925",
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-platform"
       }
@@ -158,17 +157,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1676204115,
-        "narHash": "sha256-cYYt6sN9t+lYYYelAbRtM/ioVJ27kMcUtR4unA8jfd4=",
+        "lastModified": 1681737193,
+        "narHash": "sha256-c+0eLyF/VWZWGeB1DA88aDUZ3BjO6+jnsJpVW4wxs4w=",
         "ref": "refs/heads/master",
-        "rev": "cc55bca9b25e65f7060de642c99e51bd96dfc190",
-        "revCount": 47,
+        "rev": "efaf89d12a6811f0e00034444904b8d169f0fa34",
+        "revCount": 48,
         "type": "git",
-        "url": "https://gitlab.homotopic.tech/nix/lint-utils"
+        "url": "https://gitlab.nixica.dev/nix/lint-utils"
       },
       "original": {
         "type": "git",
-        "url": "https://gitlab.homotopic.tech/nix/lint-utils"
+        "url": "https://gitlab.nixica.dev/nix/lint-utils"
       }
     },
     "lint-utils_2": {
@@ -209,11 +208,11 @@
     "nixpkgs-lib": {
       "locked": {
         "dir": "lib",
-        "lastModified": 1678375444,
-        "narHash": "sha256-XIgHfGvjFvZQ8hrkfocanCDxMefc/77rXeHvYdzBMc8=",
+        "lastModified": 1682879489,
+        "narHash": "sha256-sASwo8gBt7JDnOOstnps90K1wxmVfyhsTPPNTGBPjjg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "130fa0baaa2b93ec45523fdcde942f6844ee9f6e",
+        "rev": "da45bf6ec7bbcc5d1e14d3795c025199f28e0de0",
         "type": "github"
       },
       "original": {
@@ -242,11 +241,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1679198465,
-        "narHash": "sha256-VfXpHpniNWgg7pBzxb20pRX7kqn80LApPDQYTReiFCw=",
+        "lastModified": 1683968890,
+        "narHash": "sha256-FuNtjMvT07cJydY5NRyRhIni/dEwkSkijmFEdsmqdkA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5a05160f7671434e1c833b1b01284b876e04eca4",
+        "rev": "ea11a3977f4cba013d8680667616be827c967ac0",
         "type": "github"
       },
       "original": {

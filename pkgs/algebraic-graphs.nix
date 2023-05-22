@@ -5,6 +5,8 @@ mkDerivation {
   pname = "algebraic-graphs";
   version = "0.7";
   sha256 = "51159a0d18690ab51e6709e3c576275402f96f57d901f87d734da6854582e568";
+  revision = "1";
+  editedCabalFile = "1z9xls7riv3rlp1vjymvj7z64y8w0x3865d2ad2dzrwsdgzcsndf";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -15,8 +17,8 @@ mkDerivation {
     array base containers deepseq extra inspection-testing QuickCheck
     transformers
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

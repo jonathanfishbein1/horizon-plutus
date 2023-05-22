@@ -5,10 +5,10 @@
 }:
 mkDerivation {
   pname = "cardano-prelude";
-  version = "0.1.0.1";
+  version = "0.1.0.2";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-prelude-0.1.0.1.tar.gz";
-    sha256 = "12m6z877q2my47x4sgl4zikviha884ajkpp6grvxb3qgdvrxbnw1";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-prelude-0.1.0.2.tar.gz";
+    sha256 = "09ac7avkxyi60cb9knpzgbsxh0ik9k5xyw6yi2qk27in5yywg4xy";
   };
   isLibrary = true;
   isExecutable = false;
@@ -26,6 +26,6 @@ mkDerivation {
   doBenchmark = false;
   hyperlinkSource = false;
   description = "A Prelude replacement for the Cardano project";
-  license = lib.licenses.mit;
+  license = lib.licenses.asl20;
   broken = false;
 }

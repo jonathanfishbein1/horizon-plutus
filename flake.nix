@@ -8,7 +8,7 @@
 
   inputs = {
     get-flake.url = "github:ursi/get-flake";
-    horizon-platform.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-platform?ref=refs/heads/sts-925";
+    horizon-platform.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-platform";
     iohk-nix = {
       url = "github:input-output-hk/iohk-nix/26f56e32169dcc9ef72ac754eccdb3c96d714751";
       flake = false;
@@ -51,26 +51,10 @@
         (import ./configuration.nix { inherit libsodium R secp256k1 libblst; } { inherit pkgs; })
       ];
 
-      legacyPackages' = horizon-platform.legacyPackages.${system}.extend overrides;
+      legacyPackages = horizon-platform.legacyPackages.${system}.extend overrides;
 
-      isDerivation =
-        x: x != null
-          && builtins.typeOf x == "set"
-          && pkgs.lib.hasAttr "type" x
-          && x.type == "derivation";
+      packages = filterAttrs (_: isDerivation) legacyPackages;
 
-      isHaskellLibrary =
-        x: isDerivation x
-          && pkgs.lib.hasAttr "isHaskellLibrary" x
-          && x.isHaskellLibrary == true;
-
-      mapHaskellLibraries = f: builtins.mapAttrs (n: v: if isHaskellLibrary v then f n v else v);
-
-      addCabalSetupDepends = _: v: pkgs.haskell.lib.addSetupDepend v pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
-
-      legacyPackages = mapHaskellLibraries addCabalSetupDepends legacyPackages';
-
-      packages = filterAttrs (_: isDerivation) legacyPackages';
     in
     {
 

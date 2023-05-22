@@ -1,17 +1,14 @@
 { mkDerivation, aeson, base, cardano-binary, cborg, containers
-, data-default-class, deepseq, fetchgit, fingertree, lib, nothunks
+, data-default-class, deepseq, fetchzip, fingertree, lib, nothunks
 , serialise
 }:
 mkDerivation {
   pname = "cardano-strict-containers";
   version = "0.1.2.1";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/cardano-base";
-    sha256 = "0n3w1k30ivdppyidyws9riy1qyx4881gxw8v1v34sixbraj0ng5k";
-    rev = "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d";
-    fetchSubmodules = true;
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-strict-containers-0.1.2.1.tar.gz";
+    sha256 = "05szacvalxvw5xfyz0i7mvdlflnvhxj14vski5h3hzdcia3xvpxj";
   };
-  postUnpack = "sourceRoot+=/cardano-strict-containers/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

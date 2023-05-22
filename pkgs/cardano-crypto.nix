@@ -1,14 +1,12 @@
 { mkDerivation, base, basement, bytestring, cryptonite, deepseq
-, fetchgit, foundation, gauge, hashable, integer-gmp, lib, memory
+, fetchzip, foundation, gauge, hashable, integer-gmp, lib, memory
 }:
 mkDerivation {
   pname = "cardano-crypto";
-  version = "1.1.0";
-  src = fetchgit {
-    url = "https://github.com/input-output-hk/cardano-crypto";
-    sha256 = "06sdx5ndn2g722jhpicmg96vsrys89fl81k8290b3lr6b1b0w4m3";
-    rev = "07397f0e50da97eaa0575d93bee7ac4b2b2576ec";
-    fetchSubmodules = true;
+  version = "1.1.2";
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-crypto-1.1.2.tar.gz";
+    sha256 = "0355hs12mlrzk3pvmrb6c1sg2rvbpnwkdja9ky6psji5paxs81bn";
   };
   isLibrary = true;
   isExecutable = true;

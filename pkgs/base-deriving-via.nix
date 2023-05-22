@@ -1,14 +1,11 @@
-{ mkDerivation, base, fetchgit, lib }:
+{ mkDerivation, base, fetchzip, lib }:
 mkDerivation {
   pname = "base-deriving-via";
   version = "0.1.0.2";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/cardano-base";
-    sha256 = "0n3w1k30ivdppyidyws9riy1qyx4881gxw8v1v34sixbraj0ng5k";
-    rev = "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d";
-    fetchSubmodules = true;
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/base-deriving-via-0.1.0.2.tar.gz";
+    sha256 = "19xa46sz73382355326x72ha7h2aybibnz3cqzdz4xdiivicvpaj";
   };
-  postUnpack = "sourceRoot+=/base-deriving-via/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

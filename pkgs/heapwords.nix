@@ -1,16 +1,13 @@
-{ mkDerivation, array, base, bytestring, containers, fetchgit
+{ mkDerivation, array, base, bytestring, containers, fetchzip
 , ghc-prim, lib, text, time, vector
 }:
 mkDerivation {
   pname = "heapwords";
   version = "0.1.0.2";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/cardano-base";
-    sha256 = "0n3w1k30ivdppyidyws9riy1qyx4881gxw8v1v34sixbraj0ng5k";
-    rev = "f954aec4fbe11ba96729ddcc5e22c13ab6320b5d";
-    fetchSubmodules = true;
+  src = fetchzip {
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/heapwords-0.1.0.2.tar.gz";
+    sha256 = "0h5vmz957a4nzwjl5m7s82zms2f1g4imbggxph30l0lwgxhcy9m8";
   };
-  postUnpack = "sourceRoot+=/heapwords/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

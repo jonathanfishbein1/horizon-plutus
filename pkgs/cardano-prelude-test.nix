@@ -6,10 +6,10 @@
 }:
 mkDerivation {
   pname = "cardano-prelude-test";
-  version = "0.1.0.1";
+  version = "0.1.0.2";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-prelude-test-0.1.0.1.tar.gz";
-    sha256 = "0sf8pyil2h08kl3mr18ddrdhwz2caaqzj5mlys6g69xp4gf9b8lj";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-prelude-test-0.1.0.2.tar.gz";
+    sha256 = "1y9ppvqkl9ryqc8xw0mvk612py10895krki2v82w0a6b6vlzmds0";
   };
   isLibrary = true;
   isExecutable = false;

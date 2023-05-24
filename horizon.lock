@@ -1,10 +1,26 @@
-[ { mapKey = "algebraic-graphs"
+[ { mapKey = "HTF"
+  , mapValue =
+      "1225aceab7f0a5e26ec9c6a51ad8926154df25f8e6f94b79c3ff155f6aa596b2"
+  }
+, { mapKey = "Stream"
+  , mapValue =
+      "63e5cda102e1523071f1bbcd432c5a49bf2a90ecd1ccb061b7d60e8f373a16ac"
+  }
+, { mapKey = "algebraic-graphs"
   , mapValue =
       "5bc7a25ddccd406e860edc65691ab3e5805689505648e4c335a3fc30090ed999"
   }
 , { mapKey = "base-deriving-via"
   , mapValue =
       "4efa8288f3b65132dd05c90ee5ab1fd6b271dd2cd0d9092788e660e14fa57c59"
+  }
+, { mapKey = "base-prelude"
+  , mapValue =
+      "040f386932ce1d245870f13c97c3c3b1c5d85171f48211a1c2b4aa6e7d1835a3"
+  }
+, { mapKey = "canonical-json"
+  , mapValue =
+      "eeff1c34fbce377cca4b0a371e41bd85843da87bbfb9308e9ac6ec2e16a914bc"
   }
 , { mapKey = "cardano-binary"
   , mapValue =
@@ -46,6 +62,22 @@
   , mapValue =
       "485eaf48b54726c14fd1f3a0f2eea3b0e8bcabe71704c337162fb144e3cf26c1"
   }
+, { mapKey = "checkers"
+  , mapValue =
+      "002bfd44c7723a7ff8522102fcaed71029d778983d3b5089120e287c456af02a"
+  }
+, { mapKey = "composition-prelude"
+  , mapValue =
+      "2cfc0ddd0b95654489063690dab2246857fc4d1115ed7a0ed585990e27da9c49"
+  }
+, { mapKey = "deriving-aeson"
+  , mapValue =
+      "ba1138082bf6c3b0cffbfd64994e8fa2ea7867d66d591934e02ae067f9833db6"
+  }
+, { mapKey = "dom-lt"
+  , mapValue =
+      "f1d13860071a092181717545fd5587e39923ae8f1ed65567bc4ec582ca5006f5"
+  }
 , { mapKey = "flat"
   , mapValue =
       "17b6962a73cc0bb73fffb0995a33a461ed02cce9f846465ec735ccdf987c2fa3"
@@ -54,9 +86,45 @@
   , mapValue =
       "41fabeaa872de5d8a18a282678c3484e48e47b13fd1502b876dbd0be95f10adb"
   }
+, { mapKey = "hex-text"
+  , mapValue =
+      "6d9f6a07be15d70c3490ccf3feee65802ab317d3fd588353ca59abba9c2d9ec6"
+  }
+, { mapKey = "int-cast"
+  , mapValue =
+      "bca9806cb08d4eb98459219b71691ef9c37f83e39ba756199c42fa80e5901f4c"
+  }
+, { mapKey = "lazy-search"
+  , mapValue =
+      "307f3442b156cf0ea0d7862a1280a8ecb1071d5b86cba51361c89065288ad370"
+  }
+, { mapKey = "lazysmallcheck"
+  , mapValue =
+      "b8bdb0089a941855255683102206b93ddbe9f0c14dda9bfe45e271e45e34a855"
+  }
+, { mapKey = "list-t"
+  , mapValue =
+      "40c1399863044eacb1fc6308cdb88ce667b36b51a4c714968dab2a915a3d93df"
+  }
 , { mapKey = "monoidal-containers"
   , mapValue =
       "e38b51520e25815e1ab07182060cd3c62f5688dfd99123d415dab387db659f6f"
+  }
+, { mapKey = "mtl-prelude"
+  , mapValue =
+      "cf59bd012fb61ffc607af7ad77b85c1e31e38237f81246afad731d44b4dcb310"
+  }
+, { mapKey = "multiset"
+  , mapValue =
+      "9aef55ddc9e9877ea8d2d29f8360017e4afdd2512cddd60f79d62ec5e65314a9"
+  }
+, { mapKey = "newtype"
+  , mapValue =
+      "7946c94e1c739b61b8a29ee2961d0d06cc8c14f6dfc904cb7da19d7dee46ebe2"
+  }
+, { mapKey = "nonempty-vector"
+  , mapValue =
+      "848bc50ecfda9ffdb141464ac213c43bfaff5486e16588c615124616b9c4dca9"
   }
 , { mapKey = "plutus-core"
   , mapValue =
@@ -78,6 +146,14 @@
   , mapValue =
       "f58f186ea90b2433251ad8d4d74b50d146a009cc7c5fc113f114b9c44fc39158"
   }
+, { mapKey = "protolude"
+  , mapValue =
+      "f6de61313fcd4cf0d398c769120fcfcf9aa274b7baade3050a9442831d0f4bfd"
+  }
+, { mapKey = "quickcheck-text"
+  , mapValue =
+      "1f80455ef38eebb1af8b13b7486f8a08609b36a678b1af1e91235c97ef3f18a6"
+  }
 , { mapKey = "quickcheck-transformer"
   , mapValue =
       "c1c76c9cdbd7922a62a7b88a38d860916045fc1991aa0e8aa3065b7cf241f4dd"
@@ -85,6 +161,10 @@
 , { mapKey = "ral"
   , mapValue =
       "aaea02fd2a43735a127661cc570fea47d0e21516e83458d7de772f689d86f0d1"
+  }
+, { mapKey = "timeit"
+  , mapValue =
+      "be58e1a2ff93f740bbdba9b5ba2b5b95a7b960f7b132dd5f77e5aaa301ef010c"
   }
 , { mapKey = "word-array"
   , mapValue =

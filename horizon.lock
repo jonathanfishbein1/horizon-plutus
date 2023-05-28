@@ -162,6 +162,10 @@
   , mapValue =
       "aaea02fd2a43735a127661cc570fea47d0e21516e83458d7de772f689d86f0d1"
   }
+, { mapKey = "size-based"
+  , mapValue =
+      "26c1e84587c9ed5ee69c1a21cf03860b7e4107ff1cbce0aa7eaf33e5573678bb"
+  }
 , { mapKey = "timeit"
   , mapValue =
       "be58e1a2ff93f740bbdba9b5ba2b5b95a7b960f7b132dd5f77e5aaa301ef010c"

@@ -83,6 +83,8 @@ final: prev: with pkgs.haskell.lib; {
 
   ral = final.callPackage (./pkgs/ral.nix) { };
 
+  size-based = final.callPackage (./pkgs/size-based.nix) { };
+
   timeit = final.callPackage (./pkgs/timeit.nix) { };
 
   word-array = final.callPackage (./pkgs/word-array.nix) { };

@@ -8,7 +8,7 @@
 
   inputs = {
     get-flake.url = "github:ursi/get-flake";
-    horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance?ref=sts-961";
+    horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance";
     iohk-nix = {
       url = "github:input-output-hk/iohk-nix/26f56e32169dcc9ef72ac754eccdb3c96d714751";
       flake = false;

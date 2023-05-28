@@ -148,16 +148,15 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1684927629,
-        "narHash": "sha256-4VDOnwSryCIOEZqC8AgXw8ypDa5sHaBMk2QXemcctQ8=",
-        "ref": "sts-961",
-        "rev": "a032cf97aa4ea3d050e979f593b870ebd662812c",
-        "revCount": 23,
+        "lastModified": 1685278962,
+        "narHash": "sha256-nd/wOa6pXrntrG7cxpv72HshUrkoyWqCITjjHUK+wqo=",
+        "ref": "refs/heads/master",
+        "rev": "be01bb490b2e5f03a6731478bb2aa5aeda5a50d3",
+        "revCount": 33,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-advance"
       },
       "original": {
-        "ref": "sts-961",
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-advance"
       }
@@ -172,16 +171,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1684847245,
-        "narHash": "sha256-0MdYx6ysuUyc8A6AFzPh1dyNWFQJ4hGFpPnlcx72a18=",
-        "ref": "sts-961",
-        "rev": "8abdb70498bbcaed927f7469cfeaf7e6444fe84a",
-        "revCount": 1055,
+        "lastModified": 1685121935,
+        "narHash": "sha256-FMm70CHX1z8ChyterTCNXRwJ0FrUPpCRUoRN9/KT8Hg=",
+        "ref": "refs/heads/master",
+        "rev": "aa57d144cff0d9888d662b7d0f584b98e8c2847b",
+        "revCount": 1076,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-core"
       },
       "original": {
-        "ref": "sts-961",
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-core"
       }

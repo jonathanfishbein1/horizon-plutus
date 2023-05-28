@@ -50,6 +50,7 @@ let packages =
             , newtype = H.callHackage "newtype" "0.2.2.0"
             , nonempty-vector = H.callHackage "nonempty-vector" "0.2.2.0"
             , ral = H.callHackage "ral" "0.2.1"
+            , size-based = H.callHackage "size-based" "0.1.3.1"
             , timeit = H.callHackage "timeit" "2.0"
             , plutus-core = callCHaP "plutus-core" "1.7.0.0"
             , plutus-ledger-api = callCHaP "plutus-ledger-api" "1.7.0.0"

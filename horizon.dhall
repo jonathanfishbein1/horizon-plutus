@@ -21,7 +21,8 @@ let packages =
             , Stream = H.callHackage "Stream" "0.4.7.2"
             , base-deriving-via = callCHaP "base-deriving-via" "0.1.0.2"
             , base-prelude = H.callHackage "base-prelude" "1.6.1"
-            , composition-prelude = H.callHackage "composition-prelude" "3.0.0.2"
+            , composition-prelude =
+                H.callHackage "composition-prelude" "3.0.0.2"
             , canonical-json = H.callHackage "canonical-json" "0.6.0.1"
             , cardano-binary = callCHaP "cardano-binary" "1.7.0.1"
             , cardano-binary-test = callCHaP "cardano-binary-test" "1.4.0.2"
@@ -51,7 +52,8 @@ let packages =
             , nonempty-vector = H.callHackage "nonempty-vector" "0.2.2.0"
             , ral = H.callHackage "ral" "0.2.1"
             , size-based = H.callHackage "size-based" "0.1.3.1"
-            , testing-type-modifiers = H.callHackage "testing-type-modifiers" "0.1.0.1"
+            , testing-type-modifiers =
+                H.callHackage "testing-type-modifiers" "0.1.0.1"
             , timeit = H.callHackage "timeit" "2.0"
             , plutus-core = callCHaP "plutus-core" "1.7.0.0"
             , plutus-ledger-api = callCHaP "plutus-ledger-api" "1.7.0.0"

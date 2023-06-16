@@ -17,6 +17,7 @@ let packages =
         H.Modifiers::{ enableProfiling = False }
         ( toMap
             { HTF = H.callHackage "HTF" "0.15.0.1"
+            , PyF = H.callHackage "PyF" "0.11.1.1"
             , Stream = H.callHackage "Stream" "0.4.7.2"
             , base-deriving-via = callCHaP "base-deriving-via" "0.1.0.2"
             , base-prelude = H.callHackage "base-prelude" "1.6.1"
@@ -35,22 +36,22 @@ let packages =
             , cardano-prelude-test = callCHaP "cardano-prelude-test" "0.1.0.2"
             , checkers = H.callHackage "checkers" "0.6.0"
             , deriving-aeson = H.callHackage "deriving-aeson" "0.2.9"
+            , dictionary-sharing = H.callHackage "dictionary-sharing" "0.1.0.0"
             , dom-lt = H.callHackage "dom-lt" "0.2.3"
             , flat = H.callHackage "flat" "0.6"
             , heapwords = callCHaP "heapwords" "0.1.0.2"
+            , hedgehog-fn = H.callHackage "hedgehog-fn" "1.0"
             , hex-text = H.callHackage "hex-text" "0.1.0.8"
             , int-cast = H.callHackage "int-cast" "0.2.0.0"
             , lazysmallcheck = H.callHackage "lazysmallcheck" "0.6"
             , lazy-search = H.callHackage "lazy-search" "0.1.3.0"
             , list-t = H.callHackage "list-t" "1.0.5.6"
-            , monoidal-containers =
-                H.callHackage "monoidal-containers" "0.6.4.0"
             , mtl-prelude = H.callHackage "mtl-prelude" "2.0.3.2"
             , multiset = H.callHackage "multiset" "0.3.4.3"
-            , newtype = H.callHackage "newtype" "0.2.2.0"
             , nonempty-vector = H.callHackage "nonempty-vector" "0.2.2.0"
             , ral = H.callHackage "ral" "0.2.1"
             , size-based = H.callHackage "size-based" "0.1.3.1"
+            , testing-type-modifiers = H.callHackage "testing-type-modifiers" "0.1.0.1"
             , timeit = H.callHackage "timeit" "2.0"
             , plutus-core = callCHaP "plutus-core" "1.7.0.0"
             , plutus-ledger-api = callCHaP "plutus-ledger-api" "1.7.0.0"
@@ -69,5 +70,5 @@ let packages =
 in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
-      , overlay = { compiler = "ghc-9.4.5", packages = overrides # packages }
+      , overlay = { compiler = "ghc-9.6.1", packages = overrides # packages }
       }

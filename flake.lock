@@ -5,11 +5,11 @@
         "nixpkgs-lib": "nixpkgs-lib"
       },
       "locked": {
-        "lastModified": 1679737941,
-        "narHash": "sha256-srSD9CwsVPnUMsIZ7Kt/UegkKUEBcTyU1Rev7mO45S0=",
+        "lastModified": 1683560683,
+        "narHash": "sha256-XAygPMN5Xnk/W2c1aW0jyEa6lfMDZWlQgiNtmHXytPc=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "3502ee99d6dade045bdeaf7b0cd8ec703484c25c",
+        "rev": "006c75898cf814ef9497252b022e91c946ba8e17",
         "type": "github"
       },
       "original": {
@@ -148,15 +148,16 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1685278962,
-        "narHash": "sha256-nd/wOa6pXrntrG7cxpv72HshUrkoyWqCITjjHUK+wqo=",
-        "ref": "refs/heads/master",
-        "rev": "be01bb490b2e5f03a6731478bb2aa5aeda5a50d3",
-        "revCount": 33,
+        "lastModified": 1686913774,
+        "narHash": "sha256-cxWeLt9GNu9XvlRSHYfsdh5prlwgCqLka5vq6NSimC8=",
+        "ref": "lts/ghc-9.6.x",
+        "rev": "ed673688a5d771454bc3dc2110552b5086150c18",
+        "revCount": 53,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-advance"
       },
       "original": {
+        "ref": "lts/ghc-9.6.x",
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-advance"
       }
@@ -171,15 +172,16 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1685121935,
-        "narHash": "sha256-FMm70CHX1z8ChyterTCNXRwJ0FrUPpCRUoRN9/KT8Hg=",
-        "ref": "refs/heads/master",
-        "rev": "aa57d144cff0d9888d662b7d0f584b98e8c2847b",
-        "revCount": 1076,
+        "lastModified": 1686913752,
+        "narHash": "sha256-go5Wmu80FdT2BW3Y9jzlmN0KZ4YSYdQlwCXDb4wbEYA=",
+        "ref": "lts/ghc-9.6.x",
+        "rev": "770e80b58389dede721c5270dbbaa4e0d8d26faa",
+        "revCount": 1085,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-core"
       },
       "original": {
+        "ref": "lts/ghc-9.6.x",
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-core"
       }
@@ -187,11 +189,11 @@
     "horizon-gen-nix-flake-source": {
       "flake": false,
       "locked": {
-        "lastModified": 1679489082,
-        "narHash": "sha256-c8n6EjjSx+qK8k85n/xLHXmGMf2IZHaXOU1bFmuZAp4=",
+        "lastModified": 1680415211,
+        "narHash": "sha256-nV6JW2x0mKHZkfGjShZhL16azL8kFtbmLw0iZNsoV/0=",
         "ref": "refs/heads/master",
-        "rev": "89cec6756dbdcac614713d5700e31f110d61d003",
-        "revCount": 159,
+        "rev": "23f1352b6ebc61901bf63f534859ca0f6330bb94",
+        "revCount": 162,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix"
       },
@@ -203,11 +205,11 @@
     "horizon-shell-flake-source": {
       "flake": false,
       "locked": {
-        "lastModified": 1680363750,
-        "narHash": "sha256-Zq48TEVKRqAEZGlseIPEjoor2Joph5avo0AeoRZhNj4=",
+        "lastModified": 1680415280,
+        "narHash": "sha256-33DGfEUJP56lSAjXMPUdfR8OpL1PFri/Tnwr9EsDb9Q=",
         "ref": "refs/heads/master",
-        "rev": "c7ebda22e47ac1dbb7f273f8063069749fbb67e7",
-        "revCount": 25,
+        "rev": "1eadace0dfaab411ad43d874116fa65d4e6aab70",
+        "revCount": 26,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/shells/horizon-shell"
       },
@@ -309,11 +311,11 @@
     "nixpkgs-lib": {
       "locked": {
         "dir": "lib",
-        "lastModified": 1678375444,
-        "narHash": "sha256-XIgHfGvjFvZQ8hrkfocanCDxMefc/77rXeHvYdzBMc8=",
+        "lastModified": 1682879489,
+        "narHash": "sha256-sASwo8gBt7JDnOOstnps90K1wxmVfyhsTPPNTGBPjjg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "130fa0baaa2b93ec45523fdcde942f6844ee9f6e",
+        "rev": "da45bf6ec7bbcc5d1e14d3795c025199f28e0de0",
         "type": "github"
       },
       "original": {
@@ -342,11 +344,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1680356671,
-        "narHash": "sha256-BTxYCxmjHqj1NLopU2JtCSa8DTrpIhF3HiNdvg2aTVE=",
+        "lastModified": 1686827919,
+        "narHash": "sha256-ZeRYB/hdOOSL61cgFGJ1PGGRJFRXcyfpxjeaNeJ6NO0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "b2aabfd21642be5b8b28c19bc4d517b40644b34c",
+        "rev": "572d29fdc1ff69dd1ad5effb5b02d168b56fcd8b",
         "type": "github"
       },
       "original": {

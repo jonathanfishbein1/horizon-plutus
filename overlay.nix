@@ -3,6 +3,8 @@
 final: prev: with pkgs.haskell.lib; {
   HTF = final.callPackage (./pkgs/HTF.nix) { };
 
+  PyF = final.callPackage (./pkgs/PyF.nix) { };
+
   Stream = final.callPackage (./pkgs/Stream.nix) { };
 
   algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
@@ -39,11 +41,15 @@ final: prev: with pkgs.haskell.lib; {
 
   deriving-aeson = final.callPackage (./pkgs/deriving-aeson.nix) { };
 
+  dictionary-sharing = final.callPackage (./pkgs/dictionary-sharing.nix) { };
+
   dom-lt = final.callPackage (./pkgs/dom-lt.nix) { };
 
   flat = final.callPackage (./pkgs/flat.nix) { };
 
   heapwords = final.callPackage (./pkgs/heapwords.nix) { };
+
+  hedgehog-fn = final.callPackage (./pkgs/hedgehog-fn.nix) { };
 
   hex-text = final.callPackage (./pkgs/hex-text.nix) { };
 
@@ -55,13 +61,9 @@ final: prev: with pkgs.haskell.lib; {
 
   list-t = final.callPackage (./pkgs/list-t.nix) { };
 
-  monoidal-containers = final.callPackage (./pkgs/monoidal-containers.nix) { };
-
   mtl-prelude = final.callPackage (./pkgs/mtl-prelude.nix) { };
 
   multiset = final.callPackage (./pkgs/multiset.nix) { };
-
-  newtype = final.callPackage (./pkgs/newtype.nix) { };
 
   nonempty-vector = final.callPackage (./pkgs/nonempty-vector.nix) { };
 
@@ -84,6 +86,8 @@ final: prev: with pkgs.haskell.lib; {
   ral = final.callPackage (./pkgs/ral.nix) { };
 
   size-based = final.callPackage (./pkgs/size-based.nix) { };
+
+  testing-type-modifiers = final.callPackage (./pkgs/testing-type-modifiers.nix) { };
 
   timeit = final.callPackage (./pkgs/timeit.nix) { };
 

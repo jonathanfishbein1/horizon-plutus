@@ -40,7 +40,7 @@
   }
 , { mapKey = "cardano-crypto-class"
   , mapValue =
-      "ba854c7c116ad944ce38c487a0b1f8cc611093d3201881f5de4a83e3af2f87cd"
+      "69e1c86c65f4f07f48d0521c3011e060d8c13d997cedd30e835da8b4314a194a"
   }
 , { mapKey = "cardano-crypto-praos"
   , mapValue =
@@ -48,7 +48,7 @@
   }
 , { mapKey = "cardano-crypto-tests"
   , mapValue =
-      "690deb8520890d212028e9679c98eccdbd68bca5d768ebe57426bad631ee947d"
+      "91046f8069694c97477c59843f7fd334a4a3f7adde8832d98217ef5ce6bc1383"
   }
 , { mapKey = "cardano-prelude"
   , mapValue =
@@ -132,23 +132,23 @@
   }
 , { mapKey = "plutus-core"
   , mapValue =
-      "e8b6cff867572626cc9bc3a683caca7dd08d5e08086e7ca5ac994592367d5c4b"
+      "d749f79a2ecf6a7f3c22e3508ac69e3ff7d085eac45f2342b3285ef3c3cf754e"
   }
 , { mapKey = "plutus-ledger-api"
   , mapValue =
-      "72412fbc08ae0bc284f64d5769c44e86f07b58e968fe616eecdccff5c569b5da"
+      "6b48dd7fcb4aa74ad5d45fe67d22616918e04ffabce4745939b890da3db272d0"
   }
 , { mapKey = "plutus-tx"
   , mapValue =
-      "e0004b078a2500448a4a242436b18aee1ea9687912470bb00f346427176543ed"
+      "e7fdb3d043daf556b8da5a354f87878173a08b267ca5e57302861d2c950e6dc6"
   }
 , { mapKey = "plutus-tx-plugin"
   , mapValue =
-      "bda63f9464d19d2a97a209962b48531f5b417d242ce9ad46ff4afe5d677f940e"
+      "a9a440b85a6c3d06f8fbe2defb583f4f5ff847c118333ed11d4c178b66e408c0"
   }
 , { mapKey = "prettyprinter-configurable"
   , mapValue =
-      "878c2ad0b3fd5b2f835f7bec989c64c7486510f5fd77afb2cc1ed6bb17f000c2"
+      "7dc852f841c84d9a2f8ed4f8e452c28618bf6826b81cda6cad4bc7daa4eb5d6a"
   }
 , { mapKey = "protolude"
   , mapValue =

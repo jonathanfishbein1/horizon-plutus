@@ -6,11 +6,11 @@
 , dependent-sum, dependent-sum-template, deriving-aeson
 , deriving-compat, directory, dlist, dom-lt, exceptions, extra
 , fetchzip, filepath, flat, free, ghc-prim, hashable, haskeline
-, hedgehog, hex-text, int-cast, lazy-search, lens, lib, megaparsec
-, microlens, microlens-th, mmorph, mono-traversable
-, monoidal-containers, mtl, multiset, nonempty-vector, nothunks
-, optparse-applicative, parser-combinators, pretty-show
-, prettyprinter, prettyprinter-configurable, primitive, profunctors
+, hedgehog, hex-text, lazy-search, lens, lib, megaparsec, microlens
+, microlens-th, mmorph, mono-traversable, monoidal-containers, mtl
+, multiset, nonempty-vector, nothunks, optparse-applicative
+, parser-combinators, pretty-show, prettyprinter
+, prettyprinter-configurable, primitive, profunctors
 , quickcheck-instances, quickcheck-transformer, ral, random
 , recursion-schemes, semigroupoids, semigroups, serialise
 , size-based, some, split, tagged, tasty, tasty-golden
@@ -22,10 +22,10 @@
 }:
 mkDerivation {
   pname = "plutus-core";
-  version = "1.7.0.0";
+  version = "1.8.0.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-core-1.7.0.0.tar.gz";
-    sha256 = "043f46zgy337ngc9hl0cr8wh0lkhvbsb4fi3is8ydlia7xr7nhla";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-core-1.8.0.0.tar.gz";
+    sha256 = "0qr6kb7hz25zy8iczzcchlgfyll4xn1dnmzpk90bc06n58ksr20w";
   };
   isLibrary = true;
   isExecutable = true;
@@ -37,7 +37,7 @@ mkDerivation {
     data-default-class deepseq dependent-map dependent-sum
     dependent-sum-template deriving-aeson deriving-compat dlist dom-lt
     exceptions extra filepath flat free ghc-prim hashable hedgehog
-    int-cast lazy-search lens megaparsec mmorph mono-traversable
+    lazy-search lens megaparsec mmorph mono-traversable
     monoidal-containers mtl multiset nonempty-vector nothunks
     optparse-applicative parser-combinators prettyprinter
     prettyprinter-configurable primitive profunctors QuickCheck
@@ -49,7 +49,7 @@ mkDerivation {
   ];
   executableHaskellDepends = [
     aeson base brick bytestring cardano-crypto-class cassava containers
-    criterion criterion-measurement deepseq directory filepath
+    criterion criterion-measurement deepseq directory filepath flat
     haskeline hedgehog lens megaparsec microlens microlens-th
     mono-traversable mtl optparse-applicative prettyprinter QuickCheck
     quickcheck-instances random split text text-zipper time

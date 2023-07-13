@@ -6,14 +6,14 @@
 }:
 mkDerivation {
   pname = "cardano-crypto-tests";
-  version = "2.1.1.0";
+  version = "2.1.2.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-crypto-tests-2.1.1.0.tar.gz";
-    sha256 = "1g8j7lw4x480sdy83ihnpd2hayypqyl5yl3ap4qjqijjdycs8rlz";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-crypto-tests-2.1.2.0.tar.gz";
+    sha256 = "1dn6imy2hf2zb2k82pj9rzqy71j88pvcm505zi9l1zai396nyy4c";
   };
   isLibrary = true;
   isExecutable = false;
-  enableSeparateDataOutput = false;
+  enableSeparateDataOutput = true;
   libraryHaskellDepends = [
     base base16-bytestring bytestring cardano-binary
     cardano-crypto-class cardano-crypto-praos cborg criterion

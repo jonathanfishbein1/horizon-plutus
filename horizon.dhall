@@ -27,9 +27,9 @@ let packages =
             , cardano-binary = callCHaP "cardano-binary" "1.7.0.1"
             , cardano-binary-test = callCHaP "cardano-binary-test" "1.4.0.2"
             , cardano-crypto = callCHaP "cardano-crypto" "1.1.2"
-            , cardano-crypto-class = callCHaP "cardano-crypto-class" "2.1.1.0"
+            , cardano-crypto-class = callCHaP "cardano-crypto-class" "2.1.2.0"
             , cardano-crypto-praos = callCHaP "cardano-crypto-praos" "2.1.2.0"
-            , cardano-crypto-tests = callCHaP "cardano-crypto-tests" "2.1.1.0"
+            , cardano-crypto-tests = callCHaP "cardano-crypto-tests" "2.1.2.0"
             , cardano-slotting = callCHaP "cardano-slotting" "0.1.1.1"
             , cardano-strict-containers =
                 callCHaP "cardano-strict-containers" "0.1.2.1"
@@ -55,12 +55,12 @@ let packages =
             , testing-type-modifiers =
                 H.callHackage "testing-type-modifiers" "0.1.0.1"
             , timeit = H.callHackage "timeit" "2.0"
-            , plutus-core = callCHaP "plutus-core" "1.7.0.0"
-            , plutus-ledger-api = callCHaP "plutus-ledger-api" "1.7.0.0"
-            , plutus-tx = callCHaP "plutus-tx" "1.7.0.0"
-            , plutus-tx-plugin = callCHaP "plutus-tx-plugin" "1.7.0.0"
+            , plutus-core = callCHaP "plutus-core" "1.8.0.0"
+            , plutus-ledger-api = callCHaP "plutus-ledger-api" "1.8.0.0"
+            , plutus-tx = callCHaP "plutus-tx" "1.8.0.0"
+            , plutus-tx-plugin = callCHaP "plutus-tx-plugin" "1.8.0.0"
             , prettyprinter-configurable =
-                callCHaP "prettyprinter-configurable" "1.7.0.0"
+                callCHaP "prettyprinter-configurable" "1.8.0.0"
             , protolude = H.callHackage "protolude" "0.3.3"
             , quickcheck-text = H.callHackage "quickcheck-text" "0.1.2.1"
             , quickcheck-transformer =

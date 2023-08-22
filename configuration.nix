@@ -5,7 +5,7 @@ with pkgs.haskell.lib;
 
 final: prev: {
 
-  cardano-crypto-class = addPkgconfigDepend (prev.callPackage ./pkgs/cardano-crypto-class.nix { inherit libsodium secp256k1;}) libblst;
+  cardano-crypto-class = addPkgconfigDepends (addExtraLibraries (prev.callPackage ./pkgs/cardano-crypto-class.nix { inherit libsodium libblst secp256k1;}) [libblst]) [libblst];
 
   cardano-crypto-praos = addSetupDepend (addPkgconfigDepends prev.cardano-crypto-praos [libblst libsodium]) pkgs.haskell.packages.ghc925.Cabal_3_8_1_0;
 

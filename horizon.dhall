@@ -55,12 +55,12 @@ let packages =
             , testing-type-modifiers =
                 H.callHackage "testing-type-modifiers" "0.1.0.1"
             , timeit = H.callHackage "timeit" "2.0"
-            , plutus-core = callCHaP "plutus-core" "1.8.0.0"
-            , plutus-ledger-api = callCHaP "plutus-ledger-api" "1.8.0.0"
-            , plutus-tx = callCHaP "plutus-tx" "1.8.0.0"
-            , plutus-tx-plugin = callCHaP "plutus-tx-plugin" "1.8.0.0"
+            , plutus-core = callCHaP "plutus-core" "1.10.0.0"
+            , plutus-ledger-api = callCHaP "plutus-ledger-api" "1.10.0.0"
+            , plutus-tx = callCHaP "plutus-tx" "1.10.0.0"
+            , plutus-tx-plugin = callCHaP "plutus-tx-plugin" "1.10.0.0"
             , prettyprinter-configurable =
-                callCHaP "prettyprinter-configurable" "1.8.0.0"
+                callCHaP "prettyprinter-configurable" "1.10.0.0"
             , protolude = H.callHackage "protolude" "0.3.3"
             , quickcheck-text = H.callHackage "quickcheck-text" "0.1.2.1"
             , quickcheck-transformer =

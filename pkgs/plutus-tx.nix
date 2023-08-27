@@ -8,10 +8,10 @@
 }:
 mkDerivation {
   pname = "plutus-tx";
-  version = "1.8.0.0";
+  version = "1.10.0.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-tx-1.8.0.0.tar.gz";
-    sha256 = "0llygn64vmswkx5rxmkxrf8ylgzsb39g5fr3p4zy13dd0dqa5ffm";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-tx-1.10.0.0.tar.gz";
+    sha256 = "0ya0igfaz76xw633500v2pp35ll9p8zl74z1ipv7v1df0fgwcv5q";
   };
   isLibrary = true;
   isExecutable = false;

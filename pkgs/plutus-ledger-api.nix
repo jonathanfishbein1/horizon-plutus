@@ -6,10 +6,10 @@
 }:
 mkDerivation {
   pname = "plutus-ledger-api";
-  version = "1.8.0.0";
+  version = "1.10.0.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-ledger-api-1.8.0.0.tar.gz";
-    sha256 = "19qnb4qvw4d2kq3byqnpq3j8znjyk08qxfddjkfb8w65146ic5v7";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-ledger-api-1.10.0.0.tar.gz";
+    sha256 = "02clf6a86j7q3x17h4f4ci1jbywm4f502llaxjs9ysnf0cr291sb";
   };
   isLibrary = true;
   isExecutable = true;

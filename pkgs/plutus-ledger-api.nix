@@ -6,10 +6,10 @@
 }:
 mkDerivation {
   pname = "plutus-ledger-api";
-  version = "1.10.0.0";
+  version = "1.11.0.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-ledger-api-1.10.0.0.tar.gz";
-    sha256 = "02clf6a86j7q3x17h4f4ci1jbywm4f502llaxjs9ysnf0cr291sb";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-ledger-api-1.11.0.0.tar.gz";
+    sha256 = "1lr4bnbh6iw6nsja2b9742ncykabkz8c6kvfdj645h5lm94mwv74";
   };
   isLibrary = true;
   isExecutable = true;
@@ -24,8 +24,9 @@ mkDerivation {
     tasty-hunit
   ];
   testHaskellDepends = [
-    base bytestring containers extra hedgehog mtl nothunks plutus-core
-    plutus-tx tasty tasty-hedgehog tasty-hunit tasty-quickcheck text
+    base bytestring cborg containers extra hedgehog mtl nothunks
+    plutus-core plutus-tx tasty tasty-hedgehog tasty-hunit
+    tasty-quickcheck text
   ];
   enableLibraryProfiling = false;
   enableExecutableProfiling = false;

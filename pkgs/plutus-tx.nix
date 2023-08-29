@@ -8,20 +8,19 @@
 }:
 mkDerivation {
   pname = "plutus-tx";
-  version = "1.10.0.0";
+  version = "1.11.0.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-tx-1.10.0.0.tar.gz";
-    sha256 = "0ya0igfaz76xw633500v2pp35ll9p8zl74z1ipv7v1df0fgwcv5q";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-tx-1.11.0.0.tar.gz";
+    sha256 = "1jagbhiq14421y48fm0i9q9x9vjarpwrgrg8dzrg3m5fs6nfvcmg";
   };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson base bytestring containers data-default-class deepseq
-    deriving-compat extra filepath flat ghc-prim hashable hedgehog lens
-    memory mtl plutus-core prettyprinter serialise tagged tasty
-    tasty-hedgehog template-haskell text th-abstraction th-compat
-    transformers
+    deriving-compat extra flat ghc-prim hashable hedgehog lens memory
+    mtl plutus-core prettyprinter serialise tagged tasty tasty-hedgehog
+    template-haskell text th-abstraction th-compat transformers
   ];
   testHaskellDepends = [
     aeson base base16-bytestring bytestring cborg filepath hedgehog

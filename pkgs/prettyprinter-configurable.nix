@@ -5,10 +5,10 @@
 }:
 mkDerivation {
   pname = "prettyprinter-configurable";
-  version = "1.10.0.0";
+  version = "1.11.0.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/prettyprinter-configurable-1.10.0.0.tar.gz";
-    sha256 = "18bhch6cr4i2m8m2gacvbs2n735wi5ada3g2jnhfxa30ji5l5hlw";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/prettyprinter-configurable-1.11.0.0.tar.gz";
+    sha256 = "0v9vx1rfcy9akjjjnyacya0b3mlva0xa0nxsppf3dfykj3hpf3m5";
   };
   isLibrary = true;
   isExecutable = false;

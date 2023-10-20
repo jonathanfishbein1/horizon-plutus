@@ -28,7 +28,7 @@
     , nixpkgs-libR
     , ...
     }:
-    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
+    flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" ] (system:
     let
       pkgs-libR = import nixpkgs-libR { inherit system; };
       pkgs = import nixpkgs { inherit system; };

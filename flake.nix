@@ -7,7 +7,6 @@
   };
 
   inputs = {
-    get-flake.url = "github:ursi/get-flake";
     horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance?ref=lts/ghc-9.6.x";
     iohk-nix = {
       url = "github:input-output-hk/iohk-nix/49f80e6cb415811053b63baeedca8e1a561b9c3c";
@@ -22,7 +21,6 @@
     inputs@
     { self
     , flake-utils
-    , get-flake
     , horizon-advance
     , iohk-nix
     , lint-utils
@@ -30,7 +28,7 @@
     , nixpkgs-libR
     , ...
     }:
-    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
+    flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" ] (system:
     let
       pkgs-libR = import nixpkgs-libR { inherit system; };
       pkgs = import nixpkgs { inherit system; };

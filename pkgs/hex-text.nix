@@ -5,8 +5,8 @@ mkDerivation {
   pname = "hex-text";
   version = "0.1.0.8";
   sha256 = "653924681d94db1e7e8ed9b3be209d17a0fd032683192084d62ee9b6394cf71b";
-  revision = "1";
-  editedCabalFile = "1w1hwzfhaphdbrnbqwn48v2jh7my280nisn7z98asidq77gi0lsl";
+  revision = "2";
+  editedCabalFile = "0qxpg67rwmqs0k5psc1mkm09d449w751drgmp5sixx0fgsdqmw8j";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -39,6 +39,8 @@ final: prev: with pkgs.haskell.lib; {
 
   composition-prelude = final.callPackage (./pkgs/composition-prelude.nix) { };
 
+  dependent-sum-template = final.callPackage (./pkgs/dependent-sum-template.nix) { };
+
   deriving-aeson = final.callPackage (./pkgs/deriving-aeson.nix) { };
 
   dictionary-sharing = final.callPackage (./pkgs/dictionary-sharing.nix) { };

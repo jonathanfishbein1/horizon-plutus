@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "list-t";
-  version = "1.0.5.6";
-  sha256 = "4f13658a166fc5b07ef57145ef266e3fb2426ed3c96bff89e556e12de7608bc6";
+  version = "1.0.5.7";
+  sha256 = "40928967728c7c96363309b372f415ca1729de0951c78ea1fa37f839687d6b46";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

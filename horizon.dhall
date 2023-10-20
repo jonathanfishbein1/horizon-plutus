@@ -37,6 +37,8 @@ let packages =
             , cardano-prelude-test = callCHaP "cardano-prelude-test" "0.1.0.2"
             , checkers = H.callHackage "checkers" "0.6.0"
             , deriving-aeson = H.callHackage "deriving-aeson" "0.2.9"
+            , dependent-sum-template =
+                callCHaP "dependent-sum-template" "0.1.1.1.0.0.0.1"
             , dictionary-sharing = H.callHackage "dictionary-sharing" "0.1.0.0"
             , dom-lt = H.callHackage "dom-lt" "0.2.3"
             , flat = H.callHackage "flat" "0.6"
@@ -46,7 +48,7 @@ let packages =
             , int-cast = H.callHackage "int-cast" "0.2.0.0"
             , lazysmallcheck = H.callHackage "lazysmallcheck" "0.6"
             , lazy-search = H.callHackage "lazy-search" "0.1.3.0"
-            , list-t = H.callHackage "list-t" "1.0.5.6"
+            , list-t = H.callHackage "list-t" "1.0.5.7"
             , mtl-prelude = H.callHackage "mtl-prelude" "2.0.3.2"
             , multiset = H.callHackage "multiset" "0.3.4.3"
             , nonempty-vector = H.callHackage "nonempty-vector" "0.2.2.0"
@@ -72,5 +74,5 @@ let packages =
 in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
-      , overlay = { compiler = "ghc-9.6.1", packages = overrides # packages }
+      , overlay = { compiler = "ghc-9.6.3", packages = overrides # packages }
       }

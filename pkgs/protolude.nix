@@ -6,6 +6,8 @@ mkDerivation {
   pname = "protolude";
   version = "0.3.3";
   sha256 = "6c39ded2c7e9f7b1a508e4400f0151cb325f4d80e35010c1d5afa58b48971a46";
+  revision = "1";
+  editedCabalFile = "07hfs830nc1lvcmsw1hhmrmhzq0b8z25dc090wfn25ss2cvrjkjv";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

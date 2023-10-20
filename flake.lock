@@ -98,21 +98,6 @@
         "type": "github"
       }
     },
-    "get-flake": {
-      "locked": {
-        "lastModified": 1694475786,
-        "narHash": "sha256-s5wDmPooMUNIAAsxxCMMh9g68AueGg63DYk2hVZJbc8=",
-        "owner": "ursi",
-        "repo": "get-flake",
-        "rev": "ac54750e3b95dab6ec0726d77f440efe6045bec1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ursi",
-        "repo": "get-flake",
-        "type": "github"
-      }
-    },
     "horizon-advance": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -363,7 +348,6 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "get-flake": "get-flake",
         "horizon-advance": "horizon-advance",
         "iohk-nix": "iohk-nix",
         "lint-utils": "lint-utils_3",

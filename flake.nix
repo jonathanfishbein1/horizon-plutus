@@ -7,7 +7,6 @@
   };
 
   inputs = {
-    get-flake.url = "github:ursi/get-flake";
     horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance?ref=lts/ghc-9.6.x";
     iohk-nix = {
       url = "github:input-output-hk/iohk-nix/49f80e6cb415811053b63baeedca8e1a561b9c3c";
@@ -22,7 +21,6 @@
     inputs@
     { self
     , flake-utils
-    , get-flake
     , horizon-advance
     , iohk-nix
     , lint-utils

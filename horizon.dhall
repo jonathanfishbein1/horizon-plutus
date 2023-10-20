@@ -9,9 +9,6 @@ let callCHaP
           "https://input-output-hk.github.io/cardano-haskell-packages/package/${name}-${version}.tar.gz"
           (None H.Subdir)
 
-let overrides =
-      toMap { algebraic-graphs = H.callHackage "algebraic-graphs" "0.7" }
-
 let packages =
       H.modPackageList
         H.Modifiers::{ enableProfiling = False }
@@ -19,6 +16,7 @@ let packages =
             { HTF = H.callHackage "HTF" "0.15.0.1"
             , PyF = H.callHackage "PyF" "0.11.1.1"
             , Stream = H.callHackage "Stream" "0.4.7.2"
+            , algebraic-graphs = H.callHackage "algebraic-graphs" "0.7"
             , base-deriving-via = callCHaP "base-deriving-via" "0.1.0.2"
             , base-prelude = H.callHackage "base-prelude" "1.6.1"
             , composition-prelude =
@@ -74,5 +72,5 @@ let packages =
 in  H.HorizonExport.MakeOverlay
       { packagesDir = "pkgs"
       , overlayFile = "overlay.nix"
-      , overlay = { compiler = "ghc-9.6.3", packages = overrides # packages }
+      , overlay = { compiler = "ghc-9.6.3", packages }
       }

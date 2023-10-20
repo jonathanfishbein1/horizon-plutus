@@ -12,7 +12,7 @@
   }
 , { mapKey = "algebraic-graphs"
   , mapValue =
-      "2b2d98f4e1819e387c471c13b02114c992fd6f2f42f1111ca660a2994a207212"
+      "21d7ea69c712f199dc5f0bde176d0367e20a8302ca9bce26b2d7db44f22fe749"
   }
 , { mapKey = "base-deriving-via"
   , mapValue =

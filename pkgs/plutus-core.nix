@@ -67,8 +67,8 @@ mkDerivation {
   benchmarkHaskellDepends = [
     base criterion nonempty-vector ral random
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

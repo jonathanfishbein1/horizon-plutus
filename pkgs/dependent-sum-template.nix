@@ -15,8 +15,8 @@ mkDerivation {
     base dependent-sum template-haskell th-abstraction th-extras
   ];
   testHaskellDepends = [ base constraints-extras dependent-sum ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

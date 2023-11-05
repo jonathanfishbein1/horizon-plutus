@@ -14,8 +14,8 @@ mkDerivation {
   libraryHaskellDepends = [
     array base bytestring containers ghc-prim text time vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

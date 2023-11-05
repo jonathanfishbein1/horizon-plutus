@@ -23,8 +23,8 @@ mkDerivation {
   testHaskellDepends = [
     base bytestring cardano-prelude ghc-heap ghc-prim hedgehog text
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

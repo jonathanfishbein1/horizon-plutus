@@ -6,8 +6,8 @@ mkDerivation {
   pname = "protolude";
   version = "0.3.3";
   sha256 = "6c39ded2c7e9f7b1a508e4400f0151cb325f4d80e35010c1d5afa58b48971a46";
-  revision = "1";
-  editedCabalFile = "07hfs830nc1lvcmsw1hhmrmhzq0b8z25dc090wfn25ss2cvrjkjv";
+  revision = "2";
+  editedCabalFile = "0f949f93wml7h7na9d1n9lvignwphxr2r18jwmpy33g0dxgn21h1";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -15,8 +15,8 @@ mkDerivation {
     array async base bytestring containers deepseq ghc-prim hashable
     mtl mtl-compat stm text transformers transformers-compat
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -22,8 +22,8 @@ mkDerivation {
     hedgehog hspec pretty-show QuickCheck quickcheck-instances tagged
     text time vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

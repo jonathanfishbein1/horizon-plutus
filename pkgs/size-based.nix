@@ -13,8 +13,8 @@ mkDerivation {
   libraryHaskellDepends = [
     base dictionary-sharing template-haskell testing-type-modifiers
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

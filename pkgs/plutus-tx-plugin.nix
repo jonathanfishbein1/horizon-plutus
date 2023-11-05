@@ -21,8 +21,8 @@ mkDerivation {
     base containers lens optparse-applicative prettyprinter PyF text
   ];
   testHaskellDepends = [ base plutus-tx tagged tasty ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

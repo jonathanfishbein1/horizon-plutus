@@ -18,8 +18,8 @@ mkDerivation {
     containers formatting hedgehog hspec pretty-show QuickCheck
     quickcheck-instances text time vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

@@ -6,8 +6,8 @@ mkDerivation {
   pname = "ral";
   version = "0.2.1";
   sha256 = "510fa3a1293a5ff04f605aabafe65e6bdb1a15b085d173ed9bfda317909edab8";
-  revision = "2";
-  editedCabalFile = "0s51sjv3npjmvi2d2i3x4qs427h7pa2gm0bwm6m34visk78jaypq";
+  revision = "3";
+  editedCabalFile = "1a8833bz213ynf9lpmhmsmrzfbvzbm1iznv7hmgkqc8rz93zbvjw";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -16,8 +16,8 @@ mkDerivation {
     indexed-traversable QuickCheck semigroupoids
   ];
   benchmarkHaskellDepends = [ base criterion vector ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

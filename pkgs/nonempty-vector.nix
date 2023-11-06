@@ -12,8 +12,8 @@ mkDerivation {
   testHaskellDepends = [
     base QuickCheck tasty tasty-quickcheck vector
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

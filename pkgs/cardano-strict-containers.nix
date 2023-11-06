@@ -16,8 +16,8 @@ mkDerivation {
     aeson base cardano-binary cborg containers data-default-class
     deepseq fingertree nothunks serialise
   ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

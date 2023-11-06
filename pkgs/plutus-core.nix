@@ -13,19 +13,19 @@
 , prettyprinter-configurable, primitive, profunctors
 , quickcheck-instances, quickcheck-transformer, ral, random
 , recursion-schemes, semigroupoids, semigroups, serialise
-, size-based, some, split, tagged, tasty, tasty-golden
-, tasty-hedgehog, tasty-hunit, tasty-quickcheck, template-haskell
-, test-framework, test-framework-hunit, test-framework-quickcheck2
-, text, text-zipper, th-compat, th-lift, th-lift-instances
-, th-utilities, time, transformers, unordered-containers, vector
-, vty, witherable
+, size-based, some, split, tagged, tasty, tasty-discover
+, tasty-expected-failure, tasty-golden, tasty-hedgehog, tasty-hunit
+, tasty-quickcheck, template-haskell, test-framework
+, test-framework-hunit, test-framework-quickcheck2, text
+, text-zipper, th-compat, th-lift, th-lift-instances, th-utilities
+, time, transformers, unordered-containers, vector, vty, witherable
 }:
 mkDerivation {
   pname = "plutus-core";
-  version = "1.11.0.0";
+  version = "1.15.0.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-core-1.11.0.0.tar.gz";
-    sha256 = "17z3dg48zcrm61djz0pknv27l1vxc4rdcjrv0l92nnfl7sr3xngk";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-core-1.15.0.0.tar.gz";
+    sha256 = "0ddi09xj71jz5d5pmm4m4ry913fk55pih24vsr1s29zn7r9avifi";
   };
   isLibrary = true;
   isExecutable = true;
@@ -49,21 +49,23 @@ mkDerivation {
   ];
   executableHaskellDepends = [
     aeson base brick bytestring cardano-crypto-class cassava containers
-    criterion criterion-measurement deepseq directory filepath flat
-    haskeline hedgehog lens megaparsec microlens microlens-th
-    mono-traversable mtl optparse-applicative prettyprinter QuickCheck
-    quickcheck-instances random split text text-zipper time
-    transformers vector vty
+    criterion criterion-measurement deepseq directory exceptions
+    filepath flat haskeline hedgehog lens megaparsec microlens
+    microlens-th mono-traversable mtl optparse-applicative
+    prettyprinter primitive QuickCheck quickcheck-instances random
+    split text text-zipper time transformers vector vty
   ];
   testHaskellDepends = [
     aeson base bytestring cardano-crypto-class cassava containers
     data-default-class dlist filepath flat hashable hedgehog hex-text
     HUnit lens mmorph mtl nonempty-vector pretty-show prettyprinter
-    QuickCheck quickcheck-instances serialise split tasty tasty-golden
-    tasty-hedgehog tasty-hunit tasty-quickcheck template-haskell
-    test-framework test-framework-hunit test-framework-quickcheck2 text
+    QuickCheck quickcheck-instances serialise split tasty
+    tasty-expected-failure tasty-golden tasty-hedgehog tasty-hunit
+    tasty-quickcheck template-haskell test-framework
+    test-framework-hunit test-framework-quickcheck2 text
     th-lift-instances th-utilities unordered-containers vector
   ];
+  testToolDepends = [ tasty-discover ];
   benchmarkHaskellDepends = [
     base criterion nonempty-vector ral random
   ];

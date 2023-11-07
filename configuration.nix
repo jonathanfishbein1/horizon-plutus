@@ -7,6 +7,8 @@ final: prev: {
 
   cardano-crypto-class = addPkgconfigDepends (addExtraLibraries (prev.callPackage ./pkgs/cardano-crypto-class.nix { inherit libsodium libblst secp256k1;}) [libblst]) [libblst];
 
+  cardano-crypto-praos = prev.callPackage ./pkgs/cardano-crypto-praos.nix { inherit libsodium;};
+
   ghcide = null;
 
   ghcide-bench = null;

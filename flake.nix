@@ -8,10 +8,7 @@
 
   inputs = {
     horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance?ref=lts/ghc-9.6.x";
-    iohk-nix = {
-      url = "github:input-output-hk/iohk-nix/49f80e6cb415811053b63baeedca8e1a561b9c3c";
-      flake = false;
-    };
+    iohk-nix.url = "github:input-output-hk/iohk-nix";
     lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-libR.url = "github:nixos/nixpkgs/602748c14b82a2e17078713686fe1df2824fa502";
@@ -32,8 +29,8 @@
     let
       pkgs-libR = import nixpkgs-libR { inherit system; };
       pkgs = import nixpkgs { inherit system; };
-      crypto = (import iohk-nix { }).overlays.crypto;
-      iohk-pkgs = import nixpkgs { inherit system; overlays = crypto; };
+      crypto = inputs.iohk-nix.overlays.crypto;
+      iohk-pkgs = import nixpkgs { inherit system; overlays = [ crypto ]; };
     in
     with pkgs.lib;
     with pkgs.writers;

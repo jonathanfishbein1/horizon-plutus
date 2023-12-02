@@ -136,19 +136,19 @@
   }
 , { mapKey = "plutus-core"
   , mapValue =
-      "b6dc39b33deb772a8957c04b51dd260b584c9e56057b39274b4dbc16e60fe2d9"
+      "1d0fe87c7f67697109e394c2056969628936fcdfc16b516d768f7beca4727135"
   }
 , { mapKey = "plutus-ledger-api"
   , mapValue =
-      "8f0097e1ba3d514c123396691cc7e525a2640a82fe49499c967bfa6fe9adf90f"
+      "f980ec26a631761ae8813f6cf762b609e1361f36e52985816a5e4f53b97b7adc"
   }
 , { mapKey = "plutus-tx"
   , mapValue =
-      "99b91f53686a8a10f5b3c6ad52af572960055bf8161489b845a1643ebdc39fb0"
+      "15ed026f3ed3015c787274607a19a1eff71cf93ab89c3309eff5438344580a50"
   }
 , { mapKey = "plutus-tx-plugin"
   , mapValue =
-      "40f4fe68d41963d6a6d23f7046268311ec975891e2375fb17672d90d9719efd4"
+      "1ac3eedf86126f14bb462f4d5755efbd451b331492b341d2bec29d5a812653cd"
   }
 , { mapKey = "prettyprinter-configurable"
   , mapValue =

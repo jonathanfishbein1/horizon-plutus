@@ -7,7 +7,9 @@
   };
 
   inputs = {
+    flake-parts.url = "github:hercules-ci/flake-parts";
     horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance?ref=lts/ghc-9.6.x";
+    horizon-hoogle.url = "git+https://gitlab.horizon-haskell.net/nix/horizon-hoogle";
     iohk-nix.url = "github:input-output-hk/iohk-nix";
     lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -17,7 +19,7 @@
   outputs =
     inputs@
     { self
-    , flake-utils
+    , flake-parts
     , horizon-advance
     , iohk-nix
     , lint-utils
@@ -25,40 +27,51 @@
     , nixpkgs-libR
     , ...
     }:
-    flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" ] (system:
-    let
-      pkgs-libR = import nixpkgs-libR { inherit system; };
-      pkgs = import nixpkgs { inherit system; };
-      crypto = inputs.iohk-nix.overlays.crypto;
-      iohk-pkgs = import nixpkgs { inherit system; overlays = [ crypto ]; };
-    in
-    with pkgs.lib;
-    with pkgs.writers;
-    let
+    flake-parts.lib.mkFlake { inherit inputs; }
+      {
+        systems = [
+          "aarch64-darwin"
+          "x86_64-darwin"
+          "x86_64-linux"
+        ];
+        imports = [
+          inputs.horizon-hoogle.flakeModule
+        ];
+        perSystem = { config, system, ... }:
+          let
+            pkgs-libR = import nixpkgs-libR { inherit system; };
+            pkgs = import nixpkgs { inherit system; };
+            crypto = inputs.iohk-nix.overlays.crypto;
+            iohk-pkgs = import nixpkgs { inherit system; overlays = [ crypto ]; };
+          in
+          with pkgs.lib;
+          with pkgs.writers;
+          let
 
-      libsodium = iohk-pkgs.libsodium-vrf;
-      R = pkgs-libR.R;
-      secp256k1 = iohk-pkgs.secp256k1;
-      libblst = iohk-pkgs.libblst;
+            libsodium = iohk-pkgs.libsodium-vrf;
+            R = pkgs-libR.R;
+            secp256k1 = iohk-pkgs.secp256k1;
+            libblst = iohk-pkgs.libblst;
 
-      overrides = composeManyExtensions [
-        (import ./overlay.nix { inherit pkgs; })
-        (import ./configuration.nix { inherit libsodium R secp256k1 libblst; } { inherit pkgs; })
-      ];
+            overrides = composeManyExtensions [
+              (import ./overlay.nix { inherit pkgs; })
+              (import ./configuration.nix { inherit libsodium R secp256k1 libblst; } { inherit pkgs; })
+            ];
 
-      legacyPackages = horizon-advance.legacyPackages.${system}.extend overrides;
+            legacyPackages = horizon-advance.legacyPackages.${system}.extend overrides;
 
-      packages = filterAttrs (_: isDerivation) legacyPackages;
+            packages = filterAttrs (_: isDerivation) legacyPackages;
 
-    in
-    {
+          in
+          {
 
-      checks = with lint-utils.outputs.linters.${system}; {
-        dhall-format = dhall-format { src = self; };
-        nixpkgs-fmt = nixpkgs-fmt { src = self; find = "flake.nix"; };
+            checks = with lint-utils.outputs.linters.${system}; {
+              dhall-format = dhall-format { src = self; };
+              nixpkgs-fmt = nixpkgs-fmt { src = self; find = "flake.nix"; };
+            };
+
+            inherit legacyPackages;
+            inherit packages;
+          };
       };
-
-      inherit legacyPackages;
-      inherit packages;
-    });
 }

@@ -22,10 +22,10 @@
 }:
 mkDerivation {
   pname = "plutus-core";
-  version = "1.15.0.0";
+  version = "1.15.0.1";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-core-1.15.0.0.tar.gz";
-    sha256 = "0ddi09xj71jz5d5pmm4m4ry913fk55pih24vsr1s29zn7r9avifi";
+    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-core-1.15.0.1.tar.gz";
+    sha256 = "1xz25hxnxs34hxps04rfwqyg3h99zbmghg950fyhjk9rycyn2gp9";
   };
   isLibrary = true;
   isExecutable = true;

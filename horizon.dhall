@@ -52,10 +52,10 @@ let packages =
         , testing-type-modifiers =
             H.callHackage "testing-type-modifiers" "0.1.0.1"
         , timeit = H.callHackage "timeit" "2.0"
-        , plutus-core = callCHaP "plutus-core" "1.15.0.0"
-        , plutus-ledger-api = callCHaP "plutus-ledger-api" "1.15.0.0"
-        , plutus-tx = callCHaP "plutus-tx" "1.15.0.0"
-        , plutus-tx-plugin = callCHaP "plutus-tx-plugin" "1.15.0.0"
+        , plutus-core = callCHaP "plutus-core" "1.15.0.1"
+        , plutus-ledger-api = callCHaP "plutus-ledger-api" "1.15.0.1"
+        , plutus-tx = callCHaP "plutus-tx" "1.15.0.1"
+        , plutus-tx-plugin = callCHaP "plutus-tx-plugin" "1.15.0.1"
         , prettyprinter-configurable =
             callCHaP "prettyprinter-configurable" "1.15.0.0"
         , protolude = H.callHackage "protolude" "0.3.3"

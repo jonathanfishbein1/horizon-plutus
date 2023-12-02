@@ -9,6 +9,7 @@
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance?ref=lts/ghc-9.6.x";
+    horizon-hoogle.url = "git+https://gitlab.horizon-haskell.net/nix/horizon-hoogle";
     iohk-nix.url = "github:input-output-hk/iohk-nix";
     lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -32,6 +33,9 @@
           "aarch64-darwin"
           "x86_64-darwin"
           "x86_64-linux"
+        ];
+        imports = [
+          inputs.horizon-hoogle.flakeModule
         ];
         perSystem = { config, system, ... }:
           let

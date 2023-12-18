@@ -16,7 +16,7 @@
   }
 , { mapKey = "base-deriving-via"
   , mapValue =
-      "f30a7547312526a1f41ad7910eb2ceb6582c06be04918d44387f38f845676cd1"
+      "804b1569bf4188342e603bf8bdf4bc2596618f5ccf3acc4323547a76e7317f8e"
   }
 , { mapKey = "base-prelude"
   , mapValue =
@@ -28,43 +28,43 @@
   }
 , { mapKey = "cardano-binary"
   , mapValue =
-      "fd24218777cc0908f7a1b2d16578e7fb1468a36fc8a67ea0bb024b902041747a"
+      "6ee0043bb1c62bad11f79fe458a30bc412a3d02f057ba9d92116fc8ca1fa57c4"
   }
 , { mapKey = "cardano-binary-test"
   , mapValue =
-      "2472a712e20284005f8d0f9d1c3347a8344f01611851977c5211adc8118bf5e9"
+      "fa85c5ef125388e55e431089390357d38811c919472615efb341cf316465dd45"
   }
 , { mapKey = "cardano-crypto"
   , mapValue =
-      "64ec206f3c2e27e9ffeec9425d1c7b47c385013a82af33d788658a7425b6ed8a"
+      "f143e2d2501a5686b0c2aa65a26b7c81dd05068e96d1a868b1612f7c83e8dcba"
   }
 , { mapKey = "cardano-crypto-class"
   , mapValue =
-      "1043e2e85f597172e319c18cf598f407edf3e6aafa290bd2e04b0dce2994546a"
+      "23f56993bd51d8142a13f8e534b1f74eba9f8c3548937bd74391b7d9e5ee620c"
   }
 , { mapKey = "cardano-crypto-praos"
   , mapValue =
-      "9470bb52747b559411650330a361f29cd4c316e27dee418f9f37f3b3e787492f"
+      "ab05e04e259b0a9fb584a2c38327f5cecc4df5a40b7c8ae51203cb4a454dbe41"
   }
 , { mapKey = "cardano-crypto-tests"
   , mapValue =
-      "37194c07cc526d4a94b892a752a869b6258599c08addded36b640477f7e00f17"
+      "3069b7810b33c493ead2399e62da59e4c1f097f30e3e0c01829aef0a23614459"
   }
 , { mapKey = "cardano-prelude"
   , mapValue =
-      "0268ccac72ece439104ad2dfae29ebf855360d00308ae08a9ae590d31ccab233"
+      "fea7626cd78a28693498871af21f8a07b3e042ab7c2cd6e21875c1abf7eeadd6"
   }
 , { mapKey = "cardano-prelude-test"
   , mapValue =
-      "2539ffb24504999f5b60347a006a722b715a3ee43c2e3d1e4b3a62a8d073e7bd"
+      "6b402831e0d005e39e8f0af08b103173fa1d34a75f6148d3aa42d13f0beb120c"
   }
 , { mapKey = "cardano-slotting"
   , mapValue =
-      "b811244b9a1c5e365863dc864105acdbb3caf6456c8ad78937177e668a33d916"
+      "fa5972ff924a6b8da578b0237f1bbca38c345e8463cf638315bfcd86c938fe9c"
   }
 , { mapKey = "cardano-strict-containers"
   , mapValue =
-      "866d7326afe4952b167b7b0b2d6f25c195a6622f16fd195688347addd1b7f62d"
+      "48ceb55637d2ead278f606183ff9a5b3ddbedd37ffcf82d415af73dc05d25d10"
   }
 , { mapKey = "checkers"
   , mapValue =
@@ -76,7 +76,7 @@
   }
 , { mapKey = "dependent-sum-template"
   , mapValue =
-      "157593e8fc6e4d3675468ee41d6362f2296490a87d9776af3b0b6803814626b6"
+      "ecf2260bb3c53d6cb2b301b6f5b987e2e9c5acad78e08e72622eed3e4a9e26b1"
   }
 , { mapKey = "deriving-aeson"
   , mapValue =
@@ -96,7 +96,7 @@
   }
 , { mapKey = "heapwords"
   , mapValue =
-      "09050d6c2556281e35366ff27a864172e20b5726abb6c2cb3ac179b3e0838e12"
+      "47ab08738f795793bf42de145e87c58d298e64005fda59be89f32b4f9dad9f09"
   }
 , { mapKey = "hedgehog-fn"
   , mapValue =
@@ -136,23 +136,23 @@
   }
 , { mapKey = "plutus-core"
   , mapValue =
-      "1d0fe87c7f67697109e394c2056969628936fcdfc16b516d768f7beca4727135"
+      "4f61a020ec5cd3992fb6468909546c331a2a10a67581ce5305f252bc490b88ee"
   }
 , { mapKey = "plutus-ledger-api"
   , mapValue =
-      "f980ec26a631761ae8813f6cf762b609e1361f36e52985816a5e4f53b97b7adc"
+      "efda8ca1bd7f7dc1d21d4d34851fe0650329de876f13a414a892e0c08e19016a"
   }
 , { mapKey = "plutus-tx"
   , mapValue =
-      "15ed026f3ed3015c787274607a19a1eff71cf93ab89c3309eff5438344580a50"
+      "a7ad06c5448b7335d8133b2b611c00b16441c7ea69024c930960da48df6a79a9"
   }
 , { mapKey = "plutus-tx-plugin"
   , mapValue =
-      "1ac3eedf86126f14bb462f4d5755efbd451b331492b341d2bec29d5a812653cd"
+      "084bc05e48d2880523fb75239bb148496bc452ac556618a3579edf825a4bfed8"
   }
 , { mapKey = "prettyprinter-configurable"
   , mapValue =
-      "c8db1a80113bc52191bbf723ec44c0930609a15cea25cb6b8d1a596c6b3ba01e"
+      "ae738bccfa1967f5e8f2db9631ed3db92b92801b3bb58ce836ab9d4841d5b9eb"
   }
 , { mapKey = "protolude"
   , mapValue =
@@ -184,6 +184,6 @@
   }
 , { mapKey = "word-array"
   , mapValue =
-      "f9d333f72bba259195c9b5093a1179cde9fbd206c6d7b7369b06c5ae87f8d0e3"
+      "fe70a4043807a3f94c4c5067b32a78bd2d3ce3fe248bad772d21406235c6a398"
   }
 ]

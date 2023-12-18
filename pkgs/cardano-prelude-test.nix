@@ -8,7 +8,7 @@ mkDerivation {
   pname = "cardano-prelude-test";
   version = "0.1.0.2";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-prelude-test-0.1.0.2.tar.gz";
+    url = "https://chap.intersectmbo.org/package/cardano-prelude-test-0.1.0.2.tar.gz";
     sha256 = "1y9ppvqkl9ryqc8xw0mvk612py10895krki2v82w0a6b6vlzmds0";
   };
   isLibrary = true;
@@ -25,7 +25,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

@@ -5,7 +5,7 @@ mkDerivation {
   pname = "dependent-sum-template";
   version = "0.1.1.1.0.0.0.1";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/dependent-sum-template-0.1.1.1.0.0.0.1.tar.gz";
+    url = "https://chap.intersectmbo.org/package/dependent-sum-template-0.1.1.1.0.0.0.1.tar.gz";
     sha256 = "14arv0mbs9h8ckdnzbwn3ws64zv4b572wsvgsws85cvh5bqkc7kw";
   };
   isLibrary = true;
@@ -17,7 +17,7 @@ mkDerivation {
   testHaskellDepends = [ base constraints-extras dependent-sum ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

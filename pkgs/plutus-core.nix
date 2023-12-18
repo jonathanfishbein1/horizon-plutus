@@ -24,7 +24,7 @@ mkDerivation {
   pname = "plutus-core";
   version = "1.15.0.1";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-core-1.15.0.1.tar.gz";
+    url = "https://chap.intersectmbo.org/package/plutus-core-1.15.0.1.tar.gz";
     sha256 = "1xz25hxnxs34hxps04rfwqyg3h99zbmghg950fyhjk9rycyn2gp9";
   };
   isLibrary = true;

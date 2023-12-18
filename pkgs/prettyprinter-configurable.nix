@@ -7,7 +7,7 @@ mkDerivation {
   pname = "prettyprinter-configurable";
   version = "1.15.0.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/prettyprinter-configurable-1.15.0.0.tar.gz";
+    url = "https://chap.intersectmbo.org/package/prettyprinter-configurable-1.15.0.0.tar.gz";
     sha256 = "0bnpdasw4y2n45if3pm9fzy1dkkvsjjcag9mpwmcfc5f7cg2nd34";
   };
   isLibrary = true;
@@ -21,7 +21,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

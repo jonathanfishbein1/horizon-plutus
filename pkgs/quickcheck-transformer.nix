@@ -9,7 +9,7 @@ mkDerivation {
   libraryHaskellDepends = [ base QuickCheck random transformers ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

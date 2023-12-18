@@ -9,7 +9,7 @@ mkDerivation {
   pname = "plutus-ledger-api";
   version = "1.15.0.1";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/plutus-ledger-api-1.15.0.1.tar.gz";
+    url = "https://chap.intersectmbo.org/package/plutus-ledger-api-1.15.0.1.tar.gz";
     sha256 = "1bv976hpbv4k83drsrwh359vicc398hadaayxbljqh9ayzbab3lx";
   };
   isLibrary = true;

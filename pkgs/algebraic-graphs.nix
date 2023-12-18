@@ -5,8 +5,8 @@ mkDerivation {
   pname = "algebraic-graphs";
   version = "0.7";
   sha256 = "51159a0d18690ab51e6709e3c576275402f96f57d901f87d734da6854582e568";
-  revision = "1";
-  editedCabalFile = "1z9xls7riv3rlp1vjymvj7z64y8w0x3865d2ad2dzrwsdgzcsndf";
+  revision = "2";
+  editedCabalFile = "1psgkw2qcdv91cij564jzlsyx7qjs8z7y7y6lfhciilbzkzvpy3m";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -19,7 +19,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

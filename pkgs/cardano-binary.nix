@@ -7,7 +7,7 @@ mkDerivation {
   pname = "cardano-binary";
   version = "1.7.0.1";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-binary-1.7.0.1.tar.gz";
+    url = "https://chap.intersectmbo.org/package/cardano-binary-1.7.0.1.tar.gz";
     sha256 = "1hfr4lz6iyazmixqki58lai83pry68iq9yhvmy9ps6nna4q804n5";
   };
   isLibrary = true;
@@ -24,7 +24,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

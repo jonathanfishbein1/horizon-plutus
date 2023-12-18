@@ -3,8 +3,8 @@ mkDerivation {
   pname = "hedgehog-fn";
   version = "1.0";
   sha256 = "170bc58d2e5a5bc15bc3e8a0a3ea71b11b8aab8b3bfd923b7f9394afe569b915";
-  revision = "2";
-  editedCabalFile = "1x7n1r640mc6b4s6pfk96157y3r2z4mcx4i3lbq1k04cnzivd5n2";
+  revision = "3";
+  editedCabalFile = "1nz3ndndvb0xpnlrkx02l02a62jmrx01jcgxd36k843aacjklyax";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -13,7 +13,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

@@ -6,7 +6,7 @@ mkDerivation {
   pname = "cardano-strict-containers";
   version = "0.1.2.1";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-strict-containers-0.1.2.1.tar.gz";
+    url = "https://chap.intersectmbo.org/package/cardano-strict-containers-0.1.2.1.tar.gz";
     sha256 = "05szacvalxvw5xfyz0i7mvdlflnvhxj14vski5h3hzdcia3xvpxj";
   };
   isLibrary = true;
@@ -18,7 +18,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

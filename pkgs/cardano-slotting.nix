@@ -5,7 +5,7 @@ mkDerivation {
   pname = "cardano-slotting";
   version = "0.1.1.1";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-slotting-0.1.1.1.tar.gz";
+    url = "https://chap.intersectmbo.org/package/cardano-slotting-0.1.1.1.tar.gz";
     sha256 = "0ylyx4xka8xm6si99dpyvwzzf5xy76kh569j3n3yci43lkd5ial6";
   };
   isLibrary = true;
@@ -18,7 +18,7 @@ mkDerivation {
   testHaskellDepends = [ base tasty tasty-quickcheck ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

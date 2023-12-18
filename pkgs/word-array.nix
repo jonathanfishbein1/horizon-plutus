@@ -6,7 +6,7 @@ mkDerivation {
   pname = "word-array";
   version = "1.1.0.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/word-array-1.1.0.0.tar.gz";
+    url = "https://chap.intersectmbo.org/package/word-array-1.1.0.0.tar.gz";
     sha256 = "0afl8mrwrbl393y564d3gn6kh4xjhqs3cwczb4l606bxzj0a88n4";
   };
   isLibrary = true;
@@ -19,7 +19,7 @@ mkDerivation {
   benchmarkHaskellDepends = [ base primitive tasty-bench ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

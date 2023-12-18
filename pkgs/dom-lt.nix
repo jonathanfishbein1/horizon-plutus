@@ -13,7 +13,7 @@ mkDerivation {
   benchmarkHaskellDepends = [ base containers criterion deepseq ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

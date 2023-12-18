@@ -6,6 +6,8 @@ mkDerivation {
   pname = "canonical-json";
   version = "0.6.0.1";
   sha256 = "33df39d9058d33357956cdf7f911184a26da20c49b90f844ec6374f6bf5ace7e";
+  revision = "1";
+  editedCabalFile = "180c35znblvf3j59si48n4a9qpwwprq8d7xh86fpmjj2sn2g1sj8";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -19,7 +21,7 @@ mkDerivation {
   benchmarkHaskellDepends = [ base bytestring containers criterion ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

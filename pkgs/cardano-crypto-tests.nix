@@ -8,7 +8,7 @@ mkDerivation {
   pname = "cardano-crypto-tests";
   version = "2.1.2.0";
   src = fetchzip {
-    url = "https://input-output-hk.github.io/cardano-haskell-packages/package/cardano-crypto-tests-2.1.2.0.tar.gz";
+    url = "https://chap.intersectmbo.org/package/cardano-crypto-tests-2.1.2.0.tar.gz";
     sha256 = "1dn6imy2hf2zb2k82pj9rzqy71j88pvcm505zi9l1zai396nyy4c";
   };
   isLibrary = true;
@@ -26,7 +26,7 @@ mkDerivation {
   benchmarkHaskellDepends = [ base cardano-crypto-class criterion ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

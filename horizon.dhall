@@ -6,7 +6,7 @@ let callCHaP
     = λ(name : H.Name) →
       λ(version : H.Version) →
         H.callTarball
-          "https://input-output-hk.github.io/cardano-haskell-packages/package/${name}-${version}.tar.gz"
+          "https://chap.intersectmbo.org/package/${name}-${version}.tar.gz"
           (None H.Subdir)
 
 let packages =

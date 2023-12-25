@@ -8,10 +8,10 @@
 }:
 mkDerivation {
   pname = "plutus-tx";
-  version = "1.15.0.1";
+  version = "1.19.0.0";
   src = fetchzip {
-    url = "https://chap.intersectmbo.org/package/plutus-tx-1.15.0.1.tar.gz";
-    sha256 = "1amv7cf25f4jd97nc8ybxq7hw63snkfl7z192bcis5cyqii6idha";
+    url = "https://chap.intersectmbo.org/package/plutus-tx-1.19.0.0.tar.gz";
+    sha256 = "1b26iq0ar32rw67yp6zxjzaplpb5b7bw3fx0fkqc9hq4hvl3abnf";
   };
   isLibrary = true;
   isExecutable = false;

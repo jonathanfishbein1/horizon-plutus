@@ -13,6 +13,8 @@ final: prev: with pkgs.haskell.lib; {
 
   base-prelude = final.callPackage (./pkgs/base-prelude.nix) { };
 
+  brick = final.callPackage (./pkgs/brick.nix) { };
+
   canonical-json = final.callPackage (./pkgs/canonical-json.nix) { };
 
   cardano-binary = final.callPackage (./pkgs/cardano-binary.nix) { };
@@ -69,6 +71,8 @@ final: prev: with pkgs.haskell.lib; {
 
   nonempty-vector = final.callPackage (./pkgs/nonempty-vector.nix) { };
 
+  nothunks = final.callPackage (./pkgs/nothunks.nix) { };
+
   plutus-core = final.callPackage (./pkgs/plutus-core.nix) { };
 
   plutus-ledger-api = final.callPackage (./pkgs/plutus-ledger-api.nix) { };
@@ -92,6 +96,12 @@ final: prev: with pkgs.haskell.lib; {
   testing-type-modifiers = final.callPackage (./pkgs/testing-type-modifiers.nix) { };
 
   timeit = final.callPackage (./pkgs/timeit.nix) { };
+
+  vty = final.callPackage (./pkgs/vty.nix) { };
+
+  vty-crossplatform = final.callPackage (./pkgs/vty-crossplatform.nix) { };
+
+  vty-unix = final.callPackage (./pkgs/vty-unix.nix) { };
 
   word-array = final.callPackage (./pkgs/word-array.nix) { };
 

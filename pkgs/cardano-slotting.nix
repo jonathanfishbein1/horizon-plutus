@@ -1,24 +1,25 @@
-{ mkDerivation, aeson, base, cardano-binary, deepseq, fetchzip, lib
-, mmorph, nothunks, quiet, serialise, tasty, tasty-quickcheck, time
+{ mkDerivation, QuickCheck, aeson, base, cardano-binary, deepseq
+, fetchzip, lib, mmorph, nothunks, quiet, serialise, tasty
+, tasty-quickcheck, time, tree-diff
 }:
 mkDerivation {
   pname = "cardano-slotting";
-  version = "0.1.1.1";
+  version = "0.1.2.0";
   src = fetchzip {
-    url = "https://chap.intersectmbo.org/package/cardano-slotting-0.1.1.1.tar.gz";
-    sha256 = "0ylyx4xka8xm6si99dpyvwzzf5xy76kh569j3n3yci43lkd5ial6";
+    url = "https://chap.intersectmbo.org/package/cardano-slotting-0.1.2.0.tar.gz";
+    sha256 = "1p7g5vlgvhxgybifcp719pd4ghgidqvnknnb8avsn4q3dhqdzvpr";
   };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson base cardano-binary deepseq mmorph nothunks quiet serialise
-    time
+    aeson base cardano-binary deepseq mmorph nothunks QuickCheck quiet
+    serialise time tree-diff
   ];
   testHaskellDepends = [ base tasty tasty-quickcheck ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = true;
+  doHaddock = false;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

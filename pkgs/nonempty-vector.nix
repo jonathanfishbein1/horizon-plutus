@@ -3,8 +3,10 @@
 }:
 mkDerivation {
   pname = "nonempty-vector";
-  version = "0.2.2.0";
-  sha256 = "6fc72cf173486d76e2f9e2bfc5749ed07e070fc26807594906124d99cac5db59";
+  version = "0.2.3";
+  sha256 = "0a3702141421076416928f73d3ee6c66a920533ad02a9a771bc0bfc404d7aca3";
+  revision = "1";
+  editedCabalFile = "0kn1s5ssan9m4xwf10y2ymba4zw2j18j6dvbpr6iral3rrlgngdw";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -14,7 +16,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = true;
+  doHaddock = false;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

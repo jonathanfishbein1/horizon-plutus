@@ -5,10 +5,10 @@
 }:
 mkDerivation {
   pname = "prettyprinter-configurable";
-  version = "1.15.0.0";
+  version = "1.19.0.0";
   src = fetchzip {
-    url = "https://chap.intersectmbo.org/package/prettyprinter-configurable-1.15.0.0.tar.gz";
-    sha256 = "0bnpdasw4y2n45if3pm9fzy1dkkvsjjcag9mpwmcfc5f7cg2nd34";
+    url = "https://chap.intersectmbo.org/package/prettyprinter-configurable-1.19.0.0.tar.gz";
+    sha256 = "1ajx23qv7mscyhl6b1pqc1xkizq4ywsf5h6lvmp4yycigcl9nhn8";
   };
   isLibrary = true;
   isExecutable = false;
@@ -21,7 +21,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = true;
+  doHaddock = false;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

@@ -5,10 +5,10 @@
 }:
 mkDerivation {
   pname = "cardano-prelude";
-  version = "0.1.0.2";
+  version = "0.1.0.4";
   src = fetchzip {
-    url = "https://chap.intersectmbo.org/package/cardano-prelude-0.1.0.2.tar.gz";
-    sha256 = "09ac7avkxyi60cb9knpzgbsxh0ik9k5xyw6yi2qk27in5yywg4xy";
+    url = "https://chap.intersectmbo.org/package/cardano-prelude-0.1.0.4.tar.gz";
+    sha256 = "10fprvshaw23x5ixbahkp5x6ssiakdr5lwqamgmgk22ybrys1gx1";
   };
   isLibrary = true;
   isExecutable = false;
@@ -20,7 +20,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = true;
+  doHaddock = false;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

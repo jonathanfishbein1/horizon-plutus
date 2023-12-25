@@ -4,7 +4,7 @@
   }
 , { mapKey = "PyF"
   , mapValue =
-      "0a48101b8e972fad3a86edc0190a90a6ab61a779ca08675a3202cacc650b5372"
+      "cb4ea59bf8db1d61dd1542a900b1b28ca60876417005e00d2b20d82d33206542"
   }
 , { mapKey = "Stream"
   , mapValue =
@@ -20,7 +20,11 @@
   }
 , { mapKey = "base-prelude"
   , mapValue =
-      "288ddfcc54d15020e8dc0ee84d8769de9b1c4ed8e59a3821da335e57ce229762"
+      "768225d89b1495bbb3f64ea991887d3297278dacd028e750e94621e996f523a0"
+  }
+, { mapKey = "brick"
+  , mapValue =
+      "899cc65b0fbed9e7131ed49042c29450374feef4f433b86074f37c5f4063d59a"
   }
 , { mapKey = "canonical-json"
   , mapValue =
@@ -28,7 +32,7 @@
   }
 , { mapKey = "cardano-binary"
   , mapValue =
-      "6ee0043bb1c62bad11f79fe458a30bc412a3d02f057ba9d92116fc8ca1fa57c4"
+      "8d71d72e68783af9791c16e80c32217f58649d3a18e1bb50c9abebd8a1a83ca8"
   }
 , { mapKey = "cardano-binary-test"
   , mapValue =
@@ -40,7 +44,7 @@
   }
 , { mapKey = "cardano-crypto-class"
   , mapValue =
-      "23f56993bd51d8142a13f8e534b1f74eba9f8c3548937bd74391b7d9e5ee620c"
+      "f57c5d83f52ae5bbd8ef5719e4d2cdf3d130ca7a77082a819de68482507e8e1f"
   }
 , { mapKey = "cardano-crypto-praos"
   , mapValue =
@@ -52,7 +56,7 @@
   }
 , { mapKey = "cardano-prelude"
   , mapValue =
-      "fea7626cd78a28693498871af21f8a07b3e042ab7c2cd6e21875c1abf7eeadd6"
+      "63f05b79a1c4f4da9f8453e115c6b0888ab35d7fd46c9088f32e39079e683e6d"
   }
 , { mapKey = "cardano-prelude-test"
   , mapValue =
@@ -60,7 +64,7 @@
   }
 , { mapKey = "cardano-slotting"
   , mapValue =
-      "fa5972ff924a6b8da578b0237f1bbca38c345e8463cf638315bfcd86c938fe9c"
+      "23f0cee1ab785709a5cbbeec74546e0709a4b800bdc186777a72c89619e30188"
   }
 , { mapKey = "cardano-strict-containers"
   , mapValue =
@@ -104,7 +108,7 @@
   }
 , { mapKey = "hex-text"
   , mapValue =
-      "becc4de49bd37580885032bb41af45318b7a91564f6a2dc412c9a0a5a1f6c6cb"
+      "b77a6d96279f2ea4a69ea2c23a7a1750fcbe3fdd26f8c31820e0e058693b91e3"
   }
 , { mapKey = "int-cast"
   , mapValue =
@@ -132,27 +136,31 @@
   }
 , { mapKey = "nonempty-vector"
   , mapValue =
-      "9d80fc08e3d760d8af9a0f34147125f2a58c615dad1a52596b78a108685cb4b6"
+      "30becdce82f25c786cac01aa42670666f3138c308ae475c7d4edc3a36f22577b"
+  }
+, { mapKey = "nothunks"
+  , mapValue =
+      "e072faf9cd6bf0ef2765b3b491bde6be1b8c978d27a2f8173fa7d62289be1428"
   }
 , { mapKey = "plutus-core"
   , mapValue =
-      "4f61a020ec5cd3992fb6468909546c331a2a10a67581ce5305f252bc490b88ee"
+      "c270ecf6b5dcdb7f6cfd5b6a95c3fc58be4d5af43137e57a9445ce715983e150"
   }
 , { mapKey = "plutus-ledger-api"
   , mapValue =
-      "efda8ca1bd7f7dc1d21d4d34851fe0650329de876f13a414a892e0c08e19016a"
+      "708ad995574f41f867c4901dd7c9c89a8c4d1d41b6e40ef42b4a7dbb4210ff04"
   }
 , { mapKey = "plutus-tx"
   , mapValue =
-      "a7ad06c5448b7335d8133b2b611c00b16441c7ea69024c930960da48df6a79a9"
+      "5ee72588ec4812dee08b0fa6c5bb7308a2b179af7b2a8e993c74ef3bebd6efe6"
   }
 , { mapKey = "plutus-tx-plugin"
   , mapValue =
-      "084bc05e48d2880523fb75239bb148496bc452ac556618a3579edf825a4bfed8"
+      "973fa1b84be3841cce5aab326190089794f8aa0356603b86145fdda3f5ffaac5"
   }
 , { mapKey = "prettyprinter-configurable"
   , mapValue =
-      "ae738bccfa1967f5e8f2db9631ed3db92b92801b3bb58ce836ab9d4841d5b9eb"
+      "426d8622db8132696208b0918378a114f1febdce090be97e03feeac7b2c89e94"
   }
 , { mapKey = "protolude"
   , mapValue =
@@ -172,7 +180,7 @@
   }
 , { mapKey = "size-based"
   , mapValue =
-      "eb8507a989ea112f6da17056c1358384f6a2aa520330b0050ac60ff3c04d8640"
+      "b83aed070db70726f60a7be6d1418b756fd96ae91ad3d57cedf32a466f9e240d"
   }
 , { mapKey = "testing-type-modifiers"
   , mapValue =
@@ -181,6 +189,18 @@
 , { mapKey = "timeit"
   , mapValue =
       "022199d17c6465f72907d4e4d7fb9e5f569c3e0105ac487fd2fbb66488705a7f"
+  }
+, { mapKey = "vty"
+  , mapValue =
+      "a9a89227a84e7445d224a9c82bf6a8ef6641cfc7f7d55a5fbdd566fdf9256225"
+  }
+, { mapKey = "vty-crossplatform"
+  , mapValue =
+      "0f9a32c4ea68b0481ad542a9268d16259563fe2dcb8583da4bd458666af85c1f"
+  }
+, { mapKey = "vty-unix"
+  , mapValue =
+      "5a5db2b050840b390ffaad36515484aeb7a54124ee8b60d699f83baf2a66eea7"
   }
 , { mapKey = "word-array"
   , mapValue =

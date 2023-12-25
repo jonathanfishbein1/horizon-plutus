@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "PyF";
-  version = "0.11.1.1";
-  sha256 = "f3607099f3357bce93bf1b3034c702b833d1114966b922267136340f262d3324";
+  version = "0.11.2.1";
+  sha256 = "e865c45a9323fc60f0a35f0aedf9e9f5c12258a6344bbd49031c09211b82220a";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -18,7 +18,7 @@ mkDerivation {
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = true;
+  doHaddock = false;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

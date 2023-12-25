@@ -6,10 +6,10 @@
 }:
 mkDerivation {
   pname = "cardano-crypto-class";
-  version = "2.1.2.0";
+  version = "2.1.4.0";
   src = fetchzip {
-    url = "https://chap.intersectmbo.org/package/cardano-crypto-class-2.1.2.0.tar.gz";
-    sha256 = "0248v82hs35976q5czkqvz9k2pdjrjghydgrdly9fzfhw5xlw1sr";
+    url = "https://chap.intersectmbo.org/package/cardano-crypto-class-2.1.4.0.tar.gz";
+    sha256 = "11n3v0i13sxyanjyas76cbzz7f72xsxkp7gfianic32bm6dm0sqm";
   };
   isLibrary = true;
   isExecutable = false;
@@ -23,7 +23,7 @@ mkDerivation {
   libraryPkgconfigDepends = [ libblst libsodium secp256k1 ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = true;
+  doHaddock = false;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;
